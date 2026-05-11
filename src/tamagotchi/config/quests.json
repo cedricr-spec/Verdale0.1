@@ -1,0 +1,182 @@
+[
+  {
+    "id": "quest_collect_wood",
+    "chapter": 1,
+    "order": 1,
+    "title": "Gather Logs",
+    "shortTitle": "Logs",
+    "description": "Collect enough wood logs to begin your first crafting chain.",
+    "iconItemId": "wood_log",
+    "prerequisites": [],
+    "objectives": [
+      { "type": "collect_item", "itemId": "wood_log", "quantity": 3 }
+    ],
+    "rewards": [
+      { "type": "item", "value": "stone", "amount": 2 }
+    ],
+    "repeatable": false,
+    "hidden": false,
+    "category": "gathering"
+  },
+  {
+    "id": "quest_craft_plank",
+    "chapter": 1,
+    "order": 2,
+    "title": "Craft a Plank",
+    "shortTitle": "Plank",
+    "description": "Refine your wood logs into the first wood plank.",
+    "iconItemId": "wood_plank",
+    "prerequisites": ["quest_collect_wood"],
+    "objectives": [
+      { "type": "craft_item", "itemId": "wood_plank", "quantity": 1 }
+    ],
+    "rewards": [
+      { "type": "inventory_capacity", "value": "inventory_slots", "amount": 2 }
+    ],
+    "repeatable": false,
+    "hidden": false,
+    "category": "crafting"
+  },
+  {
+    "id": "quest_craft_stick",
+    "chapter": 1,
+    "order": 3,
+    "title": "Craft a Stick",
+    "shortTitle": "Stick",
+    "description": "Turn raw wood into a proper stick for wooden tool handles.",
+    "iconItemId": "wood_stick",
+    "prerequisites": ["quest_craft_plank"],
+    "objectives": [
+      { "type": "craft_item", "itemId": "wood_stick", "quantity": 1 }
+    ],
+    "rewards": [
+      { "type": "inventory_capacity", "value": "inventory_slots", "amount": 2 }
+    ],
+    "repeatable": false,
+    "hidden": false,
+    "category": "crafting"
+  },
+  {
+    "id": "quest_craft_wooden_pickaxe",
+    "chapter": 1,
+    "order": 4,
+    "title": "Craft a Wooden Pickaxe",
+    "shortTitle": "Pickaxe",
+    "description": "Use planks and sticks to craft your first wooden pickaxe.",
+    "iconItemId": "wooden_pickaxe",
+    "prerequisites": ["quest_craft_stick"],
+    "objectives": [
+      { "type": "craft_item", "itemId": "wooden_pickaxe", "quantity": 1 }
+    ],
+    "rewards": [
+      { "type": "inventory_capacity", "value": "inventory_slots", "amount": 2 }
+    ],
+    "repeatable": false,
+    "hidden": false,
+    "category": "crafting"
+  },
+  {
+    "id": "quest_collect_stone",
+    "chapter": 1,
+    "order": 5,
+    "title": "Gather Stone",
+    "shortTitle": "Stone",
+    "description": "Now that you have a wooden pickaxe, gather stone for sturdier gear.",
+    "iconItemId": "stone",
+    "prerequisites": ["quest_craft_wooden_pickaxe"],
+    "objectives": [
+      { "type": "collect_item", "itemId": "stone", "quantity": 3 }
+    ],
+    "rewards": [
+      { "type": "item", "value": "wood_stick", "amount": 1 }
+    ],
+    "repeatable": false,
+    "hidden": false,
+    "category": "gathering"
+  },
+  {
+    "id": "quest_craft_wooden_axe",
+    "chapter": 1,
+    "order": 6,
+    "title": "Craft a Wooden Axe",
+    "shortTitle": "Axe",
+    "description": "Finish your first wooden tool set with a wooden axe.",
+    "iconItemId": "wooden_axe",
+    "prerequisites": ["quest_collect_stone"],
+    "objectives": [
+      { "type": "craft_item", "itemId": "wooden_axe", "quantity": 1 }
+    ],
+    "rewards": [
+      { "type": "item", "value": "stone", "amount": 2 }
+    ],
+    "repeatable": false,
+    "hidden": false,
+    "category": "crafting"
+  },
+  {
+    "id": "quest_unlock_character_2",
+    "chapter": 1,
+    "order": 7,
+    "title": "Stock Up",
+    "shortTitle": "Stock Up",
+    "description": "Bring together enough stone and wood logs before leaving the tutorial trail.",
+    "iconItemId": "wood_log",
+    "grade": "gold",
+    "prerequisites": ["quest_craft_wooden_axe"],
+    "objectives": [
+      { "type": "collect_item", "itemId": "stone", "quantity": 6 },
+      { "type": "collect_item", "itemId": "wood_log", "quantity": 6 }
+    ],
+    "rewards": [
+      { "type": "unlock_character", "value": "character_2", "amount": 1 }
+    ],
+    "repeatable": false,
+    "hidden": false,
+    "category": "story"
+  },
+  {
+    "id": "quest_craft_farming_tools",
+    "chapter": 2,
+    "order": 1,
+    "title": "First Farmer",
+    "shortTitle": "Farming",
+    "description": "Craft a wooden hoe, shovel, and watering can to begin your farm.",
+    "iconItemId": "wooden_hoe",
+    "prerequisites": ["quest_unlock_character_2"],
+    "objectives": [
+      { "type": "craft_item", "itemId": "wooden_hoe", "quantity": 1 },
+      { "type": "craft_item", "itemId": "wooden_shovel", "quantity": 1 },
+      { "type": "craft_item", "itemId": "wooden_watering_can", "quantity": 1 }
+    ],
+    "rewards": [
+      { "type": "item", "value": "carrot_seed", "amount": 3 },
+      { "type": "item", "value": "turnip_seed", "amount": 3 },
+      { "type": "item", "value": "potato_seed", "amount": 2 },
+      { "type": "item", "value": "tomato_seed", "amount": 2 }
+    ],
+    "repeatable": false,
+    "hidden": false,
+    "category": "farming"
+  },
+  {
+    "id": "quest_first_harvest",
+    "chapter": 2,
+    "order": 2,
+    "title": "First Harvest",
+    "shortTitle": "Harvest",
+    "description": "Plant a seed, water it, and harvest your first crop.",
+    "iconItemId": "carrot_food",
+    "prerequisites": ["quest_craft_farming_tools"],
+    "objectives": [
+      { "type": "plant_crop", "itemId": "carrot", "quantity": 1 },
+      { "type": "harvest_crop", "itemId": "carrot", "quantity": 1 }
+    ],
+    "rewards": [
+      { "type": "item", "value": "carrot_seed", "amount": 5 },
+      { "type": "inventory_capacity", "value": "inventory_slots", "amount": 4 }
+    ],
+    "repeatable": false,
+    "hidden": false,
+    "category": "farming"
+  }
+]

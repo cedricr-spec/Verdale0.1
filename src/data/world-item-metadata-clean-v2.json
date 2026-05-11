@@ -1,0 +1,1035 @@
+{
+  "meta": {
+    "type": "world_item_metadata",
+    "version": 2,
+    "sourceAtlas": "Crafting Materials Icons.png",
+    "sourceAtlasPath": "src/spritesheets/items/Crafting Materials Icons.png",
+    "generatedAt": "2026-04-29T10:27:53Z",
+    "notes": "Clean runtime item metadata. Food is intentionally excluded and should live in world-food-metadata.json later."
+  },
+  "schema": {
+    "itemRequiredFields": [
+      "id",
+      "enabled",
+      "name",
+      "type",
+      "category",
+      "atlasSource",
+      "atlasRect",
+      "stackable",
+      "maxStack",
+      "crafting",
+      "obtain"
+    ],
+    "renderPriority": [
+      "atlasSource+atlasRect",
+      "spritePath",
+      "icon",
+      "placeholder"
+    ],
+    "obtainMethods": [
+      "spawn",
+      "mine",
+      "chop",
+      "fill",
+      "harvest",
+      "craft_only",
+      "none"
+    ],
+    "runtimePhases": [
+      "definitions",
+      "crafting",
+      "spawn",
+      "future_interactions"
+    ]
+  },
+  "runtime": {
+    "atlasImports": {
+      "Crafting Materials Icons.png": "src/spritesheets/items/Crafting Materials Icons.png"
+    },
+    "spawnPolicy": {
+      "initialMode": "replace_old_pickups",
+      "doNotIncreaseTotalSpawnCount": true,
+      "spawnOnlyItemsWithSpawnableTrue": true,
+      "futureWorldInteractionsPrepared": true
+    },
+    "interactionPrep": {
+      "mine": {
+        "enabled": false,
+        "targetFamilies": [
+          "rocks"
+        ],
+        "requiredTool": "pickaxe"
+      },
+      "chop": {
+        "enabled": false,
+        "targetFamilies": [
+          "trees"
+        ],
+        "requiredTool": "axe"
+      },
+      "fill": {
+        "enabled": false,
+        "nearTerrain": "water",
+        "requiredTool": "wooden_bucket"
+      }
+    }
+  },
+  "items": {
+    "pickaxe": {
+      "id": "pickaxe",
+      "enabled": true,
+      "name": "Pickaxe",
+      "type": "tool",
+      "category": "tool",
+      "icon": "⛏️",
+      "spritePath": "",
+      "atlasSource": "src/spritesheets/items/Crafting Materials Icons.png",
+      "atlasRect": {
+        "x": 48,
+        "y": 512,
+        "width": 16,
+        "height": 16
+      },
+      "stackable": false,
+      "maxStack": 1,
+      "craftable": true,
+      "spawnable": false,
+      "obtainableFromWorld": false,
+      "usable": true,
+      "description": "Basic mining tool for rocks and ore.",
+      "crafting": {
+        "craftable": true,
+        "recipe": [
+          {
+            "itemId": "woodstick",
+            "quantity": 2
+          },
+          {
+            "itemId": "stone",
+            "quantity": 3
+          }
+        ],
+        "outputQuantity": 1,
+        "station": null,
+        "unlockCondition": null
+      },
+      "obtain": {
+        "method": "craft_only",
+        "sourceFamily": null,
+        "requiredTool": null,
+        "nearTerrain": null,
+        "outputQuantity": 1
+      },
+      "food": {
+        "edible": false,
+        "hungerRestore": 0,
+        "happinessRestore": 0,
+        "healthRestore": 0,
+        "spoilable": false,
+        "spoilTimeSeconds": null
+      }
+    },
+    "axe": {
+      "id": "axe",
+      "enabled": true,
+      "name": "Axe",
+      "type": "tool",
+      "category": "tool",
+      "icon": "🪓",
+      "spritePath": "",
+      "atlasSource": "src/spritesheets/items/Crafting Materials Icons.png",
+      "atlasRect": {
+        "x": 48,
+        "y": 528,
+        "width": 16,
+        "height": 16
+      },
+      "stackable": false,
+      "maxStack": 1,
+      "craftable": true,
+      "spawnable": false,
+      "obtainableFromWorld": false,
+      "usable": true,
+      "description": "Basic chopping tool for tree families.",
+      "crafting": {
+        "craftable": true,
+        "recipe": [
+          {
+            "itemId": "woodstick",
+            "quantity": 2
+          },
+          {
+            "itemId": "stone",
+            "quantity": 2
+          }
+        ],
+        "outputQuantity": 1,
+        "station": null,
+        "unlockCondition": null
+      },
+      "obtain": {
+        "method": "craft_only",
+        "sourceFamily": null,
+        "requiredTool": null,
+        "nearTerrain": null,
+        "outputQuantity": 1
+      },
+      "food": {
+        "edible": false,
+        "hungerRestore": 0,
+        "happinessRestore": 0,
+        "healthRestore": 0,
+        "spoilable": false,
+        "spoilTimeSeconds": null
+      }
+    },
+    "stone": {
+      "id": "stone",
+      "enabled": true,
+      "name": "Stone",
+      "type": "resource",
+      "category": "resource",
+      "icon": "🪨",
+      "spritePath": "",
+      "atlasSource": "src/spritesheets/items/Crafting Materials Icons.png",
+      "atlasRect": {
+        "x": 432,
+        "y": 480,
+        "width": 16,
+        "height": 16
+      },
+      "stackable": true,
+      "maxStack": 64,
+      "craftable": false,
+      "spawnable": true,
+      "obtainableFromWorld": true,
+      "usable": false,
+      "description": "Mined stone resource gathered from rock families.",
+      "crafting": {
+        "craftable": false,
+        "recipe": [],
+        "outputQuantity": 1,
+        "station": null,
+        "unlockCondition": null
+      },
+      "obtain": {
+        "method": "mine",
+        "sourceFamily": "rocks",
+        "requiredTool": "pickaxe",
+        "nearTerrain": null,
+        "outputQuantity": 1
+      },
+      "food": {
+        "edible": false,
+        "hungerRestore": 0,
+        "happinessRestore": 0,
+        "healthRestore": 0,
+        "spoilable": false,
+        "spoilTimeSeconds": null
+      }
+    },
+    "wood": {
+      "id": "wood",
+      "enabled": true,
+      "name": "Wood",
+      "type": "resource",
+      "category": "resource",
+      "icon": "🪵",
+      "spritePath": "",
+      "atlasSource": "src/spritesheets/items/Crafting Materials Icons.png",
+      "atlasRect": {
+        "x": 432,
+        "y": 336,
+        "width": 16,
+        "height": 16
+      },
+      "stackable": true,
+      "maxStack": 64,
+      "craftable": false,
+      "spawnable": true,
+      "obtainableFromWorld": true,
+      "usable": false,
+      "description": "Wood gathered from tree families.",
+      "crafting": {
+        "craftable": false,
+        "recipe": [],
+        "outputQuantity": 1,
+        "station": null,
+        "unlockCondition": null
+      },
+      "obtain": {
+        "method": "chop",
+        "sourceFamily": "trees",
+        "requiredTool": "axe",
+        "nearTerrain": null,
+        "outputQuantity": 1
+      },
+      "food": {
+        "edible": false,
+        "hungerRestore": 0,
+        "happinessRestore": 0,
+        "healthRestore": 0,
+        "spoilable": false,
+        "spoilTimeSeconds": null
+      }
+    },
+    "wooden_bucket": {
+      "id": "wooden_bucket",
+      "enabled": true,
+      "name": "Wooden Bucket",
+      "type": "container",
+      "category": "container",
+      "icon": "🪣",
+      "spritePath": "",
+      "atlasSource": "src/spritesheets/items/Crafting Materials Icons.png",
+      "atlasRect": {
+        "x": 0,
+        "y": 384,
+        "width": 16,
+        "height": 16
+      },
+      "stackable": false,
+      "maxStack": 1,
+      "craftable": true,
+      "spawnable": false,
+      "obtainableFromWorld": false,
+      "usable": true,
+      "description": "Basic bucket used for collecting liquids later.",
+      "crafting": {
+        "craftable": true,
+        "recipe": [
+          {
+            "itemId": "wood",
+            "quantity": 3
+          }
+        ],
+        "outputQuantity": 1,
+        "station": null,
+        "unlockCondition": null
+      },
+      "obtain": {
+        "method": "craft_only",
+        "sourceFamily": null,
+        "requiredTool": null,
+        "nearTerrain": null,
+        "outputQuantity": 1
+      },
+      "food": {
+        "edible": false,
+        "hungerRestore": 0,
+        "happinessRestore": 0,
+        "healthRestore": 0,
+        "spoilable": false,
+        "spoilTimeSeconds": null
+      }
+    },
+    "water_bucket": {
+      "id": "water_bucket",
+      "enabled": true,
+      "name": "Water Bucket",
+      "type": "container",
+      "category": "container",
+      "icon": "🪣",
+      "spritePath": "",
+      "atlasSource": "src/spritesheets/items/Crafting Materials Icons.png",
+      "atlasRect": {
+        "x": 0,
+        "y": 400,
+        "width": 16,
+        "height": 16
+      },
+      "stackable": false,
+      "maxStack": 1,
+      "craftable": false,
+      "spawnable": false,
+      "obtainableFromWorld": true,
+      "usable": true,
+      "description": "Filled bucket variant obtained near water terrain.",
+      "crafting": {
+        "craftable": false,
+        "recipe": [],
+        "outputQuantity": 1,
+        "station": null,
+        "unlockCondition": null
+      },
+      "obtain": {
+        "method": "fill",
+        "sourceFamily": null,
+        "requiredTool": "wooden_bucket",
+        "nearTerrain": "water",
+        "outputQuantity": 1
+      },
+      "food": {
+        "edible": false,
+        "hungerRestore": 0,
+        "happinessRestore": 0,
+        "healthRestore": 0,
+        "spoilable": false,
+        "spoilTimeSeconds": null
+      }
+    },
+    "gem_nugget_xs": {
+      "id": "gem_nugget_xs",
+      "enabled": true,
+      "name": "Gem",
+      "type": "resource",
+      "category": "resource",
+      "icon": "💎",
+      "spritePath": "",
+      "atlasSource": "src/spritesheets/items/Crafting Materials Icons.png",
+      "atlasRect": {
+        "x": 432,
+        "y": 512,
+        "width": 16,
+        "height": 16
+      },
+      "stackable": true,
+      "maxStack": 32,
+      "craftable": false,
+      "spawnable": false,
+      "obtainableFromWorld": true,
+      "usable": false,
+      "description": "Rare mined gem resource.",
+      "crafting": {
+        "craftable": false,
+        "recipe": [],
+        "outputQuantity": 1,
+        "station": null,
+        "unlockCondition": null
+      },
+      "obtain": {
+        "method": "mine",
+        "sourceFamily": "rocks",
+        "requiredTool": "pickaxe",
+        "nearTerrain": null,
+        "outputQuantity": 1
+      },
+      "food": {
+        "edible": false,
+        "hungerRestore": 0,
+        "happinessRestore": 0,
+        "healthRestore": 0,
+        "spoilable": false,
+        "spoilTimeSeconds": null
+      }
+    },
+    "iron_ingot": {
+      "id": "iron_ingot",
+      "enabled": true,
+      "name": "Iron Ingot",
+      "type": "material",
+      "category": "material",
+      "icon": "⚙️",
+      "spritePath": "",
+      "atlasSource": "src/spritesheets/items/Crafting Materials Icons.png",
+      "atlasRect": {
+        "x": 432,
+        "y": 496,
+        "width": 16,
+        "height": 16
+      },
+      "stackable": true,
+      "maxStack": 64,
+      "craftable": true,
+      "spawnable": false,
+      "obtainableFromWorld": false,
+      "usable": false,
+      "description": "Refined crafting material for stronger tools.",
+      "crafting": {
+        "craftable": true,
+        "recipe": [
+          {
+            "itemId": "gears",
+            "quantity": 2
+          }
+        ],
+        "outputQuantity": 1,
+        "station": null,
+        "unlockCondition": "Use iron_ore x2 instead if that resource is introduced later."
+      },
+      "obtain": {
+        "method": "craft_only",
+        "sourceFamily": null,
+        "requiredTool": null,
+        "nearTerrain": null,
+        "outputQuantity": 1
+      },
+      "food": {
+        "edible": false,
+        "hungerRestore": 0,
+        "happinessRestore": 0,
+        "healthRestore": 0,
+        "spoilable": false,
+        "spoilTimeSeconds": null
+      }
+    },
+    "gem_nugget_s": {
+      "id": "gem_nugget_s",
+      "enabled": true,
+      "name": "Gem",
+      "type": "resource",
+      "category": "resource",
+      "icon": "💎",
+      "spritePath": "",
+      "atlasSource": "src/spritesheets/items/Crafting Materials Icons.png",
+      "atlasRect": {
+        "x": 448,
+        "y": 512,
+        "width": 16,
+        "height": 16
+      },
+      "stackable": true,
+      "maxStack": 32,
+      "craftable": true,
+      "spawnable": false,
+      "obtainableFromWorld": true,
+      "usable": false,
+      "description": "Rare mined gem resource.",
+      "crafting": {
+        "craftable": true,
+        "recipe": [
+          {
+            "itemId": "gem_nugget_xs",
+            "quantity": 2
+          }
+        ],
+        "outputQuantity": 1,
+        "station": null,
+        "unlockCondition": null
+      },
+      "obtain": {
+        "method": "mine",
+        "sourceFamily": "rocks",
+        "requiredTool": "pickaxe",
+        "nearTerrain": null,
+        "outputQuantity": 1
+      },
+      "food": {
+        "edible": false,
+        "hungerRestore": 0,
+        "happinessRestore": 0,
+        "healthRestore": 0,
+        "spoilable": false,
+        "spoilTimeSeconds": null
+      }
+    },
+    "gem_nugget_m": {
+      "id": "gem_nugget_m",
+      "enabled": true,
+      "name": "Gem",
+      "type": "resource",
+      "category": "resource",
+      "icon": "💎",
+      "spritePath": "",
+      "atlasSource": "src/spritesheets/items/Crafting Materials Icons.png",
+      "atlasRect": {
+        "x": 464,
+        "y": 512,
+        "width": 16,
+        "height": 16
+      },
+      "stackable": true,
+      "maxStack": 32,
+      "craftable": true,
+      "spawnable": false,
+      "obtainableFromWorld": true,
+      "usable": false,
+      "description": "Rare mined gem resource.",
+      "crafting": {
+        "craftable": true,
+        "recipe": [
+          {
+            "itemId": "gem_nugget_s",
+            "quantity": 2
+          }
+        ],
+        "outputQuantity": 1,
+        "station": null,
+        "unlockCondition": null
+      },
+      "obtain": {
+        "method": "mine",
+        "sourceFamily": "rocks",
+        "requiredTool": "pickaxe",
+        "nearTerrain": null,
+        "outputQuantity": 1
+      },
+      "food": {
+        "edible": false,
+        "hungerRestore": 0,
+        "happinessRestore": 0,
+        "healthRestore": 0,
+        "spoilable": false,
+        "spoilTimeSeconds": null
+      }
+    },
+    "gem_nugget_l": {
+      "id": "gem_nugget_l",
+      "enabled": true,
+      "name": "Gem",
+      "type": "resource",
+      "category": "resource",
+      "icon": "💎",
+      "spritePath": "",
+      "atlasSource": "src/spritesheets/items/Crafting Materials Icons.png",
+      "atlasRect": {
+        "x": 480,
+        "y": 512,
+        "width": 16,
+        "height": 16
+      },
+      "stackable": true,
+      "maxStack": 32,
+      "craftable": true,
+      "spawnable": false,
+      "obtainableFromWorld": true,
+      "usable": false,
+      "description": "Rare mined gem resource.",
+      "crafting": {
+        "craftable": true,
+        "recipe": [
+          {
+            "itemId": "gem_nugget_m",
+            "quantity": 2
+          }
+        ],
+        "outputQuantity": 1,
+        "station": null,
+        "unlockCondition": null
+      },
+      "obtain": {
+        "method": "mine",
+        "sourceFamily": "rocks",
+        "requiredTool": "pickaxe",
+        "nearTerrain": null,
+        "outputQuantity": 1
+      },
+      "food": {
+        "edible": false,
+        "hungerRestore": 0,
+        "happinessRestore": 0,
+        "healthRestore": 0,
+        "spoilable": false,
+        "spoilTimeSeconds": null
+      }
+    },
+    "rare_gem": {
+      "id": "rare_gem",
+      "enabled": true,
+      "name": "Gem",
+      "type": "resource",
+      "category": "resource",
+      "icon": "💎",
+      "spritePath": "",
+      "atlasSource": "src/spritesheets/items/Crafting Materials Icons.png",
+      "atlasRect": {
+        "x": 496,
+        "y": 512,
+        "width": 16,
+        "height": 16
+      },
+      "stackable": true,
+      "maxStack": 32,
+      "craftable": true,
+      "spawnable": false,
+      "obtainableFromWorld": false,
+      "usable": true,
+      "description": "Rare mined gem resource.",
+      "crafting": {
+        "craftable": true,
+        "recipe": [
+          {
+            "itemId": "gem_nugget_l",
+            "quantity": 2
+          }
+        ],
+        "outputQuantity": 1,
+        "station": null,
+        "unlockCondition": null
+      },
+      "obtain": {
+        "method": "mine",
+        "sourceFamily": "rocks",
+        "requiredTool": "pickaxe",
+        "nearTerrain": null,
+        "outputQuantity": 1
+      },
+      "food": {
+        "edible": false,
+        "hungerRestore": 0,
+        "happinessRestore": 0,
+        "healthRestore": 0,
+        "spoilable": false,
+        "spoilTimeSeconds": null
+      }
+    },
+    "woodstick": {
+      "id": "woodstick",
+      "enabled": true,
+      "name": "Stick",
+      "type": "resource",
+      "category": "resource",
+      "icon": "",
+      "spritePath": "",
+      "atlasSource": "src/spritesheets/items/Crafting Materials Icons.png",
+      "atlasRect": {
+        "x": 480,
+        "y": 336,
+        "width": 16,
+        "height": 16
+      },
+      "stackable": true,
+      "maxStack": 64,
+      "craftable": true,
+      "spawnable": false,
+      "obtainableFromWorld": false,
+      "usable": false,
+      "description": "Wood stick crafted from wood. Used as a handle for basic tools.",
+      "crafting": {
+        "craftable": true,
+        "recipe": [
+          {
+            "itemId": "wood",
+            "quantity": 1
+          }
+        ],
+        "outputQuantity": 2,
+        "station": null,
+        "unlockCondition": null
+      },
+      "obtain": {
+        "method": "none",
+        "sourceFamily": null,
+        "requiredTool": null,
+        "nearTerrain": null,
+        "outputQuantity": 1
+      },
+      "food": {
+        "edible": false,
+        "hungerRestore": 0,
+        "happinessRestore": 0,
+        "healthRestore": 0,
+        "spoilable": false,
+        "spoilTimeSeconds": null
+      }
+    },
+    "gears": {
+      "id": "gears",
+      "enabled": true,
+      "name": "Gears",
+      "type": "material",
+      "category": "material",
+      "icon": "⚙️",
+      "spritePath": "",
+      "atlasSource": "src/spritesheets/items/Crafting Materials Icons.png",
+      "atlasRect": {
+        "x": 432,
+        "y": 496,
+        "width": 16,
+        "height": 16
+      },
+      "stackable": true,
+      "maxStack": 64,
+      "craftable": false,
+      "spawnable": true,
+      "obtainableFromWorld": true,
+      "usable": false,
+      "description": "Existing legacy iron/gears resource. Kept for compatibility with current inventory and recipes.",
+      "crafting": {
+        "craftable": false,
+        "recipe": [],
+        "outputQuantity": 1,
+        "station": null,
+        "unlockCondition": null
+      },
+      "obtain": {
+        "method": "spawn",
+        "sourceFamily": null,
+        "requiredTool": null,
+        "nearTerrain": null,
+        "outputQuantity": 1
+      },
+      "food": {
+        "edible": false,
+        "hungerRestore": 0,
+        "happinessRestore": 0,
+        "healthRestore": 0,
+        "spoilable": false,
+        "spoilTimeSeconds": null
+      },
+      "legacy": true
+    }
+  },
+  "recipes": {
+    "pickaxe": {
+      "id": "pickaxe",
+      "name": "Pickaxe",
+      "category": "tool",
+      "icon": "⛏️",
+      "spritePath": "",
+      "atlasSource": "src/spritesheets/items/Crafting Materials Icons.png",
+      "atlasRect": {
+        "x": 48,
+        "y": 512,
+        "width": 16,
+        "height": 16
+      },
+      "inputs": [
+        {
+          "itemId": "woodstick",
+          "quantity": 2
+        },
+        {
+          "itemId": "stone",
+          "quantity": 3
+        }
+      ],
+      "outputs": [
+        {
+          "itemId": "pickaxe",
+          "quantity": 1
+        }
+      ],
+      "station": null,
+      "unlockCondition": null,
+      "enabled": true
+    },
+    "axe": {
+      "id": "axe",
+      "name": "Axe",
+      "category": "tool",
+      "icon": "🪓",
+      "spritePath": "",
+      "atlasSource": "src/spritesheets/items/Crafting Materials Icons.png",
+      "atlasRect": {
+        "x": 48,
+        "y": 528,
+        "width": 16,
+        "height": 16
+      },
+      "inputs": [
+        {
+          "itemId": "woodstick",
+          "quantity": 2
+        },
+        {
+          "itemId": "stone",
+          "quantity": 2
+        }
+      ],
+      "outputs": [
+        {
+          "itemId": "axe",
+          "quantity": 1
+        }
+      ],
+      "station": null,
+      "unlockCondition": null,
+      "enabled": true
+    },
+    "wooden_bucket": {
+      "id": "wooden_bucket",
+      "name": "Wooden Bucket",
+      "category": "container",
+      "icon": "🪣",
+      "spritePath": "",
+      "atlasSource": "src/spritesheets/items/Crafting Materials Icons.png",
+      "atlasRect": {
+        "x": 0,
+        "y": 384,
+        "width": 16,
+        "height": 16
+      },
+      "inputs": [
+        {
+          "itemId": "wood",
+          "quantity": 3
+        }
+      ],
+      "outputs": [
+        {
+          "itemId": "wooden_bucket",
+          "quantity": 1
+        }
+      ],
+      "station": null,
+      "unlockCondition": null,
+      "enabled": true
+    },
+    "iron_ingot": {
+      "id": "iron_ingot",
+      "name": "Iron Ingot",
+      "category": "material",
+      "icon": "⚙️",
+      "spritePath": "",
+      "atlasSource": "src/spritesheets/items/Crafting Materials Icons.png",
+      "atlasRect": {
+        "x": 432,
+        "y": 496,
+        "width": 16,
+        "height": 16
+      },
+      "inputs": [
+        {
+          "itemId": "gears",
+          "quantity": 2
+        }
+      ],
+      "outputs": [
+        {
+          "itemId": "iron_ingot",
+          "quantity": 1
+        }
+      ],
+      "station": null,
+      "unlockCondition": "Use iron_ore x2 instead if that resource is introduced later.",
+      "enabled": true
+    },
+    "gem_nugget_s": {
+      "id": "gem_nugget_s",
+      "name": "Gem",
+      "category": "resource",
+      "icon": "💎",
+      "spritePath": "",
+      "atlasSource": "src/spritesheets/items/Crafting Materials Icons.png",
+      "atlasRect": {
+        "x": 448,
+        "y": 512,
+        "width": 16,
+        "height": 16
+      },
+      "inputs": [
+        {
+          "itemId": "gem_nugget_xs",
+          "quantity": 2
+        }
+      ],
+      "outputs": [
+        {
+          "itemId": "gem_nugget_s",
+          "quantity": 1
+        }
+      ],
+      "station": null,
+      "unlockCondition": null,
+      "enabled": true
+    },
+    "gem_nugget_m": {
+      "id": "gem_nugget_m",
+      "name": "Gem",
+      "category": "resource",
+      "icon": "💎",
+      "spritePath": "",
+      "atlasSource": "src/spritesheets/items/Crafting Materials Icons.png",
+      "atlasRect": {
+        "x": 464,
+        "y": 512,
+        "width": 16,
+        "height": 16
+      },
+      "inputs": [
+        {
+          "itemId": "gem_nugget_s",
+          "quantity": 2
+        }
+      ],
+      "outputs": [
+        {
+          "itemId": "gem_nugget_m",
+          "quantity": 1
+        }
+      ],
+      "station": null,
+      "unlockCondition": null,
+      "enabled": true
+    },
+    "gem_nugget_l": {
+      "id": "gem_nugget_l",
+      "name": "Gem",
+      "category": "resource",
+      "icon": "💎",
+      "spritePath": "",
+      "atlasSource": "src/spritesheets/items/Crafting Materials Icons.png",
+      "atlasRect": {
+        "x": 480,
+        "y": 512,
+        "width": 16,
+        "height": 16
+      },
+      "inputs": [
+        {
+          "itemId": "gem_nugget_m",
+          "quantity": 2
+        }
+      ],
+      "outputs": [
+        {
+          "itemId": "gem_nugget_l",
+          "quantity": 1
+        }
+      ],
+      "station": null,
+      "unlockCondition": null,
+      "enabled": true
+    },
+    "rare_gem": {
+      "id": "rare_gem",
+      "name": "Gem",
+      "category": "resource",
+      "icon": "💎",
+      "spritePath": "",
+      "atlasSource": "src/spritesheets/items/Crafting Materials Icons.png",
+      "atlasRect": {
+        "x": 496,
+        "y": 512,
+        "width": 16,
+        "height": 16
+      },
+      "inputs": [
+        {
+          "itemId": "gem_nugget_l",
+          "quantity": 2
+        }
+      ],
+      "outputs": [
+        {
+          "itemId": "rare_gem",
+          "quantity": 1
+        }
+      ],
+      "station": null,
+      "unlockCondition": null,
+      "enabled": true
+    },
+    "woodstick": {
+      "id": "woodstick",
+      "name": "Stick",
+      "category": "resource",
+      "icon": "",
+      "spritePath": "",
+      "atlasSource": "src/spritesheets/items/Crafting Materials Icons.png",
+      "atlasRect": {
+        "x": 480,
+        "y": 336,
+        "width": 16,
+        "height": 16
+      },
+      "inputs": [
+        {
+          "itemId": "wood",
+          "quantity": 1
+        }
+      ],
+      "outputs": [
+        {
+          "itemId": "woodstick",
+          "quantity": 2
+        }
+      ],
+      "station": null,
+      "unlockCondition": null,
+      "enabled": true
+    }
+  }
+}

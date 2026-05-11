@@ -1,0 +1,7192 @@
+{
+  "meta": {
+    "tileSize": 16,
+    "sourceAtlas": "All tiles Spring.png",
+    "templateType": "47_tile_autotile",
+    "version": 3,
+    "terrainRoleConvention": {
+      "terrainA": "background / outside terrain",
+      "terrainB": "foreground / patch terrain",
+      "templateIdFormat": "<terrainB>_on_<terrainA>"
+    },
+    "seasonAtlases": {
+      "spring": "src/spritesheets/atlas/All tiles Spring.png",
+      "summer": "src/spritesheets/atlas/All tiles Summer.png",
+      "autumn": "src/spritesheets/atlas/All tiles Autumn.png",
+      "winter": "src/spritesheets/atlas/All tiles Winter.png"
+    },
+    "validationSummary": {
+      "templateCount": 5,
+      "patternsPerTemplate": {
+        "grass_dark_on_grass_light": 47,
+        "water_on_grass_light": 47,
+        "grass_light_on_grass_dark": 47,
+        "sand_on_grass_light": 47,
+        "road_on_grass_light": 47
+      },
+      "allTemplatesComplete47": true,
+      "confirmedPatterns": {
+        "grass_dark_on_grass_light": 47,
+        "water_on_grass_light": 47,
+        "grass_light_on_grass_dark": 47,
+        "sand_on_grass_light": 47,
+        "road_on_grass_light": 47
+      }
+    },
+    "notes": "Grass template payloads are aligned so ids, logical labels, and atlas visuals match. Added sand_on_grass_light and road_on_grass_light templates for procedural terrain patches.",
+    "swappedTemplates": [
+      "grass_dark_on_grass_light",
+      "grass_light_on_grass_dark"
+    ]
+  },
+  "templates": {
+    "grass_dark_on_grass_light": {
+      "id": "grass_light_on_grass_dark",
+      "terrainA": "grass_dark",
+      "terrainB": "grass_light",
+      "description": "Light grass patch transitioning over dark grass. [A/B swapped in v3]",
+      "maskType": "8_neighbor_47",
+      "patterns": {
+        "full": {
+          "id": "full",
+          "label": "Full",
+          "category": "full",
+          "mask": {
+            "topLeft": "A",
+            "top": "A",
+            "topRight": "A",
+            "left": "A",
+            "center": "A",
+            "right": "A",
+            "bottomLeft": "A",
+            "bottom": "A",
+            "bottomRight": "A"
+          },
+          "tile": {
+            "id": "terrain_tile_40_35",
+            "atlas": {
+              "x": 640,
+              "y": 560,
+              "width": 16,
+              "height": 16
+            }
+          },
+          "status": "confirmed",
+          "suggested": false,
+          "unused": false,
+          "transform": null,
+          "terrainA": "grass_dark",
+          "terrainB": "grass_light"
+        },
+        "inner_corner_bottom_left": {
+          "id": "inner_corner_bottom_left",
+          "label": "Inner Corner Bottom Left",
+          "category": "inner_corners",
+          "mask": {
+            "topLeft": "A",
+            "top": "A",
+            "topRight": "A",
+            "left": "A",
+            "center": "A",
+            "right": "A",
+            "bottomLeft": "B",
+            "bottom": "A",
+            "bottomRight": "A"
+          },
+          "tile": {
+            "id": "terrain_tile_37_36",
+            "atlas": {
+              "x": 592,
+              "y": 576,
+              "width": 16,
+              "height": 16
+            }
+          },
+          "status": "confirmed",
+          "suggested": false,
+          "unused": false,
+          "transform": null,
+          "terrainA": "grass_dark",
+          "terrainB": "grass_light"
+        },
+        "inner_corner_bottom_right": {
+          "id": "inner_corner_bottom_right",
+          "label": "Inner Corner Bottom Right",
+          "category": "inner_corners",
+          "mask": {
+            "topLeft": "A",
+            "top": "A",
+            "topRight": "A",
+            "left": "A",
+            "center": "A",
+            "right": "A",
+            "bottomLeft": "A",
+            "bottom": "A",
+            "bottomRight": "B"
+          },
+          "tile": {
+            "id": "terrain_tile_38_36",
+            "atlas": {
+              "x": 608,
+              "y": 576,
+              "width": 16,
+              "height": 16
+            }
+          },
+          "status": "confirmed",
+          "suggested": false,
+          "unused": false,
+          "transform": null,
+          "terrainA": "grass_dark",
+          "terrainB": "grass_light"
+        },
+        "inner_corner_top_left": {
+          "id": "inner_corner_top_left",
+          "label": "Inner Corner Top Left",
+          "category": "inner_corners",
+          "mask": {
+            "topLeft": "B",
+            "top": "A",
+            "topRight": "A",
+            "left": "A",
+            "center": "A",
+            "right": "A",
+            "bottomLeft": "A",
+            "bottom": "A",
+            "bottomRight": "A"
+          },
+          "tile": {
+            "id": "terrain_tile_37_35",
+            "atlas": {
+              "x": 592,
+              "y": 560,
+              "width": 16,
+              "height": 16
+            }
+          },
+          "status": "confirmed",
+          "suggested": false,
+          "unused": false,
+          "transform": null,
+          "terrainA": "grass_dark",
+          "terrainB": "grass_light"
+        },
+        "inner_corner_top_right": {
+          "id": "inner_corner_top_right",
+          "label": "Inner Corner Top Right",
+          "category": "inner_corners",
+          "mask": {
+            "topLeft": "A",
+            "top": "A",
+            "topRight": "B",
+            "left": "A",
+            "center": "A",
+            "right": "A",
+            "bottomLeft": "A",
+            "bottom": "A",
+            "bottomRight": "A"
+          },
+          "tile": {
+            "id": "terrain_tile_38_35",
+            "atlas": {
+              "x": 608,
+              "y": 560,
+              "width": 16,
+              "height": 16
+            }
+          },
+          "status": "confirmed",
+          "suggested": false,
+          "unused": false,
+          "transform": null,
+          "terrainA": "grass_dark",
+          "terrainB": "grass_light"
+        },
+        "edge_bottom_01": {
+          "id": "edge_bottom_01",
+          "label": "Edge Bottom 01",
+          "category": "edges",
+          "mask": {
+            "topLeft": "B",
+            "top": "A",
+            "topRight": "B",
+            "left": "A",
+            "center": "A",
+            "right": "A",
+            "bottomLeft": "B",
+            "bottom": "B",
+            "bottomRight": "B"
+          },
+          "tile": {
+            "id": "terrain_tile_35_7",
+            "atlas": {
+              "x": 560,
+              "y": 112,
+              "width": 16,
+              "height": 16
+            }
+          },
+          "status": "confirmed",
+          "suggested": false,
+          "unused": false,
+          "transform": null,
+          "terrainA": "grass_dark",
+          "terrainB": "grass_light"
+        },
+        "edge_bottom_02": {
+          "id": "edge_bottom_02",
+          "label": "Edge Bottom 02",
+          "category": "edges",
+          "mask": {
+            "topLeft": "B",
+            "top": "A",
+            "topRight": "A",
+            "left": "A",
+            "center": "A",
+            "right": "A",
+            "bottomLeft": "B",
+            "bottom": "B",
+            "bottomRight": "B"
+          },
+          "tile": {
+            "id": "terrain_tile_38_8",
+            "atlas": {
+              "x": 608,
+              "y": 128,
+              "width": 16,
+              "height": 16
+            }
+          },
+          "status": "confirmed",
+          "suggested": false,
+          "unused": false,
+          "transform": null,
+          "terrainA": "grass_dark",
+          "terrainB": "grass_light"
+        },
+        "edge_bottom_03": {
+          "id": "edge_bottom_03",
+          "label": "Edge Bottom 03",
+          "category": "edges",
+          "mask": {
+            "topLeft": "A",
+            "top": "A",
+            "topRight": "B",
+            "left": "A",
+            "center": "A",
+            "right": "A",
+            "bottomLeft": "B",
+            "bottom": "B",
+            "bottomRight": "B"
+          },
+          "tile": {
+            "id": "terrain_tile_39_8",
+            "atlas": {
+              "x": 624,
+              "y": 128,
+              "width": 16,
+              "height": 16
+            }
+          },
+          "status": "confirmed",
+          "suggested": false,
+          "unused": false,
+          "transform": null,
+          "terrainA": "grass_dark",
+          "terrainB": "grass_light"
+        },
+        "edge_bottom_04": {
+          "id": "edge_bottom_04",
+          "label": "Edge Bottom 04",
+          "category": "edges",
+          "mask": {
+            "topLeft": "A",
+            "top": "A",
+            "topRight": "A",
+            "left": "A",
+            "center": "A",
+            "right": "A",
+            "bottomLeft": "B",
+            "bottom": "B",
+            "bottomRight": "B"
+          },
+          "tile": {
+            "id": "terrain_tile_40_36",
+            "atlas": {
+              "x": 640,
+              "y": 576,
+              "width": 16,
+              "height": 16
+            }
+          },
+          "status": "confirmed",
+          "suggested": false,
+          "unused": false,
+          "transform": null,
+          "terrainA": "grass_dark",
+          "terrainB": "grass_light"
+        },
+        "edge_left_01": {
+          "id": "edge_left_01",
+          "label": "Edge Left 01",
+          "category": "edges",
+          "mask": {
+            "topLeft": "B",
+            "top": "A",
+            "topRight": "B",
+            "left": "B",
+            "center": "A",
+            "right": "A",
+            "bottomLeft": "B",
+            "bottom": "A",
+            "bottomRight": "B"
+          },
+          "tile": {
+            "id": "terrain_tile_34_6",
+            "atlas": {
+              "x": 544,
+              "y": 96,
+              "width": 16,
+              "height": 16
+            }
+          },
+          "status": "confirmed",
+          "suggested": false,
+          "unused": false,
+          "transform": null,
+          "terrainA": "grass_dark",
+          "terrainB": "grass_light"
+        },
+        "edge_left_02": {
+          "id": "edge_left_02",
+          "label": "Edge Left 02",
+          "category": "edges",
+          "mask": {
+            "topLeft": "B",
+            "top": "A",
+            "topRight": "B",
+            "left": "B",
+            "center": "A",
+            "right": "A",
+            "bottomLeft": "B",
+            "bottom": "A",
+            "bottomRight": "A"
+          },
+          "tile": {
+            "id": "terrain_tile_37_6",
+            "atlas": {
+              "x": 592,
+              "y": 96,
+              "width": 16,
+              "height": 16
+            }
+          },
+          "status": "confirmed",
+          "suggested": false,
+          "unused": false,
+          "transform": null,
+          "terrainA": "grass_dark",
+          "terrainB": "grass_light"
+        },
+        "edge_left_03": {
+          "id": "edge_left_03",
+          "label": "Edge Left 03",
+          "category": "edges",
+          "mask": {
+            "topLeft": "B",
+            "top": "A",
+            "topRight": "A",
+            "left": "B",
+            "center": "A",
+            "right": "A",
+            "bottomLeft": "B",
+            "bottom": "A",
+            "bottomRight": "B"
+          },
+          "tile": {
+            "id": "terrain_tile_37_7",
+            "atlas": {
+              "x": 592,
+              "y": 112,
+              "width": 16,
+              "height": 16
+            }
+          },
+          "status": "confirmed",
+          "suggested": false,
+          "unused": false,
+          "transform": null,
+          "terrainA": "grass_dark",
+          "terrainB": "grass_light"
+        },
+        "edge_left_04": {
+          "id": "edge_left_04",
+          "label": "Edge Left 04",
+          "category": "edges",
+          "mask": {
+            "topLeft": "B",
+            "top": "A",
+            "topRight": "A",
+            "left": "B",
+            "center": "A",
+            "right": "A",
+            "bottomLeft": "B",
+            "bottom": "A",
+            "bottomRight": "A"
+          },
+          "tile": {
+            "id": "terrain_tile_39_35",
+            "atlas": {
+              "x": 624,
+              "y": 560,
+              "width": 16,
+              "height": 16
+            }
+          },
+          "status": "confirmed",
+          "suggested": false,
+          "unused": false,
+          "transform": null,
+          "terrainA": "grass_dark",
+          "terrainB": "grass_light"
+        },
+        "edge_right_01": {
+          "id": "edge_right_01",
+          "label": "Edge Right 01",
+          "category": "edges",
+          "mask": {
+            "topLeft": "B",
+            "top": "A",
+            "topRight": "B",
+            "left": "A",
+            "center": "A",
+            "right": "B",
+            "bottomLeft": "B",
+            "bottom": "A",
+            "bottomRight": "B"
+          },
+          "tile": {
+            "id": "terrain_tile_36_6",
+            "atlas": {
+              "x": 576,
+              "y": 96,
+              "width": 16,
+              "height": 16
+            }
+          },
+          "status": "confirmed",
+          "suggested": false,
+          "unused": false,
+          "transform": null,
+          "terrainA": "grass_dark",
+          "terrainB": "grass_light"
+        },
+        "edge_right_02": {
+          "id": "edge_right_02",
+          "label": "Edge Right 02",
+          "category": "edges",
+          "mask": {
+            "topLeft": "B",
+            "top": "A",
+            "topRight": "B",
+            "left": "A",
+            "center": "A",
+            "right": "B",
+            "bottomLeft": "A",
+            "bottom": "A",
+            "bottomRight": "B"
+          },
+          "tile": {
+            "id": "terrain_tile_40_6",
+            "atlas": {
+              "x": 640,
+              "y": 96,
+              "width": 16,
+              "height": 16
+            }
+          },
+          "status": "confirmed",
+          "suggested": false,
+          "unused": false,
+          "transform": null,
+          "terrainA": "grass_dark",
+          "terrainB": "grass_light"
+        },
+        "edge_right_03": {
+          "id": "edge_right_03",
+          "label": "Edge Right 03",
+          "category": "edges",
+          "mask": {
+            "topLeft": "A",
+            "top": "A",
+            "topRight": "B",
+            "left": "A",
+            "center": "A",
+            "right": "B",
+            "bottomLeft": "B",
+            "bottom": "A",
+            "bottomRight": "B"
+          },
+          "tile": {
+            "id": "terrain_tile_40_7",
+            "atlas": {
+              "x": 640,
+              "y": 112,
+              "width": 16,
+              "height": 16
+            }
+          },
+          "status": "confirmed",
+          "suggested": false,
+          "unused": false,
+          "transform": null,
+          "terrainA": "grass_dark",
+          "terrainB": "grass_light"
+        },
+        "edge_right_04": {
+          "id": "edge_right_04",
+          "label": "Edge Right 04",
+          "category": "edges",
+          "mask": {
+            "topLeft": "A",
+            "top": "A",
+            "topRight": "B",
+            "left": "A",
+            "center": "A",
+            "right": "B",
+            "bottomLeft": "A",
+            "bottom": "A",
+            "bottomRight": "B"
+          },
+          "tile": {
+            "id": "terrain_tile_41_35",
+            "atlas": {
+              "x": 656,
+              "y": 560,
+              "width": 16,
+              "height": 16
+            }
+          },
+          "status": "confirmed",
+          "suggested": false,
+          "unused": false,
+          "transform": null,
+          "terrainA": "grass_dark",
+          "terrainB": "grass_light"
+        },
+        "edge_top_01": {
+          "id": "edge_top_01",
+          "label": "Edge Top 01",
+          "category": "edges",
+          "mask": {
+            "topLeft": "B",
+            "top": "B",
+            "topRight": "B",
+            "left": "A",
+            "center": "A",
+            "right": "A",
+            "bottomLeft": "B",
+            "bottom": "A",
+            "bottomRight": "B"
+          },
+          "tile": {
+            "id": "terrain_tile_35_5",
+            "atlas": {
+              "x": 560,
+              "y": 80,
+              "width": 16,
+              "height": 16
+            }
+          },
+          "status": "confirmed",
+          "suggested": false,
+          "unused": false,
+          "transform": null,
+          "terrainA": "grass_dark",
+          "terrainB": "grass_light"
+        },
+        "edge_top_02": {
+          "id": "edge_top_02",
+          "label": "Edge Top 02",
+          "category": "edges",
+          "mask": {
+            "topLeft": "B",
+            "top": "B",
+            "topRight": "B",
+            "left": "A",
+            "center": "A",
+            "right": "A",
+            "bottomLeft": "B",
+            "bottom": "A",
+            "bottomRight": "A"
+          },
+          "tile": {
+            "id": "terrain_tile_38_5",
+            "atlas": {
+              "x": 608,
+              "y": 80,
+              "width": 16,
+              "height": 16
+            }
+          },
+          "status": "confirmed",
+          "suggested": false,
+          "unused": false,
+          "transform": null,
+          "terrainA": "grass_dark",
+          "terrainB": "grass_light"
+        },
+        "edge_top_03": {
+          "id": "edge_top_03",
+          "label": "Edge Top 03",
+          "category": "edges",
+          "mask": {
+            "topLeft": "B",
+            "top": "B",
+            "topRight": "B",
+            "left": "A",
+            "center": "A",
+            "right": "A",
+            "bottomLeft": "A",
+            "bottom": "A",
+            "bottomRight": "B"
+          },
+          "tile": {
+            "id": "terrain_tile_39_5",
+            "atlas": {
+              "x": 624,
+              "y": 80,
+              "width": 16,
+              "height": 16
+            }
+          },
+          "status": "confirmed",
+          "suggested": false,
+          "unused": false,
+          "transform": null,
+          "terrainA": "grass_dark",
+          "terrainB": "grass_light"
+        },
+        "edge_top_04": {
+          "id": "edge_top_04",
+          "label": "Edge Top 04",
+          "category": "edges",
+          "mask": {
+            "topLeft": "B",
+            "top": "B",
+            "topRight": "B",
+            "left": "A",
+            "center": "A",
+            "right": "A",
+            "bottomLeft": "A",
+            "bottom": "A",
+            "bottomRight": "A"
+          },
+          "tile": {
+            "id": "terrain_tile_40_34",
+            "atlas": {
+              "x": 640,
+              "y": 544,
+              "width": 16,
+              "height": 16
+            }
+          },
+          "status": "confirmed",
+          "suggested": false,
+          "unused": false,
+          "transform": null,
+          "terrainA": "grass_dark",
+          "terrainB": "grass_light"
+        },
+        "outer_corner_bottom_left_01": {
+          "id": "outer_corner_bottom_left_01",
+          "label": "Outer Corner Bottom Left 01",
+          "category": "outer_corners",
+          "mask": {
+            "topLeft": "B",
+            "top": "B",
+            "topRight": "B",
+            "left": "A",
+            "center": "A",
+            "right": "B",
+            "bottomLeft": "B",
+            "bottom": "A",
+            "bottomRight": "B"
+          },
+          "tile": {
+            "id": "terrain_tile_36_5",
+            "atlas": {
+              "x": 576,
+              "y": 80,
+              "width": 16,
+              "height": 16
+            }
+          },
+          "status": "confirmed",
+          "suggested": false,
+          "unused": false,
+          "transform": null,
+          "terrainA": "grass_dark",
+          "terrainB": "grass_light"
+        },
+        "outer_corner_bottom_left_02": {
+          "id": "outer_corner_bottom_left_02",
+          "label": "Outer Corner Bottom Left 02",
+          "category": "outer_corners",
+          "mask": {
+            "topLeft": "B",
+            "top": "B",
+            "topRight": "B",
+            "left": "A",
+            "center": "A",
+            "right": "B",
+            "bottomLeft": "A",
+            "bottom": "A",
+            "bottomRight": "B"
+          },
+          "tile": {
+            "id": "terrain_tile_44_5",
+            "atlas": {
+              "x": 704,
+              "y": 80,
+              "width": 16,
+              "height": 16
+            }
+          },
+          "status": "confirmed",
+          "suggested": false,
+          "unused": false,
+          "transform": null,
+          "terrainA": "grass_dark",
+          "terrainB": "grass_light"
+        },
+        "outer_corner_bottom_right_01": {
+          "id": "outer_corner_bottom_right_01",
+          "label": "Outer Corner Bottom Right 01",
+          "category": "outer_corners",
+          "mask": {
+            "topLeft": "B",
+            "top": "B",
+            "topRight": "B",
+            "left": "B",
+            "center": "A",
+            "right": "A",
+            "bottomLeft": "B",
+            "bottom": "A",
+            "bottomRight": "B"
+          },
+          "tile": {
+            "id": "terrain_tile_34_5",
+            "atlas": {
+              "x": 544,
+              "y": 80,
+              "width": 16,
+              "height": 16
+            }
+          },
+          "status": "confirmed",
+          "suggested": false,
+          "unused": false,
+          "transform": null,
+          "terrainA": "grass_dark",
+          "terrainB": "grass_light"
+        },
+        "outer_corner_bottom_right_02": {
+          "id": "outer_corner_bottom_right_02",
+          "label": "Outer Corner Bottom Right 02",
+          "category": "outer_corners",
+          "mask": {
+            "topLeft": "B",
+            "top": "B",
+            "topRight": "B",
+            "left": "B",
+            "center": "A",
+            "right": "A",
+            "bottomLeft": "B",
+            "bottom": "A",
+            "bottomRight": "A"
+          },
+          "tile": {
+            "id": "terrain_tile_41_5",
+            "atlas": {
+              "x": 656,
+              "y": 80,
+              "width": 16,
+              "height": 16
+            }
+          },
+          "status": "confirmed",
+          "suggested": false,
+          "unused": false,
+          "transform": null,
+          "terrainA": "grass_dark",
+          "terrainB": "grass_light"
+        },
+        "outer_corner_top_left_01": {
+          "id": "outer_corner_top_left_01",
+          "label": "Outer Corner Top Left 01",
+          "category": "outer_corners",
+          "mask": {
+            "topLeft": "B",
+            "top": "A",
+            "topRight": "B",
+            "left": "A",
+            "center": "A",
+            "right": "B",
+            "bottomLeft": "B",
+            "bottom": "B",
+            "bottomRight": "B"
+          },
+          "tile": {
+            "id": "terrain_tile_36_7",
+            "atlas": {
+              "x": 576,
+              "y": 112,
+              "width": 16,
+              "height": 16
+            }
+          },
+          "status": "confirmed",
+          "suggested": false,
+          "unused": false,
+          "transform": null,
+          "terrainA": "grass_dark",
+          "terrainB": "grass_light"
+        },
+        "outer_corner_top_left_02": {
+          "id": "outer_corner_top_left_02",
+          "label": "Outer Corner Top Left 02",
+          "category": "outer_corners",
+          "mask": {
+            "topLeft": "A",
+            "top": "A",
+            "topRight": "B",
+            "left": "A",
+            "center": "A",
+            "right": "B",
+            "bottomLeft": "B",
+            "bottom": "B",
+            "bottomRight": "B"
+          },
+          "tile": {
+            "id": "terrain_tile_44_8",
+            "atlas": {
+              "x": 704,
+              "y": 128,
+              "width": 16,
+              "height": 16
+            }
+          },
+          "status": "confirmed",
+          "suggested": false,
+          "unused": false,
+          "transform": null,
+          "terrainA": "grass_dark",
+          "terrainB": "grass_light"
+        },
+        "outer_corner_top_right_01": {
+          "id": "outer_corner_top_right_01",
+          "label": "Outer Corner Top Right 01",
+          "category": "outer_corners",
+          "mask": {
+            "topLeft": "B",
+            "top": "A",
+            "topRight": "B",
+            "left": "B",
+            "center": "A",
+            "right": "A",
+            "bottomLeft": "B",
+            "bottom": "B",
+            "bottomRight": "B"
+          },
+          "tile": {
+            "id": "terrain_tile_34_7",
+            "atlas": {
+              "x": 544,
+              "y": 112,
+              "width": 16,
+              "height": 16
+            }
+          },
+          "status": "confirmed",
+          "suggested": false,
+          "unused": false,
+          "transform": null,
+          "terrainA": "grass_dark",
+          "terrainB": "grass_light"
+        },
+        "outer_corner_top_right_02": {
+          "id": "outer_corner_top_right_02",
+          "label": "Outer Corner Top Right 02",
+          "category": "outer_corners",
+          "mask": {
+            "topLeft": "B",
+            "top": "A",
+            "topRight": "A",
+            "left": "B",
+            "center": "A",
+            "right": "A",
+            "bottomLeft": "B",
+            "bottom": "B",
+            "bottomRight": "B"
+          },
+          "tile": {
+            "id": "terrain_tile_41_8",
+            "atlas": {
+              "x": 656,
+              "y": 128,
+              "width": 16,
+              "height": 16
+            }
+          },
+          "status": "confirmed",
+          "suggested": false,
+          "unused": false,
+          "transform": null,
+          "terrainA": "grass_dark",
+          "terrainB": "grass_light"
+        },
+        "corridor_horizontal": {
+          "id": "corridor_horizontal",
+          "label": "Corridor Horizontal",
+          "category": "corridors",
+          "mask": {
+            "topLeft": "B",
+            "top": "B",
+            "topRight": "B",
+            "left": "A",
+            "center": "A",
+            "right": "A",
+            "bottomLeft": "B",
+            "bottom": "B",
+            "bottomRight": "B"
+          },
+          "tile": {
+            "id": "terrain_tile_35_8",
+            "atlas": {
+              "x": 560,
+              "y": 128,
+              "width": 16,
+              "height": 16
+            }
+          },
+          "status": "confirmed",
+          "suggested": false,
+          "unused": false,
+          "transform": null,
+          "terrainA": "grass_dark",
+          "terrainB": "grass_light"
+        },
+        "corridor_vertical": {
+          "id": "corridor_vertical",
+          "label": "Corridor Vertical",
+          "category": "corridors",
+          "mask": {
+            "topLeft": "B",
+            "top": "A",
+            "topRight": "B",
+            "left": "B",
+            "center": "A",
+            "right": "B",
+            "bottomLeft": "B",
+            "bottom": "A",
+            "bottomRight": "B"
+          },
+          "tile": {
+            "id": "terrain_tile_33_6",
+            "atlas": {
+              "x": 528,
+              "y": 96,
+              "width": 16,
+              "height": 16
+            }
+          },
+          "status": "confirmed",
+          "suggested": false,
+          "unused": false,
+          "transform": null,
+          "terrainA": "grass_dark",
+          "terrainB": "grass_light"
+        },
+        "side_bottom": {
+          "id": "side_bottom",
+          "label": "Side Bottom",
+          "category": "sides",
+          "mask": {
+            "topLeft": "B",
+            "top": "B",
+            "topRight": "B",
+            "left": "B",
+            "center": "A",
+            "right": "B",
+            "bottomLeft": "B",
+            "bottom": "A",
+            "bottomRight": "B"
+          },
+          "tile": {
+            "id": "terrain_tile_33_5",
+            "atlas": {
+              "x": 528,
+              "y": 80,
+              "width": 16,
+              "height": 16
+            }
+          },
+          "status": "confirmed",
+          "suggested": false,
+          "unused": false,
+          "transform": null,
+          "terrainA": "grass_dark",
+          "terrainB": "grass_light"
+        },
+        "side_left": {
+          "id": "side_left",
+          "label": "Side Left",
+          "category": "sides",
+          "mask": {
+            "topLeft": "B",
+            "top": "B",
+            "topRight": "B",
+            "left": "A",
+            "center": "A",
+            "right": "B",
+            "bottomLeft": "B",
+            "bottom": "B",
+            "bottomRight": "B"
+          },
+          "tile": {
+            "id": "terrain_tile_36_8",
+            "atlas": {
+              "x": 576,
+              "y": 128,
+              "width": 16,
+              "height": 16
+            }
+          },
+          "status": "confirmed",
+          "suggested": false,
+          "unused": false,
+          "transform": null,
+          "terrainA": "grass_dark",
+          "terrainB": "grass_light"
+        },
+        "side_right": {
+          "id": "side_right",
+          "label": "Side Right",
+          "category": "sides",
+          "mask": {
+            "topLeft": "B",
+            "top": "B",
+            "topRight": "B",
+            "left": "B",
+            "center": "A",
+            "right": "A",
+            "bottomLeft": "B",
+            "bottom": "B",
+            "bottomRight": "B"
+          },
+          "tile": {
+            "id": "terrain_tile_34_8",
+            "atlas": {
+              "x": 544,
+              "y": 128,
+              "width": 16,
+              "height": 16
+            }
+          },
+          "status": "confirmed",
+          "suggested": false,
+          "unused": false,
+          "transform": null,
+          "terrainA": "grass_dark",
+          "terrainB": "grass_light"
+        },
+        "side_top": {
+          "id": "side_top",
+          "label": "Side Top",
+          "category": "sides",
+          "mask": {
+            "topLeft": "B",
+            "top": "A",
+            "topRight": "B",
+            "left": "B",
+            "center": "A",
+            "right": "B",
+            "bottomLeft": "B",
+            "bottom": "B",
+            "bottomRight": "B"
+          },
+          "tile": {
+            "id": "terrain_tile_33_7",
+            "atlas": {
+              "x": 528,
+              "y": 112,
+              "width": 16,
+              "height": 16
+            }
+          },
+          "status": "confirmed",
+          "suggested": false,
+          "unused": false,
+          "transform": null,
+          "terrainA": "grass_dark",
+          "terrainB": "grass_light"
+        },
+        "isolated": {
+          "id": "isolated",
+          "label": "Isolated",
+          "category": "isolated",
+          "mask": {
+            "topLeft": "B",
+            "top": "B",
+            "topRight": "B",
+            "left": "B",
+            "center": "A",
+            "right": "B",
+            "bottomLeft": "B",
+            "bottom": "B",
+            "bottomRight": "B"
+          },
+          "tile": {
+            "id": "terrain_tile_33_8",
+            "atlas": {
+              "x": 528,
+              "y": 128,
+              "width": 16,
+              "height": 16
+            }
+          },
+          "status": "confirmed",
+          "suggested": false,
+          "unused": false,
+          "transform": null,
+          "terrainA": "grass_dark",
+          "terrainB": "grass_light"
+        },
+        "complex_core_01": {
+          "id": "complex_core_01",
+          "label": "Complex Core 01",
+          "category": "complex",
+          "mask": {
+            "topLeft": "B",
+            "top": "A",
+            "topRight": "B",
+            "left": "A",
+            "center": "A",
+            "right": "A",
+            "bottomLeft": "B",
+            "bottom": "A",
+            "bottomRight": "B"
+          },
+          "tile": {
+            "id": "terrain_tile_35_6",
+            "atlas": {
+              "x": 560,
+              "y": 96,
+              "width": 16,
+              "height": 16
+            }
+          },
+          "status": "confirmed",
+          "suggested": false,
+          "unused": false,
+          "transform": null,
+          "terrainA": "grass_dark",
+          "terrainB": "grass_light"
+        },
+        "complex_core_02": {
+          "id": "complex_core_02",
+          "label": "Complex Core 02",
+          "category": "complex",
+          "mask": {
+            "topLeft": "B",
+            "top": "A",
+            "topRight": "B",
+            "left": "A",
+            "center": "A",
+            "right": "A",
+            "bottomLeft": "B",
+            "bottom": "A",
+            "bottomRight": "A"
+          },
+          "tile": {
+            "id": "terrain_tile_40_8",
+            "atlas": {
+              "x": 640,
+              "y": 128,
+              "width": 16,
+              "height": 16
+            }
+          },
+          "status": "confirmed",
+          "suggested": false,
+          "unused": false,
+          "transform": null,
+          "terrainA": "grass_dark",
+          "terrainB": "grass_light"
+        },
+        "complex_core_03": {
+          "id": "complex_core_03",
+          "label": "Complex Core 03",
+          "category": "complex",
+          "mask": {
+            "topLeft": "B",
+            "top": "A",
+            "topRight": "B",
+            "left": "A",
+            "center": "A",
+            "right": "A",
+            "bottomLeft": "A",
+            "bottom": "A",
+            "bottomRight": "B"
+          },
+          "tile": {
+            "id": "terrain_tile_37_8",
+            "atlas": {
+              "x": 592,
+              "y": 128,
+              "width": 16,
+              "height": 16
+            }
+          },
+          "status": "confirmed",
+          "suggested": false,
+          "unused": false,
+          "transform": null,
+          "terrainA": "grass_dark",
+          "terrainB": "grass_light"
+        },
+        "complex_core_04": {
+          "id": "complex_core_04",
+          "label": "Complex Core 04",
+          "category": "complex",
+          "mask": {
+            "topLeft": "B",
+            "top": "A",
+            "topRight": "B",
+            "left": "A",
+            "center": "A",
+            "right": "A",
+            "bottomLeft": "A",
+            "bottom": "A",
+            "bottomRight": "A"
+          },
+          "tile": {
+            "id": "terrain_tile_42_5",
+            "atlas": {
+              "x": 672,
+              "y": 80,
+              "width": 16,
+              "height": 16
+            }
+          },
+          "status": "confirmed",
+          "suggested": false,
+          "unused": false,
+          "transform": null,
+          "terrainA": "grass_dark",
+          "terrainB": "grass_light"
+        },
+        "complex_core_05": {
+          "id": "complex_core_05",
+          "label": "Complex Core 05",
+          "category": "complex",
+          "mask": {
+            "topLeft": "B",
+            "top": "A",
+            "topRight": "A",
+            "left": "A",
+            "center": "A",
+            "right": "A",
+            "bottomLeft": "B",
+            "bottom": "A",
+            "bottomRight": "B"
+          },
+          "tile": {
+            "id": "terrain_tile_40_5",
+            "atlas": {
+              "x": 640,
+              "y": 80,
+              "width": 16,
+              "height": 16
+            }
+          },
+          "status": "confirmed",
+          "suggested": false,
+          "unused": false,
+          "transform": null,
+          "terrainA": "grass_dark",
+          "terrainB": "grass_light"
+        },
+        "complex_core_06": {
+          "id": "complex_core_06",
+          "label": "Complex Core 06",
+          "category": "complex",
+          "mask": {
+            "topLeft": "B",
+            "top": "A",
+            "topRight": "A",
+            "left": "A",
+            "center": "A",
+            "right": "A",
+            "bottomLeft": "B",
+            "bottom": "A",
+            "bottomRight": "A"
+          },
+          "tile": {
+            "id": "terrain_tile_41_7",
+            "atlas": {
+              "x": 656,
+              "y": 112,
+              "width": 16,
+              "height": 16
+            }
+          },
+          "status": "confirmed",
+          "suggested": false,
+          "unused": false,
+          "transform": null,
+          "terrainA": "grass_dark",
+          "terrainB": "grass_light"
+        },
+        "complex_core_07": {
+          "id": "complex_core_07",
+          "label": "Complex Core 07",
+          "category": "complex",
+          "mask": {
+            "topLeft": "B",
+            "top": "A",
+            "topRight": "A",
+            "left": "A",
+            "center": "A",
+            "right": "A",
+            "bottomLeft": "A",
+            "bottom": "A",
+            "bottomRight": "B"
+          },
+          "tile": {
+            "id": "terrain_tile_42_6",
+            "atlas": {
+              "x": 672,
+              "y": 96,
+              "width": 16,
+              "height": 16
+            }
+          },
+          "status": "confirmed",
+          "suggested": false,
+          "unused": false,
+          "transform": null,
+          "terrainA": "grass_dark",
+          "terrainB": "grass_light"
+        },
+        "complex_core_08": {
+          "id": "complex_core_08",
+          "label": "Complex Core 08",
+          "category": "complex",
+          "mask": {
+            "topLeft": "A",
+            "top": "A",
+            "topRight": "B",
+            "left": "A",
+            "center": "A",
+            "right": "A",
+            "bottomLeft": "B",
+            "bottom": "A",
+            "bottomRight": "B"
+          },
+          "tile": {
+            "id": "terrain_tile_37_5",
+            "atlas": {
+              "x": 592,
+              "y": 80,
+              "width": 16,
+              "height": 16
+            }
+          },
+          "status": "confirmed",
+          "suggested": false,
+          "unused": false,
+          "transform": null,
+          "terrainA": "grass_dark",
+          "terrainB": "grass_light"
+        },
+        "complex_core_09": {
+          "id": "complex_core_09",
+          "label": "Complex Core 09",
+          "category": "complex",
+          "mask": {
+            "topLeft": "A",
+            "top": "A",
+            "topRight": "B",
+            "left": "A",
+            "center": "A",
+            "right": "A",
+            "bottomLeft": "B",
+            "bottom": "A",
+            "bottomRight": "A"
+          },
+          "tile": {
+            "id": "terrain_tile_43_7",
+            "atlas": {
+              "x": 688,
+              "y": 112,
+              "width": 16,
+              "height": 16
+            }
+          },
+          "status": "confirmed",
+          "suggested": false,
+          "unused": false,
+          "transform": null,
+          "terrainA": "grass_dark",
+          "terrainB": "grass_light"
+        },
+        "complex_core_10": {
+          "id": "complex_core_10",
+          "label": "Complex Core 10",
+          "category": "complex",
+          "mask": {
+            "topLeft": "A",
+            "top": "A",
+            "topRight": "B",
+            "left": "A",
+            "center": "A",
+            "right": "A",
+            "bottomLeft": "A",
+            "bottom": "A",
+            "bottomRight": "B"
+          },
+          "tile": {
+            "id": "terrain_tile_44_6",
+            "atlas": {
+              "x": 704,
+              "y": 96,
+              "width": 16,
+              "height": 16
+            }
+          },
+          "status": "confirmed",
+          "suggested": false,
+          "unused": false,
+          "transform": null,
+          "terrainA": "grass_dark",
+          "terrainB": "grass_light"
+        },
+        "complex_core_11": {
+          "id": "complex_core_11",
+          "label": "Complex Core 11",
+          "category": "complex",
+          "mask": {
+            "topLeft": "A",
+            "top": "A",
+            "topRight": "A",
+            "left": "A",
+            "center": "A",
+            "right": "A",
+            "bottomLeft": "B",
+            "bottom": "A",
+            "bottomRight": "B"
+          },
+          "tile": {
+            "id": "terrain_tile_43_8",
+            "atlas": {
+              "x": 688,
+              "y": 128,
+              "width": 16,
+              "height": 16
+            }
+          },
+          "status": "confirmed",
+          "suggested": false,
+          "unused": false,
+          "transform": null,
+          "terrainA": "grass_dark",
+          "terrainB": "grass_light"
+        }
+      },
+      "backgroundTerrain": "grass_dark",
+      "foregroundTerrain": "grass_light"
+    },
+    "water_on_grass_light": {
+      "id": "water_on_grass_light",
+      "terrainA": "grass_light",
+      "terrainB": "water",
+      "description": "Water patch transitioning over light grass.",
+      "maskType": "8_neighbor_47",
+      "patterns": {
+        "full": {
+          "id": "full",
+          "label": "Full",
+          "category": "full",
+          "mask": {
+            "topLeft": "B",
+            "top": "B",
+            "topRight": "B",
+            "left": "B",
+            "center": "B",
+            "right": "B",
+            "bottomLeft": "B",
+            "bottom": "B",
+            "bottomRight": "B"
+          },
+          "tile": {
+            "id": "terrain_tile_40_26",
+            "atlas": {
+              "x": 640,
+              "y": 416,
+              "width": 16,
+              "height": 16
+            }
+          },
+          "status": "confirmed",
+          "suggested": false,
+          "unused": false,
+          "transform": null,
+          "terrainA": "grass_light",
+          "terrainB": "water"
+        },
+        "inner_corner_bottom_left": {
+          "id": "inner_corner_bottom_left",
+          "label": "Inner Corner Bottom Left",
+          "category": "inner_corners",
+          "mask": {
+            "topLeft": "B",
+            "top": "B",
+            "topRight": "B",
+            "left": "B",
+            "center": "B",
+            "right": "B",
+            "bottomLeft": "A",
+            "bottom": "B",
+            "bottomRight": "B"
+          },
+          "tile": {
+            "id": "terrain_tile_37_27",
+            "atlas": {
+              "x": 592,
+              "y": 432,
+              "width": 16,
+              "height": 16
+            }
+          },
+          "status": "confirmed",
+          "suggested": false,
+          "unused": false,
+          "transform": null,
+          "terrainA": "grass_light",
+          "terrainB": "water"
+        },
+        "inner_corner_bottom_right": {
+          "id": "inner_corner_bottom_right",
+          "label": "Inner Corner Bottom Right",
+          "category": "inner_corners",
+          "mask": {
+            "topLeft": "B",
+            "top": "B",
+            "topRight": "B",
+            "left": "B",
+            "center": "B",
+            "right": "B",
+            "bottomLeft": "B",
+            "bottom": "B",
+            "bottomRight": "A"
+          },
+          "tile": {
+            "id": "terrain_tile_38_27",
+            "atlas": {
+              "x": 608,
+              "y": 432,
+              "width": 16,
+              "height": 16
+            }
+          },
+          "status": "confirmed",
+          "suggested": false,
+          "unused": false,
+          "transform": null,
+          "terrainA": "grass_light",
+          "terrainB": "water"
+        },
+        "inner_corner_top_left": {
+          "id": "inner_corner_top_left",
+          "label": "Inner Corner Top Left",
+          "category": "inner_corners",
+          "mask": {
+            "topLeft": "A",
+            "top": "B",
+            "topRight": "B",
+            "left": "B",
+            "center": "B",
+            "right": "B",
+            "bottomLeft": "B",
+            "bottom": "B",
+            "bottomRight": "B"
+          },
+          "tile": {
+            "id": "terrain_tile_37_26",
+            "atlas": {
+              "x": 592,
+              "y": 416,
+              "width": 16,
+              "height": 16
+            }
+          },
+          "status": "confirmed",
+          "suggested": false,
+          "unused": false,
+          "transform": null,
+          "terrainA": "grass_light",
+          "terrainB": "water"
+        },
+        "inner_corner_top_right": {
+          "id": "inner_corner_top_right",
+          "label": "Inner Corner Top Right",
+          "category": "inner_corners",
+          "mask": {
+            "topLeft": "B",
+            "top": "B",
+            "topRight": "A",
+            "left": "B",
+            "center": "B",
+            "right": "B",
+            "bottomLeft": "B",
+            "bottom": "B",
+            "bottomRight": "B"
+          },
+          "tile": {
+            "id": "terrain_tile_38_26",
+            "atlas": {
+              "x": 608,
+              "y": 416,
+              "width": 16,
+              "height": 16
+            }
+          },
+          "status": "confirmed",
+          "suggested": false,
+          "unused": false,
+          "transform": null,
+          "terrainA": "grass_light",
+          "terrainB": "water"
+        },
+        "edge_bottom_01": {
+          "id": "edge_bottom_01",
+          "label": "Edge Bottom 01",
+          "category": "edges",
+          "mask": {
+            "topLeft": "A",
+            "top": "B",
+            "topRight": "A",
+            "left": "B",
+            "center": "B",
+            "right": "B",
+            "bottomLeft": "A",
+            "bottom": "A",
+            "bottomRight": "A"
+          },
+          "tile": {
+            "id": "terrain_tile_47_15",
+            "atlas": {
+              "x": 752,
+              "y": 240,
+              "width": 16,
+              "height": 16
+            }
+          },
+          "status": "confirmed",
+          "suggested": false,
+          "unused": false,
+          "transform": null,
+          "terrainA": "grass_light",
+          "terrainB": "water"
+        },
+        "edge_bottom_02": {
+          "id": "edge_bottom_02",
+          "label": "Edge Bottom 02",
+          "category": "edges",
+          "mask": {
+            "topLeft": "A",
+            "top": "B",
+            "topRight": "B",
+            "left": "B",
+            "center": "B",
+            "right": "B",
+            "bottomLeft": "A",
+            "bottom": "A",
+            "bottomRight": "A"
+          },
+          "tile": {
+            "id": "terrain_tile_50_16",
+            "atlas": {
+              "x": 800,
+              "y": 256,
+              "width": 16,
+              "height": 16
+            }
+          },
+          "status": "confirmed",
+          "suggested": false,
+          "unused": false,
+          "transform": null,
+          "terrainA": "grass_light",
+          "terrainB": "water"
+        },
+        "edge_bottom_03": {
+          "id": "edge_bottom_03",
+          "label": "Edge Bottom 03",
+          "category": "edges",
+          "mask": {
+            "topLeft": "B",
+            "top": "B",
+            "topRight": "A",
+            "left": "B",
+            "center": "B",
+            "right": "B",
+            "bottomLeft": "A",
+            "bottom": "A",
+            "bottomRight": "A"
+          },
+          "tile": {
+            "id": "terrain_tile_51_16",
+            "atlas": {
+              "x": 816,
+              "y": 256,
+              "width": 16,
+              "height": 16
+            }
+          },
+          "status": "confirmed",
+          "suggested": false,
+          "unused": false,
+          "transform": null,
+          "terrainA": "grass_light",
+          "terrainB": "water"
+        },
+        "edge_bottom_04": {
+          "id": "edge_bottom_04",
+          "label": "Edge Bottom 04",
+          "category": "edges",
+          "mask": {
+            "topLeft": "B",
+            "top": "B",
+            "topRight": "B",
+            "left": "B",
+            "center": "B",
+            "right": "B",
+            "bottomLeft": "A",
+            "bottom": "A",
+            "bottomRight": "A"
+          },
+          "tile": {
+            "id": "terrain_tile_40_27",
+            "atlas": {
+              "x": 640,
+              "y": 432,
+              "width": 16,
+              "height": 16
+            }
+          },
+          "status": "confirmed",
+          "suggested": false,
+          "unused": false,
+          "transform": null,
+          "terrainA": "grass_light",
+          "terrainB": "water"
+        },
+        "edge_left_01": {
+          "id": "edge_left_01",
+          "label": "Edge Left 01",
+          "category": "edges",
+          "mask": {
+            "topLeft": "A",
+            "top": "B",
+            "topRight": "A",
+            "left": "A",
+            "center": "B",
+            "right": "B",
+            "bottomLeft": "A",
+            "bottom": "B",
+            "bottomRight": "A"
+          },
+          "tile": {
+            "id": "terrain_tile_46_14",
+            "atlas": {
+              "x": 736,
+              "y": 224,
+              "width": 16,
+              "height": 16
+            }
+          },
+          "status": "confirmed",
+          "suggested": false,
+          "unused": false,
+          "transform": null,
+          "terrainA": "grass_light",
+          "terrainB": "water"
+        },
+        "edge_left_02": {
+          "id": "edge_left_02",
+          "label": "Edge Left 02",
+          "category": "edges",
+          "mask": {
+            "topLeft": "A",
+            "top": "B",
+            "topRight": "A",
+            "left": "A",
+            "center": "B",
+            "right": "B",
+            "bottomLeft": "A",
+            "bottom": "B",
+            "bottomRight": "B"
+          },
+          "tile": {
+            "id": "terrain_tile_49_14",
+            "atlas": {
+              "x": 784,
+              "y": 224,
+              "width": 16,
+              "height": 16
+            }
+          },
+          "status": "confirmed",
+          "suggested": false,
+          "unused": false,
+          "transform": null,
+          "terrainA": "grass_light",
+          "terrainB": "water"
+        },
+        "edge_left_03": {
+          "id": "edge_left_03",
+          "label": "Edge Left 03",
+          "category": "edges",
+          "mask": {
+            "topLeft": "A",
+            "top": "B",
+            "topRight": "B",
+            "left": "A",
+            "center": "B",
+            "right": "B",
+            "bottomLeft": "A",
+            "bottom": "B",
+            "bottomRight": "A"
+          },
+          "tile": {
+            "id": "terrain_tile_49_15",
+            "atlas": {
+              "x": 784,
+              "y": 240,
+              "width": 16,
+              "height": 16
+            }
+          },
+          "status": "confirmed",
+          "suggested": false,
+          "unused": false,
+          "transform": null,
+          "terrainA": "grass_light",
+          "terrainB": "water"
+        },
+        "edge_left_04": {
+          "id": "edge_left_04",
+          "label": "Edge Left 04",
+          "category": "edges",
+          "mask": {
+            "topLeft": "A",
+            "top": "B",
+            "topRight": "B",
+            "left": "A",
+            "center": "B",
+            "right": "B",
+            "bottomLeft": "A",
+            "bottom": "B",
+            "bottomRight": "B"
+          },
+          "tile": {
+            "id": "terrain_tile_39_26",
+            "atlas": {
+              "x": 624,
+              "y": 416,
+              "width": 16,
+              "height": 16
+            }
+          },
+          "status": "confirmed",
+          "suggested": false,
+          "unused": false,
+          "transform": null,
+          "terrainA": "grass_light",
+          "terrainB": "water"
+        },
+        "edge_right_01": {
+          "id": "edge_right_01",
+          "label": "Edge Right 01",
+          "category": "edges",
+          "mask": {
+            "topLeft": "A",
+            "top": "B",
+            "topRight": "A",
+            "left": "B",
+            "center": "B",
+            "right": "A",
+            "bottomLeft": "A",
+            "bottom": "B",
+            "bottomRight": "A"
+          },
+          "tile": {
+            "id": "terrain_tile_48_14",
+            "atlas": {
+              "x": 768,
+              "y": 224,
+              "width": 16,
+              "height": 16
+            }
+          },
+          "status": "confirmed",
+          "suggested": false,
+          "unused": false,
+          "transform": null,
+          "terrainA": "grass_light",
+          "terrainB": "water"
+        },
+        "edge_right_02": {
+          "id": "edge_right_02",
+          "label": "Edge Right 02",
+          "category": "edges",
+          "mask": {
+            "topLeft": "A",
+            "top": "B",
+            "topRight": "A",
+            "left": "B",
+            "center": "B",
+            "right": "A",
+            "bottomLeft": "B",
+            "bottom": "B",
+            "bottomRight": "A"
+          },
+          "tile": {
+            "id": "terrain_tile_52_14",
+            "atlas": {
+              "x": 832,
+              "y": 224,
+              "width": 16,
+              "height": 16
+            }
+          },
+          "status": "confirmed",
+          "suggested": false,
+          "unused": false,
+          "transform": null,
+          "terrainA": "grass_light",
+          "terrainB": "water"
+        },
+        "edge_right_03": {
+          "id": "edge_right_03",
+          "label": "Edge Right 03",
+          "category": "edges",
+          "mask": {
+            "topLeft": "B",
+            "top": "B",
+            "topRight": "A",
+            "left": "B",
+            "center": "B",
+            "right": "A",
+            "bottomLeft": "A",
+            "bottom": "B",
+            "bottomRight": "A"
+          },
+          "tile": {
+            "id": "terrain_tile_52_15",
+            "atlas": {
+              "x": 832,
+              "y": 240,
+              "width": 16,
+              "height": 16
+            }
+          },
+          "status": "confirmed",
+          "suggested": false,
+          "unused": false,
+          "transform": null,
+          "terrainA": "grass_light",
+          "terrainB": "water"
+        },
+        "edge_right_04": {
+          "id": "edge_right_04",
+          "label": "Edge Right 04",
+          "category": "edges",
+          "mask": {
+            "topLeft": "B",
+            "top": "B",
+            "topRight": "A",
+            "left": "B",
+            "center": "B",
+            "right": "A",
+            "bottomLeft": "B",
+            "bottom": "B",
+            "bottomRight": "A"
+          },
+          "tile": {
+            "id": "terrain_tile_41_26",
+            "atlas": {
+              "x": 656,
+              "y": 416,
+              "width": 16,
+              "height": 16
+            }
+          },
+          "status": "confirmed",
+          "suggested": false,
+          "unused": false,
+          "transform": null,
+          "terrainA": "grass_light",
+          "terrainB": "water"
+        },
+        "edge_top_01": {
+          "id": "edge_top_01",
+          "label": "Edge Top 01",
+          "category": "edges",
+          "mask": {
+            "topLeft": "A",
+            "top": "A",
+            "topRight": "A",
+            "left": "B",
+            "center": "B",
+            "right": "B",
+            "bottomLeft": "A",
+            "bottom": "B",
+            "bottomRight": "A"
+          },
+          "tile": {
+            "id": "terrain_tile_47_13",
+            "atlas": {
+              "x": 752,
+              "y": 208,
+              "width": 16,
+              "height": 16
+            }
+          },
+          "status": "confirmed",
+          "suggested": false,
+          "unused": false,
+          "transform": null,
+          "terrainA": "grass_light",
+          "terrainB": "water"
+        },
+        "edge_top_02": {
+          "id": "edge_top_02",
+          "label": "Edge Top 02",
+          "category": "edges",
+          "mask": {
+            "topLeft": "A",
+            "top": "A",
+            "topRight": "A",
+            "left": "B",
+            "center": "B",
+            "right": "B",
+            "bottomLeft": "A",
+            "bottom": "B",
+            "bottomRight": "B"
+          },
+          "tile": {
+            "id": "terrain_tile_50_13",
+            "atlas": {
+              "x": 800,
+              "y": 208,
+              "width": 16,
+              "height": 16
+            }
+          },
+          "status": "confirmed",
+          "suggested": false,
+          "unused": false,
+          "transform": null,
+          "terrainA": "grass_light",
+          "terrainB": "water"
+        },
+        "edge_top_03": {
+          "id": "edge_top_03",
+          "label": "Edge Top 03",
+          "category": "edges",
+          "mask": {
+            "topLeft": "A",
+            "top": "A",
+            "topRight": "A",
+            "left": "B",
+            "center": "B",
+            "right": "B",
+            "bottomLeft": "B",
+            "bottom": "B",
+            "bottomRight": "A"
+          },
+          "tile": {
+            "id": "terrain_tile_51_13",
+            "atlas": {
+              "x": 816,
+              "y": 208,
+              "width": 16,
+              "height": 16
+            }
+          },
+          "status": "confirmed",
+          "suggested": false,
+          "unused": false,
+          "transform": null,
+          "terrainA": "grass_light",
+          "terrainB": "water"
+        },
+        "edge_top_04": {
+          "id": "edge_top_04",
+          "label": "Edge Top 04",
+          "category": "edges",
+          "mask": {
+            "topLeft": "A",
+            "top": "A",
+            "topRight": "A",
+            "left": "B",
+            "center": "B",
+            "right": "B",
+            "bottomLeft": "B",
+            "bottom": "B",
+            "bottomRight": "B"
+          },
+          "tile": {
+            "id": "terrain_tile_40_25",
+            "atlas": {
+              "x": 640,
+              "y": 400,
+              "width": 16,
+              "height": 16
+            }
+          },
+          "status": "confirmed",
+          "suggested": false,
+          "unused": false,
+          "transform": null,
+          "terrainA": "grass_light",
+          "terrainB": "water"
+        },
+        "outer_corner_bottom_left_01": {
+          "id": "outer_corner_bottom_left_01",
+          "label": "Outer Corner Bottom Left 01",
+          "category": "outer_corners",
+          "mask": {
+            "topLeft": "A",
+            "top": "A",
+            "topRight": "A",
+            "left": "B",
+            "center": "B",
+            "right": "A",
+            "bottomLeft": "A",
+            "bottom": "B",
+            "bottomRight": "A"
+          },
+          "tile": {
+            "id": "terrain_tile_48_13",
+            "atlas": {
+              "x": 768,
+              "y": 208,
+              "width": 16,
+              "height": 16
+            }
+          },
+          "status": "confirmed",
+          "suggested": false,
+          "unused": false,
+          "transform": null,
+          "terrainA": "grass_light",
+          "terrainB": "water"
+        },
+        "outer_corner_bottom_left_02": {
+          "id": "outer_corner_bottom_left_02",
+          "label": "Outer Corner Bottom Left 02",
+          "category": "outer_corners",
+          "mask": {
+            "topLeft": "A",
+            "top": "A",
+            "topRight": "A",
+            "left": "B",
+            "center": "B",
+            "right": "A",
+            "bottomLeft": "B",
+            "bottom": "B",
+            "bottomRight": "A"
+          },
+          "tile": {
+            "id": "terrain_tile_56_13",
+            "atlas": {
+              "x": 896,
+              "y": 208,
+              "width": 16,
+              "height": 16
+            }
+          },
+          "status": "confirmed",
+          "suggested": false,
+          "unused": false,
+          "transform": null,
+          "terrainA": "grass_light",
+          "terrainB": "water"
+        },
+        "outer_corner_bottom_right_01": {
+          "id": "outer_corner_bottom_right_01",
+          "label": "Outer Corner Bottom Right 01",
+          "category": "outer_corners",
+          "mask": {
+            "topLeft": "A",
+            "top": "A",
+            "topRight": "A",
+            "left": "A",
+            "center": "B",
+            "right": "B",
+            "bottomLeft": "A",
+            "bottom": "B",
+            "bottomRight": "A"
+          },
+          "tile": {
+            "id": "terrain_tile_46_13",
+            "atlas": {
+              "x": 736,
+              "y": 208,
+              "width": 16,
+              "height": 16
+            }
+          },
+          "status": "confirmed",
+          "suggested": false,
+          "unused": false,
+          "transform": null,
+          "terrainA": "grass_light",
+          "terrainB": "water"
+        },
+        "outer_corner_bottom_right_02": {
+          "id": "outer_corner_bottom_right_02",
+          "label": "Outer Corner Bottom Right 02",
+          "category": "outer_corners",
+          "mask": {
+            "topLeft": "A",
+            "top": "A",
+            "topRight": "A",
+            "left": "A",
+            "center": "B",
+            "right": "B",
+            "bottomLeft": "A",
+            "bottom": "B",
+            "bottomRight": "B"
+          },
+          "tile": {
+            "id": "terrain_tile_53_13",
+            "atlas": {
+              "x": 848,
+              "y": 208,
+              "width": 16,
+              "height": 16
+            }
+          },
+          "status": "confirmed",
+          "suggested": false,
+          "unused": false,
+          "transform": null,
+          "terrainA": "grass_light",
+          "terrainB": "water"
+        },
+        "outer_corner_top_left_01": {
+          "id": "outer_corner_top_left_01",
+          "label": "Outer Corner Top Left 01",
+          "category": "outer_corners",
+          "mask": {
+            "topLeft": "A",
+            "top": "B",
+            "topRight": "A",
+            "left": "B",
+            "center": "B",
+            "right": "A",
+            "bottomLeft": "A",
+            "bottom": "A",
+            "bottomRight": "A"
+          },
+          "tile": {
+            "id": "terrain_tile_48_15",
+            "atlas": {
+              "x": 768,
+              "y": 240,
+              "width": 16,
+              "height": 16
+            }
+          },
+          "status": "confirmed",
+          "suggested": false,
+          "unused": false,
+          "transform": null,
+          "terrainA": "grass_light",
+          "terrainB": "water"
+        },
+        "outer_corner_top_left_02": {
+          "id": "outer_corner_top_left_02",
+          "label": "Outer Corner Top Left 02",
+          "category": "outer_corners",
+          "mask": {
+            "topLeft": "B",
+            "top": "B",
+            "topRight": "A",
+            "left": "B",
+            "center": "B",
+            "right": "A",
+            "bottomLeft": "A",
+            "bottom": "A",
+            "bottomRight": "A"
+          },
+          "tile": {
+            "id": "terrain_tile_56_16",
+            "atlas": {
+              "x": 896,
+              "y": 256,
+              "width": 16,
+              "height": 16
+            }
+          },
+          "status": "confirmed",
+          "suggested": false,
+          "unused": false,
+          "transform": null,
+          "terrainA": "grass_light",
+          "terrainB": "water"
+        },
+        "outer_corner_top_right_01": {
+          "id": "outer_corner_top_right_01",
+          "label": "Outer Corner Top Right 01",
+          "category": "outer_corners",
+          "mask": {
+            "topLeft": "A",
+            "top": "B",
+            "topRight": "A",
+            "left": "A",
+            "center": "B",
+            "right": "B",
+            "bottomLeft": "A",
+            "bottom": "A",
+            "bottomRight": "A"
+          },
+          "tile": {
+            "id": "terrain_tile_46_15",
+            "atlas": {
+              "x": 736,
+              "y": 240,
+              "width": 16,
+              "height": 16
+            }
+          },
+          "status": "confirmed",
+          "suggested": false,
+          "unused": false,
+          "transform": null,
+          "terrainA": "grass_light",
+          "terrainB": "water"
+        },
+        "outer_corner_top_right_02": {
+          "id": "outer_corner_top_right_02",
+          "label": "Outer Corner Top Right 02",
+          "category": "outer_corners",
+          "mask": {
+            "topLeft": "A",
+            "top": "B",
+            "topRight": "B",
+            "left": "A",
+            "center": "B",
+            "right": "B",
+            "bottomLeft": "A",
+            "bottom": "A",
+            "bottomRight": "A"
+          },
+          "tile": {
+            "id": "terrain_tile_53_16",
+            "atlas": {
+              "x": 848,
+              "y": 256,
+              "width": 16,
+              "height": 16
+            }
+          },
+          "status": "confirmed",
+          "suggested": false,
+          "unused": false,
+          "transform": null,
+          "terrainA": "grass_light",
+          "terrainB": "water"
+        },
+        "corridor_horizontal": {
+          "id": "corridor_horizontal",
+          "label": "Corridor Horizontal",
+          "category": "corridors",
+          "mask": {
+            "topLeft": "A",
+            "top": "A",
+            "topRight": "A",
+            "left": "B",
+            "center": "B",
+            "right": "B",
+            "bottomLeft": "A",
+            "bottom": "A",
+            "bottomRight": "A"
+          },
+          "tile": {
+            "id": "terrain_tile_47_16",
+            "atlas": {
+              "x": 752,
+              "y": 256,
+              "width": 16,
+              "height": 16
+            }
+          },
+          "status": "confirmed",
+          "suggested": false,
+          "unused": false,
+          "transform": null,
+          "terrainA": "grass_light",
+          "terrainB": "water"
+        },
+        "corridor_vertical": {
+          "id": "corridor_vertical",
+          "label": "Corridor Vertical",
+          "category": "corridors",
+          "mask": {
+            "topLeft": "A",
+            "top": "B",
+            "topRight": "A",
+            "left": "A",
+            "center": "B",
+            "right": "A",
+            "bottomLeft": "A",
+            "bottom": "B",
+            "bottomRight": "A"
+          },
+          "tile": {
+            "id": "terrain_tile_45_14",
+            "atlas": {
+              "x": 720,
+              "y": 224,
+              "width": 16,
+              "height": 16
+            }
+          },
+          "status": "confirmed",
+          "suggested": false,
+          "unused": false,
+          "transform": null,
+          "terrainA": "grass_light",
+          "terrainB": "water"
+        },
+        "side_bottom": {
+          "id": "side_bottom",
+          "label": "Side Bottom",
+          "category": "sides",
+          "mask": {
+            "topLeft": "A",
+            "top": "A",
+            "topRight": "A",
+            "left": "A",
+            "center": "B",
+            "right": "A",
+            "bottomLeft": "A",
+            "bottom": "B",
+            "bottomRight": "A"
+          },
+          "tile": {
+            "id": "terrain_tile_45_13",
+            "atlas": {
+              "x": 720,
+              "y": 208,
+              "width": 16,
+              "height": 16
+            }
+          },
+          "status": "confirmed",
+          "suggested": false,
+          "unused": false,
+          "transform": null,
+          "terrainA": "grass_light",
+          "terrainB": "water"
+        },
+        "side_left": {
+          "id": "side_left",
+          "label": "Side Left",
+          "category": "sides",
+          "mask": {
+            "topLeft": "A",
+            "top": "A",
+            "topRight": "A",
+            "left": "B",
+            "center": "B",
+            "right": "A",
+            "bottomLeft": "A",
+            "bottom": "A",
+            "bottomRight": "A"
+          },
+          "tile": {
+            "id": "terrain_tile_48_16",
+            "atlas": {
+              "x": 768,
+              "y": 256,
+              "width": 16,
+              "height": 16
+            }
+          },
+          "status": "confirmed",
+          "suggested": false,
+          "unused": false,
+          "transform": null,
+          "terrainA": "grass_light",
+          "terrainB": "water"
+        },
+        "side_right": {
+          "id": "side_right",
+          "label": "Side Right",
+          "category": "sides",
+          "mask": {
+            "topLeft": "A",
+            "top": "A",
+            "topRight": "A",
+            "left": "A",
+            "center": "B",
+            "right": "B",
+            "bottomLeft": "A",
+            "bottom": "A",
+            "bottomRight": "A"
+          },
+          "tile": {
+            "id": "terrain_tile_46_16",
+            "atlas": {
+              "x": 736,
+              "y": 256,
+              "width": 16,
+              "height": 16
+            }
+          },
+          "status": "confirmed",
+          "suggested": false,
+          "unused": false,
+          "transform": null,
+          "terrainA": "grass_light",
+          "terrainB": "water"
+        },
+        "side_top": {
+          "id": "side_top",
+          "label": "Side Top",
+          "category": "sides",
+          "mask": {
+            "topLeft": "A",
+            "top": "B",
+            "topRight": "A",
+            "left": "A",
+            "center": "B",
+            "right": "A",
+            "bottomLeft": "A",
+            "bottom": "A",
+            "bottomRight": "A"
+          },
+          "tile": {
+            "id": "terrain_tile_45_15",
+            "atlas": {
+              "x": 720,
+              "y": 240,
+              "width": 16,
+              "height": 16
+            }
+          },
+          "status": "confirmed",
+          "suggested": false,
+          "unused": false,
+          "transform": null,
+          "terrainA": "grass_light",
+          "terrainB": "water"
+        },
+        "isolated": {
+          "id": "isolated",
+          "label": "Isolated",
+          "category": "isolated",
+          "mask": {
+            "topLeft": "A",
+            "top": "A",
+            "topRight": "A",
+            "left": "A",
+            "center": "B",
+            "right": "A",
+            "bottomLeft": "A",
+            "bottom": "A",
+            "bottomRight": "A"
+          },
+          "tile": {
+            "id": "terrain_tile_45_16",
+            "atlas": {
+              "x": 720,
+              "y": 256,
+              "width": 16,
+              "height": 16
+            }
+          },
+          "status": "confirmed",
+          "suggested": false,
+          "unused": false,
+          "transform": null,
+          "terrainA": "grass_light",
+          "terrainB": "water"
+        },
+        "complex_core_01": {
+          "id": "complex_core_01",
+          "label": "Complex Core 01",
+          "category": "complex",
+          "mask": {
+            "topLeft": "A",
+            "top": "B",
+            "topRight": "A",
+            "left": "B",
+            "center": "B",
+            "right": "B",
+            "bottomLeft": "A",
+            "bottom": "B",
+            "bottomRight": "A"
+          },
+          "tile": {
+            "id": "terrain_tile_47_14",
+            "atlas": {
+              "x": 752,
+              "y": 224,
+              "width": 16,
+              "height": 16
+            }
+          },
+          "status": "confirmed",
+          "suggested": false,
+          "unused": false,
+          "transform": null,
+          "terrainA": "grass_light",
+          "terrainB": "water"
+        },
+        "complex_core_02": {
+          "id": "complex_core_02",
+          "label": "Complex Core 02",
+          "category": "complex",
+          "mask": {
+            "topLeft": "A",
+            "top": "B",
+            "topRight": "A",
+            "left": "B",
+            "center": "B",
+            "right": "B",
+            "bottomLeft": "A",
+            "bottom": "B",
+            "bottomRight": "B"
+          },
+          "tile": {
+            "id": "terrain_tile_52_16",
+            "atlas": {
+              "x": 832,
+              "y": 256,
+              "width": 16,
+              "height": 16
+            }
+          },
+          "status": "confirmed",
+          "suggested": false,
+          "unused": false,
+          "transform": null,
+          "terrainA": "grass_light",
+          "terrainB": "water"
+        },
+        "complex_core_03": {
+          "id": "complex_core_03",
+          "label": "Complex Core 03",
+          "category": "complex",
+          "mask": {
+            "topLeft": "A",
+            "top": "B",
+            "topRight": "A",
+            "left": "B",
+            "center": "B",
+            "right": "B",
+            "bottomLeft": "B",
+            "bottom": "B",
+            "bottomRight": "A"
+          },
+          "tile": {
+            "id": "terrain_tile_49_16",
+            "atlas": {
+              "x": 784,
+              "y": 256,
+              "width": 16,
+              "height": 16
+            }
+          },
+          "status": "confirmed",
+          "suggested": false,
+          "unused": false,
+          "transform": null,
+          "terrainA": "grass_light",
+          "terrainB": "water"
+        },
+        "complex_core_04": {
+          "id": "complex_core_04",
+          "label": "Complex Core 04",
+          "category": "complex",
+          "mask": {
+            "topLeft": "A",
+            "top": "B",
+            "topRight": "A",
+            "left": "B",
+            "center": "B",
+            "right": "B",
+            "bottomLeft": "B",
+            "bottom": "B",
+            "bottomRight": "B"
+          },
+          "tile": {
+            "id": "terrain_tile_54_13",
+            "atlas": {
+              "x": 864,
+              "y": 208,
+              "width": 16,
+              "height": 16
+            }
+          },
+          "status": "confirmed",
+          "suggested": false,
+          "unused": false,
+          "transform": null,
+          "terrainA": "grass_light",
+          "terrainB": "water"
+        },
+        "complex_core_05": {
+          "id": "complex_core_05",
+          "label": "Complex Core 05",
+          "category": "complex",
+          "mask": {
+            "topLeft": "A",
+            "top": "B",
+            "topRight": "B",
+            "left": "B",
+            "center": "B",
+            "right": "B",
+            "bottomLeft": "A",
+            "bottom": "B",
+            "bottomRight": "A"
+          },
+          "tile": {
+            "id": "terrain_tile_52_13",
+            "atlas": {
+              "x": 832,
+              "y": 208,
+              "width": 16,
+              "height": 16
+            }
+          },
+          "status": "confirmed",
+          "suggested": false,
+          "unused": false,
+          "transform": null,
+          "terrainA": "grass_light",
+          "terrainB": "water"
+        },
+        "complex_core_06": {
+          "id": "complex_core_06",
+          "label": "Complex Core 06",
+          "category": "complex",
+          "mask": {
+            "topLeft": "A",
+            "top": "B",
+            "topRight": "B",
+            "left": "B",
+            "center": "B",
+            "right": "B",
+            "bottomLeft": "A",
+            "bottom": "B",
+            "bottomRight": "B"
+          },
+          "tile": {
+            "id": "terrain_tile_53_15",
+            "atlas": {
+              "x": 848,
+              "y": 240,
+              "width": 16,
+              "height": 16
+            }
+          },
+          "status": "confirmed",
+          "suggested": false,
+          "unused": false,
+          "transform": null,
+          "terrainA": "grass_light",
+          "terrainB": "water"
+        },
+        "complex_core_07": {
+          "id": "complex_core_07",
+          "label": "Complex Core 07",
+          "category": "complex",
+          "mask": {
+            "topLeft": "A",
+            "top": "B",
+            "topRight": "B",
+            "left": "B",
+            "center": "B",
+            "right": "B",
+            "bottomLeft": "B",
+            "bottom": "B",
+            "bottomRight": "A"
+          },
+          "tile": {
+            "id": "terrain_tile_54_14",
+            "atlas": {
+              "x": 864,
+              "y": 224,
+              "width": 16,
+              "height": 16
+            }
+          },
+          "status": "confirmed",
+          "suggested": false,
+          "unused": false,
+          "transform": null,
+          "terrainA": "grass_light",
+          "terrainB": "water"
+        },
+        "complex_core_08": {
+          "id": "complex_core_08",
+          "label": "Complex Core 08",
+          "category": "complex",
+          "mask": {
+            "topLeft": "B",
+            "top": "B",
+            "topRight": "A",
+            "left": "B",
+            "center": "B",
+            "right": "B",
+            "bottomLeft": "A",
+            "bottom": "B",
+            "bottomRight": "A"
+          },
+          "tile": {
+            "id": "terrain_tile_49_13",
+            "atlas": {
+              "x": 784,
+              "y": 208,
+              "width": 16,
+              "height": 16
+            }
+          },
+          "status": "confirmed",
+          "suggested": false,
+          "unused": false,
+          "transform": null,
+          "terrainA": "grass_light",
+          "terrainB": "water"
+        },
+        "complex_core_09": {
+          "id": "complex_core_09",
+          "label": "Complex Core 09",
+          "category": "complex",
+          "mask": {
+            "topLeft": "B",
+            "top": "B",
+            "topRight": "A",
+            "left": "B",
+            "center": "B",
+            "right": "B",
+            "bottomLeft": "A",
+            "bottom": "B",
+            "bottomRight": "B"
+          },
+          "tile": {
+            "id": "terrain_tile_55_15",
+            "atlas": {
+              "x": 880,
+              "y": 240,
+              "width": 16,
+              "height": 16
+            }
+          },
+          "status": "confirmed",
+          "suggested": false,
+          "unused": false,
+          "transform": null,
+          "terrainA": "grass_light",
+          "terrainB": "water"
+        },
+        "complex_core_10": {
+          "id": "complex_core_10",
+          "label": "Complex Core 10",
+          "category": "complex",
+          "mask": {
+            "topLeft": "B",
+            "top": "B",
+            "topRight": "A",
+            "left": "B",
+            "center": "B",
+            "right": "B",
+            "bottomLeft": "B",
+            "bottom": "B",
+            "bottomRight": "A"
+          },
+          "tile": {
+            "id": "terrain_tile_56_14",
+            "atlas": {
+              "x": 896,
+              "y": 224,
+              "width": 16,
+              "height": 16
+            }
+          },
+          "status": "confirmed",
+          "suggested": false,
+          "unused": false,
+          "transform": null,
+          "terrainA": "grass_light",
+          "terrainB": "water"
+        },
+        "complex_core_11": {
+          "id": "complex_core_11",
+          "label": "Complex Core 11",
+          "category": "complex",
+          "mask": {
+            "topLeft": "B",
+            "top": "B",
+            "topRight": "B",
+            "left": "B",
+            "center": "B",
+            "right": "B",
+            "bottomLeft": "A",
+            "bottom": "B",
+            "bottomRight": "A"
+          },
+          "tile": {
+            "id": "terrain_tile_55_16",
+            "atlas": {
+              "x": 880,
+              "y": 256,
+              "width": 16,
+              "height": 16
+            }
+          },
+          "status": "confirmed",
+          "suggested": false,
+          "unused": false,
+          "transform": null,
+          "terrainA": "grass_light",
+          "terrainB": "water"
+        }
+      },
+      "backgroundTerrain": "grass_light",
+      "foregroundTerrain": "water"
+    },
+    "grass_light_on_grass_dark": {
+      "id": "grass_dark_on_grass_light",
+      "terrainA": "grass_light",
+      "terrainB": "grass_dark",
+      "description": "Dark grass patch transitioning over light grass. [A/B swapped in v3]",
+      "maskType": "8_neighbor_47",
+      "patterns": {
+        "full": {
+          "id": "full",
+          "label": "Full",
+          "category": "full",
+          "mask": {
+            "topLeft": "A",
+            "top": "A",
+            "topRight": "A",
+            "left": "A",
+            "center": "A",
+            "right": "A",
+            "bottomLeft": "A",
+            "bottom": "A",
+            "bottomRight": "A"
+          },
+          "tile": {
+            "id": "terrain_tile_45_32",
+            "atlas": {
+              "x": 720,
+              "y": 512,
+              "width": 16,
+              "height": 16
+            }
+          },
+          "status": "confirmed",
+          "suggested": false,
+          "unused": false,
+          "transform": null,
+          "terrainA": "grass_light",
+          "terrainB": "grass_dark"
+        },
+        "inner_corner_bottom_left": {
+          "id": "inner_corner_bottom_left",
+          "label": "Inner Corner Bottom Left",
+          "category": "inner_corners",
+          "mask": {
+            "topLeft": "A",
+            "top": "A",
+            "topRight": "A",
+            "left": "A",
+            "center": "A",
+            "right": "A",
+            "bottomLeft": "B",
+            "bottom": "A",
+            "bottomRight": "A"
+          },
+          "tile": {
+            "id": "terrain_tile_50_11",
+            "atlas": {
+              "x": 800,
+              "y": 176,
+              "width": 16,
+              "height": 16
+            }
+          },
+          "status": "confirmed",
+          "suggested": false,
+          "unused": false,
+          "transform": null,
+          "terrainA": "grass_light",
+          "terrainB": "grass_dark"
+        },
+        "inner_corner_bottom_right": {
+          "id": "inner_corner_bottom_right",
+          "label": "Inner Corner Bottom Right",
+          "category": "inner_corners",
+          "mask": {
+            "topLeft": "A",
+            "top": "A",
+            "topRight": "A",
+            "left": "A",
+            "center": "A",
+            "right": "A",
+            "bottomLeft": "A",
+            "bottom": "A",
+            "bottomRight": "B"
+          },
+          "tile": {
+            "id": "terrain_tile_51_11",
+            "atlas": {
+              "x": 816,
+              "y": 176,
+              "width": 16,
+              "height": 16
+            }
+          },
+          "status": "confirmed",
+          "suggested": false,
+          "unused": false,
+          "transform": null,
+          "terrainA": "grass_light",
+          "terrainB": "grass_dark"
+        },
+        "inner_corner_top_left": {
+          "id": "inner_corner_top_left",
+          "label": "Inner Corner Top Left",
+          "category": "inner_corners",
+          "mask": {
+            "topLeft": "B",
+            "top": "A",
+            "topRight": "A",
+            "left": "A",
+            "center": "A",
+            "right": "A",
+            "bottomLeft": "A",
+            "bottom": "A",
+            "bottomRight": "A"
+          },
+          "tile": {
+            "id": "terrain_tile_50_10",
+            "atlas": {
+              "x": 800,
+              "y": 160,
+              "width": 16,
+              "height": 16
+            }
+          },
+          "status": "confirmed",
+          "suggested": false,
+          "unused": false,
+          "transform": null,
+          "terrainA": "grass_light",
+          "terrainB": "grass_dark"
+        },
+        "inner_corner_top_right": {
+          "id": "inner_corner_top_right",
+          "label": "Inner Corner Top Right",
+          "category": "inner_corners",
+          "mask": {
+            "topLeft": "A",
+            "top": "A",
+            "topRight": "B",
+            "left": "A",
+            "center": "A",
+            "right": "A",
+            "bottomLeft": "A",
+            "bottom": "A",
+            "bottomRight": "A"
+          },
+          "tile": {
+            "id": "terrain_tile_51_10",
+            "atlas": {
+              "x": 816,
+              "y": 160,
+              "width": 16,
+              "height": 16
+            }
+          },
+          "status": "confirmed",
+          "suggested": false,
+          "unused": false,
+          "transform": null,
+          "terrainA": "grass_light",
+          "terrainB": "grass_dark"
+        },
+        "edge_bottom_01": {
+          "id": "edge_bottom_01",
+          "label": "Edge Bottom 01",
+          "category": "edges",
+          "mask": {
+            "topLeft": "B",
+            "top": "A",
+            "topRight": "B",
+            "left": "A",
+            "center": "A",
+            "right": "A",
+            "bottomLeft": "B",
+            "bottom": "B",
+            "bottomRight": "B"
+          },
+          "tile": {
+            "id": "terrain_tile_47_11",
+            "atlas": {
+              "x": 752,
+              "y": 176,
+              "width": 16,
+              "height": 16
+            }
+          },
+          "status": "confirmed",
+          "suggested": false,
+          "unused": false,
+          "transform": null,
+          "terrainA": "grass_light",
+          "terrainB": "grass_dark"
+        },
+        "edge_bottom_02": {
+          "id": "edge_bottom_02",
+          "label": "Edge Bottom 02",
+          "category": "edges",
+          "mask": {
+            "topLeft": "B",
+            "top": "A",
+            "topRight": "A",
+            "left": "A",
+            "center": "A",
+            "right": "A",
+            "bottomLeft": "B",
+            "bottom": "B",
+            "bottomRight": "B"
+          },
+          "tile": {
+            "id": "terrain_tile_50_12",
+            "atlas": {
+              "x": 800,
+              "y": 192,
+              "width": 16,
+              "height": 16
+            }
+          },
+          "status": "confirmed",
+          "suggested": false,
+          "unused": false,
+          "transform": null,
+          "terrainA": "grass_light",
+          "terrainB": "grass_dark"
+        },
+        "edge_bottom_03": {
+          "id": "edge_bottom_03",
+          "label": "Edge Bottom 03",
+          "category": "edges",
+          "mask": {
+            "topLeft": "A",
+            "top": "A",
+            "topRight": "B",
+            "left": "A",
+            "center": "A",
+            "right": "A",
+            "bottomLeft": "B",
+            "bottom": "B",
+            "bottomRight": "B"
+          },
+          "tile": {
+            "id": "terrain_tile_51_12",
+            "atlas": {
+              "x": 816,
+              "y": 192,
+              "width": 16,
+              "height": 16
+            }
+          },
+          "status": "confirmed",
+          "suggested": false,
+          "unused": false,
+          "transform": null,
+          "terrainA": "grass_light",
+          "terrainB": "grass_dark"
+        },
+        "edge_bottom_04": {
+          "id": "edge_bottom_04",
+          "label": "Edge Bottom 04",
+          "category": "edges",
+          "mask": {
+            "topLeft": "A",
+            "top": "A",
+            "topRight": "A",
+            "left": "A",
+            "center": "A",
+            "right": "A",
+            "bottomLeft": "B",
+            "bottom": "B",
+            "bottomRight": "B"
+          },
+          "tile": {
+            "id": "terrain_tile_45_33",
+            "atlas": {
+              "x": 720,
+              "y": 528,
+              "width": 16,
+              "height": 16
+            }
+          },
+          "status": "confirmed",
+          "suggested": false,
+          "unused": false,
+          "transform": null,
+          "terrainA": "grass_light",
+          "terrainB": "grass_dark"
+        },
+        "edge_left_01": {
+          "id": "edge_left_01",
+          "label": "Edge Left 01",
+          "category": "edges",
+          "mask": {
+            "topLeft": "B",
+            "top": "A",
+            "topRight": "B",
+            "left": "B",
+            "center": "A",
+            "right": "A",
+            "bottomLeft": "B",
+            "bottom": "A",
+            "bottomRight": "B"
+          },
+          "tile": {
+            "id": "terrain_tile_46_10",
+            "atlas": {
+              "x": 736,
+              "y": 160,
+              "width": 16,
+              "height": 16
+            }
+          },
+          "status": "confirmed",
+          "suggested": false,
+          "unused": false,
+          "transform": null,
+          "terrainA": "grass_light",
+          "terrainB": "grass_dark"
+        },
+        "edge_left_02": {
+          "id": "edge_left_02",
+          "label": "Edge Left 02",
+          "category": "edges",
+          "mask": {
+            "topLeft": "B",
+            "top": "A",
+            "topRight": "B",
+            "left": "B",
+            "center": "A",
+            "right": "A",
+            "bottomLeft": "B",
+            "bottom": "A",
+            "bottomRight": "A"
+          },
+          "tile": {
+            "id": "terrain_tile_49_10",
+            "atlas": {
+              "x": 784,
+              "y": 160,
+              "width": 16,
+              "height": 16
+            }
+          },
+          "status": "confirmed",
+          "suggested": false,
+          "unused": false,
+          "transform": null,
+          "terrainA": "grass_light",
+          "terrainB": "grass_dark"
+        },
+        "edge_left_03": {
+          "id": "edge_left_03",
+          "label": "Edge Left 03",
+          "category": "edges",
+          "mask": {
+            "topLeft": "B",
+            "top": "A",
+            "topRight": "A",
+            "left": "B",
+            "center": "A",
+            "right": "A",
+            "bottomLeft": "B",
+            "bottom": "A",
+            "bottomRight": "B"
+          },
+          "tile": {
+            "id": "terrain_tile_49_11",
+            "atlas": {
+              "x": 784,
+              "y": 176,
+              "width": 16,
+              "height": 16
+            }
+          },
+          "status": "confirmed",
+          "suggested": false,
+          "unused": false,
+          "transform": null,
+          "terrainA": "grass_light",
+          "terrainB": "grass_dark"
+        },
+        "edge_left_04": {
+          "id": "edge_left_04",
+          "label": "Edge Left 04",
+          "category": "edges",
+          "mask": {
+            "topLeft": "B",
+            "top": "A",
+            "topRight": "A",
+            "left": "B",
+            "center": "A",
+            "right": "A",
+            "bottomLeft": "B",
+            "bottom": "A",
+            "bottomRight": "A"
+          },
+          "tile": {
+            "id": "terrain_tile_44_32",
+            "atlas": {
+              "x": 704,
+              "y": 512,
+              "width": 16,
+              "height": 16
+            }
+          },
+          "status": "confirmed",
+          "suggested": false,
+          "unused": false,
+          "transform": null,
+          "terrainA": "grass_light",
+          "terrainB": "grass_dark"
+        },
+        "edge_right_01": {
+          "id": "edge_right_01",
+          "label": "Edge Right 01",
+          "category": "edges",
+          "mask": {
+            "topLeft": "B",
+            "top": "A",
+            "topRight": "B",
+            "left": "A",
+            "center": "A",
+            "right": "B",
+            "bottomLeft": "B",
+            "bottom": "A",
+            "bottomRight": "B"
+          },
+          "tile": {
+            "id": "terrain_tile_48_10",
+            "atlas": {
+              "x": 768,
+              "y": 160,
+              "width": 16,
+              "height": 16
+            }
+          },
+          "status": "confirmed",
+          "suggested": false,
+          "unused": false,
+          "transform": null,
+          "terrainA": "grass_light",
+          "terrainB": "grass_dark"
+        },
+        "edge_right_02": {
+          "id": "edge_right_02",
+          "label": "Edge Right 02",
+          "category": "edges",
+          "mask": {
+            "topLeft": "B",
+            "top": "A",
+            "topRight": "B",
+            "left": "A",
+            "center": "A",
+            "right": "B",
+            "bottomLeft": "A",
+            "bottom": "A",
+            "bottomRight": "B"
+          },
+          "tile": {
+            "id": "terrain_tile_52_10",
+            "atlas": {
+              "x": 832,
+              "y": 160,
+              "width": 16,
+              "height": 16
+            }
+          },
+          "status": "confirmed",
+          "suggested": false,
+          "unused": false,
+          "transform": null,
+          "terrainA": "grass_light",
+          "terrainB": "grass_dark"
+        },
+        "edge_right_03": {
+          "id": "edge_right_03",
+          "label": "Edge Right 03",
+          "category": "edges",
+          "mask": {
+            "topLeft": "A",
+            "top": "A",
+            "topRight": "B",
+            "left": "A",
+            "center": "A",
+            "right": "B",
+            "bottomLeft": "B",
+            "bottom": "A",
+            "bottomRight": "B"
+          },
+          "tile": {
+            "id": "terrain_tile_52_11",
+            "atlas": {
+              "x": 832,
+              "y": 176,
+              "width": 16,
+              "height": 16
+            }
+          },
+          "status": "confirmed",
+          "suggested": false,
+          "unused": false,
+          "transform": null,
+          "terrainA": "grass_light",
+          "terrainB": "grass_dark"
+        },
+        "edge_right_04": {
+          "id": "edge_right_04",
+          "label": "Edge Right 04",
+          "category": "edges",
+          "mask": {
+            "topLeft": "A",
+            "top": "A",
+            "topRight": "B",
+            "left": "A",
+            "center": "A",
+            "right": "B",
+            "bottomLeft": "A",
+            "bottom": "A",
+            "bottomRight": "B"
+          },
+          "tile": {
+            "id": "terrain_tile_46_32",
+            "atlas": {
+              "x": 736,
+              "y": 512,
+              "width": 16,
+              "height": 16
+            }
+          },
+          "status": "confirmed",
+          "suggested": false,
+          "unused": false,
+          "transform": null,
+          "terrainA": "grass_light",
+          "terrainB": "grass_dark"
+        },
+        "edge_top_01": {
+          "id": "edge_top_01",
+          "label": "Edge Top 01",
+          "category": "edges",
+          "mask": {
+            "topLeft": "B",
+            "top": "B",
+            "topRight": "B",
+            "left": "A",
+            "center": "A",
+            "right": "A",
+            "bottomLeft": "B",
+            "bottom": "A",
+            "bottomRight": "B"
+          },
+          "tile": {
+            "id": "terrain_tile_47_9",
+            "atlas": {
+              "x": 752,
+              "y": 144,
+              "width": 16,
+              "height": 16
+            }
+          },
+          "status": "confirmed",
+          "suggested": false,
+          "unused": false,
+          "transform": null,
+          "terrainA": "grass_light",
+          "terrainB": "grass_dark"
+        },
+        "edge_top_02": {
+          "id": "edge_top_02",
+          "label": "Edge Top 02",
+          "category": "edges",
+          "mask": {
+            "topLeft": "B",
+            "top": "B",
+            "topRight": "B",
+            "left": "A",
+            "center": "A",
+            "right": "A",
+            "bottomLeft": "B",
+            "bottom": "A",
+            "bottomRight": "A"
+          },
+          "tile": {
+            "id": "terrain_tile_50_9",
+            "atlas": {
+              "x": 800,
+              "y": 144,
+              "width": 16,
+              "height": 16
+            }
+          },
+          "status": "confirmed",
+          "suggested": false,
+          "unused": false,
+          "transform": null,
+          "terrainA": "grass_light",
+          "terrainB": "grass_dark"
+        },
+        "edge_top_03": {
+          "id": "edge_top_03",
+          "label": "Edge Top 03",
+          "category": "edges",
+          "mask": {
+            "topLeft": "B",
+            "top": "B",
+            "topRight": "B",
+            "left": "A",
+            "center": "A",
+            "right": "A",
+            "bottomLeft": "A",
+            "bottom": "A",
+            "bottomRight": "B"
+          },
+          "tile": {
+            "id": "terrain_tile_51_9",
+            "atlas": {
+              "x": 816,
+              "y": 144,
+              "width": 16,
+              "height": 16
+            }
+          },
+          "status": "confirmed",
+          "suggested": false,
+          "unused": false,
+          "transform": null,
+          "terrainA": "grass_light",
+          "terrainB": "grass_dark"
+        },
+        "edge_top_04": {
+          "id": "edge_top_04",
+          "label": "Edge Top 04",
+          "category": "edges",
+          "mask": {
+            "topLeft": "B",
+            "top": "B",
+            "topRight": "B",
+            "left": "A",
+            "center": "A",
+            "right": "A",
+            "bottomLeft": "A",
+            "bottom": "A",
+            "bottomRight": "A"
+          },
+          "tile": {
+            "id": "terrain_tile_45_31",
+            "atlas": {
+              "x": 720,
+              "y": 496,
+              "width": 16,
+              "height": 16
+            }
+          },
+          "status": "confirmed",
+          "suggested": false,
+          "unused": false,
+          "transform": null,
+          "terrainA": "grass_light",
+          "terrainB": "grass_dark"
+        },
+        "outer_corner_bottom_left_01": {
+          "id": "outer_corner_bottom_left_01",
+          "label": "Outer Corner Bottom Left 01",
+          "category": "outer_corners",
+          "mask": {
+            "topLeft": "B",
+            "top": "B",
+            "topRight": "B",
+            "left": "A",
+            "center": "A",
+            "right": "B",
+            "bottomLeft": "B",
+            "bottom": "A",
+            "bottomRight": "B"
+          },
+          "tile": {
+            "id": "terrain_tile_48_9",
+            "atlas": {
+              "x": 768,
+              "y": 144,
+              "width": 16,
+              "height": 16
+            }
+          },
+          "status": "confirmed",
+          "suggested": false,
+          "unused": false,
+          "transform": null,
+          "terrainA": "grass_light",
+          "terrainB": "grass_dark"
+        },
+        "outer_corner_bottom_left_02": {
+          "id": "outer_corner_bottom_left_02",
+          "label": "Outer Corner Bottom Left 02",
+          "category": "outer_corners",
+          "mask": {
+            "topLeft": "B",
+            "top": "B",
+            "topRight": "B",
+            "left": "A",
+            "center": "A",
+            "right": "B",
+            "bottomLeft": "A",
+            "bottom": "A",
+            "bottomRight": "B"
+          },
+          "tile": {
+            "id": "terrain_tile_56_9",
+            "atlas": {
+              "x": 896,
+              "y": 144,
+              "width": 16,
+              "height": 16
+            }
+          },
+          "status": "confirmed",
+          "suggested": false,
+          "unused": false,
+          "transform": null,
+          "terrainA": "grass_light",
+          "terrainB": "grass_dark"
+        },
+        "outer_corner_bottom_right_01": {
+          "id": "outer_corner_bottom_right_01",
+          "label": "Outer Corner Bottom Right 01",
+          "category": "outer_corners",
+          "mask": {
+            "topLeft": "B",
+            "top": "B",
+            "topRight": "B",
+            "left": "B",
+            "center": "A",
+            "right": "A",
+            "bottomLeft": "B",
+            "bottom": "A",
+            "bottomRight": "B"
+          },
+          "tile": {
+            "id": "terrain_tile_46_9",
+            "atlas": {
+              "x": 736,
+              "y": 144,
+              "width": 16,
+              "height": 16
+            }
+          },
+          "status": "confirmed",
+          "suggested": false,
+          "unused": false,
+          "transform": null,
+          "terrainA": "grass_light",
+          "terrainB": "grass_dark"
+        },
+        "outer_corner_bottom_right_02": {
+          "id": "outer_corner_bottom_right_02",
+          "label": "Outer Corner Bottom Right 02",
+          "category": "outer_corners",
+          "mask": {
+            "topLeft": "B",
+            "top": "B",
+            "topRight": "B",
+            "left": "B",
+            "center": "A",
+            "right": "A",
+            "bottomLeft": "B",
+            "bottom": "A",
+            "bottomRight": "A"
+          },
+          "tile": {
+            "id": "terrain_tile_53_9",
+            "atlas": {
+              "x": 848,
+              "y": 144,
+              "width": 16,
+              "height": 16
+            }
+          },
+          "status": "confirmed",
+          "suggested": false,
+          "unused": false,
+          "transform": null,
+          "terrainA": "grass_light",
+          "terrainB": "grass_dark"
+        },
+        "outer_corner_top_left_01": {
+          "id": "outer_corner_top_left_01",
+          "label": "Outer Corner Top Left 01",
+          "category": "outer_corners",
+          "mask": {
+            "topLeft": "B",
+            "top": "A",
+            "topRight": "B",
+            "left": "A",
+            "center": "A",
+            "right": "B",
+            "bottomLeft": "B",
+            "bottom": "B",
+            "bottomRight": "B"
+          },
+          "tile": {
+            "id": "terrain_tile_48_11",
+            "atlas": {
+              "x": 768,
+              "y": 176,
+              "width": 16,
+              "height": 16
+            }
+          },
+          "status": "confirmed",
+          "suggested": false,
+          "unused": false,
+          "transform": null,
+          "terrainA": "grass_light",
+          "terrainB": "grass_dark"
+        },
+        "outer_corner_top_left_02": {
+          "id": "outer_corner_top_left_02",
+          "label": "Outer Corner Top Left 02",
+          "category": "outer_corners",
+          "mask": {
+            "topLeft": "A",
+            "top": "A",
+            "topRight": "B",
+            "left": "A",
+            "center": "A",
+            "right": "B",
+            "bottomLeft": "B",
+            "bottom": "B",
+            "bottomRight": "B"
+          },
+          "tile": {
+            "id": "terrain_tile_56_12",
+            "atlas": {
+              "x": 896,
+              "y": 192,
+              "width": 16,
+              "height": 16
+            }
+          },
+          "status": "confirmed",
+          "suggested": false,
+          "unused": false,
+          "transform": null,
+          "terrainA": "grass_light",
+          "terrainB": "grass_dark"
+        },
+        "outer_corner_top_right_01": {
+          "id": "outer_corner_top_right_01",
+          "label": "Outer Corner Top Right 01",
+          "category": "outer_corners",
+          "mask": {
+            "topLeft": "B",
+            "top": "A",
+            "topRight": "B",
+            "left": "B",
+            "center": "A",
+            "right": "A",
+            "bottomLeft": "B",
+            "bottom": "B",
+            "bottomRight": "B"
+          },
+          "tile": {
+            "id": "terrain_tile_46_11",
+            "atlas": {
+              "x": 736,
+              "y": 176,
+              "width": 16,
+              "height": 16
+            }
+          },
+          "status": "confirmed",
+          "suggested": false,
+          "unused": false,
+          "transform": null,
+          "terrainA": "grass_light",
+          "terrainB": "grass_dark"
+        },
+        "outer_corner_top_right_02": {
+          "id": "outer_corner_top_right_02",
+          "label": "Outer Corner Top Right 02",
+          "category": "outer_corners",
+          "mask": {
+            "topLeft": "B",
+            "top": "A",
+            "topRight": "A",
+            "left": "B",
+            "center": "A",
+            "right": "A",
+            "bottomLeft": "B",
+            "bottom": "B",
+            "bottomRight": "B"
+          },
+          "tile": {
+            "id": "terrain_tile_53_12",
+            "atlas": {
+              "x": 848,
+              "y": 192,
+              "width": 16,
+              "height": 16
+            }
+          },
+          "status": "confirmed",
+          "suggested": false,
+          "unused": false,
+          "transform": null,
+          "terrainA": "grass_light",
+          "terrainB": "grass_dark"
+        },
+        "corridor_horizontal": {
+          "id": "corridor_horizontal",
+          "label": "Corridor Horizontal",
+          "category": "corridors",
+          "mask": {
+            "topLeft": "B",
+            "top": "B",
+            "topRight": "B",
+            "left": "A",
+            "center": "A",
+            "right": "A",
+            "bottomLeft": "B",
+            "bottom": "B",
+            "bottomRight": "B"
+          },
+          "tile": {
+            "id": "terrain_tile_47_12",
+            "atlas": {
+              "x": 752,
+              "y": 192,
+              "width": 16,
+              "height": 16
+            }
+          },
+          "status": "confirmed",
+          "suggested": false,
+          "unused": false,
+          "transform": null,
+          "terrainA": "grass_light",
+          "terrainB": "grass_dark"
+        },
+        "corridor_vertical": {
+          "id": "corridor_vertical",
+          "label": "Corridor Vertical",
+          "category": "corridors",
+          "mask": {
+            "topLeft": "B",
+            "top": "A",
+            "topRight": "B",
+            "left": "B",
+            "center": "A",
+            "right": "B",
+            "bottomLeft": "B",
+            "bottom": "A",
+            "bottomRight": "B"
+          },
+          "tile": {
+            "id": "terrain_tile_45_10",
+            "atlas": {
+              "x": 720,
+              "y": 160,
+              "width": 16,
+              "height": 16
+            }
+          },
+          "status": "confirmed",
+          "suggested": false,
+          "unused": false,
+          "transform": null,
+          "terrainA": "grass_light",
+          "terrainB": "grass_dark"
+        },
+        "side_bottom": {
+          "id": "side_bottom",
+          "label": "Side Bottom",
+          "category": "sides",
+          "mask": {
+            "topLeft": "B",
+            "top": "B",
+            "topRight": "B",
+            "left": "B",
+            "center": "A",
+            "right": "B",
+            "bottomLeft": "B",
+            "bottom": "A",
+            "bottomRight": "B"
+          },
+          "tile": {
+            "id": "terrain_tile_45_9",
+            "atlas": {
+              "x": 720,
+              "y": 144,
+              "width": 16,
+              "height": 16
+            }
+          },
+          "status": "confirmed",
+          "suggested": false,
+          "unused": false,
+          "transform": null,
+          "terrainA": "grass_light",
+          "terrainB": "grass_dark"
+        },
+        "side_left": {
+          "id": "side_left",
+          "label": "Side Left",
+          "category": "sides",
+          "mask": {
+            "topLeft": "B",
+            "top": "B",
+            "topRight": "B",
+            "left": "A",
+            "center": "A",
+            "right": "B",
+            "bottomLeft": "B",
+            "bottom": "B",
+            "bottomRight": "B"
+          },
+          "tile": {
+            "id": "terrain_tile_48_12",
+            "atlas": {
+              "x": 768,
+              "y": 192,
+              "width": 16,
+              "height": 16
+            }
+          },
+          "status": "confirmed",
+          "suggested": false,
+          "unused": false,
+          "transform": null,
+          "terrainA": "grass_light",
+          "terrainB": "grass_dark"
+        },
+        "side_right": {
+          "id": "side_right",
+          "label": "Side Right",
+          "category": "sides",
+          "mask": {
+            "topLeft": "B",
+            "top": "B",
+            "topRight": "B",
+            "left": "B",
+            "center": "A",
+            "right": "A",
+            "bottomLeft": "B",
+            "bottom": "B",
+            "bottomRight": "B"
+          },
+          "tile": {
+            "id": "terrain_tile_46_12",
+            "atlas": {
+              "x": 736,
+              "y": 192,
+              "width": 16,
+              "height": 16
+            }
+          },
+          "status": "confirmed",
+          "suggested": false,
+          "unused": false,
+          "transform": null,
+          "terrainA": "grass_light",
+          "terrainB": "grass_dark"
+        },
+        "side_top": {
+          "id": "side_top",
+          "label": "Side Top",
+          "category": "sides",
+          "mask": {
+            "topLeft": "B",
+            "top": "A",
+            "topRight": "B",
+            "left": "B",
+            "center": "A",
+            "right": "B",
+            "bottomLeft": "B",
+            "bottom": "B",
+            "bottomRight": "B"
+          },
+          "tile": {
+            "id": "terrain_tile_45_11",
+            "atlas": {
+              "x": 720,
+              "y": 176,
+              "width": 16,
+              "height": 16
+            }
+          },
+          "status": "confirmed",
+          "suggested": false,
+          "unused": false,
+          "transform": null,
+          "terrainA": "grass_light",
+          "terrainB": "grass_dark"
+        },
+        "isolated": {
+          "id": "isolated",
+          "label": "Isolated",
+          "category": "isolated",
+          "mask": {
+            "topLeft": "B",
+            "top": "B",
+            "topRight": "B",
+            "left": "B",
+            "center": "A",
+            "right": "B",
+            "bottomLeft": "B",
+            "bottom": "B",
+            "bottomRight": "B"
+          },
+          "tile": {
+            "id": "terrain_tile_45_12",
+            "atlas": {
+              "x": 720,
+              "y": 192,
+              "width": 16,
+              "height": 16
+            }
+          },
+          "status": "confirmed",
+          "suggested": false,
+          "unused": false,
+          "transform": null,
+          "terrainA": "grass_light",
+          "terrainB": "grass_dark"
+        },
+        "complex_core_01": {
+          "id": "complex_core_01",
+          "label": "Complex Core 01",
+          "category": "complex",
+          "mask": {
+            "topLeft": "B",
+            "top": "A",
+            "topRight": "B",
+            "left": "A",
+            "center": "A",
+            "right": "A",
+            "bottomLeft": "B",
+            "bottom": "A",
+            "bottomRight": "B"
+          },
+          "tile": {
+            "id": "terrain_tile_47_10",
+            "atlas": {
+              "x": 752,
+              "y": 160,
+              "width": 16,
+              "height": 16
+            }
+          },
+          "status": "confirmed",
+          "suggested": false,
+          "unused": false,
+          "transform": null,
+          "terrainA": "grass_light",
+          "terrainB": "grass_dark"
+        },
+        "complex_core_02": {
+          "id": "complex_core_02",
+          "label": "Complex Core 02",
+          "category": "complex",
+          "mask": {
+            "topLeft": "B",
+            "top": "A",
+            "topRight": "B",
+            "left": "A",
+            "center": "A",
+            "right": "A",
+            "bottomLeft": "B",
+            "bottom": "A",
+            "bottomRight": "A"
+          },
+          "tile": {
+            "id": "terrain_tile_52_12",
+            "atlas": {
+              "x": 832,
+              "y": 192,
+              "width": 16,
+              "height": 16
+            }
+          },
+          "status": "confirmed",
+          "suggested": false,
+          "unused": false,
+          "transform": null,
+          "terrainA": "grass_light",
+          "terrainB": "grass_dark"
+        },
+        "complex_core_03": {
+          "id": "complex_core_03",
+          "label": "Complex Core 03",
+          "category": "complex",
+          "mask": {
+            "topLeft": "B",
+            "top": "A",
+            "topRight": "B",
+            "left": "A",
+            "center": "A",
+            "right": "A",
+            "bottomLeft": "A",
+            "bottom": "A",
+            "bottomRight": "B"
+          },
+          "tile": {
+            "id": "terrain_tile_49_12",
+            "atlas": {
+              "x": 784,
+              "y": 192,
+              "width": 16,
+              "height": 16
+            }
+          },
+          "status": "confirmed",
+          "suggested": false,
+          "unused": false,
+          "transform": null,
+          "terrainA": "grass_light",
+          "terrainB": "grass_dark"
+        },
+        "complex_core_04": {
+          "id": "complex_core_04",
+          "label": "Complex Core 04",
+          "category": "complex",
+          "mask": {
+            "topLeft": "B",
+            "top": "A",
+            "topRight": "B",
+            "left": "A",
+            "center": "A",
+            "right": "A",
+            "bottomLeft": "A",
+            "bottom": "A",
+            "bottomRight": "A"
+          },
+          "tile": {
+            "id": "terrain_tile_54_9",
+            "atlas": {
+              "x": 864,
+              "y": 144,
+              "width": 16,
+              "height": 16
+            }
+          },
+          "status": "confirmed",
+          "suggested": false,
+          "unused": false,
+          "transform": null,
+          "terrainA": "grass_light",
+          "terrainB": "grass_dark"
+        },
+        "complex_core_05": {
+          "id": "complex_core_05",
+          "label": "Complex Core 05",
+          "category": "complex",
+          "mask": {
+            "topLeft": "B",
+            "top": "A",
+            "topRight": "A",
+            "left": "A",
+            "center": "A",
+            "right": "A",
+            "bottomLeft": "B",
+            "bottom": "A",
+            "bottomRight": "B"
+          },
+          "tile": {
+            "id": "terrain_tile_52_9",
+            "atlas": {
+              "x": 832,
+              "y": 144,
+              "width": 16,
+              "height": 16
+            }
+          },
+          "status": "confirmed",
+          "suggested": false,
+          "unused": false,
+          "transform": null,
+          "terrainA": "grass_light",
+          "terrainB": "grass_dark"
+        },
+        "complex_core_06": {
+          "id": "complex_core_06",
+          "label": "Complex Core 06",
+          "category": "complex",
+          "mask": {
+            "topLeft": "B",
+            "top": "A",
+            "topRight": "A",
+            "left": "A",
+            "center": "A",
+            "right": "A",
+            "bottomLeft": "B",
+            "bottom": "A",
+            "bottomRight": "A"
+          },
+          "tile": {
+            "id": "terrain_tile_53_11",
+            "atlas": {
+              "x": 848,
+              "y": 176,
+              "width": 16,
+              "height": 16
+            }
+          },
+          "status": "confirmed",
+          "suggested": false,
+          "unused": false,
+          "transform": null,
+          "terrainA": "grass_light",
+          "terrainB": "grass_dark"
+        },
+        "complex_core_07": {
+          "id": "complex_core_07",
+          "label": "Complex Core 07",
+          "category": "complex",
+          "mask": {
+            "topLeft": "B",
+            "top": "A",
+            "topRight": "A",
+            "left": "A",
+            "center": "A",
+            "right": "A",
+            "bottomLeft": "A",
+            "bottom": "A",
+            "bottomRight": "B"
+          },
+          "tile": {
+            "id": "terrain_tile_54_10",
+            "atlas": {
+              "x": 864,
+              "y": 160,
+              "width": 16,
+              "height": 16
+            }
+          },
+          "status": "confirmed",
+          "suggested": false,
+          "unused": false,
+          "transform": null,
+          "terrainA": "grass_light",
+          "terrainB": "grass_dark"
+        },
+        "complex_core_08": {
+          "id": "complex_core_08",
+          "label": "Complex Core 08",
+          "category": "complex",
+          "mask": {
+            "topLeft": "A",
+            "top": "A",
+            "topRight": "B",
+            "left": "A",
+            "center": "A",
+            "right": "A",
+            "bottomLeft": "B",
+            "bottom": "A",
+            "bottomRight": "B"
+          },
+          "tile": {
+            "id": "terrain_tile_49_9",
+            "atlas": {
+              "x": 784,
+              "y": 144,
+              "width": 16,
+              "height": 16
+            }
+          },
+          "status": "confirmed",
+          "suggested": false,
+          "unused": false,
+          "transform": null,
+          "terrainA": "grass_light",
+          "terrainB": "grass_dark"
+        },
+        "complex_core_09": {
+          "id": "complex_core_09",
+          "label": "Complex Core 09",
+          "category": "complex",
+          "mask": {
+            "topLeft": "A",
+            "top": "A",
+            "topRight": "B",
+            "left": "A",
+            "center": "A",
+            "right": "A",
+            "bottomLeft": "B",
+            "bottom": "A",
+            "bottomRight": "A"
+          },
+          "tile": {
+            "id": "terrain_tile_55_11",
+            "atlas": {
+              "x": 880,
+              "y": 176,
+              "width": 16,
+              "height": 16
+            }
+          },
+          "status": "confirmed",
+          "suggested": false,
+          "unused": false,
+          "transform": null,
+          "terrainA": "grass_light",
+          "terrainB": "grass_dark"
+        },
+        "complex_core_10": {
+          "id": "complex_core_10",
+          "label": "Complex Core 10",
+          "category": "complex",
+          "mask": {
+            "topLeft": "A",
+            "top": "A",
+            "topRight": "B",
+            "left": "A",
+            "center": "A",
+            "right": "A",
+            "bottomLeft": "A",
+            "bottom": "A",
+            "bottomRight": "B"
+          },
+          "tile": {
+            "id": "terrain_tile_56_10",
+            "atlas": {
+              "x": 896,
+              "y": 160,
+              "width": 16,
+              "height": 16
+            }
+          },
+          "status": "confirmed",
+          "suggested": false,
+          "unused": false,
+          "transform": null,
+          "terrainA": "grass_light",
+          "terrainB": "grass_dark"
+        },
+        "complex_core_11": {
+          "id": "complex_core_11",
+          "label": "Complex Core 11",
+          "category": "complex",
+          "mask": {
+            "topLeft": "A",
+            "top": "A",
+            "topRight": "A",
+            "left": "A",
+            "center": "A",
+            "right": "A",
+            "bottomLeft": "B",
+            "bottom": "A",
+            "bottomRight": "B"
+          },
+          "tile": {
+            "id": "terrain_tile_55_12",
+            "atlas": {
+              "x": 880,
+              "y": 192,
+              "width": 16,
+              "height": 16
+            }
+          },
+          "status": "confirmed",
+          "suggested": false,
+          "unused": false,
+          "transform": null,
+          "terrainA": "grass_light",
+          "terrainB": "grass_dark"
+        }
+      },
+      "backgroundTerrain": "grass_light",
+      "foregroundTerrain": "grass_dark"
+    },
+    "sand_on_grass_light": {
+      "id": "sand_on_grass_light",
+      "terrainA": "grass_light",
+      "terrainB": "sand",
+      "description": "Sand patches transitioning over light grass.",
+      "maskType": "8_neighbor_47",
+      "patterns": {
+        "full": {
+          "id": "full",
+          "label": "Full",
+          "category": "full",
+          "mask": {
+            "topLeft": "B",
+            "top": "B",
+            "topRight": "B",
+            "left": "B",
+            "center": "B",
+            "right": "B",
+            "bottomLeft": "B",
+            "bottom": "B",
+            "bottomRight": "B"
+          },
+          "tile": {
+            "id": "terrain_tile_54_7",
+            "atlas": {
+              "x": 864,
+              "y": 112,
+              "width": 16,
+              "height": 16
+            }
+          },
+          "status": "confirmed",
+          "suggested": false,
+          "unused": false,
+          "transform": null
+        },
+        "inner_corner_bottom_left": {
+          "id": "inner_corner_bottom_left",
+          "label": "Inner Corner Bottom Left",
+          "category": "inner_corners",
+          "mask": {
+            "topLeft": "B",
+            "top": "B",
+            "topRight": "B",
+            "left": "B",
+            "center": "B",
+            "right": "B",
+            "bottomLeft": "A",
+            "bottom": "B",
+            "bottomRight": "B"
+          },
+          "tile": {
+            "id": "terrain_tile_50_7",
+            "atlas": {
+              "x": 800,
+              "y": 112,
+              "width": 16,
+              "height": 16
+            }
+          },
+          "status": "confirmed",
+          "suggested": false,
+          "unused": false,
+          "transform": null
+        },
+        "inner_corner_bottom_right": {
+          "id": "inner_corner_bottom_right",
+          "label": "Inner Corner Bottom Right",
+          "category": "inner_corners",
+          "mask": {
+            "topLeft": "B",
+            "top": "B",
+            "topRight": "B",
+            "left": "B",
+            "center": "B",
+            "right": "B",
+            "bottomLeft": "B",
+            "bottom": "B",
+            "bottomRight": "A"
+          },
+          "tile": {
+            "id": "terrain_tile_51_7",
+            "atlas": {
+              "x": 816,
+              "y": 112,
+              "width": 16,
+              "height": 16
+            }
+          },
+          "status": "confirmed",
+          "suggested": false,
+          "unused": false,
+          "transform": null
+        },
+        "inner_corner_top_left": {
+          "id": "inner_corner_top_left",
+          "label": "Inner Corner Top Left",
+          "category": "inner_corners",
+          "mask": {
+            "topLeft": "A",
+            "top": "B",
+            "topRight": "B",
+            "left": "B",
+            "center": "B",
+            "right": "B",
+            "bottomLeft": "B",
+            "bottom": "B",
+            "bottomRight": "B"
+          },
+          "tile": {
+            "id": "terrain_tile_50_6",
+            "atlas": {
+              "x": 800,
+              "y": 96,
+              "width": 16,
+              "height": 16
+            }
+          },
+          "status": "confirmed",
+          "suggested": false,
+          "unused": false,
+          "transform": null
+        },
+        "inner_corner_top_right": {
+          "id": "inner_corner_top_right",
+          "label": "Inner Corner Top Right",
+          "category": "inner_corners",
+          "mask": {
+            "topLeft": "B",
+            "top": "B",
+            "topRight": "A",
+            "left": "B",
+            "center": "B",
+            "right": "B",
+            "bottomLeft": "B",
+            "bottom": "B",
+            "bottomRight": "B"
+          },
+          "tile": {
+            "id": "terrain_tile_51_6",
+            "atlas": {
+              "x": 816,
+              "y": 96,
+              "width": 16,
+              "height": 16
+            }
+          },
+          "status": "confirmed",
+          "suggested": false,
+          "unused": false,
+          "transform": null
+        },
+        "edge_bottom_01": {
+          "id": "edge_bottom_01",
+          "label": "Edge Bottom 01",
+          "category": "edges",
+          "mask": {
+            "topLeft": "A",
+            "top": "B",
+            "topRight": "A",
+            "left": "B",
+            "center": "B",
+            "right": "B",
+            "bottomLeft": "A",
+            "bottom": "A",
+            "bottomRight": "A"
+          },
+          "tile": {
+            "id": "terrain_tile_47_7",
+            "atlas": {
+              "x": 752,
+              "y": 112,
+              "width": 16,
+              "height": 16
+            }
+          },
+          "status": "confirmed",
+          "suggested": false,
+          "unused": false,
+          "transform": null
+        },
+        "edge_bottom_02": {
+          "id": "edge_bottom_02",
+          "label": "Edge Bottom 02",
+          "category": "edges",
+          "mask": {
+            "topLeft": "A",
+            "top": "B",
+            "topRight": "B",
+            "left": "B",
+            "center": "B",
+            "right": "B",
+            "bottomLeft": "A",
+            "bottom": "A",
+            "bottomRight": "A"
+          },
+          "tile": {
+            "id": "terrain_tile_50_8",
+            "atlas": {
+              "x": 800,
+              "y": 128,
+              "width": 16,
+              "height": 16
+            }
+          },
+          "status": "confirmed",
+          "suggested": false,
+          "unused": false,
+          "transform": null
+        },
+        "edge_bottom_03": {
+          "id": "edge_bottom_03",
+          "label": "Edge Bottom 03",
+          "category": "edges",
+          "mask": {
+            "topLeft": "B",
+            "top": "B",
+            "topRight": "A",
+            "left": "B",
+            "center": "B",
+            "right": "B",
+            "bottomLeft": "A",
+            "bottom": "A",
+            "bottomRight": "A"
+          },
+          "tile": {
+            "id": "terrain_tile_51_8",
+            "atlas": {
+              "x": 816,
+              "y": 128,
+              "width": 16,
+              "height": 16
+            }
+          },
+          "status": "confirmed",
+          "suggested": false,
+          "unused": false,
+          "transform": null
+        },
+        "edge_bottom_04": {
+          "id": "edge_bottom_04",
+          "label": "Edge Bottom 04",
+          "category": "edges",
+          "mask": {
+            "topLeft": "B",
+            "top": "B",
+            "topRight": "B",
+            "left": "B",
+            "center": "B",
+            "right": "B",
+            "bottomLeft": "A",
+            "bottom": "A",
+            "bottomRight": "A"
+          },
+          "tile": {
+            "id": "terrain_tile_54_8",
+            "atlas": {
+              "x": 864,
+              "y": 128,
+              "width": 16,
+              "height": 16
+            }
+          },
+          "status": "confirmed",
+          "suggested": false,
+          "unused": false,
+          "transform": null
+        },
+        "edge_left_01": {
+          "id": "edge_left_01",
+          "label": "Edge Left 01",
+          "category": "edges",
+          "mask": {
+            "topLeft": "A",
+            "top": "B",
+            "topRight": "A",
+            "left": "A",
+            "center": "B",
+            "right": "B",
+            "bottomLeft": "A",
+            "bottom": "B",
+            "bottomRight": "A"
+          },
+          "tile": {
+            "id": "terrain_tile_46_6",
+            "atlas": {
+              "x": 736,
+              "y": 96,
+              "width": 16,
+              "height": 16
+            }
+          },
+          "status": "confirmed",
+          "suggested": false,
+          "unused": false,
+          "transform": null
+        },
+        "edge_left_02": {
+          "id": "edge_left_02",
+          "label": "Edge Left 02",
+          "category": "edges",
+          "mask": {
+            "topLeft": "A",
+            "top": "B",
+            "topRight": "A",
+            "left": "A",
+            "center": "B",
+            "right": "B",
+            "bottomLeft": "A",
+            "bottom": "B",
+            "bottomRight": "B"
+          },
+          "tile": {
+            "id": "terrain_tile_49_6",
+            "atlas": {
+              "x": 784,
+              "y": 96,
+              "width": 16,
+              "height": 16
+            }
+          },
+          "status": "confirmed",
+          "suggested": false,
+          "unused": false,
+          "transform": null
+        },
+        "edge_left_03": {
+          "id": "edge_left_03",
+          "label": "Edge Left 03",
+          "category": "edges",
+          "mask": {
+            "topLeft": "A",
+            "top": "B",
+            "topRight": "B",
+            "left": "A",
+            "center": "B",
+            "right": "B",
+            "bottomLeft": "A",
+            "bottom": "B",
+            "bottomRight": "A"
+          },
+          "tile": {
+            "id": "terrain_tile_49_7",
+            "atlas": {
+              "x": 784,
+              "y": 112,
+              "width": 16,
+              "height": 16
+            }
+          },
+          "status": "confirmed",
+          "suggested": false,
+          "unused": false,
+          "transform": null
+        },
+        "edge_left_04": {
+          "id": "edge_left_04",
+          "label": "Edge Left 04",
+          "category": "edges",
+          "mask": {
+            "topLeft": "A",
+            "top": "B",
+            "topRight": "B",
+            "left": "A",
+            "center": "B",
+            "right": "B",
+            "bottomLeft": "A",
+            "bottom": "B",
+            "bottomRight": "B"
+          },
+          "tile": {
+            "id": "terrain_tile_53_6",
+            "atlas": {
+              "x": 848,
+              "y": 96,
+              "width": 16,
+              "height": 16
+            }
+          },
+          "status": "confirmed",
+          "suggested": false,
+          "unused": false,
+          "transform": null
+        },
+        "edge_right_01": {
+          "id": "edge_right_01",
+          "label": "Edge Right 01",
+          "category": "edges",
+          "mask": {
+            "topLeft": "A",
+            "top": "B",
+            "topRight": "A",
+            "left": "B",
+            "center": "B",
+            "right": "A",
+            "bottomLeft": "A",
+            "bottom": "B",
+            "bottomRight": "A"
+          },
+          "tile": {
+            "id": "terrain_tile_48_6",
+            "atlas": {
+              "x": 768,
+              "y": 96,
+              "width": 16,
+              "height": 16
+            }
+          },
+          "status": "confirmed",
+          "suggested": false,
+          "unused": false,
+          "transform": null
+        },
+        "edge_right_02": {
+          "id": "edge_right_02",
+          "label": "Edge Right 02",
+          "category": "edges",
+          "mask": {
+            "topLeft": "A",
+            "top": "B",
+            "topRight": "A",
+            "left": "B",
+            "center": "B",
+            "right": "A",
+            "bottomLeft": "B",
+            "bottom": "B",
+            "bottomRight": "A"
+          },
+          "tile": {
+            "id": "terrain_tile_52_6",
+            "atlas": {
+              "x": 832,
+              "y": 96,
+              "width": 16,
+              "height": 16
+            }
+          },
+          "status": "confirmed",
+          "suggested": false,
+          "unused": false,
+          "transform": null
+        },
+        "edge_right_03": {
+          "id": "edge_right_03",
+          "label": "Edge Right 03",
+          "category": "edges",
+          "mask": {
+            "topLeft": "B",
+            "top": "B",
+            "topRight": "A",
+            "left": "B",
+            "center": "B",
+            "right": "A",
+            "bottomLeft": "A",
+            "bottom": "B",
+            "bottomRight": "A"
+          },
+          "tile": {
+            "id": "terrain_tile_52_7",
+            "atlas": {
+              "x": 832,
+              "y": 112,
+              "width": 16,
+              "height": 16
+            }
+          },
+          "status": "confirmed",
+          "suggested": false,
+          "unused": false,
+          "transform": null
+        },
+        "edge_right_04": {
+          "id": "edge_right_04",
+          "label": "Edge Right 04",
+          "category": "edges",
+          "mask": {
+            "topLeft": "B",
+            "top": "B",
+            "topRight": "A",
+            "left": "B",
+            "center": "B",
+            "right": "A",
+            "bottomLeft": "B",
+            "bottom": "B",
+            "bottomRight": "A"
+          },
+          "tile": {
+            "id": "terrain_tile_56_7",
+            "atlas": {
+              "x": 896,
+              "y": 112,
+              "width": 16,
+              "height": 16
+            }
+          },
+          "status": "confirmed",
+          "suggested": false,
+          "unused": false,
+          "transform": null
+        },
+        "edge_top_01": {
+          "id": "edge_top_01",
+          "label": "Edge Top 01",
+          "category": "edges",
+          "mask": {
+            "topLeft": "A",
+            "top": "A",
+            "topRight": "A",
+            "left": "B",
+            "center": "B",
+            "right": "B",
+            "bottomLeft": "A",
+            "bottom": "B",
+            "bottomRight": "A"
+          },
+          "tile": {
+            "id": "terrain_tile_47_5",
+            "atlas": {
+              "x": 752,
+              "y": 80,
+              "width": 16,
+              "height": 16
+            }
+          },
+          "status": "confirmed",
+          "suggested": false,
+          "unused": false,
+          "transform": null
+        },
+        "edge_top_02": {
+          "id": "edge_top_02",
+          "label": "Edge Top 02",
+          "category": "edges",
+          "mask": {
+            "topLeft": "A",
+            "top": "A",
+            "topRight": "A",
+            "left": "B",
+            "center": "B",
+            "right": "B",
+            "bottomLeft": "A",
+            "bottom": "B",
+            "bottomRight": "B"
+          },
+          "tile": {
+            "id": "terrain_tile_50_5",
+            "atlas": {
+              "x": 800,
+              "y": 80,
+              "width": 16,
+              "height": 16
+            }
+          },
+          "status": "confirmed",
+          "suggested": false,
+          "unused": false,
+          "transform": null
+        },
+        "edge_top_03": {
+          "id": "edge_top_03",
+          "label": "Edge Top 03",
+          "category": "edges",
+          "mask": {
+            "topLeft": "A",
+            "top": "A",
+            "topRight": "A",
+            "left": "B",
+            "center": "B",
+            "right": "B",
+            "bottomLeft": "B",
+            "bottom": "B",
+            "bottomRight": "A"
+          },
+          "tile": {
+            "id": "terrain_tile_51_5",
+            "atlas": {
+              "x": 816,
+              "y": 80,
+              "width": 16,
+              "height": 16
+            }
+          },
+          "status": "confirmed",
+          "suggested": false,
+          "unused": false,
+          "transform": null
+        },
+        "edge_top_04": {
+          "id": "edge_top_04",
+          "label": "Edge Top 04",
+          "category": "edges",
+          "mask": {
+            "topLeft": "A",
+            "top": "A",
+            "topRight": "A",
+            "left": "B",
+            "center": "B",
+            "right": "B",
+            "bottomLeft": "B",
+            "bottom": "B",
+            "bottomRight": "B"
+          },
+          "tile": {
+            "id": "terrain_tile_55_5",
+            "atlas": {
+              "x": 880,
+              "y": 80,
+              "width": 16,
+              "height": 16
+            }
+          },
+          "status": "confirmed",
+          "suggested": false,
+          "unused": false,
+          "transform": null
+        },
+        "outer_corner_bottom_left_01": {
+          "id": "outer_corner_bottom_left_01",
+          "label": "Outer Corner Bottom Left 01",
+          "category": "outer_corners",
+          "mask": {
+            "topLeft": "A",
+            "top": "A",
+            "topRight": "A",
+            "left": "B",
+            "center": "B",
+            "right": "A",
+            "bottomLeft": "A",
+            "bottom": "B",
+            "bottomRight": "A"
+          },
+          "tile": {
+            "id": "terrain_tile_48_5",
+            "atlas": {
+              "x": 768,
+              "y": 80,
+              "width": 16,
+              "height": 16
+            }
+          },
+          "status": "confirmed",
+          "suggested": false,
+          "unused": false,
+          "transform": null
+        },
+        "outer_corner_bottom_left_02": {
+          "id": "outer_corner_bottom_left_02",
+          "label": "Outer Corner Bottom Left 02",
+          "category": "outer_corners",
+          "mask": {
+            "topLeft": "A",
+            "top": "A",
+            "topRight": "A",
+            "left": "B",
+            "center": "B",
+            "right": "A",
+            "bottomLeft": "B",
+            "bottom": "B",
+            "bottomRight": "A"
+          },
+          "tile": {
+            "id": "terrain_tile_56_5",
+            "atlas": {
+              "x": 896,
+              "y": 80,
+              "width": 16,
+              "height": 16
+            }
+          },
+          "status": "confirmed",
+          "suggested": false,
+          "unused": false,
+          "transform": null
+        },
+        "outer_corner_bottom_right_01": {
+          "id": "outer_corner_bottom_right_01",
+          "label": "Outer Corner Bottom Right 01",
+          "category": "outer_corners",
+          "mask": {
+            "topLeft": "A",
+            "top": "A",
+            "topRight": "A",
+            "left": "A",
+            "center": "B",
+            "right": "B",
+            "bottomLeft": "A",
+            "bottom": "B",
+            "bottomRight": "A"
+          },
+          "tile": {
+            "id": "terrain_tile_46_5",
+            "atlas": {
+              "x": 736,
+              "y": 80,
+              "width": 16,
+              "height": 16
+            }
+          },
+          "status": "confirmed",
+          "suggested": false,
+          "unused": false,
+          "transform": null
+        },
+        "outer_corner_bottom_right_02": {
+          "id": "outer_corner_bottom_right_02",
+          "label": "Outer Corner Bottom Right 02",
+          "category": "outer_corners",
+          "mask": {
+            "topLeft": "A",
+            "top": "A",
+            "topRight": "A",
+            "left": "A",
+            "center": "B",
+            "right": "B",
+            "bottomLeft": "A",
+            "bottom": "B",
+            "bottomRight": "B"
+          },
+          "tile": {
+            "id": "terrain_tile_53_5",
+            "atlas": {
+              "x": 848,
+              "y": 80,
+              "width": 16,
+              "height": 16
+            }
+          },
+          "status": "confirmed",
+          "suggested": false,
+          "unused": false,
+          "transform": null
+        },
+        "outer_corner_top_left_01": {
+          "id": "outer_corner_top_left_01",
+          "label": "Outer Corner Top Left 01",
+          "category": "outer_corners",
+          "mask": {
+            "topLeft": "A",
+            "top": "B",
+            "topRight": "A",
+            "left": "B",
+            "center": "B",
+            "right": "A",
+            "bottomLeft": "A",
+            "bottom": "A",
+            "bottomRight": "A"
+          },
+          "tile": {
+            "id": "terrain_tile_48_7",
+            "atlas": {
+              "x": 768,
+              "y": 112,
+              "width": 16,
+              "height": 16
+            }
+          },
+          "status": "confirmed",
+          "suggested": false,
+          "unused": false,
+          "transform": null
+        },
+        "outer_corner_top_left_02": {
+          "id": "outer_corner_top_left_02",
+          "label": "Outer Corner Top Left 02",
+          "category": "outer_corners",
+          "mask": {
+            "topLeft": "B",
+            "top": "B",
+            "topRight": "A",
+            "left": "B",
+            "center": "B",
+            "right": "A",
+            "bottomLeft": "A",
+            "bottom": "A",
+            "bottomRight": "A"
+          },
+          "tile": {
+            "id": "terrain_tile_56_8",
+            "atlas": {
+              "x": 896,
+              "y": 128,
+              "width": 16,
+              "height": 16
+            }
+          },
+          "status": "confirmed",
+          "suggested": false,
+          "unused": false,
+          "transform": null
+        },
+        "outer_corner_top_right_01": {
+          "id": "outer_corner_top_right_01",
+          "label": "Outer Corner Top Right 01",
+          "category": "outer_corners",
+          "mask": {
+            "topLeft": "A",
+            "top": "B",
+            "topRight": "A",
+            "left": "A",
+            "center": "B",
+            "right": "B",
+            "bottomLeft": "A",
+            "bottom": "A",
+            "bottomRight": "A"
+          },
+          "tile": {
+            "id": "terrain_tile_46_7",
+            "atlas": {
+              "x": 736,
+              "y": 112,
+              "width": 16,
+              "height": 16
+            }
+          },
+          "status": "confirmed",
+          "suggested": false,
+          "unused": false,
+          "transform": null
+        },
+        "outer_corner_top_right_02": {
+          "id": "outer_corner_top_right_02",
+          "label": "Outer Corner Top Right 02",
+          "category": "outer_corners",
+          "mask": {
+            "topLeft": "A",
+            "top": "B",
+            "topRight": "B",
+            "left": "A",
+            "center": "B",
+            "right": "B",
+            "bottomLeft": "A",
+            "bottom": "A",
+            "bottomRight": "A"
+          },
+          "tile": {
+            "id": "terrain_tile_53_8",
+            "atlas": {
+              "x": 848,
+              "y": 128,
+              "width": 16,
+              "height": 16
+            }
+          },
+          "status": "confirmed",
+          "suggested": false,
+          "unused": false,
+          "transform": null
+        },
+        "corridor_horizontal": {
+          "id": "corridor_horizontal",
+          "label": "Corridor Horizontal",
+          "category": "corridors",
+          "mask": {
+            "topLeft": "A",
+            "top": "A",
+            "topRight": "A",
+            "left": "B",
+            "center": "B",
+            "right": "B",
+            "bottomLeft": "A",
+            "bottom": "A",
+            "bottomRight": "A"
+          },
+          "tile": {
+            "id": "terrain_tile_47_8",
+            "atlas": {
+              "x": 752,
+              "y": 128,
+              "width": 16,
+              "height": 16
+            }
+          },
+          "status": "confirmed",
+          "suggested": false,
+          "unused": false,
+          "transform": null
+        },
+        "corridor_vertical": {
+          "id": "corridor_vertical",
+          "label": "Corridor Vertical",
+          "category": "corridors",
+          "mask": {
+            "topLeft": "A",
+            "top": "B",
+            "topRight": "A",
+            "left": "A",
+            "center": "B",
+            "right": "A",
+            "bottomLeft": "A",
+            "bottom": "B",
+            "bottomRight": "A"
+          },
+          "tile": {
+            "id": "terrain_tile_45_6",
+            "atlas": {
+              "x": 720,
+              "y": 96,
+              "width": 16,
+              "height": 16
+            }
+          },
+          "status": "confirmed",
+          "suggested": false,
+          "unused": false,
+          "transform": null
+        },
+        "side_bottom": {
+          "id": "side_bottom",
+          "label": "Side Bottom",
+          "category": "sides",
+          "mask": {
+            "topLeft": "A",
+            "top": "A",
+            "topRight": "A",
+            "left": "A",
+            "center": "B",
+            "right": "A",
+            "bottomLeft": "A",
+            "bottom": "B",
+            "bottomRight": "A"
+          },
+          "tile": {
+            "id": "terrain_tile_45_5",
+            "atlas": {
+              "x": 720,
+              "y": 80,
+              "width": 16,
+              "height": 16
+            }
+          },
+          "status": "confirmed",
+          "suggested": false,
+          "unused": false,
+          "transform": null
+        },
+        "side_left": {
+          "id": "side_left",
+          "label": "Side Left",
+          "category": "sides",
+          "mask": {
+            "topLeft": "A",
+            "top": "A",
+            "topRight": "A",
+            "left": "B",
+            "center": "B",
+            "right": "A",
+            "bottomLeft": "A",
+            "bottom": "A",
+            "bottomRight": "A"
+          },
+          "tile": {
+            "id": "terrain_tile_48_8",
+            "atlas": {
+              "x": 768,
+              "y": 128,
+              "width": 16,
+              "height": 16
+            }
+          },
+          "status": "confirmed",
+          "suggested": false,
+          "unused": false,
+          "transform": null
+        },
+        "side_right": {
+          "id": "side_right",
+          "label": "Side Right",
+          "category": "sides",
+          "mask": {
+            "topLeft": "A",
+            "top": "A",
+            "topRight": "A",
+            "left": "A",
+            "center": "B",
+            "right": "B",
+            "bottomLeft": "A",
+            "bottom": "A",
+            "bottomRight": "A"
+          },
+          "tile": {
+            "id": "terrain_tile_46_8",
+            "atlas": {
+              "x": 736,
+              "y": 128,
+              "width": 16,
+              "height": 16
+            }
+          },
+          "status": "confirmed",
+          "suggested": false,
+          "unused": false,
+          "transform": null
+        },
+        "side_top": {
+          "id": "side_top",
+          "label": "Side Top",
+          "category": "sides",
+          "mask": {
+            "topLeft": "A",
+            "top": "B",
+            "topRight": "A",
+            "left": "A",
+            "center": "B",
+            "right": "A",
+            "bottomLeft": "A",
+            "bottom": "A",
+            "bottomRight": "A"
+          },
+          "tile": {
+            "id": "terrain_tile_45_7",
+            "atlas": {
+              "x": 720,
+              "y": 112,
+              "width": 16,
+              "height": 16
+            }
+          },
+          "status": "confirmed",
+          "suggested": false,
+          "unused": false,
+          "transform": null
+        },
+        "isolated": {
+          "id": "isolated",
+          "label": "Isolated",
+          "category": "isolated",
+          "mask": {
+            "topLeft": "A",
+            "top": "A",
+            "topRight": "A",
+            "left": "A",
+            "center": "B",
+            "right": "A",
+            "bottomLeft": "A",
+            "bottom": "A",
+            "bottomRight": "A"
+          },
+          "tile": {
+            "id": "terrain_tile_45_8",
+            "atlas": {
+              "x": 720,
+              "y": 128,
+              "width": 16,
+              "height": 16
+            }
+          },
+          "status": "confirmed",
+          "suggested": false,
+          "unused": false,
+          "transform": null
+        },
+        "complex_core_01": {
+          "id": "complex_core_01",
+          "label": "Complex Core 01",
+          "category": "complex",
+          "mask": {
+            "topLeft": "A",
+            "top": "B",
+            "topRight": "A",
+            "left": "B",
+            "center": "B",
+            "right": "B",
+            "bottomLeft": "A",
+            "bottom": "B",
+            "bottomRight": "A"
+          },
+          "tile": {
+            "id": "terrain_tile_47_6",
+            "atlas": {
+              "x": 752,
+              "y": 96,
+              "width": 16,
+              "height": 16
+            }
+          },
+          "status": "confirmed",
+          "suggested": false,
+          "unused": false,
+          "transform": null
+        },
+        "complex_core_02": {
+          "id": "complex_core_02",
+          "label": "Complex Core 02",
+          "category": "complex",
+          "mask": {
+            "topLeft": "A",
+            "top": "B",
+            "topRight": "A",
+            "left": "B",
+            "center": "B",
+            "right": "B",
+            "bottomLeft": "A",
+            "bottom": "B",
+            "bottomRight": "B"
+          },
+          "tile": {
+            "id": "terrain_tile_52_8",
+            "atlas": {
+              "x": 832,
+              "y": 128,
+              "width": 16,
+              "height": 16
+            }
+          },
+          "status": "confirmed",
+          "suggested": false,
+          "unused": false,
+          "transform": null
+        },
+        "complex_core_03": {
+          "id": "complex_core_03",
+          "label": "Complex Core 03",
+          "category": "complex",
+          "mask": {
+            "topLeft": "A",
+            "top": "B",
+            "topRight": "A",
+            "left": "B",
+            "center": "B",
+            "right": "B",
+            "bottomLeft": "B",
+            "bottom": "B",
+            "bottomRight": "A"
+          },
+          "tile": {
+            "id": "terrain_tile_49_8",
+            "atlas": {
+              "x": 784,
+              "y": 128,
+              "width": 16,
+              "height": 16
+            }
+          },
+          "status": "confirmed",
+          "suggested": false,
+          "unused": false,
+          "transform": null
+        },
+        "complex_core_04": {
+          "id": "complex_core_04",
+          "label": "Complex Core 04",
+          "category": "complex",
+          "mask": {
+            "topLeft": "A",
+            "top": "B",
+            "topRight": "A",
+            "left": "B",
+            "center": "B",
+            "right": "B",
+            "bottomLeft": "B",
+            "bottom": "B",
+            "bottomRight": "B"
+          },
+          "tile": {
+            "id": "terrain_tile_54_5",
+            "atlas": {
+              "x": 864,
+              "y": 80,
+              "width": 16,
+              "height": 16
+            }
+          },
+          "status": "confirmed",
+          "suggested": false,
+          "unused": false,
+          "transform": null
+        },
+        "complex_core_05": {
+          "id": "complex_core_05",
+          "label": "Complex Core 05",
+          "category": "complex",
+          "mask": {
+            "topLeft": "A",
+            "top": "B",
+            "topRight": "B",
+            "left": "B",
+            "center": "B",
+            "right": "B",
+            "bottomLeft": "A",
+            "bottom": "B",
+            "bottomRight": "A"
+          },
+          "tile": {
+            "id": "terrain_tile_52_5",
+            "atlas": {
+              "x": 832,
+              "y": 80,
+              "width": 16,
+              "height": 16
+            }
+          },
+          "status": "confirmed",
+          "suggested": false,
+          "unused": false,
+          "transform": null
+        },
+        "complex_core_06": {
+          "id": "complex_core_06",
+          "label": "Complex Core 06",
+          "category": "complex",
+          "mask": {
+            "topLeft": "A",
+            "top": "B",
+            "topRight": "B",
+            "left": "B",
+            "center": "B",
+            "right": "B",
+            "bottomLeft": "A",
+            "bottom": "B",
+            "bottomRight": "B"
+          },
+          "tile": {
+            "id": "terrain_tile_53_7",
+            "atlas": {
+              "x": 848,
+              "y": 112,
+              "width": 16,
+              "height": 16
+            }
+          },
+          "status": "confirmed",
+          "suggested": false,
+          "unused": false,
+          "transform": null
+        },
+        "complex_core_07": {
+          "id": "complex_core_07",
+          "label": "Complex Core 07",
+          "category": "complex",
+          "mask": {
+            "topLeft": "A",
+            "top": "B",
+            "topRight": "B",
+            "left": "B",
+            "center": "B",
+            "right": "B",
+            "bottomLeft": "B",
+            "bottom": "B",
+            "bottomRight": "A"
+          },
+          "tile": {
+            "id": "terrain_tile_54_6",
+            "atlas": {
+              "x": 864,
+              "y": 96,
+              "width": 16,
+              "height": 16
+            }
+          },
+          "status": "confirmed",
+          "suggested": false,
+          "unused": false,
+          "transform": null
+        },
+        "complex_core_08": {
+          "id": "complex_core_08",
+          "label": "Complex Core 08",
+          "category": "complex",
+          "mask": {
+            "topLeft": "B",
+            "top": "B",
+            "topRight": "A",
+            "left": "B",
+            "center": "B",
+            "right": "B",
+            "bottomLeft": "A",
+            "bottom": "B",
+            "bottomRight": "A"
+          },
+          "tile": {
+            "id": "terrain_tile_49_5",
+            "atlas": {
+              "x": 784,
+              "y": 80,
+              "width": 16,
+              "height": 16
+            }
+          },
+          "status": "confirmed",
+          "suggested": false,
+          "unused": false,
+          "transform": null
+        },
+        "complex_core_09": {
+          "id": "complex_core_09",
+          "label": "Complex Core 09",
+          "category": "complex",
+          "mask": {
+            "topLeft": "B",
+            "top": "B",
+            "topRight": "A",
+            "left": "B",
+            "center": "B",
+            "right": "B",
+            "bottomLeft": "A",
+            "bottom": "B",
+            "bottomRight": "B"
+          },
+          "tile": {
+            "id": "terrain_tile_55_7",
+            "atlas": {
+              "x": 880,
+              "y": 112,
+              "width": 16,
+              "height": 16
+            }
+          },
+          "status": "confirmed",
+          "suggested": false,
+          "unused": false,
+          "transform": null
+        },
+        "complex_core_10": {
+          "id": "complex_core_10",
+          "label": "Complex Core 10",
+          "category": "complex",
+          "mask": {
+            "topLeft": "B",
+            "top": "B",
+            "topRight": "A",
+            "left": "B",
+            "center": "B",
+            "right": "B",
+            "bottomLeft": "B",
+            "bottom": "B",
+            "bottomRight": "A"
+          },
+          "tile": {
+            "id": "terrain_tile_56_6",
+            "atlas": {
+              "x": 896,
+              "y": 96,
+              "width": 16,
+              "height": 16
+            }
+          },
+          "status": "confirmed",
+          "suggested": false,
+          "unused": false,
+          "transform": null
+        },
+        "complex_core_11": {
+          "id": "complex_core_11",
+          "label": "Complex Core 11",
+          "category": "complex",
+          "mask": {
+            "topLeft": "B",
+            "top": "B",
+            "topRight": "B",
+            "left": "B",
+            "center": "B",
+            "right": "B",
+            "bottomLeft": "A",
+            "bottom": "B",
+            "bottomRight": "A"
+          },
+          "tile": {
+            "id": "terrain_tile_55_8",
+            "atlas": {
+              "x": 880,
+              "y": 128,
+              "width": 16,
+              "height": 16
+            }
+          },
+          "status": "confirmed",
+          "suggested": false,
+          "unused": false,
+          "transform": null
+        }
+      }
+    },
+    "road_on_grass_light": {
+      "id": "road_on_grass_light",
+      "terrainA": "grass_light",
+      "terrainB": "road",
+      "description": "Sand patches transitioning over light grass.",
+      "maskType": "8_neighbor_47",
+      "patterns": {
+        "full": {
+          "id": "full",
+          "label": "Full",
+          "category": "full",
+          "mask": {
+            "topLeft": "B",
+            "top": "B",
+            "topRight": "B",
+            "left": "B",
+            "center": "B",
+            "right": "B",
+            "bottomLeft": "B",
+            "bottom": "B",
+            "bottomRight": "B"
+          },
+          "tile": {
+            "id": "terrain_tile_33_37",
+            "atlas": {
+              "x": 528,
+              "y": 592,
+              "width": 16,
+              "height": 16
+            }
+          },
+          "status": "confirmed",
+          "suggested": false,
+          "unused": false,
+          "transform": null
+        },
+        "inner_corner_bottom_left": {
+          "id": "inner_corner_bottom_left",
+          "label": "Inner Corner Bottom Left",
+          "category": "inner_corners",
+          "mask": {
+            "topLeft": "B",
+            "top": "B",
+            "topRight": "B",
+            "left": "B",
+            "center": "B",
+            "right": "B",
+            "bottomLeft": "A",
+            "bottom": "B",
+            "bottomRight": "B"
+          },
+          "tile": {
+            "id": "terrain_tile_29_37",
+            "atlas": {
+              "x": 464,
+              "y": 592,
+              "width": 16,
+              "height": 16
+            }
+          },
+          "status": "confirmed",
+          "suggested": false,
+          "unused": false,
+          "transform": null
+        },
+        "inner_corner_bottom_right": {
+          "id": "inner_corner_bottom_right",
+          "label": "Inner Corner Bottom Right",
+          "category": "inner_corners",
+          "mask": {
+            "topLeft": "B",
+            "top": "B",
+            "topRight": "B",
+            "left": "B",
+            "center": "B",
+            "right": "B",
+            "bottomLeft": "B",
+            "bottom": "B",
+            "bottomRight": "A"
+          },
+          "tile": {
+            "id": "terrain_tile_30_37",
+            "atlas": {
+              "x": 480,
+              "y": 592,
+              "width": 16,
+              "height": 16
+            }
+          },
+          "status": "confirmed",
+          "suggested": false,
+          "unused": false,
+          "transform": null
+        },
+        "inner_corner_top_left": {
+          "id": "inner_corner_top_left",
+          "label": "Inner Corner Top Left",
+          "category": "inner_corners",
+          "mask": {
+            "topLeft": "A",
+            "top": "B",
+            "topRight": "B",
+            "left": "B",
+            "center": "B",
+            "right": "B",
+            "bottomLeft": "B",
+            "bottom": "B",
+            "bottomRight": "B"
+          },
+          "tile": {
+            "id": "terrain_tile_29_36",
+            "atlas": {
+              "x": 464,
+              "y": 576,
+              "width": 16,
+              "height": 16
+            }
+          },
+          "status": "confirmed",
+          "suggested": false,
+          "unused": false,
+          "transform": null
+        },
+        "inner_corner_top_right": {
+          "id": "inner_corner_top_right",
+          "label": "Inner Corner Top Right",
+          "category": "inner_corners",
+          "mask": {
+            "topLeft": "B",
+            "top": "B",
+            "topRight": "A",
+            "left": "B",
+            "center": "B",
+            "right": "B",
+            "bottomLeft": "B",
+            "bottom": "B",
+            "bottomRight": "B"
+          },
+          "tile": {
+            "id": "terrain_tile_30_36",
+            "atlas": {
+              "x": 480,
+              "y": 576,
+              "width": 16,
+              "height": 16
+            }
+          },
+          "status": "confirmed",
+          "suggested": false,
+          "unused": false,
+          "transform": null
+        },
+        "edge_bottom_01": {
+          "id": "edge_bottom_01",
+          "label": "Edge Bottom 01",
+          "category": "edges",
+          "mask": {
+            "topLeft": "A",
+            "top": "B",
+            "topRight": "A",
+            "left": "B",
+            "center": "B",
+            "right": "B",
+            "bottomLeft": "A",
+            "bottom": "A",
+            "bottomRight": "A"
+          },
+          "tile": {
+            "id": "terrain_tile_26_37",
+            "atlas": {
+              "x": 416,
+              "y": 592,
+              "width": 16,
+              "height": 16
+            }
+          },
+          "status": "confirmed",
+          "suggested": false,
+          "unused": false,
+          "transform": null
+        },
+        "edge_bottom_02": {
+          "id": "edge_bottom_02",
+          "label": "Edge Bottom 02",
+          "category": "edges",
+          "mask": {
+            "topLeft": "A",
+            "top": "B",
+            "topRight": "B",
+            "left": "B",
+            "center": "B",
+            "right": "B",
+            "bottomLeft": "A",
+            "bottom": "A",
+            "bottomRight": "A"
+          },
+          "tile": {
+            "id": "terrain_tile_29_38",
+            "atlas": {
+              "x": 464,
+              "y": 608,
+              "width": 16,
+              "height": 16
+            }
+          },
+          "status": "confirmed",
+          "suggested": false,
+          "unused": false,
+          "transform": null
+        },
+        "edge_bottom_03": {
+          "id": "edge_bottom_03",
+          "label": "Edge Bottom 03",
+          "category": "edges",
+          "mask": {
+            "topLeft": "B",
+            "top": "B",
+            "topRight": "A",
+            "left": "B",
+            "center": "B",
+            "right": "B",
+            "bottomLeft": "A",
+            "bottom": "A",
+            "bottomRight": "A"
+          },
+          "tile": {
+            "id": "terrain_tile_30_38",
+            "atlas": {
+              "x": 480,
+              "y": 608,
+              "width": 16,
+              "height": 16
+            }
+          },
+          "status": "confirmed",
+          "suggested": false,
+          "unused": false,
+          "transform": null
+        },
+        "edge_bottom_04": {
+          "id": "edge_bottom_04",
+          "label": "Edge Bottom 04",
+          "category": "edges",
+          "mask": {
+            "topLeft": "B",
+            "top": "B",
+            "topRight": "B",
+            "left": "B",
+            "center": "B",
+            "right": "B",
+            "bottomLeft": "A",
+            "bottom": "A",
+            "bottomRight": "A"
+          },
+          "tile": {
+            "id": "terrain_tile_33_38",
+            "atlas": {
+              "x": 528,
+              "y": 608,
+              "width": 16,
+              "height": 16
+            }
+          },
+          "status": "confirmed",
+          "suggested": false,
+          "unused": false,
+          "transform": null
+        },
+        "edge_left_01": {
+          "id": "edge_left_01",
+          "label": "Edge Left 01",
+          "category": "edges",
+          "mask": {
+            "topLeft": "A",
+            "top": "B",
+            "topRight": "A",
+            "left": "A",
+            "center": "B",
+            "right": "B",
+            "bottomLeft": "A",
+            "bottom": "B",
+            "bottomRight": "A"
+          },
+          "tile": {
+            "id": "terrain_tile_25_36",
+            "atlas": {
+              "x": 400,
+              "y": 576,
+              "width": 16,
+              "height": 16
+            }
+          },
+          "status": "confirmed",
+          "suggested": false,
+          "unused": false,
+          "transform": null
+        },
+        "edge_left_02": {
+          "id": "edge_left_02",
+          "label": "Edge Left 02",
+          "category": "edges",
+          "mask": {
+            "topLeft": "A",
+            "top": "B",
+            "topRight": "A",
+            "left": "A",
+            "center": "B",
+            "right": "B",
+            "bottomLeft": "A",
+            "bottom": "B",
+            "bottomRight": "B"
+          },
+          "tile": {
+            "id": "terrain_tile_28_36",
+            "atlas": {
+              "x": 448,
+              "y": 576,
+              "width": 16,
+              "height": 16
+            }
+          },
+          "status": "confirmed",
+          "suggested": false,
+          "unused": false,
+          "transform": null
+        },
+        "edge_left_03": {
+          "id": "edge_left_03",
+          "label": "Edge Left 03",
+          "category": "edges",
+          "mask": {
+            "topLeft": "A",
+            "top": "B",
+            "topRight": "B",
+            "left": "A",
+            "center": "B",
+            "right": "B",
+            "bottomLeft": "A",
+            "bottom": "B",
+            "bottomRight": "A"
+          },
+          "tile": {
+            "id": "terrain_tile_28_37",
+            "atlas": {
+              "x": 448,
+              "y": 592,
+              "width": 16,
+              "height": 16
+            }
+          },
+          "status": "confirmed",
+          "suggested": false,
+          "unused": false,
+          "transform": null
+        },
+        "edge_left_04": {
+          "id": "edge_left_04",
+          "label": "Edge Left 04",
+          "category": "edges",
+          "mask": {
+            "topLeft": "A",
+            "top": "B",
+            "topRight": "B",
+            "left": "A",
+            "center": "B",
+            "right": "B",
+            "bottomLeft": "A",
+            "bottom": "B",
+            "bottomRight": "B"
+          },
+          "tile": {
+            "id": "terrain_tile_32_36",
+            "atlas": {
+              "x": 512,
+              "y": 576,
+              "width": 16,
+              "height": 16
+            }
+          },
+          "status": "confirmed",
+          "suggested": false,
+          "unused": false,
+          "transform": null
+        },
+        "edge_right_01": {
+          "id": "edge_right_01",
+          "label": "Edge Right 01",
+          "category": "edges",
+          "mask": {
+            "topLeft": "A",
+            "top": "B",
+            "topRight": "A",
+            "left": "B",
+            "center": "B",
+            "right": "A",
+            "bottomLeft": "A",
+            "bottom": "B",
+            "bottomRight": "A"
+          },
+          "tile": {
+            "id": "terrain_tile_27_36",
+            "atlas": {
+              "x": 432,
+              "y": 576,
+              "width": 16,
+              "height": 16
+            }
+          },
+          "status": "confirmed",
+          "suggested": false,
+          "unused": false,
+          "transform": null
+        },
+        "edge_right_02": {
+          "id": "edge_right_02",
+          "label": "Edge Right 02",
+          "category": "edges",
+          "mask": {
+            "topLeft": "A",
+            "top": "B",
+            "topRight": "A",
+            "left": "B",
+            "center": "B",
+            "right": "A",
+            "bottomLeft": "B",
+            "bottom": "B",
+            "bottomRight": "A"
+          },
+          "tile": {
+            "id": "terrain_tile_31_36",
+            "atlas": {
+              "x": 496,
+              "y": 576,
+              "width": 16,
+              "height": 16
+            }
+          },
+          "status": "confirmed",
+          "suggested": false,
+          "unused": false,
+          "transform": null
+        },
+        "edge_right_03": {
+          "id": "edge_right_03",
+          "label": "Edge Right 03",
+          "category": "edges",
+          "mask": {
+            "topLeft": "B",
+            "top": "B",
+            "topRight": "A",
+            "left": "B",
+            "center": "B",
+            "right": "A",
+            "bottomLeft": "A",
+            "bottom": "B",
+            "bottomRight": "A"
+          },
+          "tile": {
+            "id": "terrain_tile_31_37",
+            "atlas": {
+              "x": 496,
+              "y": 592,
+              "width": 16,
+              "height": 16
+            }
+          },
+          "status": "confirmed",
+          "suggested": false,
+          "unused": false,
+          "transform": null
+        },
+        "edge_right_04": {
+          "id": "edge_right_04",
+          "label": "Edge Right 04",
+          "category": "edges",
+          "mask": {
+            "topLeft": "B",
+            "top": "B",
+            "topRight": "A",
+            "left": "B",
+            "center": "B",
+            "right": "A",
+            "bottomLeft": "B",
+            "bottom": "B",
+            "bottomRight": "A"
+          },
+          "tile": {
+            "id": "terrain_tile_35_37",
+            "atlas": {
+              "x": 560,
+              "y": 592,
+              "width": 16,
+              "height": 16
+            }
+          },
+          "status": "confirmed",
+          "suggested": false,
+          "unused": false,
+          "transform": null
+        },
+        "edge_top_01": {
+          "id": "edge_top_01",
+          "label": "Edge Top 01",
+          "category": "edges",
+          "mask": {
+            "topLeft": "A",
+            "top": "A",
+            "topRight": "A",
+            "left": "B",
+            "center": "B",
+            "right": "B",
+            "bottomLeft": "A",
+            "bottom": "B",
+            "bottomRight": "A"
+          },
+          "tile": {
+            "id": "terrain_tile_26_35",
+            "atlas": {
+              "x": 416,
+              "y": 560,
+              "width": 16,
+              "height": 16
+            }
+          },
+          "status": "confirmed",
+          "suggested": false,
+          "unused": false,
+          "transform": null
+        },
+        "edge_top_02": {
+          "id": "edge_top_02",
+          "label": "Edge Top 02",
+          "category": "edges",
+          "mask": {
+            "topLeft": "A",
+            "top": "A",
+            "topRight": "A",
+            "left": "B",
+            "center": "B",
+            "right": "B",
+            "bottomLeft": "A",
+            "bottom": "B",
+            "bottomRight": "B"
+          },
+          "tile": {
+            "id": "terrain_tile_29_35",
+            "atlas": {
+              "x": 464,
+              "y": 560,
+              "width": 16,
+              "height": 16
+            }
+          },
+          "status": "confirmed",
+          "suggested": false,
+          "unused": false,
+          "transform": null
+        },
+        "edge_top_03": {
+          "id": "edge_top_03",
+          "label": "Edge Top 03",
+          "category": "edges",
+          "mask": {
+            "topLeft": "A",
+            "top": "A",
+            "topRight": "A",
+            "left": "B",
+            "center": "B",
+            "right": "B",
+            "bottomLeft": "B",
+            "bottom": "B",
+            "bottomRight": "A"
+          },
+          "tile": {
+            "id": "terrain_tile_30_35",
+            "atlas": {
+              "x": 480,
+              "y": 560,
+              "width": 16,
+              "height": 16
+            }
+          },
+          "status": "confirmed",
+          "suggested": false,
+          "unused": false,
+          "transform": null
+        },
+        "edge_top_04": {
+          "id": "edge_top_04",
+          "label": "Edge Top 04",
+          "category": "edges",
+          "mask": {
+            "topLeft": "A",
+            "top": "A",
+            "topRight": "A",
+            "left": "B",
+            "center": "B",
+            "right": "B",
+            "bottomLeft": "B",
+            "bottom": "B",
+            "bottomRight": "B"
+          },
+          "tile": {
+            "id": "terrain_tile_34_35",
+            "atlas": {
+              "x": 544,
+              "y": 560,
+              "width": 16,
+              "height": 16
+            }
+          },
+          "status": "confirmed",
+          "suggested": false,
+          "unused": false,
+          "transform": null
+        },
+        "outer_corner_bottom_left_01": {
+          "id": "outer_corner_bottom_left_01",
+          "label": "Outer Corner Bottom Left 01",
+          "category": "outer_corners",
+          "mask": {
+            "topLeft": "A",
+            "top": "A",
+            "topRight": "A",
+            "left": "B",
+            "center": "B",
+            "right": "A",
+            "bottomLeft": "A",
+            "bottom": "B",
+            "bottomRight": "A"
+          },
+          "tile": {
+            "id": "terrain_tile_27_35",
+            "atlas": {
+              "x": 432,
+              "y": 560,
+              "width": 16,
+              "height": 16
+            }
+          },
+          "status": "confirmed",
+          "suggested": false,
+          "unused": false,
+          "transform": null
+        },
+        "outer_corner_bottom_left_02": {
+          "id": "outer_corner_bottom_left_02",
+          "label": "Outer Corner Bottom Left 02",
+          "category": "outer_corners",
+          "mask": {
+            "topLeft": "A",
+            "top": "A",
+            "topRight": "A",
+            "left": "B",
+            "center": "B",
+            "right": "A",
+            "bottomLeft": "B",
+            "bottom": "B",
+            "bottomRight": "A"
+          },
+          "tile": {
+            "id": "terrain_tile_35_35",
+            "atlas": {
+              "x": 560,
+              "y": 560,
+              "width": 16,
+              "height": 16
+            }
+          },
+          "status": "confirmed",
+          "suggested": false,
+          "unused": false,
+          "transform": null
+        },
+        "outer_corner_bottom_right_01": {
+          "id": "outer_corner_bottom_right_01",
+          "label": "Outer Corner Bottom Right 01",
+          "category": "outer_corners",
+          "mask": {
+            "topLeft": "A",
+            "top": "A",
+            "topRight": "A",
+            "left": "A",
+            "center": "B",
+            "right": "B",
+            "bottomLeft": "A",
+            "bottom": "B",
+            "bottomRight": "A"
+          },
+          "tile": {
+            "id": "terrain_tile_25_35",
+            "atlas": {
+              "x": 400,
+              "y": 560,
+              "width": 16,
+              "height": 16
+            }
+          },
+          "status": "confirmed",
+          "suggested": false,
+          "unused": false,
+          "transform": null
+        },
+        "outer_corner_bottom_right_02": {
+          "id": "outer_corner_bottom_right_02",
+          "label": "Outer Corner Bottom Right 02",
+          "category": "outer_corners",
+          "mask": {
+            "topLeft": "A",
+            "top": "A",
+            "topRight": "A",
+            "left": "A",
+            "center": "B",
+            "right": "B",
+            "bottomLeft": "A",
+            "bottom": "B",
+            "bottomRight": "B"
+          },
+          "tile": {
+            "id": "terrain_tile_32_35",
+            "atlas": {
+              "x": 512,
+              "y": 560,
+              "width": 16,
+              "height": 16
+            }
+          },
+          "status": "confirmed",
+          "suggested": false,
+          "unused": false,
+          "transform": null
+        },
+        "outer_corner_top_left_01": {
+          "id": "outer_corner_top_left_01",
+          "label": "Outer Corner Top Left 01",
+          "category": "outer_corners",
+          "mask": {
+            "topLeft": "A",
+            "top": "B",
+            "topRight": "A",
+            "left": "B",
+            "center": "B",
+            "right": "A",
+            "bottomLeft": "A",
+            "bottom": "A",
+            "bottomRight": "A"
+          },
+          "tile": {
+            "id": "terrain_tile_27_37",
+            "atlas": {
+              "x": 432,
+              "y": 592,
+              "width": 16,
+              "height": 16
+            }
+          },
+          "status": "confirmed",
+          "suggested": false,
+          "unused": false,
+          "transform": null
+        },
+        "outer_corner_top_left_02": {
+          "id": "outer_corner_top_left_02",
+          "label": "Outer Corner Top Left 02",
+          "category": "outer_corners",
+          "mask": {
+            "topLeft": "B",
+            "top": "B",
+            "topRight": "A",
+            "left": "B",
+            "center": "B",
+            "right": "A",
+            "bottomLeft": "A",
+            "bottom": "A",
+            "bottomRight": "A"
+          },
+          "tile": {
+            "id": "terrain_tile_35_38",
+            "atlas": {
+              "x": 560,
+              "y": 608,
+              "width": 16,
+              "height": 16
+            }
+          },
+          "status": "confirmed",
+          "suggested": false,
+          "unused": false,
+          "transform": null
+        },
+        "outer_corner_top_right_01": {
+          "id": "outer_corner_top_right_01",
+          "label": "Outer Corner Top Right 01",
+          "category": "outer_corners",
+          "mask": {
+            "topLeft": "A",
+            "top": "B",
+            "topRight": "A",
+            "left": "A",
+            "center": "B",
+            "right": "B",
+            "bottomLeft": "A",
+            "bottom": "A",
+            "bottomRight": "A"
+          },
+          "tile": {
+            "id": "terrain_tile_25_37",
+            "atlas": {
+              "x": 400,
+              "y": 592,
+              "width": 16,
+              "height": 16
+            }
+          },
+          "status": "confirmed",
+          "suggested": false,
+          "unused": false,
+          "transform": null
+        },
+        "outer_corner_top_right_02": {
+          "id": "outer_corner_top_right_02",
+          "label": "Outer Corner Top Right 02",
+          "category": "outer_corners",
+          "mask": {
+            "topLeft": "A",
+            "top": "B",
+            "topRight": "B",
+            "left": "A",
+            "center": "B",
+            "right": "B",
+            "bottomLeft": "A",
+            "bottom": "A",
+            "bottomRight": "A"
+          },
+          "tile": {
+            "id": "terrain_tile_32_38",
+            "atlas": {
+              "x": 512,
+              "y": 608,
+              "width": 16,
+              "height": 16
+            }
+          },
+          "status": "confirmed",
+          "suggested": false,
+          "unused": false,
+          "transform": null
+        },
+        "corridor_horizontal": {
+          "id": "corridor_horizontal",
+          "label": "Corridor Horizontal",
+          "category": "corridors",
+          "mask": {
+            "topLeft": "A",
+            "top": "A",
+            "topRight": "A",
+            "left": "B",
+            "center": "B",
+            "right": "B",
+            "bottomLeft": "A",
+            "bottom": "A",
+            "bottomRight": "A"
+          },
+          "tile": {
+            "id": "terrain_tile_26_38",
+            "atlas": {
+              "x": 416,
+              "y": 608,
+              "width": 16,
+              "height": 16
+            }
+          },
+          "status": "confirmed",
+          "suggested": false,
+          "unused": false,
+          "transform": null
+        },
+        "corridor_vertical": {
+          "id": "corridor_vertical",
+          "label": "Corridor Vertical",
+          "category": "corridors",
+          "mask": {
+            "topLeft": "A",
+            "top": "B",
+            "topRight": "A",
+            "left": "A",
+            "center": "B",
+            "right": "A",
+            "bottomLeft": "A",
+            "bottom": "B",
+            "bottomRight": "A"
+          },
+          "tile": {
+            "id": "terrain_tile_24_36",
+            "atlas": {
+              "x": 384,
+              "y": 576,
+              "width": 16,
+              "height": 16
+            }
+          },
+          "status": "confirmed",
+          "suggested": false,
+          "unused": false,
+          "transform": null
+        },
+        "side_bottom": {
+          "id": "side_bottom",
+          "label": "Side Bottom",
+          "category": "sides",
+          "mask": {
+            "topLeft": "A",
+            "top": "A",
+            "topRight": "A",
+            "left": "A",
+            "center": "B",
+            "right": "A",
+            "bottomLeft": "A",
+            "bottom": "B",
+            "bottomRight": "A"
+          },
+          "tile": {
+            "id": "terrain_tile_24_35",
+            "atlas": {
+              "x": 384,
+              "y": 560,
+              "width": 16,
+              "height": 16
+            }
+          },
+          "status": "confirmed",
+          "suggested": false,
+          "unused": false,
+          "transform": null
+        },
+        "side_left": {
+          "id": "side_left",
+          "label": "Side Left",
+          "category": "sides",
+          "mask": {
+            "topLeft": "A",
+            "top": "A",
+            "topRight": "A",
+            "left": "B",
+            "center": "B",
+            "right": "A",
+            "bottomLeft": "A",
+            "bottom": "A",
+            "bottomRight": "A"
+          },
+          "tile": {
+            "id": "terrain_tile_27_38",
+            "atlas": {
+              "x": 432,
+              "y": 608,
+              "width": 16,
+              "height": 16
+            }
+          },
+          "status": "confirmed",
+          "suggested": false,
+          "unused": false,
+          "transform": null
+        },
+        "side_right": {
+          "id": "side_right",
+          "label": "Side Right",
+          "category": "sides",
+          "mask": {
+            "topLeft": "A",
+            "top": "A",
+            "topRight": "A",
+            "left": "A",
+            "center": "B",
+            "right": "B",
+            "bottomLeft": "A",
+            "bottom": "A",
+            "bottomRight": "A"
+          },
+          "tile": {
+            "id": "terrain_tile_25_38",
+            "atlas": {
+              "x": 400,
+              "y": 608,
+              "width": 16,
+              "height": 16
+            }
+          },
+          "status": "confirmed",
+          "suggested": false,
+          "unused": false,
+          "transform": null
+        },
+        "side_top": {
+          "id": "side_top",
+          "label": "Side Top",
+          "category": "sides",
+          "mask": {
+            "topLeft": "A",
+            "top": "B",
+            "topRight": "A",
+            "left": "A",
+            "center": "B",
+            "right": "A",
+            "bottomLeft": "A",
+            "bottom": "A",
+            "bottomRight": "A"
+          },
+          "tile": {
+            "id": "terrain_tile_24_37",
+            "atlas": {
+              "x": 384,
+              "y": 592,
+              "width": 16,
+              "height": 16
+            }
+          },
+          "status": "confirmed",
+          "suggested": false,
+          "unused": false,
+          "transform": null
+        },
+        "isolated": {
+          "id": "isolated",
+          "label": "Isolated",
+          "category": "isolated",
+          "mask": {
+            "topLeft": "A",
+            "top": "A",
+            "topRight": "A",
+            "left": "A",
+            "center": "B",
+            "right": "A",
+            "bottomLeft": "A",
+            "bottom": "A",
+            "bottomRight": "A"
+          },
+          "tile": {
+            "id": "terrain_tile_24_38",
+            "atlas": {
+              "x": 384,
+              "y": 608,
+              "width": 16,
+              "height": 16
+            }
+          },
+          "status": "confirmed",
+          "suggested": false,
+          "unused": false,
+          "transform": null
+        },
+        "complex_core_01": {
+          "id": "complex_core_01",
+          "label": "Complex Core 01",
+          "category": "complex",
+          "mask": {
+            "topLeft": "A",
+            "top": "B",
+            "topRight": "A",
+            "left": "B",
+            "center": "B",
+            "right": "B",
+            "bottomLeft": "A",
+            "bottom": "B",
+            "bottomRight": "A"
+          },
+          "tile": {
+            "id": "terrain_tile_26_36",
+            "atlas": {
+              "x": 416,
+              "y": 576,
+              "width": 16,
+              "height": 16
+            }
+          },
+          "status": "confirmed",
+          "suggested": false,
+          "unused": false,
+          "transform": null
+        },
+        "complex_core_02": {
+          "id": "complex_core_02",
+          "label": "Complex Core 02",
+          "category": "complex",
+          "mask": {
+            "topLeft": "A",
+            "top": "B",
+            "topRight": "A",
+            "left": "B",
+            "center": "B",
+            "right": "B",
+            "bottomLeft": "A",
+            "bottom": "B",
+            "bottomRight": "B"
+          },
+          "tile": {
+            "id": "terrain_tile_31_38",
+            "atlas": {
+              "x": 496,
+              "y": 608,
+              "width": 16,
+              "height": 16
+            }
+          },
+          "status": "confirmed",
+          "suggested": false,
+          "unused": false,
+          "transform": null
+        },
+        "complex_core_03": {
+          "id": "complex_core_03",
+          "label": "Complex Core 03",
+          "category": "complex",
+          "mask": {
+            "topLeft": "A",
+            "top": "B",
+            "topRight": "A",
+            "left": "B",
+            "center": "B",
+            "right": "B",
+            "bottomLeft": "B",
+            "bottom": "B",
+            "bottomRight": "A"
+          },
+          "tile": {
+            "id": "terrain_tile_28_38",
+            "atlas": {
+              "x": 448,
+              "y": 608,
+              "width": 16,
+              "height": 16
+            }
+          },
+          "status": "confirmed",
+          "suggested": false,
+          "unused": false,
+          "transform": null
+        },
+        "complex_core_04": {
+          "id": "complex_core_04",
+          "label": "Complex Core 04",
+          "category": "complex",
+          "mask": {
+            "topLeft": "A",
+            "top": "B",
+            "topRight": "A",
+            "left": "B",
+            "center": "B",
+            "right": "B",
+            "bottomLeft": "B",
+            "bottom": "B",
+            "bottomRight": "B"
+          },
+          "tile": {
+            "id": "terrain_tile_33_35",
+            "atlas": {
+              "x": 528,
+              "y": 560,
+              "width": 16,
+              "height": 16
+            }
+          },
+          "status": "confirmed",
+          "suggested": false,
+          "unused": false,
+          "transform": null
+        },
+        "complex_core_05": {
+          "id": "complex_core_05",
+          "label": "Complex Core 05",
+          "category": "complex",
+          "mask": {
+            "topLeft": "A",
+            "top": "B",
+            "topRight": "B",
+            "left": "B",
+            "center": "B",
+            "right": "B",
+            "bottomLeft": "A",
+            "bottom": "B",
+            "bottomRight": "A"
+          },
+          "tile": {
+            "id": "terrain_tile_31_35",
+            "atlas": {
+              "x": 496,
+              "y": 560,
+              "width": 16,
+              "height": 16
+            }
+          },
+          "status": "confirmed",
+          "suggested": false,
+          "unused": false,
+          "transform": null
+        },
+        "complex_core_06": {
+          "id": "complex_core_06",
+          "label": "Complex Core 06",
+          "category": "complex",
+          "mask": {
+            "topLeft": "A",
+            "top": "B",
+            "topRight": "B",
+            "left": "B",
+            "center": "B",
+            "right": "B",
+            "bottomLeft": "A",
+            "bottom": "B",
+            "bottomRight": "B"
+          },
+          "tile": {
+            "id": "terrain_tile_32_37",
+            "atlas": {
+              "x": 512,
+              "y": 592,
+              "width": 16,
+              "height": 16
+            }
+          },
+          "status": "confirmed",
+          "suggested": false,
+          "unused": false,
+          "transform": null
+        },
+        "complex_core_07": {
+          "id": "complex_core_07",
+          "label": "Complex Core 07",
+          "category": "complex",
+          "mask": {
+            "topLeft": "A",
+            "top": "B",
+            "topRight": "B",
+            "left": "B",
+            "center": "B",
+            "right": "B",
+            "bottomLeft": "B",
+            "bottom": "B",
+            "bottomRight": "A"
+          },
+          "tile": {
+            "id": "terrain_tile_33_36",
+            "atlas": {
+              "x": 528,
+              "y": 576,
+              "width": 16,
+              "height": 16
+            }
+          },
+          "status": "confirmed",
+          "suggested": false,
+          "unused": false,
+          "transform": null
+        },
+        "complex_core_08": {
+          "id": "complex_core_08",
+          "label": "Complex Core 08",
+          "category": "complex",
+          "mask": {
+            "topLeft": "B",
+            "top": "B",
+            "topRight": "A",
+            "left": "B",
+            "center": "B",
+            "right": "B",
+            "bottomLeft": "A",
+            "bottom": "B",
+            "bottomRight": "A"
+          },
+          "tile": {
+            "id": "terrain_tile_28_35",
+            "atlas": {
+              "x": 448,
+              "y": 560,
+              "width": 16,
+              "height": 16
+            }
+          },
+          "status": "confirmed",
+          "suggested": false,
+          "unused": false,
+          "transform": null
+        },
+        "complex_core_09": {
+          "id": "complex_core_09",
+          "label": "Complex Core 09",
+          "category": "complex",
+          "mask": {
+            "topLeft": "B",
+            "top": "B",
+            "topRight": "A",
+            "left": "B",
+            "center": "B",
+            "right": "B",
+            "bottomLeft": "A",
+            "bottom": "B",
+            "bottomRight": "B"
+          },
+          "tile": {
+            "id": "terrain_tile_34_37",
+            "atlas": {
+              "x": 544,
+              "y": 592,
+              "width": 16,
+              "height": 16
+            }
+          },
+          "status": "confirmed",
+          "suggested": false,
+          "unused": false,
+          "transform": null
+        },
+        "complex_core_10": {
+          "id": "complex_core_10",
+          "label": "Complex Core 10",
+          "category": "complex",
+          "mask": {
+            "topLeft": "B",
+            "top": "B",
+            "topRight": "A",
+            "left": "B",
+            "center": "B",
+            "right": "B",
+            "bottomLeft": "B",
+            "bottom": "B",
+            "bottomRight": "A"
+          },
+          "tile": {
+            "id": "terrain_tile_35_36",
+            "atlas": {
+              "x": 560,
+              "y": 576,
+              "width": 16,
+              "height": 16
+            }
+          },
+          "status": "confirmed",
+          "suggested": false,
+          "unused": false,
+          "transform": null
+        },
+        "complex_core_11": {
+          "id": "complex_core_11",
+          "label": "Complex Core 11",
+          "category": "complex",
+          "mask": {
+            "topLeft": "B",
+            "top": "B",
+            "topRight": "B",
+            "left": "B",
+            "center": "B",
+            "right": "B",
+            "bottomLeft": "A",
+            "bottom": "B",
+            "bottomRight": "A"
+          },
+          "tile": {
+            "id": "terrain_tile_34_38",
+            "atlas": {
+              "x": 544,
+              "y": 608,
+              "width": 16,
+              "height": 16
+            }
+          },
+          "status": "confirmed",
+          "suggested": false,
+          "unused": false,
+          "transform": null
+        }
+      }
+    }
+  }
+}

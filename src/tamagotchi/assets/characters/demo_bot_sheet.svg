@@ -1,0 +1,138 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="216" height="120" viewBox="0 0 216 120" shape-rendering="crispEdges">
+  <defs>
+    <g id="bot-idle-up">
+      <rect x="7" y="8" width="10" height="9" rx="1" fill="#fff"/>
+      <rect x="11" y="4" width="2" height="4" fill="#fff"/>
+      <rect x="10" y="2" width="4" height="2" fill="#fff"/>
+      <rect x="8" y="18" width="3" height="3" fill="#fff"/>
+      <rect x="13" y="18" width="3" height="3" fill="#fff"/>
+      <rect x="5" y="10" width="2" height="5" fill="#fff"/>
+      <rect x="17" y="10" width="2" height="5" fill="#fff"/>
+    </g>
+    <g id="bot-idle-mid">
+      <rect x="7" y="9" width="10" height="9" rx="1" fill="#fff"/>
+      <rect x="11" y="5" width="2" height="4" fill="#fff"/>
+      <rect x="10" y="3" width="4" height="2" fill="#fff"/>
+      <rect x="8" y="19" width="3" height="3" fill="#fff"/>
+      <rect x="13" y="19" width="3" height="3" fill="#fff"/>
+      <rect x="5" y="11" width="2" height="5" fill="#fff"/>
+      <rect x="17" y="11" width="2" height="5" fill="#fff"/>
+    </g>
+    <g id="bot-idle-down">
+      <rect x="7" y="10" width="10" height="9" rx="1" fill="#fff"/>
+      <rect x="11" y="6" width="2" height="4" fill="#fff"/>
+      <rect x="10" y="4" width="4" height="2" fill="#fff"/>
+      <rect x="7" y="19" width="3" height="3" fill="#fff"/>
+      <rect x="14" y="19" width="3" height="3" fill="#fff"/>
+      <rect x="5" y="12" width="2" height="5" fill="#fff"/>
+      <rect x="17" y="12" width="2" height="5" fill="#fff"/>
+    </g>
+    <g id="bot-run-a">
+      <rect x="8" y="9" width="10" height="9" rx="1" fill="#fff"/>
+      <rect x="12" y="5" width="2" height="4" fill="#fff"/>
+      <rect x="11" y="3" width="4" height="2" fill="#fff"/>
+      <rect x="6" y="19" width="4" height="3" fill="#fff"/>
+      <rect x="15" y="17" width="4" height="3" fill="#fff"/>
+      <rect x="6" y="10" width="2" height="5" fill="#fff"/>
+      <rect x="18" y="11" width="2" height="5" fill="#fff"/>
+    </g>
+    <g id="bot-run-b">
+      <rect x="7" y="8" width="10" height="9" rx="1" fill="#fff"/>
+      <rect x="11" y="4" width="2" height="4" fill="#fff"/>
+      <rect x="10" y="2" width="4" height="2" fill="#fff"/>
+      <rect x="9" y="18" width="2" height="3" fill="#fff"/>
+      <rect x="13" y="17" width="2" height="3" fill="#fff"/>
+      <rect x="5" y="10" width="2" height="5" fill="#fff"/>
+      <rect x="17" y="10" width="2" height="5" fill="#fff"/>
+    </g>
+    <g id="bot-run-c">
+      <rect x="6" y="9" width="10" height="9" rx="1" fill="#fff"/>
+      <rect x="10" y="5" width="2" height="4" fill="#fff"/>
+      <rect x="9" y="3" width="4" height="2" fill="#fff"/>
+      <rect x="5" y="17" width="4" height="3" fill="#fff"/>
+      <rect x="14" y="19" width="4" height="3" fill="#fff"/>
+      <rect x="4" y="11" width="2" height="5" fill="#fff"/>
+      <rect x="16" y="10" width="2" height="5" fill="#fff"/>
+    </g>
+    <g id="bot-jump">
+      <rect x="7" y="6" width="10" height="9" rx="1" fill="#fff"/>
+      <rect x="11" y="2" width="2" height="4" fill="#fff"/>
+      <rect x="10" y="0" width="4" height="2" fill="#fff"/>
+      <rect x="9" y="15" width="2" height="2" fill="#fff"/>
+      <rect x="13" y="15" width="2" height="2" fill="#fff"/>
+    </g>
+    <g id="bot-hurt">
+      <rect x="6" y="11" width="12" height="7" rx="1" fill="#fff"/>
+      <rect x="11" y="7" width="2" height="4" fill="#fff"/>
+      <rect x="9" y="5" width="6" height="2" fill="#fff"/>
+      <rect x="7" y="19" width="3" height="2" fill="#fff"/>
+      <rect x="14" y="19" width="3" height="2" fill="#fff"/>
+    </g>
+    <g id="bot-sit-right">
+      <rect x="6" y="12" width="12" height="7" rx="1" fill="#fff"/>
+      <rect x="11" y="8" width="2" height="4" fill="#fff"/>
+      <rect x="9" y="6" width="6" height="2" fill="#fff"/>
+      <rect x="14" y="19" width="5" height="2" fill="#fff"/>
+    </g>
+    <g id="bot-sit-left">
+      <rect x="6" y="12" width="12" height="7" rx="1" fill="#fff"/>
+      <rect x="11" y="8" width="2" height="4" fill="#fff"/>
+      <rect x="9" y="6" width="6" height="2" fill="#fff"/>
+      <rect x="5" y="19" width="5" height="2" fill="#fff"/>
+    </g>
+    <g id="bot-death-1"><use href="#bot-idle-mid"/></g>
+    <g id="bot-death-2" transform="rotate(8 12 12)"><use href="#bot-idle-mid"/></g>
+    <g id="bot-death-3" transform="rotate(16 12 12)"><use href="#bot-idle-mid"/></g>
+    <g id="bot-death-4" transform="rotate(28 12 12)"><use href="#bot-idle-mid"/></g>
+    <g id="bot-death-5" transform="rotate(40 12 12)"><use href="#bot-idle-mid"/></g>
+    <g id="bot-death-6">
+      <rect x="6" y="15" width="12" height="6" rx="1" fill="#fff"/>
+      <rect x="9" y="12" width="2" height="3" fill="#fff"/>
+      <rect x="13" y="12" width="2" height="3" fill="#fff"/>
+    </g>
+    <g id="bot-death-7">
+      <rect x="5" y="17" width="14" height="4" rx="1" fill="#fff"/>
+      <rect x="8" y="15" width="2" height="2" fill="#fff"/>
+      <rect x="14" y="15" width="2" height="2" fill="#fff"/>
+    </g>
+    <g id="bot-death-8">
+      <rect x="4" y="18" width="16" height="3" rx="1" fill="#fff"/>
+      <rect x="7" y="16" width="2" height="2" fill="#fff"/>
+      <rect x="15" y="16" width="2" height="2" fill="#fff"/>
+    </g>
+    <g id="bot-death-9">
+      <rect x="4" y="18" width="16" height="3" rx="1" fill="#fff"/>
+      <rect x="7" y="16" width="2" height="2" fill="#fff"/>
+      <rect x="15" y="16" width="2" height="2" fill="#fff"/>
+    </g>
+  </defs>
+
+  <g transform="translate(0 0)"><use href="#bot-idle-mid"/></g>
+  <g transform="translate(24 0)"><use href="#bot-idle-up"/></g>
+  <g transform="translate(48 0)"><use href="#bot-idle-mid"/></g>
+  <g transform="translate(72 0)"><use href="#bot-idle-down"/></g>
+  <g transform="translate(96 0)"><use href="#bot-idle-mid"/></g>
+  <g transform="translate(120 0)"><use href="#bot-idle-up"/></g>
+  <g transform="translate(144 0)"><use href="#bot-idle-mid"/></g>
+  <g transform="translate(168 0)"><use href="#bot-idle-down"/></g>
+
+  <g transform="translate(0 24)"><use href="#bot-run-a"/></g>
+  <g transform="translate(24 24)"><use href="#bot-run-b"/></g>
+  <g transform="translate(48 24)"><use href="#bot-run-c"/></g>
+  <g transform="translate(72 24)"><use href="#bot-jump"/></g>
+
+  <g transform="translate(0 48)"><use href="#bot-death-1"/></g>
+  <g transform="translate(24 48)"><use href="#bot-death-2"/></g>
+  <g transform="translate(48 48)"><use href="#bot-death-3"/></g>
+  <g transform="translate(72 48)"><use href="#bot-death-4"/></g>
+  <g transform="translate(96 48)"><use href="#bot-death-5"/></g>
+  <g transform="translate(120 48)"><use href="#bot-death-6"/></g>
+  <g transform="translate(144 48)"><use href="#bot-death-7"/></g>
+  <g transform="translate(168 48)"><use href="#bot-death-8"/></g>
+  <g transform="translate(192 48)"><use href="#bot-death-9"/></g>
+
+  <g transform="translate(0 72)"><use href="#bot-hurt"/></g>
+
+  <g transform="translate(0 96)"><use href="#bot-sit-right"/></g>
+  <g transform="translate(24 96)"><use href="#bot-sit-left"/></g>
+</svg>

@@ -1,0 +1,430 @@
+@import url('https://fonts.googleapis.com/css2?family=Press+Start+2P&display=swap');
+:root {
+  --bg-base: #050505;
+  --grad-1: rgba(187, 239, 252, 1);
+  --grad-2: rgba(28, 151, 227, 1);
+  --grad-3: rgba(41, 0, 122, 1);
+}
+
+body {
+  margin: 0;
+  overflow: hidden;
+  background: var(--bg-base);
+  font-family: 'Inter', sans-serif;
+}
+
+.hud-ui-text-scope {
+  color: #ffffff;
+  font-family: inherit;
+  font-weight: 500;
+  letter-spacing: 0.04em;
+}
+
+.hud-ui-text-scope button,
+.hud-ui-text-scope input,
+.hud-ui-text-scope select,
+.hud-ui-text-scope textarea {
+  font: inherit;
+  letter-spacing: inherit;
+  color: inherit;
+}
+
+.hud-ui-text {
+  color: #ffffff;
+  font-family: inherit;
+  font-weight: 500;
+  letter-spacing: 0.04em;
+}
+
+.hud-ui-text--cta {
+  font-size: 12px;
+  font-family: sans-serif;
+  font-weight: 1000;
+  text-transform: uppercase;
+  margin-bottom: 2px;
+}
+
+/* Background base */
+#bg-base {
+  position: fixed;
+  inset: 0;
+  background: var(--bg-base);
+  z-index: 0;
+}
+
+/* Gradient */
+#gradient-bg {
+  position: fixed;
+  bottom: -10%;
+  left: 50%;
+  transform: translate(-50%, 0);
+  width: 170vw;
+  height: 80vh;
+  pointer-events: none;
+  z-index: 0;
+
+  background: radial-gradient(
+    ellipse at 50% 100%,
+    var(--grad-1) 0%,
+    var(--grad-2) 16%,
+    var(--grad-3) 39%,
+    rgba(0, 0, 0, 0) 67%,
+    transparent 100%
+  );
+
+  filter: blur(96px);
+  opacity: 0.82;
+  transition: background 0.3s ease;
+}
+
+/* Grain */
+#grain {
+  position: fixed;
+  inset: 0;
+  pointer-events: none;
+  z-index: 1;
+  opacity: 0.05;
+  background-image: url('/noise.png');
+  background-repeat: repeat;
+  mix-blend-mode: overlay;
+}
+
+/* Canvas */
+canvas {
+  position: relative;
+  z-index: 2; /* keep but ensure it's above background */
+  width: 100vw;
+  height: 100vh;
+  display: block;
+}
+.panel-header {
+  position: relative;
+  padding: 24px;
+
+  /* ligne sombre (séparation) */
+  border-bottom: 2px solid #050505;
+
+  /* glow global */
+  box-shadow: 0px 6px 16px rgba(0, 0, 0, 0.35);
+}
+
+/* ligne blanche + blur EN DESSOUS */
+.panel-header::after {
+  content: "";
+  position: absolute;
+  left: 0;
+  bottom: -3px;
+  width: 100%;
+  height: 2px;
+
+  background: rgba(255, 255, 255, 0.25);
+  filter: blur(1px);
+
+  z-index: -1; /* 👈 en dessous */
+
+  pointer-events: none;
+}
+.panel-section {
+  padding: 0px 24px;
+  margin: 0px;
+}
+.panel-section-full-width {
+  padding: 0px 0px;
+  margin: 0px;
+}
+.panel-items-container {
+  padding: 0 24px; /* seulement horizontal */
+}
+.panel-buttons {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+  padding: 0 24px; /* only horizontal padding so buttons feel edge-to-edge */
+}
+* {
+  user-select: none;
+  -webkit-user-select: none;
+  -ms-user-select: none;
+}
+.preset-header {
+  color: white;
+  font-size: 14px;
+  opacity: 0.7;
+  margin-bottom: 12px;
+}
+
+.preset-dropdown {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+
+.preset-selected {
+  height: 40px;
+  display: flex;
+  align-items: center;
+  padding: 0 12px;
+
+  border: 1px solid rgba(255,255,255,0.1);
+  border-radius: 12px;
+
+  color: white;
+  font-size: 14px;
+}
+
+.preset-list {
+  display: none; /* on ouvrira plus tard */
+  flex-direction: column;
+  gap: 6px;
+}
+
+.preset-item {
+  padding: 10px 14px;
+  border-radius: 12px;
+  color: white;
+  font-size: 14px;
+
+  cursor: pointer;
+  transition: background 0.2s;
+}
+
+@media (hover: hover) {
+  .preset-item:hover {
+    background: rgba(255,255,255,0.08);
+  }
+}
+
+.panel-frame {
+  position: relative;
+
+  padding: 24px;
+  padding-top: 12px; /* un peu moins que le bas pour compenser le header */
+  padding-bottom: 24px; /* ✅ équilibre haut / bas */
+
+  border-bottom: 2px solid #050505;
+
+  box-shadow: 0px 6px 16px rgba(0, 0, 0, 0.35);
+}
+
+/* glow identique au header */
+.panel-frame::after {
+  content: "";
+  position: absolute;
+  left: 0;
+  bottom: -3px;
+  width: 100%;
+  height: 2px;
+
+  background: rgba(255, 255, 255, 0.25);
+  filter: blur(1px);
+
+  z-index: -1;
+  pointer-events: none;
+}
+
+.preset-popin {
+  position: absolute;
+  top: calc(100% + 0px);
+  left: 0;
+  width: 100%;
+  z-index: 30; /* 👈 higher than panel content */
+
+  pointer-events: auto;
+}
+
+.preset-popin-content {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+
+  padding: 6px 6px;
+
+  background: url('/preset_popin.svg');
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+
+  border-radius: 12px;
+
+  box-shadow: 0px 10px 30px rgba(0,0,0,0.6);
+}
+
+.preset-popin-content::after {
+  content: "";
+  position: absolute;
+  inset: 0;
+  pointer-events: none;
+  border-radius: 12px;
+
+  padding: 1px; /* stroke thickness */
+
+  background: radial-gradient(
+      ellipse at top right,
+      rgba(255,255,255,0.28) 0%,
+      rgba(255,255,255,0.18) 20%,
+      rgba(255,255,255,0.08) 40%,
+      rgba(255,255,255,0.02) 60%,
+      rgba(255,255,255,0.0) 75%
+    ),
+    linear-gradient(
+      rgba(255,255,255,0.08),
+      rgba(255,255,255,0.04)
+    );
+
+  -webkit-mask:
+    linear-gradient(#000 0 0) content-box,
+    linear-gradient(#000 0 0);
+  -webkit-mask-composite: xor;
+  mask-composite: exclude;
+}
+.text-label {
+  font-size: 11px;
+  font-weight: 500;
+  opacity: 0.85;
+  letter-spacing: 0.4px;
+}
+
+.text-value {
+  font-size: 14px;
+  font-weight: 600;
+  letter-spacing: 0.5px;
+  color: #dfe6ff;
+}
+
+.text-title {
+  font-size: 16px;
+  font-weight: 600;
+}
+.preset-popin-content div {
+  padding: 12px 12px;
+  border-radius: 6px;
+  cursor: pointer;
+  transition: background 0.2s;
+  color: white;
+}
+
+@media (hover: hover) {
+  .preset-popin-content div:hover {
+    background: rgba(255,255,255,0.12);
+  }
+}
+
+.preset-section {
+  position: relative;
+}
+
+.gauge-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: flex-start;
+}
+
+.gauge-label-wrapper {
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.gauge-ring-wrapper {
+  position: relative;
+  overflow: visible;
+}
+
+.gauge-value {
+  /* color is controlled dynamically in Gauge.jsx (red → orange → green) */
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  align-items: center;
+  transform: translate(-50%, -50%);
+  font-size: 0.5rem;
+  font-weight: 600;
+  color: #dfe6ff;
+  letter-spacing: -0.8px;
+  z-index: 3;
+}
+
+.game-action-button {
+  font-family: sans-serif;
+}
+
+.game-action-label {
+  font-size: 14px;
+  color: white;
+  letter-spacing: -0.3px;
+}
+
+.game-action-icon {
+  width: 16px;
+  height: 16px;
+}
+
+/* 🔒 Force UI above everything */
+.game-action-button,
+.game-action-label,
+.game-action-icon {
+  position: relative;
+  z-index: 1;
+}
+
+.cooldown-text {
+  font-size: 20px;
+  letter-spacing: -0.3px;
+  color: white;
+  text-shadow: 0 0 4px rgba(0, 0, 0, 0.9);
+}
+
+.action-title {
+  font-size: 1.2vw;
+  letter-spacing: -0.05em;
+  font-family: 'Inter', sans-serif;
+  line-height: 1.4;
+}
+
+.effect.positive {
+  color: #00ffcc;
+  font-family: 'Press Start 2P', monospace;
+  font-size: 0.6vw;
+  line-height: 1.4;
+}
+
+.effect.negative {
+  color: #ff3b3b;
+  font-family: 'Press Start 2P', monospace;
+  font-size: 0.6vw;
+  line-height: 1.4;
+}
+
+.cta.bit {
+  color: #ffffff;
+  font-family: 'Press Start 2P', monospace;
+  font-size: 14px;
+  line-height: 1.4;
+}
+
+:root {
+  --hud-grad-1: #00ffc8;
+  --hud-grad-2: #00a6ff;
+  --hud-grad-3: #7b5cff;
+}
+
+/* Customizer panel scrollbar */
+.customizer-panel-scroll::-webkit-scrollbar {
+  width: 12px;
+}
+
+.customizer-panel-scroll::-webkit-scrollbar-track {
+  background: transparent;
+}
+
+.customizer-panel-scroll::-webkit-scrollbar-thumb {
+  background: rgba(255, 255, 255, 0.4);
+  border-radius: 8px;
+}
+
+.customizer-panel-scroll::-webkit-scrollbar-thumb:hover {
+  background: rgba(255, 255, 255, 0.7);
+}

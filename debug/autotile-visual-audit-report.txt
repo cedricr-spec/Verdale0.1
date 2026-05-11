@@ -1,0 +1,37 @@
+AUTOTILE VISUAL AUDIT
+JSON: src/spritesheets/world/autotile-templates-clean.json
+ATLAS: src/spritesheets/atlas/All tiles Spring.png
+
+This report is heuristic. It checks whether the assigned atlas tile art visually agrees with the validated mask topology.
+
+Template: grass_dark_on_grass_light
+  terrainA=grass_light terrainB=grass_dark
+  contactsheet=debug/autotile-contactsheet-grass_dark_on_grass_light.png
+  testpatch=debug/autotile-testpatch-grass_dark_on_grass_light.png
+  suspicious assignments:
+    - edge_bottom_01: visual side reading looks like outer_corners, expected edges
+    - edge_bottom_01: orientation looks top_right, expected bottom
+    - edge_bottom_02: visual side reading looks like outer_corners, expected edges
+    - edge_bottom_02: orientation looks top_right, expected bottom
+    - edge_right_01: visual side reading looks like outer_corners, expected edges
+    - edge_right_01: orientation looks bottom_left, expected right
+    - outer_corner_top_left_01: visual side reading looks like isolated, expected outer_corners
+    - corridor_horizontal: visual side reading looks like isolated, expected corridors
+    - corridor_vertical: visual side reading looks like isolated, expected corridors
+    - side_bottom: visual side reading looks like isolated, expected sides
+    - side_left: visual side reading looks like isolated, expected sides
+    - side_right: visual side reading looks like isolated, expected sides
+    - side_top: visual side reading looks like isolated, expected sides
+
+Template: water_on_grass_light
+  terrainA=grass_light terrainB=water
+  contactsheet=debug/autotile-contactsheet-water_on_grass_light.png
+  testpatch=debug/autotile-testpatch-water_on_grass_light.png
+  suspicious assignments: none flagged by heuristics
+
+Template: grass_light_on_grass_dark
+  terrainA=grass_dark terrainB=grass_light
+  contactsheet=debug/autotile-contactsheet-grass_light_on_grass_dark.png
+  testpatch=debug/autotile-testpatch-grass_light_on_grass_dark.png
+  suspicious assignments: none flagged by heuristics
+

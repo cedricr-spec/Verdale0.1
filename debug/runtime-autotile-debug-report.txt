@@ -1,0 +1,63 @@
+Runtime autotile debug report
+
+Template source: /Users/cedricrandriakoto/Desktop/PRO/PORTFOLIO 2K26/animation-macbook-site/src/spritesheets/world/autotile-templates-clean.json
+Spring atlas: /Users/cedricrandriakoto/Desktop/PRO/PORTFOLIO 2K26/animation-macbook-site/src/spritesheets/atlas/All tiles Spring.png
+
+Sampled terrain window: x -48..47, y -48..47
+Total resolved cells: 9216
+Fallback count: 0
+
+Category counts:
+- full: 8327
+- edges: 350
+- outer_corners: 290
+- inner_corners: 206
+- corridors: 2
+- sides: 22
+- isolated: 0
+- complex: 19
+
+Per-template counts:
+- fallback: total=7478, fallbacks=0, outer_corners=0
+  full: 7478
+  edges: 0
+  outer_corners: 0
+  inner_corners: 0
+  corridors: 0
+  sides: 0
+  isolated: 0
+  complex: 0
+- grass_dark_on_grass_light: total=1446, fallbacks=0, outer_corners=240
+  full: 702
+  edges: 295
+  outer_corners: 240
+  inner_corners: 172
+  corridors: 2
+  sides: 19
+  isolated: 0
+  complex: 16
+- road_on_grass_light: total=199, fallbacks=0, outer_corners=32
+  full: 106
+  edges: 31
+  outer_corners: 32
+  inner_corners: 24
+  corridors: 0
+  sides: 3
+  isolated: 0
+  complex: 3
+- sand_on_grass_light: total=93, fallbacks=0, outer_corners=18
+  full: 41
+  edges: 24
+  outer_corners: 18
+  inner_corners: 10
+  corridors: 0
+  sides: 0
+  isolated: 0
+  complex: 0
+
+Generated images:
+- /Users/cedricrandriakoto/Desktop/PRO/PORTFOLIO 2K26/animation-macbook-site/debug/runtime-autotile-testpatch-grass_dark_on_grass_light.png
+- /Users/cedricrandriakoto/Desktop/PRO/PORTFOLIO 2K26/animation-macbook-site/debug/runtime-autotile-testpatch-water_on_grass_light.png
+- /Users/cedricrandriakoto/Desktop/PRO/PORTFOLIO 2K26/animation-macbook-site/debug/runtime-autotile-testpatch-grass_light_on_grass_dark.png
+- /Users/cedricrandriakoto/Desktop/PRO/PORTFOLIO 2K26/animation-macbook-site/debug/runtime-autotile-testpatch-sand_on_grass_light.png
+- /Users/cedricrandriakoto/Desktop/PRO/PORTFOLIO 2K26/animation-macbook-site/debug/runtime-autotile-testpatch-road_on_grass_light.png

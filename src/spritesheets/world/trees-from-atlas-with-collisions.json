@@ -1,0 +1,818 @@
+{
+  "trees": [
+    {
+      "id": "tree_48x40_01",
+      "x": 432,
+      "y": 928,
+      "width": 48,
+      "height": 40,
+      "collisionBox": {
+        "x": 16,
+        "y": 24,
+        "width": 16,
+        "height": 10
+      },
+      "choppedVariantId": "tree_48x32_01"
+    },
+    {
+      "id": "tree_48x40_02",
+      "x": 480,
+      "y": 928,
+      "width": 48,
+      "height": 40,
+      "collisionBox": {
+        "x": 16,
+        "y": 24,
+        "width": 16,
+        "height": 10
+      },
+      "choppedVariantId": "tree_48x32_01"
+    },
+    {
+      "id": "tree_48x40_03",
+      "x": 576,
+      "y": 928,
+      "width": 48,
+      "height": 40,
+      "collisionBox": {
+        "x": 16,
+        "y": 24,
+        "width": 16,
+        "height": 10
+      },
+      "choppedVariantId": "tree_48x32_01"
+    },
+    {
+      "id": "tree_48x40_04",
+      "x": 624,
+      "y": 928,
+      "width": 48,
+      "height": 40,
+      "collisionBox": {
+        "x": 16,
+        "y": 24,
+        "width": 16,
+        "height": 10
+      },
+      "choppedVariantId": "tree_48x32_01"
+    },
+    {
+      "id": "tree_48x40_05",
+      "x": 720,
+      "y": 928,
+      "width": 48,
+      "height": 40,
+      "collisionBox": {
+        "x": 16,
+        "y": 24,
+        "width": 16,
+        "height": 10
+      },
+      "choppedVariantId": "tree_48x32_01"
+    },
+    {
+      "id": "tree_48x40_06",
+      "x": 768,
+      "y": 928,
+      "width": 48,
+      "height": 40,
+      "collisionBox": {
+        "x": 16,
+        "y": 24,
+        "width": 16,
+        "height": 10
+      },
+      "choppedVariantId": "tree_48x32_01"
+    },
+    {
+      "id": "tree_48x40_07",
+      "x": 864,
+      "y": 928,
+      "width": 48,
+      "height": 40,
+      "collisionBox": {
+        "x": 16,
+        "y": 24,
+        "width": 16,
+        "height": 10
+      },
+      "choppedVariantId": "tree_48x32_01"
+    },
+    {
+      "id": "tree_48x40_08",
+      "x": 912,
+      "y": 928,
+      "width": 48,
+      "height": 40,
+      "collisionBox": {
+        "x": 16,
+        "y": 24,
+        "width": 16,
+        "height": 10
+      },
+      "choppedVariantId": "tree_48x32_01"
+    },
+    {
+      "id": "tree_16x32_01",
+      "x": 416,
+      "y": 928,
+      "width": 16,
+      "height": 32,
+      "collisionBox": {
+        "x": 0,
+        "y": 13,
+        "width": 16,
+        "height": 16
+      },
+      "choppedVariantId": "tree_48x32_01"
+    },
+    {
+      "id": "tree_16x32_02",
+      "x": 560,
+      "y": 928,
+      "width": 16,
+      "height": 32,
+      "collisionBox": {
+        "x": 0,
+        "y": 13,
+        "width": 16,
+        "height": 16
+      },
+      "choppedVariantId": "tree_48x32_01"
+    },
+    {
+      "id": "tree_16x32_03",
+      "x": 704,
+      "y": 928,
+      "width": 16,
+      "height": 32,
+      "collisionBox": {
+        "x": 0,
+        "y": 13,
+        "width": 16,
+        "height": 16
+      },
+      "choppedVariantId": "tree_48x32_01"
+    },
+    {
+      "id": "tree_16x32_04",
+      "x": 848,
+      "y": 928,
+      "width": 16,
+      "height": 32,
+      "collisionBox": {
+        "x": 0,
+        "y": 13,
+        "width": 16,
+        "height": 16
+      },
+      "choppedVariantId": "tree_48x32_01"
+    },
+    {
+      "id": "tree_48x51_01",
+      "x": 384,
+      "y": 981,
+      "width": 48,
+      "height": 51,
+      "collisionBox": {
+        "x": 16,
+        "y": 39,
+        "width": 16,
+        "height": 7
+      },
+      "choppedVariantId": "tree_48x32_01"
+    },
+    {
+      "id": "tree_48x51_02",
+      "x": 528,
+      "y": 981,
+      "width": 48,
+      "height": 51,
+      "collisionBox": {
+        "x": 16,
+        "y": 39,
+        "width": 16,
+        "height": 7
+      },
+      "choppedVariantId": "tree_48x32_01"
+    },
+    {
+      "id": "tree_48x51_03",
+      "x": 672,
+      "y": 981,
+      "width": 48,
+      "height": 51,
+      "collisionBox": {
+        "x": 16,
+        "y": 39,
+        "width": 16,
+        "height": 7
+      },
+      "choppedVariantId": "tree_48x32_01"
+    },
+    {
+      "id": "tree_48x51_04",
+      "x": 816,
+      "y": 981,
+      "width": 48,
+      "height": 51,
+      "collisionBox": {
+        "x": 16,
+        "y": 39,
+        "width": 16,
+        "height": 7
+      },
+      "choppedVariantId": "tree_48x32_01"
+    },
+    {
+      "id": "tree_48x40_09",
+      "x": 432,
+      "y": 992,
+      "width": 48,
+      "height": 40,
+      "collisionBox": {
+        "x": 16,
+        "y": 24,
+        "width": 16,
+        "height": 10
+      },
+      "choppedVariantId": "tree_48x32_01"
+    },
+    {
+      "id": "tree_48x40_10",
+      "x": 480,
+      "y": 992,
+      "width": 48,
+      "height": 40,
+      "collisionBox": {
+        "x": 16,
+        "y": 24,
+        "width": 16,
+        "height": 10
+      },
+      "choppedVariantId": "tree_48x32_01"
+    },
+    {
+      "id": "tree_48x40_11",
+      "x": 576,
+      "y": 992,
+      "width": 48,
+      "height": 40,
+      "collisionBox": {
+        "x": 16,
+        "y": 24,
+        "width": 16,
+        "height": 10
+      },
+      "choppedVariantId": "tree_48x32_01"
+    },
+    {
+      "id": "tree_48x40_12",
+      "x": 624,
+      "y": 992,
+      "width": 48,
+      "height": 40,
+      "collisionBox": {
+        "x": 16,
+        "y": 24,
+        "width": 16,
+        "height": 10
+      },
+      "choppedVariantId": "tree_48x32_01"
+    },
+    {
+      "id": "tree_48x40_13",
+      "x": 720,
+      "y": 992,
+      "width": 48,
+      "height": 40,
+      "collisionBox": {
+        "x": 16,
+        "y": 24,
+        "width": 16,
+        "height": 10
+      },
+      "choppedVariantId": "tree_48x32_01"
+    },
+    {
+      "id": "tree_48x40_14",
+      "x": 768,
+      "y": 992,
+      "width": 48,
+      "height": 40,
+      "collisionBox": {
+        "x": 16,
+        "y": 24,
+        "width": 16,
+        "height": 10
+      },
+      "choppedVariantId": "tree_48x32_01"
+    },
+    {
+      "id": "tree_48x40_15",
+      "x": 864,
+      "y": 992,
+      "width": 48,
+      "height": 40,
+      "collisionBox": {
+        "x": 16,
+        "y": 24,
+        "width": 16,
+        "height": 10
+      },
+      "choppedVariantId": "tree_48x32_01"
+    },
+    {
+      "id": "tree_48x40_16",
+      "x": 912,
+      "y": 992,
+      "width": 48,
+      "height": 40,
+      "collisionBox": {
+        "x": 16,
+        "y": 24,
+        "width": 16,
+        "height": 10
+      },
+      "choppedVariantId": "tree_48x32_01"
+    },
+    {
+      "id": "tree_16x32_05",
+      "x": 416,
+      "y": 1056,
+      "width": 16,
+      "height": 32,
+      "collisionBox": {
+        "x": 0,
+        "y": 13,
+        "width": 16,
+        "height": 16
+      },
+      "choppedVariantId": "tree_48x32_02"
+    },
+    {
+      "id": "tree_16x32_06",
+      "x": 560,
+      "y": 1056,
+      "width": 16,
+      "height": 32,
+      "collisionBox": {
+        "x": 0,
+        "y": 13,
+        "width": 16,
+        "height": 16
+      },
+      "choppedVariantId": "tree_48x32_02"
+    },
+    {
+      "id": "tree_16x32_07",
+      "x": 704,
+      "y": 1056,
+      "width": 16,
+      "height": 32,
+      "collisionBox": {
+        "x": 0,
+        "y": 13,
+        "width": 16,
+        "height": 16
+      },
+      "choppedVariantId": "tree_48x32_02"
+    },
+    {
+      "id": "tree_16x32_08",
+      "x": 848,
+      "y": 1056,
+      "width": 16,
+      "height": 32,
+      "collisionBox": {
+        "x": 0,
+        "y": 13,
+        "width": 16,
+        "height": 16
+      },
+      "choppedVariantId": "tree_48x32_02"
+    },
+    {
+      "id": "tree_48x40_17",
+      "x": 432,
+      "y": 1056,
+      "width": 48,
+      "height": 40,
+      "collisionBox": {
+        "x": 16,
+        "y": 24,
+        "width": 16,
+        "height": 10
+      },
+      "choppedVariantId": "tree_48x32_02"
+    },
+    {
+      "id": "tree_48x40_18",
+      "x": 480,
+      "y": 1056,
+      "width": 48,
+      "height": 40,
+      "collisionBox": {
+        "x": 16,
+        "y": 24,
+        "width": 16,
+        "height": 10
+      },
+      "choppedVariantId": "tree_48x32_02"
+    },
+    {
+      "id": "tree_48x40_19",
+      "x": 576,
+      "y": 1056,
+      "width": 48,
+      "height": 40,
+      "collisionBox": {
+        "x": 16,
+        "y": 24,
+        "width": 16,
+        "height": 10
+      },
+      "choppedVariantId": "tree_48x32_02"
+    },
+    {
+      "id": "tree_48x40_20",
+      "x": 624,
+      "y": 1056,
+      "width": 48,
+      "height": 40,
+      "collisionBox": {
+        "x": 16,
+        "y": 24,
+        "width": 16,
+        "height": 10
+      },
+      "choppedVariantId": "tree_48x32_02"
+    },
+    {
+      "id": "tree_48x40_21",
+      "x": 720,
+      "y": 1056,
+      "width": 48,
+      "height": 40,
+      "collisionBox": {
+        "x": 16,
+        "y": 24,
+        "width": 16,
+        "height": 10
+      },
+      "choppedVariantId": "tree_48x32_02"
+    },
+    {
+      "id": "tree_48x40_22",
+      "x": 768,
+      "y": 1056,
+      "width": 48,
+      "height": 40,
+      "collisionBox": {
+        "x": 16,
+        "y": 24,
+        "width": 16,
+        "height": 10
+      },
+      "choppedVariantId": "tree_48x32_02"
+    },
+    {
+      "id": "tree_48x40_23",
+      "x": 864,
+      "y": 1056,
+      "width": 48,
+      "height": 40,
+      "collisionBox": {
+        "x": 16,
+        "y": 24,
+        "width": 16,
+        "height": 10
+      },
+      "choppedVariantId": "tree_48x32_02"
+    },
+    {
+      "id": "tree_48x40_24",
+      "x": 912,
+      "y": 1056,
+      "width": 48,
+      "height": 40,
+      "collisionBox": {
+        "x": 16,
+        "y": 24,
+        "width": 16,
+        "height": 10
+      },
+      "choppedVariantId": "tree_48x32_02"
+    },
+    {
+      "id": "tree_48x51_05",
+      "x": 384,
+      "y": 1109,
+      "width": 48,
+      "height": 51,
+      "collisionBox": {
+        "x": 16,
+        "y": 39,
+        "width": 16,
+        "height": 7
+      },
+      "choppedVariantId": "tree_48x32_02"
+    },
+    {
+      "id": "tree_48x51_06",
+      "x": 528,
+      "y": 1109,
+      "width": 48,
+      "height": 51,
+      "collisionBox": {
+        "x": 16,
+        "y": 39,
+        "width": 16,
+        "height": 7
+      },
+      "choppedVariantId": "tree_48x32_02"
+    },
+    {
+      "id": "tree_48x51_07",
+      "x": 672,
+      "y": 1109,
+      "width": 48,
+      "height": 51,
+      "collisionBox": {
+        "x": 16,
+        "y": 39,
+        "width": 16,
+        "height": 7
+      },
+      "choppedVariantId": "tree_48x32_02"
+    },
+    {
+      "id": "tree_48x51_08",
+      "x": 816,
+      "y": 1109,
+      "width": 48,
+      "height": 51,
+      "collisionBox": {
+        "x": 16,
+        "y": 39,
+        "width": 16,
+        "height": 7
+      },
+      "choppedVariantId": "tree_48x32_02"
+    },
+    {
+      "id": "tree_48x40_25",
+      "x": 432,
+      "y": 1120,
+      "width": 48,
+      "height": 40,
+      "collisionBox": {
+        "x": 16,
+        "y": 24,
+        "width": 16,
+        "height": 10
+      },
+      "choppedVariantId": "tree_48x32_02"
+    },
+    {
+      "id": "tree_48x40_26",
+      "x": 480,
+      "y": 1120,
+      "width": 48,
+      "height": 40,
+      "collisionBox": {
+        "x": 16,
+        "y": 24,
+        "width": 16,
+        "height": 10
+      },
+      "choppedVariantId": "tree_48x32_02"
+    },
+    {
+      "id": "tree_48x40_27",
+      "x": 576,
+      "y": 1120,
+      "width": 48,
+      "height": 40,
+      "collisionBox": {
+        "x": 16,
+        "y": 24,
+        "width": 16,
+        "height": 10
+      },
+      "choppedVariantId": "tree_48x32_02"
+    },
+    {
+      "id": "tree_48x40_28",
+      "x": 624,
+      "y": 1120,
+      "width": 48,
+      "height": 40,
+      "collisionBox": {
+        "x": 16,
+        "y": 24,
+        "width": 16,
+        "height": 10
+      },
+      "choppedVariantId": "tree_48x32_02"
+    },
+    {
+      "id": "tree_48x40_29",
+      "x": 720,
+      "y": 1120,
+      "width": 48,
+      "height": 40,
+      "collisionBox": {
+        "x": 16,
+        "y": 24,
+        "width": 16,
+        "height": 10
+      },
+      "choppedVariantId": "tree_48x32_02"
+    },
+    {
+      "id": "tree_48x40_30",
+      "x": 768,
+      "y": 1120,
+      "width": 48,
+      "height": 40,
+      "collisionBox": {
+        "x": 16,
+        "y": 24,
+        "width": 16,
+        "height": 10
+      },
+      "choppedVariantId": "tree_48x32_02"
+    },
+    {
+      "id": "tree_48x40_31",
+      "x": 864,
+      "y": 1120,
+      "width": 48,
+      "height": 40,
+      "collisionBox": {
+        "x": 16,
+        "y": 24,
+        "width": 16,
+        "height": 10
+      },
+      "choppedVariantId": "tree_48x32_02"
+    },
+    {
+      "id": "tree_48x40_32",
+      "x": 912,
+      "y": 1120,
+      "width": 48,
+      "height": 40,
+      "collisionBox": {
+        "x": 16,
+        "y": 24,
+        "width": 16,
+        "height": 10
+      },
+      "choppedVariantId": "tree_48x32_02"
+    },
+    {
+      "id": "tree_48x72_01",
+      "x": 976,
+      "y": 944,
+      "width": 48,
+      "height": 72,
+      "collisionBox": {
+        "x": 16,
+        "y": 53,
+        "width": 16,
+        "height": 12
+      },
+      "choppedVariantId": "tree_48x32_01"
+    },
+    {
+      "id": "tree_48x72_02",
+      "x": 1040,
+      "y": 944,
+      "width": 48,
+      "height": 72,
+      "collisionBox": {
+        "x": 16,
+        "y": 53,
+        "width": 16,
+        "height": 12
+      },
+      "choppedVariantId": "tree_48x32_01"
+    },
+    {
+      "id": "tree_48x72_03",
+      "x": 1104,
+      "y": 944,
+      "width": 48,
+      "height": 72,
+      "collisionBox": {
+        "x": 16,
+        "y": 53,
+        "width": 16,
+        "height": 12
+      },
+      "choppedVariantId": "tree_48x32_01"
+    },
+    {
+      "id": "tree_48x72_04",
+      "x": 1168,
+      "y": 944,
+      "width": 48,
+      "height": 72,
+      "collisionBox": {
+        "x": 16,
+        "y": 53,
+        "width": 16,
+        "height": 12
+      },
+      "choppedVariantId": "tree_48x32_01"
+    },
+    {
+      "id": "tree_48x72_05",
+      "x": 976,
+      "y": 1072,
+      "width": 48,
+      "height": 72,
+      "collisionBox": {
+        "x": 16,
+        "y": 53,
+        "width": 16,
+        "height": 12
+      },
+      "choppedVariantId": "tree_48x32_02"
+    },
+    {
+      "id": "tree_48x72_06",
+      "x": 1040,
+      "y": 1072,
+      "width": 48,
+      "height": 72,
+      "collisionBox": {
+        "x": 16,
+        "y": 53,
+        "width": 16,
+        "height": 12
+      },
+      "choppedVariantId": "tree_48x32_02"
+    },
+    {
+      "id": "tree_48x72_07",
+      "x": 1104,
+      "y": 1072,
+      "width": 48,
+      "height": 72,
+      "collisionBox": {
+        "x": 16,
+        "y": 53,
+        "width": 16,
+        "height": 12
+      },
+      "choppedVariantId": "tree_48x32_02"
+    },
+    {
+      "id": "tree_48x72_08",
+      "x": 1168,
+      "y": 1072,
+      "width": 48,
+      "height": 72,
+      "collisionBox": {
+        "x": 16,
+        "y": 53,
+        "width": 16,
+        "height": 12
+      },
+      "choppedVariantId": "tree_48x32_02"
+    },
+    {
+      "id": "tree_48x32_01",
+      "x": 976,
+      "y": 1024,
+      "width": 48,
+      "height": 32,
+      "collisionBox": {
+        "x": 16,
+        "y": 8,
+        "width": 16,
+        "height": 16
+      },
+      "isStump": true,
+      "interactionDisabled": true
+    },
+    {
+      "id": "tree_48x32_02",
+      "x": 976,
+      "y": 1152,
+      "width": 48,
+      "height": 32,
+      "collisionBox": {
+        "x": 16,
+        "y": 8,
+        "width": 16,
+        "height": 16
+      },
+      "isStump": true,
+      "interactionDisabled": true
+    }
+  ]
+}

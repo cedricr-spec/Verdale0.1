@@ -1,0 +1,2527 @@
+{
+  "meta": {
+    "type": "world_food_metadata",
+    "version": 1,
+    "generatedAt": "2026-04-29T11:00:00.000Z",
+    "sourceAtlas": "src/spritesheets/food/Icons_Food.png",
+    "notes": "Food metadata for runtime integration. atlasSource paths point to the food sprite atlas. Items referenced in recipes may come from world-item-metadata.json."
+  },
+  "foods": {
+    "apple": {
+      "id": "apple",
+      "enabled": true,
+      "name": "Apple",
+      "type": "food",
+      "category": "fruit",
+      "icon": "🍎",
+      "spritePath": "",
+      "atlasSource": "src/spritesheets/food/Icons_Food.png",
+      "atlasRect": {
+        "x": 256,
+        "y": 176,
+        "width": 16,
+        "height": 16
+      },
+      "stackable": true,
+      "maxStack": 32,
+      "spawnable": true,
+      "craftable": false,
+      "description": "Apple placeholder entry for future atlas assignment and food tuning.",
+      "food": {
+        "edible": true,
+        "hungerRestore": 5,
+        "happinessRestore": 2,
+        "healthRestore": 0,
+        "energyRestore": 0,
+        "spoilable": false,
+        "spoilTimeSeconds": null
+      },
+      "crafting": {
+        "craftable": false,
+        "recipe": [],
+        "outputQuantity": 1,
+        "station": null,
+        "unlockCondition": null
+      },
+      "obtain": {
+        "method": "spawn",
+        "sourceFamily": null,
+        "requiredTool": null,
+        "nearTerrain": null,
+        "outputQuantity": 1
+      }
+    },
+    "grapes": {
+      "id": "grapes",
+      "enabled": true,
+      "name": "Grapes",
+      "type": "food",
+      "category": "fruit",
+      "icon": "🍇",
+      "spritePath": "",
+      "atlasSource": "src/spritesheets/food/Icons_Food.png",
+      "atlasRect": {
+        "x": 496,
+        "y": 176,
+        "width": 16,
+        "height": 16
+      },
+      "stackable": true,
+      "maxStack": 32,
+      "spawnable": true,
+      "craftable": false,
+      "description": "Grapes placeholder entry for future atlas assignment and food tuning.",
+      "food": {
+        "edible": true,
+        "hungerRestore": 5,
+        "happinessRestore": 2,
+        "healthRestore": 0,
+        "energyRestore": 0,
+        "spoilable": false,
+        "spoilTimeSeconds": null
+      },
+      "crafting": {
+        "craftable": false,
+        "recipe": [],
+        "outputQuantity": 1,
+        "station": null,
+        "unlockCondition": null
+      },
+      "obtain": {
+        "method": "spawn",
+        "sourceFamily": null,
+        "requiredTool": null,
+        "nearTerrain": null,
+        "outputQuantity": 1
+      }
+    },
+    "orange": {
+      "id": "orange",
+      "enabled": true,
+      "name": "Orange",
+      "type": "food",
+      "category": "fruit",
+      "icon": "🍊",
+      "spritePath": "",
+      "atlasSource": "src/spritesheets/food/Icons_Food.png",
+      "atlasRect": {
+        "x": 16,
+        "y": 192,
+        "width": 16,
+        "height": 16
+      },
+      "stackable": true,
+      "maxStack": 32,
+      "spawnable": true,
+      "craftable": false,
+      "description": "Orange placeholder entry for future atlas assignment and food tuning.",
+      "food": {
+        "edible": true,
+        "hungerRestore": 5,
+        "happinessRestore": 2,
+        "healthRestore": 0,
+        "energyRestore": 0,
+        "spoilable": false,
+        "spoilTimeSeconds": null
+      },
+      "crafting": {
+        "craftable": false,
+        "recipe": [],
+        "outputQuantity": 1,
+        "station": null,
+        "unlockCondition": null
+      },
+      "obtain": {
+        "method": "spawn",
+        "sourceFamily": null,
+        "requiredTool": null,
+        "nearTerrain": null,
+        "outputQuantity": 1
+      }
+    },
+    "lemon": {
+      "id": "lemon",
+      "enabled": true,
+      "name": "Lemon",
+      "type": "food",
+      "category": "fruit",
+      "icon": "🍋",
+      "spritePath": "",
+      "atlasSource": "src/spritesheets/food/Icons_Food.png",
+      "atlasRect": {
+        "x": 608,
+        "y": 176,
+        "width": 16,
+        "height": 16
+      },
+      "stackable": true,
+      "maxStack": 32,
+      "spawnable": true,
+      "craftable": false,
+      "description": "Lemon placeholder entry for future atlas assignment and food tuning.",
+      "food": {
+        "edible": true,
+        "hungerRestore": 5,
+        "happinessRestore": 2,
+        "healthRestore": 0,
+        "energyRestore": 0,
+        "spoilable": false,
+        "spoilTimeSeconds": null
+      },
+      "crafting": {
+        "craftable": false,
+        "recipe": [],
+        "outputQuantity": 1,
+        "station": null,
+        "unlockCondition": null
+      },
+      "obtain": {
+        "method": "spawn",
+        "sourceFamily": null,
+        "requiredTool": null,
+        "nearTerrain": null,
+        "outputQuantity": 1
+      }
+    },
+    "berry": {
+      "id": "berry",
+      "enabled": true,
+      "name": "Berry",
+      "type": "food",
+      "category": "fruit",
+      "icon": "🫐",
+      "spritePath": "",
+      "atlasSource": "src/spritesheets/food/Icons_Food.png",
+      "atlasRect": {
+        "x": 368,
+        "y": 176,
+        "width": 16,
+        "height": 16
+      },
+      "stackable": true,
+      "maxStack": 32,
+      "spawnable": true,
+      "craftable": false,
+      "description": "Berry placeholder entry for future atlas assignment and food tuning.",
+      "food": {
+        "edible": true,
+        "hungerRestore": 5,
+        "happinessRestore": 2,
+        "healthRestore": 0,
+        "energyRestore": 0,
+        "spoilable": false,
+        "spoilTimeSeconds": null
+      },
+      "crafting": {
+        "craftable": false,
+        "recipe": [],
+        "outputQuantity": 1,
+        "station": null,
+        "unlockCondition": null
+      },
+      "obtain": {
+        "method": "spawn",
+        "sourceFamily": null,
+        "requiredTool": null,
+        "nearTerrain": null,
+        "outputQuantity": 1
+      }
+    },
+    "strawberry": {
+      "id": "strawberry",
+      "enabled": true,
+      "name": "Strawberry",
+      "type": "food",
+      "category": "fruit",
+      "icon": "🍓",
+      "spritePath": "",
+      "atlasSource": "src/spritesheets/food/Icons_Food.png",
+      "atlasRect": {
+        "x": 96,
+        "y": 192,
+        "width": 16,
+        "height": 16
+      },
+      "stackable": true,
+      "maxStack": 32,
+      "spawnable": true,
+      "craftable": false,
+      "description": "Strawberry placeholder entry for future atlas assignment and food tuning.",
+      "food": {
+        "edible": true,
+        "hungerRestore": 5,
+        "happinessRestore": 2,
+        "healthRestore": 0,
+        "energyRestore": 0,
+        "spoilable": false,
+        "spoilTimeSeconds": null
+      },
+      "crafting": {
+        "craftable": false,
+        "recipe": [],
+        "outputQuantity": 1,
+        "station": null,
+        "unlockCondition": null
+      },
+      "obtain": {
+        "method": "spawn",
+        "sourceFamily": null,
+        "requiredTool": null,
+        "nearTerrain": null,
+        "outputQuantity": 1
+      }
+    },
+    "banana": {
+      "id": "banana",
+      "enabled": true,
+      "name": "Banana",
+      "type": "food",
+      "category": "fruit",
+      "icon": "🍌",
+      "spritePath": "",
+      "atlasSource": "src/spritesheets/food/Icons_Food.png",
+      "atlasRect": {
+        "x": 320,
+        "y": 176,
+        "width": 16,
+        "height": 16
+      },
+      "stackable": true,
+      "maxStack": 32,
+      "spawnable": true,
+      "craftable": false,
+      "description": "Banana placeholder entry for future atlas assignment and food tuning.",
+      "food": {
+        "edible": true,
+        "hungerRestore": 5,
+        "happinessRestore": 2,
+        "healthRestore": 0,
+        "energyRestore": 0,
+        "spoilable": false,
+        "spoilTimeSeconds": null
+      },
+      "crafting": {
+        "craftable": false,
+        "recipe": [],
+        "outputQuantity": 1,
+        "station": null,
+        "unlockCondition": null
+      },
+      "obtain": {
+        "method": "spawn",
+        "sourceFamily": null,
+        "requiredTool": null,
+        "nearTerrain": null,
+        "outputQuantity": 1
+      }
+    },
+    "coffee_bean": {
+      "id": "coffee_bean",
+      "enabled": true,
+      "name": "Coffee Bean",
+      "type": "food",
+      "category": "ingredient",
+      "icon": "🫘",
+      "spritePath": "",
+      "atlasSource": "src/spritesheets/food/Icons_Food.png",
+      "atlasRect": {
+        "x": 320,
+        "y": 208,
+        "width": 16,
+        "height": 16
+      },
+      "stackable": true,
+      "maxStack": 32,
+      "spawnable": true,
+      "craftable": false,
+      "description": "Coffee Bean placeholder ingredient for future food crafting.",
+      "food": {
+        "edible": false,
+        "hungerRestore": 0,
+        "happinessRestore": 0,
+        "healthRestore": 0,
+        "energyRestore": 0,
+        "spoilable": false,
+        "spoilTimeSeconds": null
+      },
+      "crafting": {
+        "craftable": false,
+        "recipe": [],
+        "outputQuantity": 1,
+        "station": null,
+        "unlockCondition": null
+      },
+      "obtain": {
+        "method": "harvest",
+        "sourceFamily": "coffee_plants",
+        "requiredTool": null,
+        "nearTerrain": null,
+        "outputQuantity": 1
+      }
+    },
+    "cocoa_bean": {
+      "id": "cocoa_bean",
+      "enabled": true,
+      "name": "Cocoa Bean",
+      "type": "food",
+      "category": "ingredient",
+      "icon": "🍫",
+      "spritePath": "",
+      "atlasSource": "src/spritesheets/food/Icons_Food.png",
+      "atlasRect": {
+        "x": 144,
+        "y": 208,
+        "width": 16,
+        "height": 16
+      },
+      "stackable": true,
+      "maxStack": 32,
+      "spawnable": true,
+      "craftable": false,
+      "description": "Cocoa Bean placeholder ingredient for future food crafting.",
+      "food": {
+        "edible": false,
+        "hungerRestore": 0,
+        "happinessRestore": 0,
+        "healthRestore": 0,
+        "energyRestore": 0,
+        "spoilable": false,
+        "spoilTimeSeconds": null
+      },
+      "crafting": {
+        "craftable": false,
+        "recipe": [],
+        "outputQuantity": 1,
+        "station": null,
+        "unlockCondition": null
+      },
+      "obtain": {
+        "method": "harvest",
+        "sourceFamily": "cocoa_plants",
+        "requiredTool": null,
+        "nearTerrain": null,
+        "outputQuantity": 1
+      }
+    },
+    "wheat": {
+      "id": "wheat",
+      "enabled": true,
+      "name": "Wheat",
+      "type": "food",
+      "category": "ingredient",
+      "icon": "🌾",
+      "spritePath": "",
+      "atlasSource": "src/spritesheets/food/Icons_Food.png",
+      "atlasRect": {
+        "x": 0,
+        "y": 224,
+        "width": 16,
+        "height": 16
+      },
+      "stackable": true,
+      "maxStack": 32,
+      "spawnable": true,
+      "craftable": false,
+      "description": "Wheat placeholder ingredient for future food crafting.",
+      "food": {
+        "edible": false,
+        "hungerRestore": 0,
+        "happinessRestore": 0,
+        "healthRestore": 0,
+        "energyRestore": 0,
+        "spoilable": false,
+        "spoilTimeSeconds": null
+      },
+      "crafting": {
+        "craftable": false,
+        "recipe": [],
+        "outputQuantity": 1,
+        "station": null,
+        "unlockCondition": null
+      },
+      "obtain": {
+        "method": "harvest",
+        "sourceFamily": "crops",
+        "requiredTool": null,
+        "nearTerrain": null,
+        "outputQuantity": 1
+      }
+    },
+    "egg": {
+      "id": "egg",
+      "enabled": true,
+      "name": "Egg",
+      "type": "food",
+      "category": "ingredient",
+      "icon": "🥚",
+      "spritePath": "",
+      "atlasSource": "src/spritesheets/food/Icons_Food.png",
+      "atlasRect": {
+        "x": 240,
+        "y": 112,
+        "width": 16,
+        "height": 16
+      },
+      "stackable": true,
+      "maxStack": 32,
+      "spawnable": true,
+      "craftable": false,
+      "description": "Egg placeholder ingredient for future food crafting.",
+      "food": {
+        "edible": true,
+        "hungerRestore": 2,
+        "happinessRestore": 0,
+        "healthRestore": 0,
+        "energyRestore": 0,
+        "spoilable": false,
+        "spoilTimeSeconds": null
+      },
+      "crafting": {
+        "craftable": false,
+        "recipe": [],
+        "outputQuantity": 1,
+        "station": null,
+        "unlockCondition": null
+      },
+      "obtain": {
+        "method": "harvest",
+        "sourceFamily": "farm_animals",
+        "requiredTool": null,
+        "nearTerrain": null,
+        "outputQuantity": 1
+      }
+    },
+    "milk": {
+      "id": "milk",
+      "enabled": true,
+      "name": "Milk",
+      "type": "food",
+      "category": "ingredient",
+      "icon": "🥛",
+      "spritePath": "",
+      "atlasSource": "src/spritesheets/food/Icons_Food.png",
+      "atlasRect": {
+        "x": 448,
+        "y": 112,
+        "width": 16,
+        "height": 16
+      },
+      "stackable": true,
+      "maxStack": 32,
+      "spawnable": true,
+      "craftable": false,
+      "description": "Milk placeholder ingredient for future food crafting.",
+      "food": {
+        "edible": true,
+        "hungerRestore": 2,
+        "happinessRestore": 0,
+        "healthRestore": 1,
+        "energyRestore": 0,
+        "spoilable": false,
+        "spoilTimeSeconds": null
+      },
+      "crafting": {
+        "craftable": false,
+        "recipe": [],
+        "outputQuantity": 1,
+        "station": null,
+        "unlockCondition": null
+      },
+      "obtain": {
+        "method": "harvest",
+        "sourceFamily": "farm_animals",
+        "requiredTool": null,
+        "nearTerrain": null,
+        "outputQuantity": 1
+      }
+    },
+    "honey": {
+      "id": "honey",
+      "enabled": true,
+      "name": "Honey",
+      "type": "food",
+      "category": "ingredient",
+      "icon": "🍯",
+      "spritePath": "",
+      "atlasSource": "src/spritesheets/food/Icons_Food.png",
+      "atlasRect": {
+        "x": 528,
+        "y": 16,
+        "width": 16,
+        "height": 16
+      },
+      "stackable": true,
+      "maxStack": 32,
+      "spawnable": true,
+      "craftable": false,
+      "description": "Honey placeholder ingredient for future food crafting.",
+      "food": {
+        "edible": true,
+        "hungerRestore": 0,
+        "happinessRestore": 1,
+        "healthRestore": 0,
+        "energyRestore": 1,
+        "spoilable": false,
+        "spoilTimeSeconds": null
+      },
+      "crafting": {
+        "craftable": false,
+        "recipe": [],
+        "outputQuantity": 1,
+        "station": null,
+        "unlockCondition": null
+      },
+      "obtain": {
+        "method": "harvest",
+        "sourceFamily": "bee_hives",
+        "requiredTool": null,
+        "nearTerrain": null,
+        "outputQuantity": 1
+      }
+    },
+    "coffee": {
+      "id": "coffee",
+      "enabled": true,
+      "name": "Coffee",
+      "type": "food",
+      "category": "drink",
+      "icon": "☕",
+      "spritePath": "",
+      "atlasSource": "src/spritesheets/food/Icons_Food.png",
+      "atlasRect": {
+        "x": 144,
+        "y": 112,
+        "width": 16,
+        "height": 16
+      },
+      "stackable": true,
+      "maxStack": 16,
+      "spawnable": false,
+      "craftable": true,
+      "description": "Coffee crafted food placeholder entry.",
+      "food": {
+        "edible": true,
+        "hungerRestore": 3,
+        "happinessRestore": 5,
+        "healthRestore": 0,
+        "energyRestore": 8,
+        "spoilable": false,
+        "spoilTimeSeconds": null
+      },
+      "crafting": {
+        "craftable": true,
+        "recipe": [
+          {
+            "itemId": "coffee_bean",
+            "quantity": 2
+          },
+          {
+            "itemId": "water_bucket",
+            "quantity": 1
+          }
+        ],
+        "outputQuantity": 1,
+        "station": null,
+        "unlockCondition": null
+      },
+      "obtain": {
+        "method": "craft_only",
+        "sourceFamily": null,
+        "requiredTool": null,
+        "nearTerrain": null,
+        "outputQuantity": 1
+      }
+    },
+    "hot_chocolate": {
+      "id": "hot_chocolate",
+      "enabled": true,
+      "name": "Hot Chocolate",
+      "type": "food",
+      "category": "drink",
+      "icon": "🍫",
+      "spritePath": "",
+      "atlasSource": "src/spritesheets/food/Icons_Food.png",
+      "atlasRect": {
+        "x": 32,
+        "y": 112,
+        "width": 16,
+        "height": 16
+      },
+      "stackable": true,
+      "maxStack": 16,
+      "spawnable": false,
+      "craftable": true,
+      "description": "Hot Chocolate crafted food placeholder entry.",
+      "food": {
+        "edible": true,
+        "hungerRestore": 4,
+        "happinessRestore": 6,
+        "healthRestore": 0,
+        "energyRestore": 5,
+        "spoilable": false,
+        "spoilTimeSeconds": null
+      },
+      "crafting": {
+        "craftable": true,
+        "recipe": [
+          {
+            "itemId": "cocoa_bean",
+            "quantity": 2
+          },
+          {
+            "itemId": "milk",
+            "quantity": 1
+          }
+        ],
+        "outputQuantity": 1,
+        "station": null,
+        "unlockCondition": null
+      },
+      "obtain": {
+        "method": "craft_only",
+        "sourceFamily": null,
+        "requiredTool": null,
+        "nearTerrain": null,
+        "outputQuantity": 1
+      }
+    },
+    "apple_juice": {
+      "id": "apple_juice",
+      "enabled": true,
+      "name": "Apple Juice",
+      "type": "food",
+      "category": "drink",
+      "icon": "🧃",
+      "spritePath": "",
+      "atlasSource": "src/spritesheets/food/Icons_Food.png",
+      "atlasRect": {
+        "x": 208,
+        "y": 128,
+        "width": 16,
+        "height": 16
+      },
+      "stackable": true,
+      "maxStack": 16,
+      "spawnable": false,
+      "craftable": true,
+      "description": "Apple Juice crafted food placeholder entry.",
+      "food": {
+        "edible": true,
+        "hungerRestore": 3,
+        "happinessRestore": 4,
+        "healthRestore": 0,
+        "energyRestore": 2,
+        "spoilable": false,
+        "spoilTimeSeconds": null
+      },
+      "crafting": {
+        "craftable": true,
+        "recipe": [
+          {
+            "itemId": "apple",
+            "quantity": 2
+          },
+          {
+            "itemId": "water_bucket",
+            "quantity": 1
+          }
+        ],
+        "outputQuantity": 1,
+        "station": null,
+        "unlockCondition": null
+      },
+      "obtain": {
+        "method": "craft_only",
+        "sourceFamily": null,
+        "requiredTool": null,
+        "nearTerrain": null,
+        "outputQuantity": 1
+      }
+    },
+    "grape_juice": {
+      "id": "grape_juice",
+      "enabled": true,
+      "name": "Grape Juice",
+      "type": "food",
+      "category": "drink",
+      "icon": "🧃",
+      "spritePath": "",
+      "atlasSource": "src/spritesheets/food/Icons_Food.png",
+      "atlasRect": {
+        "x": 256,
+        "y": 144,
+        "width": 16,
+        "height": 16
+      },
+      "stackable": true,
+      "maxStack": 16,
+      "spawnable": false,
+      "craftable": true,
+      "description": "Grape Juice crafted food placeholder entry.",
+      "food": {
+        "edible": true,
+        "hungerRestore": 3,
+        "happinessRestore": 4,
+        "healthRestore": 0,
+        "energyRestore": 2,
+        "spoilable": false,
+        "spoilTimeSeconds": null
+      },
+      "crafting": {
+        "craftable": true,
+        "recipe": [
+          {
+            "itemId": "grapes",
+            "quantity": 2
+          },
+          {
+            "itemId": "water_bucket",
+            "quantity": 1
+          }
+        ],
+        "outputQuantity": 1,
+        "station": null,
+        "unlockCondition": null
+      },
+      "obtain": {
+        "method": "craft_only",
+        "sourceFamily": null,
+        "requiredTool": null,
+        "nearTerrain": null,
+        "outputQuantity": 1
+      }
+    },
+    "orange_juice": {
+      "id": "orange_juice",
+      "enabled": true,
+      "name": "Orange Juice",
+      "type": "food",
+      "category": "drink",
+      "icon": "🧃",
+      "spritePath": "",
+      "atlasSource": "src/spritesheets/food/Icons_Food.png",
+      "atlasRect": {
+        "x": 560,
+        "y": 144,
+        "width": 16,
+        "height": 16
+      },
+      "stackable": true,
+      "maxStack": 16,
+      "spawnable": false,
+      "craftable": true,
+      "description": "Orange Juice crafted food placeholder entry.",
+      "food": {
+        "edible": true,
+        "hungerRestore": 3,
+        "happinessRestore": 4,
+        "healthRestore": 0,
+        "energyRestore": 3,
+        "spoilable": false,
+        "spoilTimeSeconds": null
+      },
+      "crafting": {
+        "craftable": true,
+        "recipe": [
+          {
+            "itemId": "orange",
+            "quantity": 2
+          },
+          {
+            "itemId": "water_bucket",
+            "quantity": 1
+          }
+        ],
+        "outputQuantity": 1,
+        "station": null,
+        "unlockCondition": null
+      },
+      "obtain": {
+        "method": "craft_only",
+        "sourceFamily": null,
+        "requiredTool": null,
+        "nearTerrain": null,
+        "outputQuantity": 1
+      }
+    },
+    "lemonade": {
+      "id": "lemonade",
+      "enabled": true,
+      "name": "Lemonade",
+      "type": "food",
+      "category": "drink",
+      "icon": "🥤",
+      "spritePath": "",
+      "atlasSource": "src/spritesheets/food/Icons_Food.png",
+      "atlasRect": {
+        "x": 416,
+        "y": 144,
+        "width": 16,
+        "height": 16
+      },
+      "stackable": true,
+      "maxStack": 16,
+      "spawnable": false,
+      "craftable": true,
+      "description": "Lemonade crafted food placeholder entry.",
+      "food": {
+        "edible": true,
+        "hungerRestore": 3,
+        "happinessRestore": 5,
+        "healthRestore": 0,
+        "energyRestore": 3,
+        "spoilable": false,
+        "spoilTimeSeconds": null
+      },
+      "crafting": {
+        "craftable": true,
+        "recipe": [
+          {
+            "itemId": "lemon",
+            "quantity": 2
+          },
+          {
+            "itemId": "water_bucket",
+            "quantity": 1
+          },
+          {
+            "itemId": "honey",
+            "quantity": 1
+          }
+        ],
+        "outputQuantity": 1,
+        "station": null,
+        "unlockCondition": null
+      },
+      "obtain": {
+        "method": "craft_only",
+        "sourceFamily": null,
+        "requiredTool": null,
+        "nearTerrain": null,
+        "outputQuantity": 1
+      }
+    },
+    "berry_smoothie": {
+      "id": "berry_smoothie",
+      "enabled": true,
+      "name": "Berry Smoothie",
+      "type": "food",
+      "category": "drink",
+      "icon": "🥤",
+      "spritePath": "",
+      "atlasSource": "src/spritesheets/food/Icons_Food.png",
+      "atlasRect": {
+        "x": 288,
+        "y": 144,
+        "width": 16,
+        "height": 16
+      },
+      "stackable": true,
+      "maxStack": 16,
+      "spawnable": false,
+      "craftable": true,
+      "description": "Berry Smoothie crafted food placeholder entry.",
+      "food": {
+        "edible": true,
+        "hungerRestore": 6,
+        "happinessRestore": 5,
+        "healthRestore": 0,
+        "energyRestore": 4,
+        "spoilable": false,
+        "spoilTimeSeconds": null
+      },
+      "crafting": {
+        "craftable": true,
+        "recipe": [
+          {
+            "itemId": "berry",
+            "quantity": 2
+          },
+          {
+            "itemId": "milk",
+            "quantity": 1
+          },
+          {
+            "itemId": "honey",
+            "quantity": 1
+          }
+        ],
+        "outputQuantity": 1,
+        "station": null,
+        "unlockCondition": null
+      },
+      "obtain": {
+        "method": "craft_only",
+        "sourceFamily": null,
+        "requiredTool": null,
+        "nearTerrain": null,
+        "outputQuantity": 1
+      }
+    },
+    "fruit_salad": {
+      "id": "fruit_salad",
+      "enabled": true,
+      "name": "Fruit Salad",
+      "type": "food",
+      "category": "prepared_food",
+      "icon": "🥗",
+      "spritePath": "",
+      "atlasSource": "src/spritesheets/food/Icons_Food.png",
+      "atlasRect": {
+        "x": 112,
+        "y": 128,
+        "width": 16,
+        "height": 16
+      },
+      "stackable": true,
+      "maxStack": 16,
+      "spawnable": false,
+      "craftable": true,
+      "description": "Fruit Salad crafted food placeholder entry.",
+      "food": {
+        "edible": true,
+        "hungerRestore": 9,
+        "happinessRestore": 5,
+        "healthRestore": 1,
+        "energyRestore": 0,
+        "spoilable": false,
+        "spoilTimeSeconds": null
+      },
+      "crafting": {
+        "craftable": true,
+        "recipe": [
+          {
+            "itemId": "apple",
+            "quantity": 1
+          },
+          {
+            "itemId": "grapes",
+            "quantity": 1
+          },
+          {
+            "itemId": "orange",
+            "quantity": 1
+          },
+          {
+            "itemId": "berry",
+            "quantity": 1
+          }
+        ],
+        "outputQuantity": 1,
+        "station": null,
+        "unlockCondition": null
+      },
+      "obtain": {
+        "method": "craft_only",
+        "sourceFamily": null,
+        "requiredTool": null,
+        "nearTerrain": null,
+        "outputQuantity": 1
+      }
+    },
+    "jam": {
+      "id": "jam",
+      "enabled": true,
+      "name": "Jam",
+      "type": "food",
+      "category": "prepared_food",
+      "icon": "🫙",
+      "spritePath": "",
+      "atlasSource": "src/spritesheets/food/Icons_Food.png",
+      "atlasRect": {
+        "x": 256,
+        "y": 16,
+        "width": 16,
+        "height": 16
+      },
+      "stackable": true,
+      "maxStack": 16,
+      "spawnable": false,
+      "craftable": true,
+      "description": "Jam crafted food placeholder entry.",
+      "food": {
+        "edible": true,
+        "hungerRestore": 6,
+        "happinessRestore": 4,
+        "healthRestore": 1,
+        "energyRestore": 0,
+        "spoilable": false,
+        "spoilTimeSeconds": null
+      },
+      "crafting": {
+        "craftable": true,
+        "recipe": [
+          {
+            "itemId": "berry",
+            "quantity": 3
+          },
+          {
+            "itemId": "honey",
+            "quantity": 1
+          }
+        ],
+        "outputQuantity": 1,
+        "station": null,
+        "unlockCondition": null
+      },
+      "obtain": {
+        "method": "craft_only",
+        "sourceFamily": null,
+        "requiredTool": null,
+        "nearTerrain": null,
+        "outputQuantity": 1
+      }
+    },
+    "bread": {
+      "id": "bread",
+      "enabled": true,
+      "name": "Bread",
+      "type": "food",
+      "category": "prepared_food",
+      "icon": "🍞",
+      "spritePath": "",
+      "atlasSource": "src/spritesheets/food/Icons_Food.png",
+      "atlasRect": {
+        "x": 256,
+        "y": 32,
+        "width": 16,
+        "height": 16
+      },
+      "stackable": true,
+      "maxStack": 16,
+      "spawnable": false,
+      "craftable": true,
+      "description": "Bread crafted food placeholder entry.",
+      "food": {
+        "edible": true,
+        "hungerRestore": 8,
+        "happinessRestore": 2,
+        "healthRestore": 1,
+        "energyRestore": 0,
+        "spoilable": false,
+        "spoilTimeSeconds": null
+      },
+      "crafting": {
+        "craftable": true,
+        "recipe": [
+          {
+            "itemId": "wheat",
+            "quantity": 3
+          }
+        ],
+        "outputQuantity": 1,
+        "station": null,
+        "unlockCondition": null
+      },
+      "obtain": {
+        "method": "craft_only",
+        "sourceFamily": null,
+        "requiredTool": null,
+        "nearTerrain": null,
+        "outputQuantity": 1
+      }
+    },
+    "pancakes": {
+      "id": "pancakes",
+      "enabled": true,
+      "name": "Pancakes",
+      "type": "food",
+      "category": "prepared_food",
+      "icon": "🥞",
+      "spritePath": "",
+      "atlasSource": "src/spritesheets/food/Icons_Food.png",
+      "atlasRect": {
+        "x": 336,
+        "y": 48,
+        "width": 16,
+        "height": 16
+      },
+      "stackable": true,
+      "maxStack": 16,
+      "spawnable": false,
+      "craftable": true,
+      "description": "Pancakes crafted food placeholder entry.",
+      "food": {
+        "edible": true,
+        "hungerRestore": 12,
+        "happinessRestore": 5,
+        "healthRestore": 1,
+        "energyRestore": 2,
+        "spoilable": false,
+        "spoilTimeSeconds": null
+      },
+      "crafting": {
+        "craftable": true,
+        "recipe": [
+          {
+            "itemId": "wheat",
+            "quantity": 2
+          },
+          {
+            "itemId": "egg",
+            "quantity": 1
+          },
+          {
+            "itemId": "milk",
+            "quantity": 1
+          },
+          {
+            "itemId": "honey",
+            "quantity": 1
+          }
+        ],
+        "outputQuantity": 1,
+        "station": null,
+        "unlockCondition": null
+      },
+      "obtain": {
+        "method": "craft_only",
+        "sourceFamily": null,
+        "requiredTool": null,
+        "nearTerrain": null,
+        "outputQuantity": 1
+      }
+    },
+    "cake": {
+      "id": "cake",
+      "enabled": true,
+      "name": "Cake",
+      "type": "food",
+      "category": "prepared_food",
+      "icon": "🍰",
+      "spritePath": "",
+      "atlasSource": "src/spritesheets/food/Icons_Food.png",
+      "atlasRect": {
+        "x": 464,
+        "y": 64,
+        "width": 16,
+        "height": 16
+      },
+      "stackable": true,
+      "maxStack": 16,
+      "spawnable": false,
+      "craftable": true,
+      "description": "Cake crafted food placeholder entry.",
+      "food": {
+        "edible": true,
+        "hungerRestore": 14,
+        "happinessRestore": 7,
+        "healthRestore": 2,
+        "energyRestore": 0,
+        "spoilable": false,
+        "spoilTimeSeconds": null
+      },
+      "crafting": {
+        "craftable": true,
+        "recipe": [
+          {
+            "itemId": "wheat",
+            "quantity": 3
+          },
+          {
+            "itemId": "egg",
+            "quantity": 2
+          },
+          {
+            "itemId": "milk",
+            "quantity": 1
+          },
+          {
+            "itemId": "honey",
+            "quantity": 1
+          }
+        ],
+        "outputQuantity": 1,
+        "station": null,
+        "unlockCondition": null
+      },
+      "obtain": {
+        "method": "craft_only",
+        "sourceFamily": null,
+        "requiredTool": null,
+        "nearTerrain": null,
+        "outputQuantity": 1
+      }
+    },
+    "apple_pie": {
+      "id": "apple_pie",
+      "enabled": true,
+      "name": "Apple Pie",
+      "type": "food",
+      "category": "prepared_food",
+      "icon": "🥧",
+      "spritePath": "",
+      "atlasSource": "src/spritesheets/food/Icons_Food.png",
+      "atlasRect": {
+        "x": 224,
+        "y": 64,
+        "width": 16,
+        "height": 16
+      },
+      "stackable": true,
+      "maxStack": 16,
+      "spawnable": false,
+      "craftable": true,
+      "description": "Apple Pie crafted food placeholder entry.",
+      "food": {
+        "edible": true,
+        "hungerRestore": 13,
+        "happinessRestore": 6,
+        "healthRestore": 1,
+        "energyRestore": 0,
+        "spoilable": false,
+        "spoilTimeSeconds": null
+      },
+      "crafting": {
+        "craftable": true,
+        "recipe": [
+          {
+            "itemId": "apple",
+            "quantity": 3
+          },
+          {
+            "itemId": "wheat",
+            "quantity": 2
+          },
+          {
+            "itemId": "honey",
+            "quantity": 1
+          }
+        ],
+        "outputQuantity": 1,
+        "station": null,
+        "unlockCondition": null
+      },
+      "obtain": {
+        "method": "craft_only",
+        "sourceFamily": null,
+        "requiredTool": null,
+        "nearTerrain": null,
+        "outputQuantity": 1
+      }
+    },
+    "berry_pie": {
+      "id": "berry_pie",
+      "enabled": true,
+      "name": "Berry Pie",
+      "type": "food",
+      "category": "prepared_food",
+      "icon": "🥧",
+      "spritePath": "",
+      "atlasSource": "src/spritesheets/food/Icons_Food.png",
+      "atlasRect": {
+        "x": 256,
+        "y": 64,
+        "width": 16,
+        "height": 16
+      },
+      "stackable": true,
+      "maxStack": 16,
+      "spawnable": false,
+      "craftable": true,
+      "description": "Berry Pie crafted food placeholder entry.",
+      "food": {
+        "edible": true,
+        "hungerRestore": 13,
+        "happinessRestore": 6,
+        "healthRestore": 1,
+        "energyRestore": 0,
+        "spoilable": false,
+        "spoilTimeSeconds": null
+      },
+      "crafting": {
+        "craftable": true,
+        "recipe": [
+          {
+            "itemId": "berry",
+            "quantity": 3
+          },
+          {
+            "itemId": "wheat",
+            "quantity": 2
+          },
+          {
+            "itemId": "honey",
+            "quantity": 1
+          }
+        ],
+        "outputQuantity": 1,
+        "station": null,
+        "unlockCondition": null
+      },
+      "obtain": {
+        "method": "craft_only",
+        "sourceFamily": null,
+        "requiredTool": null,
+        "nearTerrain": null,
+        "outputQuantity": 1
+      }
+    },
+    "sandwich": {
+      "id": "sandwich",
+      "enabled": true,
+      "name": "Sandwich",
+      "type": "food",
+      "category": "prepared_food",
+      "icon": "🥪",
+      "spritePath": "",
+      "atlasSource": "src/spritesheets/food/Icons_Food.png",
+      "atlasRect": {
+        "x": 496,
+        "y": 48,
+        "width": 16,
+        "height": 16
+      },
+      "stackable": true,
+      "maxStack": 16,
+      "spawnable": false,
+      "craftable": true,
+      "description": "Sandwich crafted food placeholder entry.",
+      "food": {
+        "edible": true,
+        "hungerRestore": 10,
+        "happinessRestore": 3,
+        "healthRestore": 1,
+        "energyRestore": 0,
+        "spoilable": false,
+        "spoilTimeSeconds": null
+      },
+      "crafting": {
+        "craftable": true,
+        "recipe": [
+          {
+            "itemId": "bread",
+            "quantity": 2
+          },
+          {
+            "itemId": "apple",
+            "quantity": 1
+          }
+        ],
+        "outputQuantity": 1,
+        "station": null,
+        "unlockCondition": null
+      },
+      "obtain": {
+        "method": "craft_only",
+        "sourceFamily": null,
+        "requiredTool": null,
+        "nearTerrain": null,
+        "outputQuantity": 1
+      }
+    },
+    "soup": {
+      "id": "soup",
+      "enabled": true,
+      "name": "Soup",
+      "type": "food",
+      "category": "prepared_food",
+      "icon": "🍲",
+      "spritePath": "",
+      "atlasSource": "src/spritesheets/food/Icons_Food.png",
+      "atlasRect": {
+        "x": 432,
+        "y": 32,
+        "width": 16,
+        "height": 16
+      },
+      "stackable": true,
+      "maxStack": 16,
+      "spawnable": false,
+      "craftable": true,
+      "description": "Soup crafted food placeholder entry.",
+      "food": {
+        "edible": true,
+        "hungerRestore": 8,
+        "happinessRestore": 3,
+        "healthRestore": 2,
+        "energyRestore": 0,
+        "spoilable": false,
+        "spoilTimeSeconds": null
+      },
+      "crafting": {
+        "craftable": true,
+        "recipe": [
+          {
+            "itemId": "water_bucket",
+            "quantity": 1
+          },
+          {
+            "itemId": "mushroom",
+            "quantity": 1
+          }
+        ],
+        "outputQuantity": 1,
+        "station": null,
+        "unlockCondition": null
+      },
+      "obtain": {
+        "method": "craft_only",
+        "sourceFamily": null,
+        "requiredTool": null,
+        "nearTerrain": null,
+        "outputQuantity": 1
+      }
+    },
+    "mushroom_soup": {
+      "id": "mushroom_soup",
+      "enabled": true,
+      "name": "Mushroom Soup",
+      "type": "food",
+      "category": "prepared_food",
+      "icon": "🍲",
+      "spritePath": "",
+      "atlasSource": "src/spritesheets/food/Icons_Food.png",
+      "atlasRect": {
+        "x": 528,
+        "y": 32,
+        "width": 16,
+        "height": 16
+      },
+      "stackable": true,
+      "maxStack": 16,
+      "spawnable": false,
+      "craftable": true,
+      "description": "Mushroom Soup crafted food placeholder entry.",
+      "food": {
+        "edible": true,
+        "hungerRestore": 10,
+        "happinessRestore": 3,
+        "healthRestore": 3,
+        "energyRestore": 0,
+        "spoilable": false,
+        "spoilTimeSeconds": null
+      },
+      "crafting": {
+        "craftable": true,
+        "recipe": [
+          {
+            "itemId": "mushroom",
+            "quantity": 2
+          },
+          {
+            "itemId": "water_bucket",
+            "quantity": 1
+          }
+        ],
+        "outputQuantity": 1,
+        "station": null,
+        "unlockCondition": null
+      },
+      "obtain": {
+        "method": "craft_only",
+        "sourceFamily": null,
+        "requiredTool": null,
+        "nearTerrain": null,
+        "outputQuantity": 1
+      }
+    },
+    "cookie": {
+      "id": "cookie",
+      "enabled": true,
+      "name": "Cookie",
+      "type": "food",
+      "category": "prepared_food",
+      "icon": "🍪",
+      "spritePath": "",
+      "atlasSource": "src/spritesheets/food/Icons_Food.png",
+      "atlasRect": {
+        "x": 96,
+        "y": 80,
+        "width": 16,
+        "height": 16
+      },
+      "stackable": true,
+      "maxStack": 16,
+      "spawnable": false,
+      "craftable": true,
+      "description": "Cookie crafted food placeholder entry.",
+      "food": {
+        "edible": true,
+        "hungerRestore": 7,
+        "happinessRestore": 4,
+        "healthRestore": 1,
+        "energyRestore": 0,
+        "spoilable": false,
+        "spoilTimeSeconds": null
+      },
+      "crafting": {
+        "craftable": true,
+        "recipe": [
+          {
+            "itemId": "wheat",
+            "quantity": 2
+          },
+          {
+            "itemId": "honey",
+            "quantity": 1
+          }
+        ],
+        "outputQuantity": 1,
+        "station": null,
+        "unlockCondition": null
+      },
+      "obtain": {
+        "method": "craft_only",
+        "sourceFamily": null,
+        "requiredTool": null,
+        "nearTerrain": null,
+        "outputQuantity": 1
+      }
+    },
+    "candy": {
+      "id": "candy",
+      "enabled": true,
+      "name": "Candy",
+      "type": "food",
+      "category": "prepared_food",
+      "icon": "🍬",
+      "spritePath": "",
+      "atlasSource": "src/spritesheets/food/Icons_Food.png",
+      "atlasRect": {
+        "x": 624,
+        "y": 64,
+        "width": 16,
+        "height": 16
+      },
+      "stackable": true,
+      "maxStack": 16,
+      "spawnable": false,
+      "craftable": true,
+      "description": "Candy crafted food placeholder entry.",
+      "food": {
+        "edible": true,
+        "hungerRestore": 4,
+        "happinessRestore": 6,
+        "healthRestore": 1,
+        "energyRestore": 2,
+        "spoilable": false,
+        "spoilTimeSeconds": null
+      },
+      "crafting": {
+        "craftable": true,
+        "recipe": [
+          {
+            "itemId": "berry",
+            "quantity": 1
+          },
+          {
+            "itemId": "honey",
+            "quantity": 2
+          }
+        ],
+        "outputQuantity": 1,
+        "station": null,
+        "unlockCondition": null
+      },
+      "obtain": {
+        "method": "craft_only",
+        "sourceFamily": null,
+        "requiredTool": null,
+        "nearTerrain": null,
+        "outputQuantity": 1
+      }
+    },
+    "ice_cream": {
+      "id": "ice_cream",
+      "enabled": true,
+      "name": "Ice Cream",
+      "type": "food",
+      "category": "prepared_food",
+      "icon": "🍨",
+      "spritePath": "",
+      "atlasSource": "src/spritesheets/food/Icons_Food.png",
+      "atlasRect": {
+        "x": 224,
+        "y": 80,
+        "width": 16,
+        "height": 16
+      },
+      "stackable": true,
+      "maxStack": 16,
+      "spawnable": false,
+      "craftable": true,
+      "description": "Ice Cream crafted food placeholder entry.",
+      "food": {
+        "edible": true,
+        "hungerRestore": 9,
+        "happinessRestore": 7,
+        "healthRestore": 1,
+        "energyRestore": 0,
+        "spoilable": false,
+        "spoilTimeSeconds": null
+      },
+      "crafting": {
+        "craftable": true,
+        "recipe": [
+          {
+            "itemId": "milk",
+            "quantity": 2
+          },
+          {
+            "itemId": "honey",
+            "quantity": 1
+          },
+          {
+            "itemId": "berry",
+            "quantity": 1
+          }
+        ],
+        "outputQuantity": 1,
+        "station": null,
+        "unlockCondition": null
+      },
+      "obtain": {
+        "method": "craft_only",
+        "sourceFamily": null,
+        "requiredTool": null,
+        "nearTerrain": null,
+        "outputQuantity": 1
+      }
+    },
+    "apple_green": {
+      "id": "apple_green",
+      "enabled": true,
+      "name": "Green Apple",
+      "type": "food",
+      "category": "fruit",
+      "icon": "🍎",
+      "spritePath": "",
+      "atlasSource": "src/spritesheets/food/Icons_Food.png",
+      "atlasRect": {
+        "x": 272,
+        "y": 176,
+        "width": 16,
+        "height": 16
+      },
+      "stackable": true,
+      "maxStack": 32,
+      "spawnable": true,
+      "craftable": false,
+      "description": "Green apple food item.",
+      "food": {
+        "edible": true,
+        "hungerRestore": 5,
+        "happinessRestore": 2,
+        "healthRestore": 0,
+        "energyRestore": 0,
+        "spoilable": false,
+        "spoilTimeSeconds": null
+      },
+      "crafting": {
+        "craftable": false,
+        "recipe": [],
+        "outputQuantity": 1,
+        "station": null,
+        "unlockCondition": null
+      },
+      "obtain": {
+        "method": "spawn",
+        "sourceFamily": null,
+        "requiredTool": null,
+        "nearTerrain": null,
+        "outputQuantity": 1
+      }
+    },
+    "candy_pink": {
+      "id": "candy_pink",
+      "enabled": true,
+      "name": "Pink Candy",
+      "type": "food",
+      "category": "prepared_food",
+      "icon": "🍬",
+      "spritePath": "",
+      "atlasSource": "src/spritesheets/food/Icons_Food.png",
+      "atlasRect": {
+        "x": 0,
+        "y": 80,
+        "width": 16,
+        "height": 16
+      },
+      "stackable": true,
+      "maxStack": 16,
+      "spawnable": false,
+      "craftable": true,
+      "description": "Pink candy crafted food item.",
+      "food": {
+        "edible": true,
+        "hungerRestore": 4,
+        "happinessRestore": 6,
+        "healthRestore": 1,
+        "energyRestore": 2,
+        "spoilable": false,
+        "spoilTimeSeconds": null
+      },
+      "crafting": {
+        "craftable": true,
+        "recipe": [
+          {
+            "itemId": "berry",
+            "quantity": 1
+          },
+          {
+            "itemId": "honey",
+            "quantity": 2
+          }
+        ],
+        "outputQuantity": 1,
+        "station": null,
+        "unlockCondition": null
+      },
+      "obtain": {
+        "method": "craft_only",
+        "sourceFamily": null,
+        "requiredTool": null,
+        "nearTerrain": null,
+        "outputQuantity": 1
+      }
+    }
+  },
+  "recipes": {
+    "coffee": {
+      "id": "coffee",
+      "name": "Coffee",
+      "category": "drink",
+      "icon": "☕",
+      "spritePath": "",
+      "atlasSource": "src/spritesheets/food/Icons_Food.png",
+      "atlasRect": {
+        "x": 144,
+        "y": 112,
+        "width": 16,
+        "height": 16
+      },
+      "inputs": [
+        {
+          "itemId": "coffee_bean",
+          "quantity": 2
+        },
+        {
+          "itemId": "water_bucket",
+          "quantity": 1
+        }
+      ],
+      "outputs": [
+        {
+          "itemId": "coffee",
+          "quantity": 1
+        }
+      ],
+      "station": null,
+      "unlockCondition": null,
+      "unlocked": true
+    },
+    "hot_chocolate": {
+      "id": "hot_chocolate",
+      "name": "Hot Chocolate",
+      "category": "drink",
+      "icon": "🍫",
+      "spritePath": "",
+      "atlasSource": "src/spritesheets/food/Icons_Food.png",
+      "atlasRect": {
+        "x": 32,
+        "y": 112,
+        "width": 16,
+        "height": 16
+      },
+      "inputs": [
+        {
+          "itemId": "cocoa_bean",
+          "quantity": 2
+        },
+        {
+          "itemId": "milk",
+          "quantity": 1
+        }
+      ],
+      "outputs": [
+        {
+          "itemId": "hot_chocolate",
+          "quantity": 1
+        }
+      ],
+      "station": null,
+      "unlockCondition": null,
+      "unlocked": true
+    },
+    "apple_juice": {
+      "id": "apple_juice",
+      "name": "Apple Juice",
+      "category": "drink",
+      "icon": "🧃",
+      "spritePath": "",
+      "atlasSource": "src/spritesheets/food/Icons_Food.png",
+      "atlasRect": {
+        "x": 208,
+        "y": 128,
+        "width": 16,
+        "height": 16
+      },
+      "inputs": [
+        {
+          "itemId": "apple",
+          "quantity": 2
+        },
+        {
+          "itemId": "water_bucket",
+          "quantity": 1
+        }
+      ],
+      "outputs": [
+        {
+          "itemId": "apple_juice",
+          "quantity": 1
+        }
+      ],
+      "station": null,
+      "unlockCondition": null,
+      "unlocked": true
+    },
+    "grape_juice": {
+      "id": "grape_juice",
+      "name": "Grape Juice",
+      "category": "drink",
+      "icon": "🧃",
+      "spritePath": "",
+      "atlasSource": "src/spritesheets/food/Icons_Food.png",
+      "atlasRect": {
+        "x": 256,
+        "y": 144,
+        "width": 16,
+        "height": 16
+      },
+      "inputs": [
+        {
+          "itemId": "grapes",
+          "quantity": 2
+        },
+        {
+          "itemId": "water_bucket",
+          "quantity": 1
+        }
+      ],
+      "outputs": [
+        {
+          "itemId": "grape_juice",
+          "quantity": 1
+        }
+      ],
+      "station": null,
+      "unlockCondition": null,
+      "unlocked": true
+    },
+    "orange_juice": {
+      "id": "orange_juice",
+      "name": "Orange Juice",
+      "category": "drink",
+      "icon": "🧃",
+      "spritePath": "",
+      "atlasSource": "src/spritesheets/food/Icons_Food.png",
+      "atlasRect": {
+        "x": 560,
+        "y": 144,
+        "width": 16,
+        "height": 16
+      },
+      "inputs": [
+        {
+          "itemId": "orange",
+          "quantity": 2
+        },
+        {
+          "itemId": "water_bucket",
+          "quantity": 1
+        }
+      ],
+      "outputs": [
+        {
+          "itemId": "orange_juice",
+          "quantity": 1
+        }
+      ],
+      "station": null,
+      "unlockCondition": null,
+      "unlocked": true
+    },
+    "lemonade": {
+      "id": "lemonade",
+      "name": "Lemonade",
+      "category": "drink",
+      "icon": "🥤",
+      "spritePath": "",
+      "atlasSource": "src/spritesheets/food/Icons_Food.png",
+      "atlasRect": {
+        "x": 416,
+        "y": 144,
+        "width": 16,
+        "height": 16
+      },
+      "inputs": [
+        {
+          "itemId": "lemon",
+          "quantity": 2
+        },
+        {
+          "itemId": "water_bucket",
+          "quantity": 1
+        },
+        {
+          "itemId": "honey",
+          "quantity": 1
+        }
+      ],
+      "outputs": [
+        {
+          "itemId": "lemonade",
+          "quantity": 1
+        }
+      ],
+      "station": null,
+      "unlockCondition": null,
+      "unlocked": true
+    },
+    "berry_smoothie": {
+      "id": "berry_smoothie",
+      "name": "Berry Smoothie",
+      "category": "drink",
+      "icon": "🥤",
+      "spritePath": "",
+      "atlasSource": "src/spritesheets/food/Icons_Food.png",
+      "atlasRect": {
+        "x": 288,
+        "y": 144,
+        "width": 16,
+        "height": 16
+      },
+      "inputs": [
+        {
+          "itemId": "berry",
+          "quantity": 2
+        },
+        {
+          "itemId": "milk",
+          "quantity": 1
+        },
+        {
+          "itemId": "honey",
+          "quantity": 1
+        }
+      ],
+      "outputs": [
+        {
+          "itemId": "berry_smoothie",
+          "quantity": 1
+        }
+      ],
+      "station": null,
+      "unlockCondition": null,
+      "unlocked": true
+    },
+    "fruit_salad": {
+      "id": "fruit_salad",
+      "name": "Fruit Salad",
+      "category": "prepared_food",
+      "icon": "🥗",
+      "spritePath": "",
+      "atlasSource": "src/spritesheets/food/Icons_Food.png",
+      "atlasRect": {
+        "x": 112,
+        "y": 128,
+        "width": 16,
+        "height": 16
+      },
+      "inputs": [
+        {
+          "itemId": "apple",
+          "quantity": 1
+        },
+        {
+          "itemId": "grapes",
+          "quantity": 1
+        },
+        {
+          "itemId": "orange",
+          "quantity": 1
+        },
+        {
+          "itemId": "berry",
+          "quantity": 1
+        }
+      ],
+      "outputs": [
+        {
+          "itemId": "fruit_salad",
+          "quantity": 1
+        }
+      ],
+      "station": null,
+      "unlockCondition": null,
+      "unlocked": true
+    },
+    "jam": {
+      "id": "jam",
+      "name": "Jam",
+      "category": "prepared_food",
+      "icon": "🫙",
+      "spritePath": "",
+      "atlasSource": "src/spritesheets/food/Icons_Food.png",
+      "atlasRect": {
+        "x": 256,
+        "y": 16,
+        "width": 16,
+        "height": 16
+      },
+      "inputs": [
+        {
+          "itemId": "berry",
+          "quantity": 3
+        },
+        {
+          "itemId": "honey",
+          "quantity": 1
+        }
+      ],
+      "outputs": [
+        {
+          "itemId": "jam",
+          "quantity": 1
+        }
+      ],
+      "station": null,
+      "unlockCondition": null,
+      "unlocked": true
+    },
+    "bread": {
+      "id": "bread",
+      "name": "Bread",
+      "category": "prepared_food",
+      "icon": "🍞",
+      "spritePath": "",
+      "atlasSource": "src/spritesheets/food/Icons_Food.png",
+      "atlasRect": {
+        "x": 256,
+        "y": 32,
+        "width": 16,
+        "height": 16
+      },
+      "inputs": [
+        {
+          "itemId": "wheat",
+          "quantity": 3
+        }
+      ],
+      "outputs": [
+        {
+          "itemId": "bread",
+          "quantity": 1
+        }
+      ],
+      "station": null,
+      "unlockCondition": null,
+      "unlocked": true
+    },
+    "pancakes": {
+      "id": "pancakes",
+      "name": "Pancakes",
+      "category": "prepared_food",
+      "icon": "🥞",
+      "spritePath": "",
+      "atlasSource": "src/spritesheets/food/Icons_Food.png",
+      "atlasRect": {
+        "x": 336,
+        "y": 48,
+        "width": 16,
+        "height": 16
+      },
+      "inputs": [
+        {
+          "itemId": "wheat",
+          "quantity": 2
+        },
+        {
+          "itemId": "egg",
+          "quantity": 1
+        },
+        {
+          "itemId": "milk",
+          "quantity": 1
+        },
+        {
+          "itemId": "honey",
+          "quantity": 1
+        }
+      ],
+      "outputs": [
+        {
+          "itemId": "pancakes",
+          "quantity": 1
+        }
+      ],
+      "station": null,
+      "unlockCondition": null,
+      "unlocked": true
+    },
+    "cake": {
+      "id": "cake",
+      "name": "Cake",
+      "category": "prepared_food",
+      "icon": "🍰",
+      "spritePath": "",
+      "atlasSource": "src/spritesheets/food/Icons_Food.png",
+      "atlasRect": {
+        "x": 464,
+        "y": 64,
+        "width": 16,
+        "height": 16
+      },
+      "inputs": [
+        {
+          "itemId": "wheat",
+          "quantity": 3
+        },
+        {
+          "itemId": "egg",
+          "quantity": 2
+        },
+        {
+          "itemId": "milk",
+          "quantity": 1
+        },
+        {
+          "itemId": "honey",
+          "quantity": 1
+        }
+      ],
+      "outputs": [
+        {
+          "itemId": "cake",
+          "quantity": 1
+        }
+      ],
+      "station": null,
+      "unlockCondition": null,
+      "unlocked": true
+    },
+    "apple_pie": {
+      "id": "apple_pie",
+      "name": "Apple Pie",
+      "category": "prepared_food",
+      "icon": "🥧",
+      "spritePath": "",
+      "atlasSource": "src/spritesheets/food/Icons_Food.png",
+      "atlasRect": {
+        "x": 224,
+        "y": 64,
+        "width": 16,
+        "height": 16
+      },
+      "inputs": [
+        {
+          "itemId": "apple",
+          "quantity": 3
+        },
+        {
+          "itemId": "wheat",
+          "quantity": 2
+        },
+        {
+          "itemId": "honey",
+          "quantity": 1
+        }
+      ],
+      "outputs": [
+        {
+          "itemId": "apple_pie",
+          "quantity": 1
+        }
+      ],
+      "station": null,
+      "unlockCondition": null,
+      "unlocked": true
+    },
+    "berry_pie": {
+      "id": "berry_pie",
+      "name": "Berry Pie",
+      "category": "prepared_food",
+      "icon": "🥧",
+      "spritePath": "",
+      "atlasSource": "src/spritesheets/food/Icons_Food.png",
+      "atlasRect": {
+        "x": 256,
+        "y": 64,
+        "width": 16,
+        "height": 16
+      },
+      "inputs": [
+        {
+          "itemId": "berry",
+          "quantity": 3
+        },
+        {
+          "itemId": "wheat",
+          "quantity": 2
+        },
+        {
+          "itemId": "honey",
+          "quantity": 1
+        }
+      ],
+      "outputs": [
+        {
+          "itemId": "berry_pie",
+          "quantity": 1
+        }
+      ],
+      "station": null,
+      "unlockCondition": null,
+      "unlocked": true
+    },
+    "sandwich": {
+      "id": "sandwich",
+      "name": "Sandwich",
+      "category": "prepared_food",
+      "icon": "🥪",
+      "spritePath": "",
+      "atlasSource": "src/spritesheets/food/Icons_Food.png",
+      "atlasRect": {
+        "x": 496,
+        "y": 48,
+        "width": 16,
+        "height": 16
+      },
+      "inputs": [
+        {
+          "itemId": "bread",
+          "quantity": 2
+        },
+        {
+          "itemId": "apple",
+          "quantity": 1
+        }
+      ],
+      "outputs": [
+        {
+          "itemId": "sandwich",
+          "quantity": 1
+        }
+      ],
+      "station": null,
+      "unlockCondition": null,
+      "unlocked": true
+    },
+    "soup": {
+      "id": "soup",
+      "name": "Soup",
+      "category": "prepared_food",
+      "icon": "🍲",
+      "spritePath": "",
+      "atlasSource": "src/spritesheets/food/Icons_Food.png",
+      "atlasRect": {
+        "x": 432,
+        "y": 32,
+        "width": 16,
+        "height": 16
+      },
+      "inputs": [
+        {
+          "itemId": "water_bucket",
+          "quantity": 1
+        },
+        {
+          "itemId": "mushroom",
+          "quantity": 1
+        }
+      ],
+      "outputs": [
+        {
+          "itemId": "soup",
+          "quantity": 1
+        }
+      ],
+      "station": null,
+      "unlockCondition": null,
+      "unlocked": true
+    },
+    "mushroom_soup": {
+      "id": "mushroom_soup",
+      "name": "Mushroom Soup",
+      "category": "prepared_food",
+      "icon": "🍲",
+      "spritePath": "",
+      "atlasSource": "src/spritesheets/food/Icons_Food.png",
+      "atlasRect": {
+        "x": 528,
+        "y": 32,
+        "width": 16,
+        "height": 16
+      },
+      "inputs": [
+        {
+          "itemId": "mushroom",
+          "quantity": 2
+        },
+        {
+          "itemId": "water_bucket",
+          "quantity": 1
+        }
+      ],
+      "outputs": [
+        {
+          "itemId": "mushroom_soup",
+          "quantity": 1
+        }
+      ],
+      "station": null,
+      "unlockCondition": null,
+      "unlocked": true
+    },
+    "cookie": {
+      "id": "cookie",
+      "name": "Cookie",
+      "category": "prepared_food",
+      "icon": "🍪",
+      "spritePath": "",
+      "atlasSource": "src/spritesheets/food/Icons_Food.png",
+      "atlasRect": {
+        "x": 96,
+        "y": 80,
+        "width": 16,
+        "height": 16
+      },
+      "inputs": [
+        {
+          "itemId": "wheat",
+          "quantity": 2
+        },
+        {
+          "itemId": "honey",
+          "quantity": 1
+        }
+      ],
+      "outputs": [
+        {
+          "itemId": "cookie",
+          "quantity": 1
+        }
+      ],
+      "station": null,
+      "unlockCondition": null,
+      "unlocked": true
+    },
+    "candy": {
+      "id": "candy",
+      "name": "Candy",
+      "category": "prepared_food",
+      "icon": "🍬",
+      "spritePath": "",
+      "atlasSource": "src/spritesheets/food/Icons_Food.png",
+      "atlasRect": {
+        "x": 624,
+        "y": 64,
+        "width": 16,
+        "height": 16
+      },
+      "inputs": [
+        {
+          "itemId": "berry",
+          "quantity": 1
+        },
+        {
+          "itemId": "honey",
+          "quantity": 2
+        }
+      ],
+      "outputs": [
+        {
+          "itemId": "candy",
+          "quantity": 1
+        }
+      ],
+      "station": null,
+      "unlockCondition": null,
+      "unlocked": true
+    },
+    "ice_cream": {
+      "id": "ice_cream",
+      "name": "Ice Cream",
+      "category": "prepared_food",
+      "icon": "🍨",
+      "spritePath": "",
+      "atlasSource": "src/spritesheets/food/Icons_Food.png",
+      "atlasRect": {
+        "x": 224,
+        "y": 80,
+        "width": 16,
+        "height": 16
+      },
+      "inputs": [
+        {
+          "itemId": "milk",
+          "quantity": 2
+        },
+        {
+          "itemId": "honey",
+          "quantity": 1
+        },
+        {
+          "itemId": "berry",
+          "quantity": 1
+        }
+      ],
+      "outputs": [
+        {
+          "itemId": "ice_cream",
+          "quantity": 1
+        }
+      ],
+      "station": null,
+      "unlockCondition": null,
+      "unlocked": true
+    },
+    "candy_pink": {
+      "id": "candy_pink",
+      "name": "Pink Candy",
+      "category": "prepared_food",
+      "icon": "🍬",
+      "spritePath": "",
+      "atlasSource": "src/spritesheets/food/Icons_Food.png",
+      "atlasRect": {
+        "x": 0,
+        "y": 80,
+        "width": 16,
+        "height": 16
+      },
+      "inputs": [
+        {
+          "itemId": "berry",
+          "quantity": 1
+        },
+        {
+          "itemId": "honey",
+          "quantity": 2
+        }
+      ],
+      "outputs": [
+        {
+          "itemId": "candy_pink",
+          "quantity": 1
+        }
+      ],
+      "station": null,
+      "unlockCondition": null,
+      "unlocked": true
+    }
+  },
+  "spawnPools": {
+    "nature_food": {
+      "enabled": true,
+      "itemIds": [
+        "apple",
+        "berry",
+        "honey",
+        "milk"
+      ],
+      "notes": "Direct ground food pickups stay intentionally rare in V1. Keep this pool limited to primary raw foods only; harvest-method foods should still stay out of random world spawn unless they remain spawnable and are explicitly listed here."
+    }
+  }
+}

@@ -1,0 +1,136 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="216" height="120" viewBox="0 0 216 120" shape-rendering="crispEdges">
+  <defs>
+    <g id="cat-idle-up">
+      <ellipse cx="12" cy="13" rx="6" ry="6" fill="#fff"/>
+      <polygon points="8,8 10,3 12,8" fill="#fff"/>
+      <polygon points="12,8 14,3 16,8" fill="#fff"/>
+      <rect x="8" y="19" width="3" height="2" fill="#fff"/>
+      <rect x="13" y="19" width="3" height="2" fill="#fff"/>
+      <rect x="17" y="14" width="3" height="2" fill="#fff"/>
+    </g>
+    <g id="cat-idle-mid">
+      <ellipse cx="12" cy="14" rx="6" ry="6" fill="#fff"/>
+      <polygon points="8,9 10,4 12,9" fill="#fff"/>
+      <polygon points="12,9 14,4 16,9" fill="#fff"/>
+      <rect x="8" y="20" width="3" height="2" fill="#fff"/>
+      <rect x="13" y="20" width="3" height="2" fill="#fff"/>
+      <rect x="17" y="15" width="3" height="2" fill="#fff"/>
+    </g>
+    <g id="cat-idle-down">
+      <ellipse cx="12" cy="15" rx="6" ry="6" fill="#fff"/>
+      <polygon points="8,10 10,5 12,10" fill="#fff"/>
+      <polygon points="12,10 14,5 16,10" fill="#fff"/>
+      <rect x="7" y="20" width="3" height="2" fill="#fff"/>
+      <rect x="14" y="20" width="3" height="2" fill="#fff"/>
+      <rect x="17" y="16" width="3" height="2" fill="#fff"/>
+    </g>
+    <g id="cat-run-a">
+      <ellipse cx="13" cy="14" rx="6" ry="6" fill="#fff"/>
+      <polygon points="9,9 11,4 13,9" fill="#fff"/>
+      <polygon points="13,9 15,4 17,9" fill="#fff"/>
+      <rect x="6" y="20" width="4" height="2" fill="#fff"/>
+      <rect x="15" y="18" width="4" height="2" fill="#fff"/>
+      <rect x="18" y="12" width="3" height="2" fill="#fff"/>
+    </g>
+    <g id="cat-run-b">
+      <ellipse cx="12" cy="13" rx="6" ry="6" fill="#fff"/>
+      <polygon points="8,8 10,3 12,8" fill="#fff"/>
+      <polygon points="12,8 14,3 16,8" fill="#fff"/>
+      <rect x="8" y="19" width="3" height="2" fill="#fff"/>
+      <rect x="13" y="17" width="3" height="2" fill="#fff"/>
+      <rect x="17" y="12" width="3" height="2" fill="#fff"/>
+    </g>
+    <g id="cat-run-c">
+      <ellipse cx="11" cy="14" rx="6" ry="6" fill="#fff"/>
+      <polygon points="7,9 9,4 11,9" fill="#fff"/>
+      <polygon points="11,9 13,4 15,9" fill="#fff"/>
+      <rect x="5" y="18" width="4" height="2" fill="#fff"/>
+      <rect x="14" y="20" width="4" height="2" fill="#fff"/>
+      <rect x="16" y="16" width="3" height="2" fill="#fff"/>
+    </g>
+    <g id="cat-jump">
+      <ellipse cx="12" cy="11" rx="6" ry="6" fill="#fff"/>
+      <polygon points="8,6 10,1 12,6" fill="#fff"/>
+      <polygon points="12,6 14,1 16,6" fill="#fff"/>
+      <rect x="9" y="17" width="2" height="2" fill="#fff"/>
+      <rect x="13" y="17" width="2" height="2" fill="#fff"/>
+      <rect x="17" y="12" width="3" height="2" fill="#fff"/>
+    </g>
+    <g id="cat-hurt">
+      <ellipse cx="12" cy="15" rx="7" ry="5" fill="#fff"/>
+      <polygon points="8,10 10,6 12,10" fill="#fff"/>
+      <polygon points="12,10 14,6 16,10" fill="#fff"/>
+      <rect x="7" y="20" width="3" height="2" fill="#fff"/>
+      <rect x="14" y="20" width="3" height="2" fill="#fff"/>
+      <rect x="17" y="16" width="3" height="2" fill="#fff"/>
+    </g>
+    <g id="cat-sit-right">
+      <ellipse cx="12" cy="16" rx="7" ry="5" fill="#fff"/>
+      <polygon points="8,11 10,7 12,11" fill="#fff"/>
+      <polygon points="12,11 14,7 16,11" fill="#fff"/>
+      <rect x="14" y="20" width="5" height="2" fill="#fff"/>
+      <rect x="17" y="16" width="2" height="2" fill="#fff"/>
+    </g>
+    <g id="cat-sit-left">
+      <ellipse cx="12" cy="16" rx="7" ry="5" fill="#fff"/>
+      <polygon points="8,11 10,7 12,11" fill="#fff"/>
+      <polygon points="12,11 14,7 16,11" fill="#fff"/>
+      <rect x="5" y="20" width="5" height="2" fill="#fff"/>
+      <rect x="5" y="16" width="2" height="2" fill="#fff"/>
+    </g>
+    <g id="cat-death-1"><use href="#cat-idle-mid"/></g>
+    <g id="cat-death-2" transform="rotate(8 12 12)"><use href="#cat-idle-mid"/></g>
+    <g id="cat-death-3" transform="rotate(16 12 12)"><use href="#cat-idle-mid"/></g>
+    <g id="cat-death-4" transform="rotate(28 12 12)"><use href="#cat-idle-mid"/></g>
+    <g id="cat-death-5" transform="rotate(42 12 12)"><use href="#cat-idle-mid"/></g>
+    <g id="cat-death-6">
+      <ellipse cx="13" cy="18" rx="8" ry="4" fill="#fff"/>
+      <polygon points="8,17 10,13 12,17" fill="#fff"/>
+      <rect x="16" y="18" width="4" height="2" fill="#fff"/>
+    </g>
+    <g id="cat-death-7">
+      <ellipse cx="13" cy="19" rx="9" ry="3" fill="#fff"/>
+      <polygon points="7,18 9,15 11,18" fill="#fff"/>
+      <rect x="16" y="19" width="4" height="2" fill="#fff"/>
+    </g>
+    <g id="cat-death-8">
+      <ellipse cx="13" cy="20" rx="9" ry="3" fill="#fff"/>
+      <polygon points="7,19 9,16 11,19" fill="#fff"/>
+      <rect x="16" y="20" width="4" height="2" fill="#fff"/>
+    </g>
+    <g id="cat-death-9">
+      <ellipse cx="13" cy="20" rx="9" ry="3" fill="#fff"/>
+      <polygon points="7,19 9,16 11,19" fill="#fff"/>
+      <rect x="16" y="20" width="4" height="2" fill="#fff"/>
+    </g>
+  </defs>
+
+  <g transform="translate(0 0)"><use href="#cat-idle-mid"/></g>
+  <g transform="translate(24 0)"><use href="#cat-idle-up"/></g>
+  <g transform="translate(48 0)"><use href="#cat-idle-mid"/></g>
+  <g transform="translate(72 0)"><use href="#cat-idle-down"/></g>
+  <g transform="translate(96 0)"><use href="#cat-idle-mid"/></g>
+  <g transform="translate(120 0)"><use href="#cat-idle-up"/></g>
+  <g transform="translate(144 0)"><use href="#cat-idle-mid"/></g>
+  <g transform="translate(168 0)"><use href="#cat-idle-down"/></g>
+
+  <g transform="translate(0 24)"><use href="#cat-run-a"/></g>
+  <g transform="translate(24 24)"><use href="#cat-run-b"/></g>
+  <g transform="translate(48 24)"><use href="#cat-run-c"/></g>
+  <g transform="translate(72 24)"><use href="#cat-jump"/></g>
+
+  <g transform="translate(0 48)"><use href="#cat-death-1"/></g>
+  <g transform="translate(24 48)"><use href="#cat-death-2"/></g>
+  <g transform="translate(48 48)"><use href="#cat-death-3"/></g>
+  <g transform="translate(72 48)"><use href="#cat-death-4"/></g>
+  <g transform="translate(96 48)"><use href="#cat-death-5"/></g>
+  <g transform="translate(120 48)"><use href="#cat-death-6"/></g>
+  <g transform="translate(144 48)"><use href="#cat-death-7"/></g>
+  <g transform="translate(168 48)"><use href="#cat-death-8"/></g>
+  <g transform="translate(192 48)"><use href="#cat-death-9"/></g>
+
+  <g transform="translate(0 72)"><use href="#cat-hurt"/></g>
+
+  <g transform="translate(0 96)"><use href="#cat-sit-right"/></g>
+  <g transform="translate(24 96)"><use href="#cat-sit-left"/></g>
+</svg>

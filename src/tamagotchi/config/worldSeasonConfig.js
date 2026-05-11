@@ -1,0 +1,15 @@
+export const WORLD_SEASON_IDS = {
+  SPRING: "spring",
+  SUMMER: "summer",
+  AUTUMN: "autumn",
+  WINTER: "winter",
+};
+
+export const DEFAULT_WORLD_SEASON = WORLD_SEASON_IDS.SPRING;
+
+export const WORLD_SEASON_ORDER = [
+  WORLD_SEASON_IDS.SPRING,
+  WORLD_SEASON_IDS.SUMMER,
+  WORLD_SEASON_IDS.AUTUMN,
+  WORLD_SEASON_IDS.WINTER,
+];

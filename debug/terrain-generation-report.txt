@@ -1,0 +1,52 @@
+Terrain Generation Report
+
+Sample bounds: x -96..95, y -96..95
+
+Terrain counts around origin:
+- grass_light: 30698
+- grass_dark: 4911
+- water: 225
+- sand: 521
+- road: 509
+
+Visual label mapping:
+- logical grass_light resolves through the grass_light_on_grass_dark full tile fallback (luminance 148)
+- logical grass_dark resolves through grass_dark_on_grass_light full tile (luminance 108)
+- higher full-tile luminance means the dominant logical base now maps to the lighter-looking grass art
+
+Water patch estimate:
+- connected water patch count: 2
+- average water patch size (cells): 112.50
+- repeated nearby water motifs detected: no
+- repeated nearby water pairs: 0
+
+Grass patch estimate:
+- connected dark-grass patch count: 70
+- average dark-grass patch size (cells): 70.16
+- repeated nearby dark-grass motifs detected: no
+- repeated nearby dark-grass pairs: 0
+
+Sand patch estimate:
+- connected sand patch count: 5
+- average sand patch size (cells): 104.20
+- repeated nearby sand motifs detected: no
+- repeated nearby sand pairs: 0
+
+Road patch estimate:
+- connected road patch count: 5
+- average road patch size (cells): 101.80
+- repeated nearby road motifs detected: no
+- repeated nearby road pairs: 0
+
+Autotile runtime sample:
+- fallback count: 0
+Category counts:
+- full: 33774
+- edges: 1157
+- outer_corners: 1051
+- inner_corners: 744
+- corridors: 8
+- sides: 77
+- isolated: 0
+- complex: 53
+

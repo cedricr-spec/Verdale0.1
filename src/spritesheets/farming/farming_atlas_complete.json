@@ -1,0 +1,1470 @@
+{
+  "version": 4,
+  "tileSize": 16,
+  "sheets": {
+    "cropObjects": "src/spritesheets/farming/Crops Objects.png",
+    "cropIcons": "src/spritesheets/farming/Crops Icons.png",
+    "cropTiles": "src/spritesheets/farming/Crops Tiles.png"
+  },
+  "layout": {
+    "cropWidth": 16,
+    "cropHeight": 32,
+    "growthStageCount": 5,
+    "growthStageSpacingX": 16,
+    "deadOffsetX": 96,
+    "growthYOffsetCorrection": -16,
+    "seedBagOffsetFromFoodX": 32
+  },
+  "tools": {
+    "wood_hoe": {
+      "sheet": "cropIcons",
+      "x": 32,
+      "y": 48,
+      "width": 16,
+      "height": 16,
+      "toolType": "hoe"
+    },
+    "wood_shovel": {
+      "sheet": "cropIcons",
+      "x": 48,
+      "y": 48,
+      "width": 16,
+      "height": 16,
+      "toolType": "shovel"
+    },
+    "wood_watering_can": {
+      "sheet": "cropIcons",
+      "x": 64,
+      "y": 0,
+      "width": 16,
+      "height": 16,
+      "toolType": "watering_can"
+    }
+  },
+  "soil": {
+    "tilledDry": {
+      "sheet": "cropTiles",
+      "x": 0,
+      "y": 48
+    },
+    "tilledWatered": {
+      "sheet": "cropTiles",
+      "x": 0,
+      "y": 112
+    },
+    "holeDry": {
+      "sheet": "cropTiles",
+      "x": 192,
+      "y": 0
+    },
+    "seededDry": {
+      "sheet": "cropTiles",
+      "x": 192,
+      "y": 16
+    },
+    "holeWatered": {
+      "sheet": "cropTiles",
+      "x": 192,
+      "y": 32
+    },
+    "seededWatered": {
+      "sheet": "cropTiles",
+      "x": 192,
+      "y": 48
+    }
+  },
+  "starterSeedPool": [
+    "carrot",
+    "turnip",
+    "potato",
+    "tomato"
+  ],
+  "crops": {
+    "carrot": {
+      "growth": {
+        "sheet": "cropObjects",
+        "startX": 0,
+        "startY": 0,
+        "stageWidth": 16,
+        "stageHeight": 32,
+        "stageCount": 5,
+        "stageSpacingX": 16,
+        "rawStartY": 16
+      },
+      "dead": {
+        "sheet": "cropObjects",
+        "x": 96,
+        "y": 0,
+        "width": 16,
+        "height": 32
+      },
+      "food": {
+        "sheet": "cropObjects",
+        "x": 400,
+        "y": 0,
+        "width": 16,
+        "height": 16
+      },
+      "seedBag": {
+        "sheet": "cropObjects",
+        "x": 432,
+        "y": 0,
+        "width": 16,
+        "height": 16
+      }
+    },
+    "turnip": {
+      "growth": {
+        "sheet": "cropObjects",
+        "startX": 0,
+        "startY": 32,
+        "stageWidth": 16,
+        "stageHeight": 32,
+        "stageCount": 5,
+        "stageSpacingX": 16,
+        "rawStartY": 48
+      },
+      "dead": {
+        "sheet": "cropObjects",
+        "x": 96,
+        "y": 32,
+        "width": 16,
+        "height": 32
+      },
+      "food": {
+        "sheet": "cropObjects",
+        "x": 400,
+        "y": 16,
+        "width": 16,
+        "height": 16
+      },
+      "seedBag": {
+        "sheet": "cropObjects",
+        "x": 432,
+        "y": 16,
+        "width": 16,
+        "height": 16
+      }
+    },
+    "pumpkin": {
+      "growth": {
+        "sheet": "cropObjects",
+        "startX": 0,
+        "startY": 64,
+        "stageWidth": 16,
+        "stageHeight": 32,
+        "stageCount": 5,
+        "stageSpacingX": 16,
+        "rawStartY": 80
+      },
+      "dead": {
+        "sheet": "cropObjects",
+        "x": 96,
+        "y": 64,
+        "width": 16,
+        "height": 32
+      },
+      "food": {
+        "sheet": "cropObjects",
+        "x": 400,
+        "y": 32,
+        "width": 16,
+        "height": 16
+      },
+      "seedBag": {
+        "sheet": "cropObjects",
+        "x": 432,
+        "y": 32,
+        "width": 16,
+        "height": 16
+      }
+    },
+    "potato": {
+      "growth": {
+        "sheet": "cropObjects",
+        "startX": 0,
+        "startY": 96,
+        "stageWidth": 16,
+        "stageHeight": 32,
+        "stageCount": 5,
+        "stageSpacingX": 16,
+        "rawStartY": 112
+      },
+      "dead": {
+        "sheet": "cropObjects",
+        "x": 96,
+        "y": 96,
+        "width": 16,
+        "height": 32
+      },
+      "food": {
+        "sheet": "cropObjects",
+        "x": 400,
+        "y": 48,
+        "width": 16,
+        "height": 16
+      },
+      "seedBag": {
+        "sheet": "cropObjects",
+        "x": 432,
+        "y": 48,
+        "width": 16,
+        "height": 16
+      }
+    },
+    "onion": {
+      "growth": {
+        "sheet": "cropObjects",
+        "startX": 0,
+        "startY": 128,
+        "stageWidth": 16,
+        "stageHeight": 32,
+        "stageCount": 5,
+        "stageSpacingX": 16,
+        "rawStartY": 144
+      },
+      "dead": {
+        "sheet": "cropObjects",
+        "x": 96,
+        "y": 128,
+        "width": 16,
+        "height": 32
+      },
+      "food": {
+        "sheet": "cropObjects",
+        "x": 400,
+        "y": 64,
+        "width": 16,
+        "height": 16
+      },
+      "seedBag": {
+        "sheet": "cropObjects",
+        "x": 432,
+        "y": 64,
+        "width": 16,
+        "height": 16
+      }
+    },
+    "strawberry": {
+      "growth": {
+        "sheet": "cropObjects",
+        "startX": 0,
+        "startY": 160,
+        "stageWidth": 16,
+        "stageHeight": 32,
+        "stageCount": 5,
+        "stageSpacingX": 16,
+        "rawStartY": 176
+      },
+      "dead": {
+        "sheet": "cropObjects",
+        "x": 96,
+        "y": 160,
+        "width": 16,
+        "height": 32
+      },
+      "food": {
+        "sheet": "cropObjects",
+        "x": 400,
+        "y": 80,
+        "width": 16,
+        "height": 16
+      },
+      "seedBag": {
+        "sheet": "cropObjects",
+        "x": 432,
+        "y": 80,
+        "width": 16,
+        "height": 16
+      }
+    },
+    "cauliflower": {
+      "growth": {
+        "sheet": "cropObjects",
+        "startX": 0,
+        "startY": 192,
+        "stageWidth": 16,
+        "stageHeight": 32,
+        "stageCount": 5,
+        "stageSpacingX": 16,
+        "rawStartY": 208
+      },
+      "dead": {
+        "sheet": "cropObjects",
+        "x": 96,
+        "y": 192,
+        "width": 16,
+        "height": 32
+      },
+      "food": {
+        "sheet": "cropObjects",
+        "x": 400,
+        "y": 96,
+        "width": 16,
+        "height": 16
+      },
+      "seedBag": {
+        "sheet": "cropObjects",
+        "x": 432,
+        "y": 96,
+        "width": 16,
+        "height": 16
+      }
+    },
+    "tomato": {
+      "growth": {
+        "sheet": "cropObjects",
+        "startX": 0,
+        "startY": 224,
+        "stageWidth": 16,
+        "stageHeight": 32,
+        "stageCount": 5,
+        "stageSpacingX": 16,
+        "rawStartY": 240
+      },
+      "dead": {
+        "sheet": "cropObjects",
+        "x": 96,
+        "y": 224,
+        "width": 16,
+        "height": 32
+      },
+      "food": {
+        "sheet": "cropObjects",
+        "x": 400,
+        "y": 112,
+        "width": 16,
+        "height": 16
+      },
+      "seedBag": {
+        "sheet": "cropObjects",
+        "x": 432,
+        "y": 112,
+        "width": 16,
+        "height": 16
+      }
+    },
+    "snap_peas": {
+      "growth": {
+        "sheet": "cropObjects",
+        "startX": 0,
+        "startY": 288,
+        "stageWidth": 16,
+        "stageHeight": 32,
+        "stageCount": 5,
+        "stageSpacingX": 16,
+        "rawStartY": 304
+      },
+      "dead": {
+        "sheet": "cropObjects",
+        "x": 96,
+        "y": 288,
+        "width": 16,
+        "height": 32
+      },
+      "food": {
+        "sheet": "cropObjects",
+        "x": 400,
+        "y": 144,
+        "width": 16,
+        "height": 16
+      },
+      "seedBag": {
+        "sheet": "cropObjects",
+        "x": 432,
+        "y": 144,
+        "width": 16,
+        "height": 16
+      }
+    },
+    "garlic": {
+      "growth": {
+        "sheet": "cropObjects",
+        "startX": 0,
+        "startY": 320,
+        "stageWidth": 16,
+        "stageHeight": 32,
+        "stageCount": 5,
+        "stageSpacingX": 16,
+        "rawStartY": 336
+      },
+      "dead": {
+        "sheet": "cropObjects",
+        "x": 96,
+        "y": 320,
+        "width": 16,
+        "height": 32
+      },
+      "food": {
+        "sheet": "cropObjects",
+        "x": 400,
+        "y": 160,
+        "width": 16,
+        "height": 16
+      },
+      "seedBag": {
+        "sheet": "cropObjects",
+        "x": 432,
+        "y": 160,
+        "width": 16,
+        "height": 16
+      }
+    },
+    "radish": {
+      "growth": {
+        "sheet": "cropObjects",
+        "startX": 0,
+        "startY": 352,
+        "stageWidth": 16,
+        "stageHeight": 32,
+        "stageCount": 5,
+        "stageSpacingX": 16,
+        "rawStartY": 368
+      },
+      "dead": {
+        "sheet": "cropObjects",
+        "x": 96,
+        "y": 352,
+        "width": 16,
+        "height": 32
+      },
+      "food": {
+        "sheet": "cropObjects",
+        "x": 400,
+        "y": 176,
+        "width": 16,
+        "height": 16
+      },
+      "seedBag": {
+        "sheet": "cropObjects",
+        "x": 432,
+        "y": 176,
+        "width": 16,
+        "height": 16
+      }
+    },
+    "eggplant": {
+      "growth": {
+        "sheet": "cropObjects",
+        "startX": 0,
+        "startY": 384,
+        "stageWidth": 16,
+        "stageHeight": 32,
+        "stageCount": 5,
+        "stageSpacingX": 16,
+        "rawStartY": 400
+      },
+      "dead": {
+        "sheet": "cropObjects",
+        "x": 96,
+        "y": 384,
+        "width": 16,
+        "height": 32
+      },
+      "food": {
+        "sheet": "cropObjects",
+        "x": 400,
+        "y": 192,
+        "width": 16,
+        "height": 16
+      },
+      "seedBag": {
+        "sheet": "cropObjects",
+        "x": 432,
+        "y": 192,
+        "width": 16,
+        "height": 16
+      }
+    },
+    "corn": {
+      "growth": {
+        "sheet": "cropObjects",
+        "startX": 0,
+        "startY": 416,
+        "stageWidth": 16,
+        "stageHeight": 32,
+        "stageCount": 5,
+        "stageSpacingX": 16,
+        "rawStartY": 432
+      },
+      "dead": {
+        "sheet": "cropObjects",
+        "x": 96,
+        "y": 416,
+        "width": 16,
+        "height": 32
+      },
+      "food": {
+        "sheet": "cropObjects",
+        "x": 400,
+        "y": 208,
+        "width": 16,
+        "height": 16
+      },
+      "seedBag": {
+        "sheet": "cropObjects",
+        "x": 432,
+        "y": 208,
+        "width": 16,
+        "height": 16
+      }
+    },
+    "leek": {
+      "growth": {
+        "sheet": "cropObjects",
+        "startX": 0,
+        "startY": 448,
+        "stageWidth": 16,
+        "stageHeight": 32,
+        "stageCount": 5,
+        "stageSpacingX": 16,
+        "rawStartY": 464
+      },
+      "dead": {
+        "sheet": "cropObjects",
+        "x": 96,
+        "y": 448,
+        "width": 16,
+        "height": 32
+      },
+      "food": {
+        "sheet": "cropObjects",
+        "x": 400,
+        "y": 224,
+        "width": 16,
+        "height": 16
+      },
+      "seedBag": {
+        "sheet": "cropObjects",
+        "x": 432,
+        "y": 224,
+        "width": 16,
+        "height": 16
+      }
+    },
+    "wheat": {
+      "growth": {
+        "sheet": "cropObjects",
+        "startX": 0,
+        "startY": 480,
+        "stageWidth": 16,
+        "stageHeight": 32,
+        "stageCount": 5,
+        "stageSpacingX": 16,
+        "rawStartY": 496
+      },
+      "dead": {
+        "sheet": "cropObjects",
+        "x": 96,
+        "y": 480,
+        "width": 16,
+        "height": 32
+      },
+      "food": {
+        "sheet": "cropObjects",
+        "x": 400,
+        "y": 240,
+        "width": 16,
+        "height": 16
+      },
+      "seedBag": {
+        "sheet": "cropObjects",
+        "x": 432,
+        "y": 240,
+        "width": 16,
+        "height": 16
+      }
+    },
+    "sunflower": {
+      "growth": {
+        "sheet": "cropObjects",
+        "startX": 0,
+        "startY": 512,
+        "stageWidth": 16,
+        "stageHeight": 32,
+        "stageCount": 5,
+        "stageSpacingX": 16,
+        "rawStartY": 528
+      },
+      "dead": {
+        "sheet": "cropObjects",
+        "x": 96,
+        "y": 512,
+        "width": 16,
+        "height": 32
+      },
+      "food": {
+        "sheet": "cropObjects",
+        "x": 400,
+        "y": 256,
+        "width": 16,
+        "height": 16
+      },
+      "seedBag": {
+        "sheet": "cropObjects",
+        "x": 432,
+        "y": 256,
+        "width": 16,
+        "height": 16
+      }
+    },
+    "beetroot": {
+      "growth": {
+        "sheet": "cropObjects",
+        "startX": 0,
+        "startY": 544,
+        "stageWidth": 16,
+        "stageHeight": 32,
+        "stageCount": 5,
+        "stageSpacingX": 16,
+        "rawStartY": 560
+      },
+      "dead": {
+        "sheet": "cropObjects",
+        "x": 96,
+        "y": 544,
+        "width": 16,
+        "height": 32
+      },
+      "food": {
+        "sheet": "cropObjects",
+        "x": 400,
+        "y": 272,
+        "width": 16,
+        "height": 16
+      },
+      "seedBag": {
+        "sheet": "cropObjects",
+        "x": 432,
+        "y": 272,
+        "width": 16,
+        "height": 16
+      }
+    },
+    "cabbage": {
+      "growth": {
+        "sheet": "cropObjects",
+        "startX": 0,
+        "startY": 576,
+        "stageWidth": 16,
+        "stageHeight": 32,
+        "stageCount": 5,
+        "stageSpacingX": 16,
+        "rawStartY": 592
+      },
+      "dead": {
+        "sheet": "cropObjects",
+        "x": 96,
+        "y": 576,
+        "width": 16,
+        "height": 32
+      },
+      "food": {
+        "sheet": "cropObjects",
+        "x": 400,
+        "y": 288,
+        "width": 16,
+        "height": 16
+      },
+      "seedBag": {
+        "sheet": "cropObjects",
+        "x": 432,
+        "y": 288,
+        "width": 16,
+        "height": 16
+      }
+    },
+    "red_cabbage": {
+      "growth": {
+        "sheet": "cropObjects",
+        "startX": 0,
+        "startY": 608,
+        "stageWidth": 16,
+        "stageHeight": 32,
+        "stageCount": 5,
+        "stageSpacingX": 16,
+        "rawStartY": 624
+      },
+      "dead": {
+        "sheet": "cropObjects",
+        "x": 96,
+        "y": 608,
+        "width": 16,
+        "height": 32
+      },
+      "food": {
+        "sheet": "cropObjects",
+        "x": 400,
+        "y": 304,
+        "width": 16,
+        "height": 16
+      },
+      "seedBag": {
+        "sheet": "cropObjects",
+        "x": 432,
+        "y": 304,
+        "width": 16,
+        "height": 16
+      }
+    },
+    "broccoli": {
+      "growth": {
+        "sheet": "cropObjects",
+        "startX": 0,
+        "startY": 640,
+        "stageWidth": 16,
+        "stageHeight": 32,
+        "stageCount": 5,
+        "stageSpacingX": 16,
+        "rawStartY": 656
+      },
+      "dead": {
+        "sheet": "cropObjects",
+        "x": 96,
+        "y": 640,
+        "width": 16,
+        "height": 32
+      },
+      "food": {
+        "sheet": "cropObjects",
+        "x": 400,
+        "y": 320,
+        "width": 16,
+        "height": 16
+      },
+      "seedBag": {
+        "sheet": "cropObjects",
+        "x": 432,
+        "y": 320,
+        "width": 16,
+        "height": 16
+      }
+    },
+    "red_bell_pepper": {
+      "growth": {
+        "sheet": "cropObjects",
+        "startX": 0,
+        "startY": 704,
+        "stageWidth": 16,
+        "stageHeight": 32,
+        "stageCount": 5,
+        "stageSpacingX": 16,
+        "rawStartY": 720
+      },
+      "dead": {
+        "sheet": "cropObjects",
+        "x": 96,
+        "y": 704,
+        "width": 16,
+        "height": 32
+      },
+      "food": {
+        "sheet": "cropObjects",
+        "x": 400,
+        "y": 352,
+        "width": 16,
+        "height": 16
+      },
+      "seedBag": {
+        "sheet": "cropObjects",
+        "x": 432,
+        "y": 352,
+        "width": 16,
+        "height": 16
+      }
+    },
+    "spinach": {
+      "growth": {
+        "sheet": "cropObjects",
+        "startX": 0,
+        "startY": 736,
+        "stageWidth": 16,
+        "stageHeight": 32,
+        "stageCount": 5,
+        "stageSpacingX": 16,
+        "rawStartY": 752
+      },
+      "dead": {
+        "sheet": "cropObjects",
+        "x": 96,
+        "y": 736,
+        "width": 16,
+        "height": 32
+      },
+      "food": {
+        "sheet": "cropObjects",
+        "x": 400,
+        "y": 368,
+        "width": 16,
+        "height": 16
+      },
+      "seedBag": {
+        "sheet": "cropObjects",
+        "x": 432,
+        "y": 368,
+        "width": 16,
+        "height": 16
+      }
+    },
+    "bok_choy": {
+      "growth": {
+        "sheet": "cropObjects",
+        "startX": 0,
+        "startY": 768,
+        "stageWidth": 16,
+        "stageHeight": 32,
+        "stageCount": 5,
+        "stageSpacingX": 16,
+        "rawStartY": 784
+      },
+      "dead": {
+        "sheet": "cropObjects",
+        "x": 96,
+        "y": 768,
+        "width": 16,
+        "height": 32
+      },
+      "food": {
+        "sheet": "cropObjects",
+        "x": 400,
+        "y": 384,
+        "width": 16,
+        "height": 16
+      },
+      "seedBag": {
+        "sheet": "cropObjects",
+        "x": 432,
+        "y": 384,
+        "width": 16,
+        "height": 16
+      }
+    },
+    "artichoke": {
+      "growth": {
+        "sheet": "cropObjects",
+        "startX": 0,
+        "startY": 800,
+        "stageWidth": 16,
+        "stageHeight": 32,
+        "stageCount": 5,
+        "stageSpacingX": 16,
+        "rawStartY": 816
+      },
+      "dead": {
+        "sheet": "cropObjects",
+        "x": 96,
+        "y": 800,
+        "width": 16,
+        "height": 32
+      },
+      "food": {
+        "sheet": "cropObjects",
+        "x": 400,
+        "y": 0,
+        "width": 16,
+        "height": 16
+      },
+      "seedBag": {
+        "sheet": "cropObjects",
+        "x": 432,
+        "y": 0,
+        "width": 16,
+        "height": 16
+      }
+    },
+    "cotton": {
+      "growth": {
+        "sheet": "cropObjects",
+        "startX": 112,
+        "startY": 0,
+        "stageWidth": 16,
+        "stageHeight": 32,
+        "stageCount": 5,
+        "stageSpacingX": 16,
+        "rawStartY": 16
+      },
+      "dead": {
+        "sheet": "cropObjects",
+        "x": 208,
+        "y": 0,
+        "width": 16,
+        "height": 32
+      },
+      "food": {
+        "sheet": "cropObjects",
+        "x": 448,
+        "y": 0,
+        "width": 16,
+        "height": 16
+      },
+      "seedBag": {
+        "sheet": "cropObjects",
+        "x": 480,
+        "y": 0,
+        "width": 16,
+        "height": 16
+      }
+    },
+    "purple_grapes": {
+      "growth": {
+        "sheet": "cropObjects",
+        "startX": 112,
+        "startY": 32,
+        "stageWidth": 16,
+        "stageHeight": 32,
+        "stageCount": 5,
+        "stageSpacingX": 16,
+        "rawStartY": 48
+      },
+      "dead": {
+        "sheet": "cropObjects",
+        "x": 208,
+        "y": 32,
+        "width": 16,
+        "height": 32
+      },
+      "food": {
+        "sheet": "cropObjects",
+        "x": 448,
+        "y": 16,
+        "width": 16,
+        "height": 16
+      },
+      "seedBag": {
+        "sheet": "cropObjects",
+        "x": 480,
+        "y": 16,
+        "width": 16,
+        "height": 16
+      }
+    },
+    "green_grapes": {
+      "growth": {
+        "sheet": "cropObjects",
+        "startX": 112,
+        "startY": 64,
+        "stageWidth": 16,
+        "stageHeight": 32,
+        "stageCount": 5,
+        "stageSpacingX": 16,
+        "rawStartY": 80
+      },
+      "dead": {
+        "sheet": "cropObjects",
+        "x": 208,
+        "y": 64,
+        "width": 16,
+        "height": 32
+      },
+      "food": {
+        "sheet": "cropObjects",
+        "x": 448,
+        "y": 32,
+        "width": 16,
+        "height": 16
+      },
+      "seedBag": {
+        "sheet": "cropObjects",
+        "x": 480,
+        "y": 32,
+        "width": 16,
+        "height": 16
+      }
+    },
+    "red_grapes": {
+      "growth": {
+        "sheet": "cropObjects",
+        "startX": 112,
+        "startY": 96,
+        "stageWidth": 16,
+        "stageHeight": 32,
+        "stageCount": 5,
+        "stageSpacingX": 16,
+        "rawStartY": 112
+      },
+      "dead": {
+        "sheet": "cropObjects",
+        "x": 208,
+        "y": 96,
+        "width": 16,
+        "height": 32
+      },
+      "food": {
+        "sheet": "cropObjects",
+        "x": 448,
+        "y": 48,
+        "width": 16,
+        "height": 16
+      },
+      "seedBag": {
+        "sheet": "cropObjects",
+        "x": 480,
+        "y": 48,
+        "width": 16,
+        "height": 16
+      }
+    },
+    "pink_grapes": {
+      "growth": {
+        "sheet": "cropObjects",
+        "startX": 112,
+        "startY": 128,
+        "stageWidth": 16,
+        "stageHeight": 32,
+        "stageCount": 5,
+        "stageSpacingX": 16,
+        "rawStartY": 144
+      },
+      "dead": {
+        "sheet": "cropObjects",
+        "x": 208,
+        "y": 128,
+        "width": 16,
+        "height": 32
+      },
+      "food": {
+        "sheet": "cropObjects",
+        "x": 448,
+        "y": 64,
+        "width": 16,
+        "height": 16
+      },
+      "seedBag": {
+        "sheet": "cropObjects",
+        "x": 480,
+        "y": 64,
+        "width": 16,
+        "height": 16
+      }
+    },
+    "cantaloupe": {
+      "growth": {
+        "sheet": "cropObjects",
+        "startX": 112,
+        "startY": 160,
+        "stageWidth": 16,
+        "stageHeight": 32,
+        "stageCount": 5,
+        "stageSpacingX": 16,
+        "rawStartY": 176
+      },
+      "dead": {
+        "sheet": "cropObjects",
+        "x": 208,
+        "y": 160,
+        "width": 16,
+        "height": 32
+      },
+      "food": {
+        "sheet": "cropObjects",
+        "x": 448,
+        "y": 80,
+        "width": 16,
+        "height": 16
+      },
+      "seedBag": {
+        "sheet": "cropObjects",
+        "x": 480,
+        "y": 80,
+        "width": 16,
+        "height": 16
+      }
+    },
+    "honeydew": {
+      "growth": {
+        "sheet": "cropObjects",
+        "startX": 112,
+        "startY": 192,
+        "stageWidth": 16,
+        "stageHeight": 32,
+        "stageCount": 5,
+        "stageSpacingX": 16,
+        "rawStartY": 208
+      },
+      "dead": {
+        "sheet": "cropObjects",
+        "x": 208,
+        "y": 192,
+        "width": 16,
+        "height": 32
+      },
+      "food": {
+        "sheet": "cropObjects",
+        "x": 448,
+        "y": 96,
+        "width": 16,
+        "height": 16
+      },
+      "seedBag": {
+        "sheet": "cropObjects",
+        "x": 480,
+        "y": 96,
+        "width": 16,
+        "height": 16
+      }
+    },
+    "butternut_squash": {
+      "growth": {
+        "sheet": "cropObjects",
+        "startX": 112,
+        "startY": 224,
+        "stageWidth": 16,
+        "stageHeight": 32,
+        "stageCount": 5,
+        "stageSpacingX": 16,
+        "rawStartY": 240
+      },
+      "dead": {
+        "sheet": "cropObjects",
+        "x": 208,
+        "y": 224,
+        "width": 16,
+        "height": 32
+      },
+      "food": {
+        "sheet": "cropObjects",
+        "x": 448,
+        "y": 112,
+        "width": 16,
+        "height": 16
+      },
+      "seedBag": {
+        "sheet": "cropObjects",
+        "x": 480,
+        "y": 112,
+        "width": 16,
+        "height": 16
+      }
+    },
+    "yellow_bell_pepper": {
+      "growth": {
+        "sheet": "cropObjects",
+        "startX": 112,
+        "startY": 288,
+        "stageWidth": 16,
+        "stageHeight": 32,
+        "stageCount": 5,
+        "stageSpacingX": 16,
+        "rawStartY": 304
+      },
+      "dead": {
+        "sheet": "cropObjects",
+        "x": 208,
+        "y": 288,
+        "width": 16,
+        "height": 32
+      },
+      "food": {
+        "sheet": "cropObjects",
+        "x": 448,
+        "y": 144,
+        "width": 16,
+        "height": 16
+      },
+      "seedBag": {
+        "sheet": "cropObjects",
+        "x": 480,
+        "y": 144,
+        "width": 16,
+        "height": 16
+      }
+    },
+    "orange_bell_pepper": {
+      "growth": {
+        "sheet": "cropObjects",
+        "startX": 112,
+        "startY": 320,
+        "stageWidth": 16,
+        "stageHeight": 32,
+        "stageCount": 5,
+        "stageSpacingX": 16,
+        "rawStartY": 336
+      },
+      "dead": {
+        "sheet": "cropObjects",
+        "x": 208,
+        "y": 320,
+        "width": 16,
+        "height": 32
+      },
+      "food": {
+        "sheet": "cropObjects",
+        "x": 448,
+        "y": 160,
+        "width": 16,
+        "height": 16
+      },
+      "seedBag": {
+        "sheet": "cropObjects",
+        "x": 480,
+        "y": 160,
+        "width": 16,
+        "height": 16
+      }
+    },
+    "green_bell_pepper": {
+      "growth": {
+        "sheet": "cropObjects",
+        "startX": 112,
+        "startY": 352,
+        "stageWidth": 16,
+        "stageHeight": 32,
+        "stageCount": 5,
+        "stageSpacingX": 16,
+        "rawStartY": 368
+      },
+      "dead": {
+        "sheet": "cropObjects",
+        "x": 208,
+        "y": 352,
+        "width": 16,
+        "height": 32
+      },
+      "food": {
+        "sheet": "cropObjects",
+        "x": 448,
+        "y": 176,
+        "width": 16,
+        "height": 16
+      },
+      "seedBag": {
+        "sheet": "cropObjects",
+        "x": 480,
+        "y": 176,
+        "width": 16,
+        "height": 16
+      }
+    },
+    "purple_bell_pepper": {
+      "growth": {
+        "sheet": "cropObjects",
+        "startX": 112,
+        "startY": 384,
+        "stageWidth": 16,
+        "stageHeight": 32,
+        "stageCount": 5,
+        "stageSpacingX": 16,
+        "rawStartY": 400
+      },
+      "dead": {
+        "sheet": "cropObjects",
+        "x": 208,
+        "y": 384,
+        "width": 16,
+        "height": 32
+      },
+      "food": {
+        "sheet": "cropObjects",
+        "x": 448,
+        "y": 192,
+        "width": 16,
+        "height": 16
+      },
+      "seedBag": {
+        "sheet": "cropObjects",
+        "x": 480,
+        "y": 192,
+        "width": 16,
+        "height": 16
+      }
+    },
+    "white_bell_pepper": {
+      "growth": {
+        "sheet": "cropObjects",
+        "startX": 112,
+        "startY": 416,
+        "stageWidth": 16,
+        "stageHeight": 32,
+        "stageCount": 5,
+        "stageSpacingX": 16,
+        "rawStartY": 432
+      },
+      "dead": {
+        "sheet": "cropObjects",
+        "x": 208,
+        "y": 416,
+        "width": 16,
+        "height": 32
+      },
+      "food": {
+        "sheet": "cropObjects",
+        "x": 448,
+        "y": 208,
+        "width": 16,
+        "height": 16
+      },
+      "seedBag": {
+        "sheet": "cropObjects",
+        "x": 480,
+        "y": 208,
+        "width": 16,
+        "height": 16
+      }
+    },
+    "coffee": {
+      "growth": {
+        "sheet": "cropObjects",
+        "startX": 112,
+        "startY": 448,
+        "stageWidth": 16,
+        "stageHeight": 32,
+        "stageCount": 5,
+        "stageSpacingX": 16,
+        "rawStartY": 464
+      },
+      "dead": {
+        "sheet": "cropObjects",
+        "x": 208,
+        "y": 448,
+        "width": 16,
+        "height": 32
+      },
+      "food": {
+        "sheet": "cropObjects",
+        "x": 448,
+        "y": 224,
+        "width": 16,
+        "height": 16
+      },
+      "seedBag": {
+        "sheet": "cropObjects",
+        "x": 480,
+        "y": 224,
+        "width": 16,
+        "height": 16
+      }
+    },
+    "amaranth": {
+      "growth": {
+        "sheet": "cropObjects",
+        "startX": 112,
+        "startY": 512,
+        "stageWidth": 16,
+        "stageHeight": 32,
+        "stageCount": 5,
+        "stageSpacingX": 16,
+        "rawStartY": 528
+      },
+      "dead": {
+        "sheet": "cropObjects",
+        "x": 208,
+        "y": 512,
+        "width": 16,
+        "height": 32
+      },
+      "food": {
+        "sheet": "cropObjects",
+        "x": 448,
+        "y": 256,
+        "width": 16,
+        "height": 16
+      },
+      "seedBag": {
+        "sheet": "cropObjects",
+        "x": 480,
+        "y": 256,
+        "width": 16,
+        "height": 16
+      }
+    },
+    "green_chilli_pepper": {
+      "growth": {
+        "sheet": "cropObjects",
+        "startX": 112,
+        "startY": 544,
+        "stageWidth": 16,
+        "stageHeight": 32,
+        "stageCount": 5,
+        "stageSpacingX": 16,
+        "rawStartY": 560
+      },
+      "dead": {
+        "sheet": "cropObjects",
+        "x": 208,
+        "y": 544,
+        "width": 16,
+        "height": 32
+      },
+      "food": {
+        "sheet": "cropObjects",
+        "x": 448,
+        "y": 272,
+        "width": 16,
+        "height": 16
+      },
+      "seedBag": {
+        "sheet": "cropObjects",
+        "x": 480,
+        "y": 272,
+        "width": 16,
+        "height": 16
+      }
+    },
+    "red_chilli_pepper": {
+      "growth": {
+        "sheet": "cropObjects",
+        "startX": 112,
+        "startY": 576,
+        "stageWidth": 16,
+        "stageHeight": 32,
+        "stageCount": 5,
+        "stageSpacingX": 16,
+        "rawStartY": 592
+      },
+      "dead": {
+        "sheet": "cropObjects",
+        "x": 208,
+        "y": 576,
+        "width": 16,
+        "height": 32
+      },
+      "food": {
+        "sheet": "cropObjects",
+        "x": 448,
+        "y": 288,
+        "width": 16,
+        "height": 16
+      },
+      "seedBag": {
+        "sheet": "cropObjects",
+        "x": 480,
+        "y": 288,
+        "width": 16,
+        "height": 16
+      }
+    },
+    "yellow_chilli_pepper": {
+      "growth": {
+        "sheet": "cropObjects",
+        "startX": 112,
+        "startY": 608,
+        "stageWidth": 16,
+        "stageHeight": 32,
+        "stageCount": 5,
+        "stageSpacingX": 16,
+        "rawStartY": 624
+      },
+      "dead": {
+        "sheet": "cropObjects",
+        "x": 208,
+        "y": 608,
+        "width": 16,
+        "height": 32
+      },
+      "food": {
+        "sheet": "cropObjects",
+        "x": 112,
+        "y": 304,
+        "width": 16,
+        "height": 16
+      },
+      "seedBag": {
+        "sheet": "cropObjects",
+        "x": 144,
+        "y": 304,
+        "width": 16,
+        "height": 16
+      }
+    }
+  }
+}

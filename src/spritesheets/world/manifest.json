@@ -1,0 +1,7447 @@
+{
+  "seasons": [
+    "spring",
+    "summer",
+    "autumn",
+    "winter"
+  ],
+  "sourceAtlasJson": "src/spritesheets/atlas/atlas-clean-v1.json",
+  "sourceAtlases": {
+    "spring": "src/spritesheets/atlas/All tiles Spring.png",
+    "summer": "src/spritesheets/atlas/All tiles Summer.png",
+    "autumn": "src/spritesheets/atlas/All tiles Autumn.png",
+    "winter": "src/spritesheets/atlas/All tiles Winter.png"
+  },
+  "categories": {
+    "terrain": [
+      "grass_base_01",
+      "grass_dark_base_01",
+      "grass_dark_patch_01",
+      "grass_dark_patch_02",
+      "grass_dark_patch_03",
+      "grass_dark_patch_04",
+      "grass_patch_01",
+      "grass_patch_02",
+      "grass_variation_01",
+      "grass_variation_02"
+    ],
+    "trees": [
+      "tall_tree_green_01",
+      "tall_tree_green_02",
+      "tall_tree_green_03",
+      "tall_tree_green_04",
+      "tall_tree_green_05",
+      "tall_tree_green_06",
+      "tall_tree_green_07",
+      "tall_tree_green_08",
+      "tall_tree_green_09",
+      "tall_tree_green_10",
+      "tall_tree_green_11",
+      "tall_tree_green_12",
+      "tall_tree_green_13",
+      "tall_tree_green_14",
+      "tall_tree_green_15",
+      "tall_tree_green_16",
+      "tall_tree_pink_01",
+      "tall_tree_pink_02",
+      "tall_tree_pink_03",
+      "tall_tree_pink_04",
+      "tall_tree_pink_05",
+      "tall_tree_pink_06",
+      "tall_tree_pink_07",
+      "tall_tree_pink_08",
+      "tall_tree_pink_09",
+      "tall_tree_pink_10",
+      "tall_tree_pink_11",
+      "tall_tree_pink_12",
+      "tall_tree_pink_13",
+      "tall_tree_pink_14",
+      "tall_tree_pink_15",
+      "tall_tree_pink_16",
+      "tree_green_01",
+      "tree_green_02",
+      "tree_green_03",
+      "tree_green_04",
+      "tree_green_05",
+      "tree_green_06",
+      "tree_green_07",
+      "tree_green_08",
+      "tree_green_09",
+      "tree_green_10",
+      "tree_green_11",
+      "tree_green_12",
+      "tree_green_13",
+      "tree_green_14",
+      "tree_green_15",
+      "tree_green_16",
+      "tree_green_17",
+      "tree_green_18",
+      "tree_green_19",
+      "tree_green_20",
+      "tree_green_21",
+      "tree_green_22",
+      "tree_green_23",
+      "tree_green_24",
+      "tree_green_25",
+      "tree_green_26",
+      "tree_green_27",
+      "tree_green_28",
+      "tree_green_29",
+      "tree_green_30",
+      "tree_green_31",
+      "tree_green_32",
+      "tree_pink_01",
+      "tree_pink_02",
+      "tree_pink_03",
+      "tree_pink_04",
+      "tree_pink_05",
+      "tree_pink_06",
+      "tree_pink_07",
+      "tree_pink_08",
+      "tree_pink_09",
+      "tree_pink_10",
+      "tree_pink_11",
+      "tree_pink_12",
+      "tree_pink_13",
+      "tree_pink_14",
+      "tree_pink_15",
+      "tree_pink_16",
+      "tree_pink_17",
+      "tree_pink_18",
+      "tree_pink_19",
+      "tree_pink_20",
+      "tree_pink_21",
+      "tree_pink_22",
+      "tree_pink_23",
+      "tree_pink_24",
+      "tree_pink_25",
+      "tree_pink_26",
+      "tree_pink_27",
+      "tree_pink_28",
+      "tree_pink_29",
+      "tree_pink_30",
+      "tree_pink_31",
+      "tree_pink_32"
+    ],
+    "rocks": [
+      "rock_01",
+      "rock_02",
+      "rock_03",
+      "rock_04",
+      "rock_05",
+      "rock_06",
+      "rock_07",
+      "rock_08",
+      "rock_09",
+      "rock_10",
+      "rock_11",
+      "rock_12",
+      "rock_13",
+      "rock_14",
+      "rock_15",
+      "rock_16",
+      "rock_17",
+      "rock_18",
+      "rock_19",
+      "rock_20",
+      "rock_21",
+      "rock_22",
+      "rock_23",
+      "rock_24"
+    ]
+  },
+  "sprites": {
+    "grass_patch_01": {
+      "name": "grass_patch_01",
+      "originalName": "terrain_patch_01",
+      "category": "terrain",
+      "family": "grass_patch",
+      "group": "terrain",
+      "description": "Bloc de terrain grass vertical",
+      "width": 16,
+      "height": 48,
+      "tileW": 1,
+      "tileH": 3,
+      "tags": [
+        "grass",
+        "ground"
+      ],
+      "collision": {
+        "blocksMovement": false,
+        "walkableOverride": false
+      },
+      "spawn": {
+        "surfaces": [
+          "grass"
+        ],
+        "avoid": [
+          "water",
+          "road",
+          "sand"
+        ],
+        "near": [],
+        "frequency": "common",
+        "placement": "patch"
+      },
+      "render": {
+        "layer": "ground",
+        "priority": 0
+      },
+      "v1": {
+        "enabled": true,
+        "excludedByRule": false
+      },
+      "sourceRect": {
+        "x": 528,
+        "y": 80,
+        "width": 16,
+        "height": 48
+      },
+      "paths": {
+        "spring": "src/spritesheets/world/spring/terrain/grass_patch_01.png",
+        "summer": "src/spritesheets/world/summer/terrain/grass_patch_01.png",
+        "autumn": "src/spritesheets/world/autumn/terrain/grass_patch_01.png",
+        "winter": "src/spritesheets/world/winter/terrain/grass_patch_01.png"
+      }
+    },
+    "grass_patch_02": {
+      "name": "grass_patch_02",
+      "originalName": "terrain_patch_10",
+      "category": "terrain",
+      "family": "grass_patch",
+      "group": "terrain",
+      "description": "Bloc de terrain grass horizontal",
+      "width": 48,
+      "height": 16,
+      "tileW": 3,
+      "tileH": 1,
+      "tags": [
+        "grass",
+        "ground"
+      ],
+      "collision": {
+        "blocksMovement": false,
+        "walkableOverride": false
+      },
+      "spawn": {
+        "surfaces": [
+          "grass"
+        ],
+        "avoid": [
+          "water",
+          "road",
+          "sand"
+        ],
+        "near": [],
+        "frequency": "common",
+        "placement": "patch"
+      },
+      "render": {
+        "layer": "ground",
+        "priority": 0
+      },
+      "v1": {
+        "enabled": true,
+        "excludedByRule": false
+      },
+      "sourceRect": {
+        "x": 544,
+        "y": 128,
+        "width": 48,
+        "height": 16
+      },
+      "paths": {
+        "spring": "src/spritesheets/world/spring/terrain/grass_patch_02.png",
+        "summer": "src/spritesheets/world/summer/terrain/grass_patch_02.png",
+        "autumn": "src/spritesheets/world/autumn/terrain/grass_patch_02.png",
+        "winter": "src/spritesheets/world/winter/terrain/grass_patch_02.png"
+      }
+    },
+    "grass_dark_patch_01": {
+      "name": "grass_dark_patch_01",
+      "originalName": "terrain_patch_13",
+      "category": "terrain",
+      "family": "grass_dark_patch",
+      "group": "terrain",
+      "description": "Bloc de terrain grass sombre vertical",
+      "width": 16,
+      "height": 48,
+      "tileW": 1,
+      "tileH": 3,
+      "tags": [
+        "grass_dark",
+        "ground",
+        "variation"
+      ],
+      "collision": {
+        "blocksMovement": false,
+        "walkableOverride": false
+      },
+      "spawn": {
+        "surfaces": [
+          "grass"
+        ],
+        "avoid": [
+          "water",
+          "road",
+          "sand"
+        ],
+        "near": [],
+        "frequency": "uncommon",
+        "placement": "patch"
+      },
+      "render": {
+        "layer": "ground",
+        "priority": 0
+      },
+      "v1": {
+        "enabled": true,
+        "excludedByRule": false
+      },
+      "sourceRect": {
+        "x": 528,
+        "y": 144,
+        "width": 16,
+        "height": 48
+      },
+      "paths": {
+        "spring": "src/spritesheets/world/spring/terrain/grass_dark_patch_01.png",
+        "summer": "src/spritesheets/world/summer/terrain/grass_dark_patch_01.png",
+        "autumn": "src/spritesheets/world/autumn/terrain/grass_dark_patch_01.png",
+        "winter": "src/spritesheets/world/winter/terrain/grass_dark_patch_01.png"
+      }
+    },
+    "grass_dark_patch_02": {
+      "name": "grass_dark_patch_02",
+      "originalName": "terrain_patch_17",
+      "category": "terrain",
+      "family": "grass_dark_patch",
+      "group": "terrain",
+      "description": "Bloc de terrain grass sombre vertical",
+      "width": 16,
+      "height": 48,
+      "tileW": 1,
+      "tileH": 3,
+      "tags": [
+        "grass_dark",
+        "ground",
+        "variation"
+      ],
+      "collision": {
+        "blocksMovement": false,
+        "walkableOverride": false
+      },
+      "spawn": {
+        "surfaces": [
+          "grass"
+        ],
+        "avoid": [
+          "water",
+          "road",
+          "sand"
+        ],
+        "near": [],
+        "frequency": "uncommon",
+        "placement": "patch"
+      },
+      "render": {
+        "layer": "ground",
+        "priority": 0
+      },
+      "v1": {
+        "enabled": true,
+        "excludedByRule": false
+      },
+      "sourceRect": {
+        "x": 720,
+        "y": 144,
+        "width": 16,
+        "height": 48
+      },
+      "paths": {
+        "spring": "src/spritesheets/world/spring/terrain/grass_dark_patch_02.png",
+        "summer": "src/spritesheets/world/summer/terrain/grass_dark_patch_02.png",
+        "autumn": "src/spritesheets/world/autumn/terrain/grass_dark_patch_02.png",
+        "winter": "src/spritesheets/world/winter/terrain/grass_dark_patch_02.png"
+      }
+    },
+    "grass_variation_01": {
+      "name": "grass_variation_01",
+      "originalName": "cliff_block_01",
+      "category": "terrain",
+      "family": "grass_variation",
+      "group": "terrain",
+      "description": "Utiliser cet item entouré de grass, c'est un grass modifié qui permet de créer de la variation",
+      "width": 48,
+      "height": 32,
+      "tileW": 3,
+      "tileH": 2,
+      "tags": [
+        "grass",
+        "ground",
+        "variation"
+      ],
+      "collision": {
+        "blocksMovement": false,
+        "walkableOverride": false
+      },
+      "spawn": {
+        "surfaces": [
+          "grass"
+        ],
+        "avoid": [
+          "water",
+          "road",
+          "sand"
+        ],
+        "near": [],
+        "frequency": "rare",
+        "placement": "patch"
+      },
+      "render": {
+        "layer": "ground",
+        "priority": 0
+      },
+      "v1": {
+        "enabled": true,
+        "excludedByRule": false
+      },
+      "sourceRect": {
+        "x": 400,
+        "y": 160,
+        "width": 48,
+        "height": 32
+      },
+      "paths": {
+        "spring": "src/spritesheets/world/spring/terrain/grass_variation_01.png",
+        "summer": "src/spritesheets/world/summer/terrain/grass_variation_01.png",
+        "autumn": "src/spritesheets/world/autumn/terrain/grass_variation_01.png",
+        "winter": "src/spritesheets/world/winter/terrain/grass_variation_01.png"
+      }
+    },
+    "grass_variation_02": {
+      "name": "grass_variation_02",
+      "originalName": "cliff_block_02",
+      "category": "terrain",
+      "family": "grass_variation",
+      "group": "terrain",
+      "description": "Utiliser cet item entouré de grass, c'est un grass modifié qui permet de créer de la variation",
+      "width": 48,
+      "height": 32,
+      "tileW": 3,
+      "tileH": 2,
+      "tags": [
+        "grass",
+        "ground",
+        "variation"
+      ],
+      "collision": {
+        "blocksMovement": false,
+        "walkableOverride": false
+      },
+      "spawn": {
+        "surfaces": [
+          "grass"
+        ],
+        "avoid": [
+          "water",
+          "road",
+          "sand"
+        ],
+        "near": [],
+        "frequency": "rare",
+        "placement": "patch"
+      },
+      "render": {
+        "layer": "ground",
+        "priority": 0
+      },
+      "v1": {
+        "enabled": true,
+        "excludedByRule": false
+      },
+      "sourceRect": {
+        "x": 464,
+        "y": 160,
+        "width": 48,
+        "height": 32
+      },
+      "paths": {
+        "spring": "src/spritesheets/world/spring/terrain/grass_variation_02.png",
+        "summer": "src/spritesheets/world/summer/terrain/grass_variation_02.png",
+        "autumn": "src/spritesheets/world/autumn/terrain/grass_variation_02.png",
+        "winter": "src/spritesheets/world/winter/terrain/grass_variation_02.png"
+      }
+    },
+    "grass_dark_patch_03": {
+      "name": "grass_dark_patch_03",
+      "originalName": "terrain_patch_22",
+      "category": "terrain",
+      "family": "grass_dark_patch",
+      "group": "terrain",
+      "description": "Bloc de terrain grass sombre horizontal",
+      "width": 48,
+      "height": 16,
+      "tileW": 3,
+      "tileH": 1,
+      "tags": [
+        "grass_dark",
+        "ground",
+        "variation"
+      ],
+      "collision": {
+        "blocksMovement": false,
+        "walkableOverride": false
+      },
+      "spawn": {
+        "surfaces": [
+          "grass"
+        ],
+        "avoid": [
+          "water",
+          "road",
+          "sand"
+        ],
+        "near": [],
+        "frequency": "uncommon",
+        "placement": "patch"
+      },
+      "render": {
+        "layer": "ground",
+        "priority": 0
+      },
+      "v1": {
+        "enabled": true,
+        "excludedByRule": false
+      },
+      "sourceRect": {
+        "x": 544,
+        "y": 192,
+        "width": 48,
+        "height": 16
+      },
+      "paths": {
+        "spring": "src/spritesheets/world/spring/terrain/grass_dark_patch_03.png",
+        "summer": "src/spritesheets/world/summer/terrain/grass_dark_patch_03.png",
+        "autumn": "src/spritesheets/world/autumn/terrain/grass_dark_patch_03.png",
+        "winter": "src/spritesheets/world/winter/terrain/grass_dark_patch_03.png"
+      }
+    },
+    "grass_dark_patch_04": {
+      "name": "grass_dark_patch_04",
+      "originalName": "terrain_patch_24",
+      "category": "terrain",
+      "family": "grass_dark_patch",
+      "group": "terrain",
+      "description": "Bloc de terrain grass sombre horizontal",
+      "width": 48,
+      "height": 16,
+      "tileW": 3,
+      "tileH": 1,
+      "tags": [
+        "grass_dark",
+        "ground",
+        "variation"
+      ],
+      "collision": {
+        "blocksMovement": false,
+        "walkableOverride": false
+      },
+      "spawn": {
+        "surfaces": [
+          "grass"
+        ],
+        "avoid": [
+          "water",
+          "road",
+          "sand"
+        ],
+        "near": [],
+        "frequency": "uncommon",
+        "placement": "patch"
+      },
+      "render": {
+        "layer": "ground",
+        "priority": 0
+      },
+      "v1": {
+        "enabled": true,
+        "excludedByRule": false
+      },
+      "sourceRect": {
+        "x": 736,
+        "y": 192,
+        "width": 48,
+        "height": 16
+      },
+      "paths": {
+        "spring": "src/spritesheets/world/spring/terrain/grass_dark_patch_04.png",
+        "summer": "src/spritesheets/world/summer/terrain/grass_dark_patch_04.png",
+        "autumn": "src/spritesheets/world/autumn/terrain/grass_dark_patch_04.png",
+        "winter": "src/spritesheets/world/winter/terrain/grass_dark_patch_04.png"
+      }
+    },
+    "grass_base_01": {
+      "name": "grass_base_01",
+      "originalName": "platform_tile_08",
+      "category": "terrain",
+      "family": "grass_base_light",
+      "group": "terrain",
+      "description": "Bloc de grass uni, à utiliser très souvent en tant que sol grass",
+      "width": 16,
+      "height": 16,
+      "tileW": 1,
+      "tileH": 1,
+      "tags": [
+        "base_ground",
+        "dominant_biome",
+        "grass",
+        "ground",
+        "light_grass"
+      ],
+      "collision": {
+        "blocksMovement": false,
+        "walkableOverride": false
+      },
+      "spawn": {
+        "surfaces": [
+          "grass"
+        ],
+        "avoid": [
+          "water",
+          "road",
+          "sand"
+        ],
+        "near": [],
+        "frequency": "very_common",
+        "placement": "patch"
+      },
+      "render": {
+        "layer": "ground",
+        "priority": 0
+      },
+      "v1": {
+        "enabled": true,
+        "excludedByRule": false
+      },
+      "sourceRect": {
+        "x": 608,
+        "y": 400,
+        "width": 16,
+        "height": 16
+      },
+      "paths": {
+        "spring": "src/spritesheets/world/spring/terrain/grass_base_01.png",
+        "summer": "src/spritesheets/world/summer/terrain/grass_base_01.png",
+        "autumn": "src/spritesheets/world/autumn/terrain/grass_base_01.png",
+        "winter": "src/spritesheets/world/winter/terrain/grass_base_01.png"
+      }
+    },
+    "grass_dark_base_01": {
+      "name": "grass_dark_base_01",
+      "originalName": "platform_tile_10",
+      "category": "terrain",
+      "family": "grass_base_dark",
+      "group": "terrain",
+      "description": "Bloc de grass sombre uni, à utiliser très souvent en tant que sol grass mais avec d'autres blocs de grass sombre.",
+      "width": 16,
+      "height": 16,
+      "tileW": 1,
+      "tileH": 1,
+      "tags": [
+        "grass_dark",
+        "ground",
+        "variation"
+      ],
+      "collision": {
+        "blocksMovement": false,
+        "walkableOverride": false
+      },
+      "spawn": {
+        "surfaces": [
+          "grass"
+        ],
+        "avoid": [
+          "water",
+          "road",
+          "sand"
+        ],
+        "near": [],
+        "frequency": "uncommon",
+        "placement": "patch"
+      },
+      "render": {
+        "layer": "ground",
+        "priority": 0
+      },
+      "v1": {
+        "enabled": true,
+        "excludedByRule": false
+      },
+      "sourceRect": {
+        "x": 688,
+        "y": 400,
+        "width": 16,
+        "height": 16
+      },
+      "paths": {
+        "spring": "src/spritesheets/world/spring/terrain/grass_dark_base_01.png",
+        "summer": "src/spritesheets/world/summer/terrain/grass_dark_base_01.png",
+        "autumn": "src/spritesheets/world/autumn/terrain/grass_dark_base_01.png",
+        "winter": "src/spritesheets/world/winter/terrain/grass_dark_base_01.png"
+      }
+    },
+    "rock_01": {
+      "name": "rock_01",
+      "originalName": "gate_piece_06",
+      "category": "rocks",
+      "family": "rock",
+      "group": "rocks",
+      "description": "blocs de cailloux qui apparaissent sur la grass, penser à appliquer de la collision dessus",
+      "width": 32,
+      "height": 32,
+      "tileW": 2,
+      "tileH": 2,
+      "tags": [
+        "blocks_movement",
+        "rock"
+      ],
+      "collision": {
+        "blocksMovement": true,
+        "walkableOverride": false
+      },
+      "spawn": {
+        "surfaces": [
+          "grass"
+        ],
+        "avoid": [
+          "water",
+          "road"
+        ],
+        "near": [
+          "grass"
+        ],
+        "frequency": "uncommon",
+        "placement": "scatter"
+      },
+      "render": {
+        "layer": "decor",
+        "priority": 0
+      },
+      "v1": {
+        "enabled": true,
+        "excludedByRule": false
+      },
+      "sourceRect": {
+        "x": 976,
+        "y": 192,
+        "width": 32,
+        "height": 32
+      },
+      "paths": {
+        "spring": "src/spritesheets/world/spring/rocks/rock_01.png",
+        "summer": "src/spritesheets/world/summer/rocks/rock_01.png",
+        "autumn": "src/spritesheets/world/autumn/rocks/rock_01.png",
+        "winter": "src/spritesheets/world/winter/rocks/rock_01.png"
+      }
+    },
+    "rock_02": {
+      "name": "rock_02",
+      "originalName": "gate_piece_07",
+      "category": "rocks",
+      "family": "rock",
+      "group": "rocks",
+      "description": "blocs de cailloux qui apparaissent sur la grass, penser à appliquer de la collision dessus",
+      "width": 32,
+      "height": 32,
+      "tileW": 2,
+      "tileH": 2,
+      "tags": [
+        "blocks_movement",
+        "rock"
+      ],
+      "collision": {
+        "blocksMovement": true,
+        "walkableOverride": false
+      },
+      "spawn": {
+        "surfaces": [
+          "grass"
+        ],
+        "avoid": [
+          "water",
+          "road"
+        ],
+        "near": [
+          "grass"
+        ],
+        "frequency": "uncommon",
+        "placement": "scatter"
+      },
+      "render": {
+        "layer": "decor",
+        "priority": 0
+      },
+      "v1": {
+        "enabled": true,
+        "excludedByRule": false
+      },
+      "sourceRect": {
+        "x": 1008,
+        "y": 192,
+        "width": 32,
+        "height": 32
+      },
+      "paths": {
+        "spring": "src/spritesheets/world/spring/rocks/rock_02.png",
+        "summer": "src/spritesheets/world/summer/rocks/rock_02.png",
+        "autumn": "src/spritesheets/world/autumn/rocks/rock_02.png",
+        "winter": "src/spritesheets/world/winter/rocks/rock_02.png"
+      }
+    },
+    "rock_03": {
+      "name": "rock_03",
+      "originalName": "gate_piece_08",
+      "category": "rocks",
+      "family": "rock",
+      "group": "rocks",
+      "description": "blocs de cailloux qui apparaissent sur la grass, penser à appliquer de la collision dessus",
+      "width": 32,
+      "height": 32,
+      "tileW": 2,
+      "tileH": 2,
+      "tags": [
+        "blocks_movement",
+        "rock"
+      ],
+      "collision": {
+        "blocksMovement": true,
+        "walkableOverride": false
+      },
+      "spawn": {
+        "surfaces": [
+          "grass"
+        ],
+        "avoid": [
+          "water",
+          "road"
+        ],
+        "near": [
+          "grass"
+        ],
+        "frequency": "uncommon",
+        "placement": "scatter"
+      },
+      "render": {
+        "layer": "decor",
+        "priority": 0
+      },
+      "v1": {
+        "enabled": true,
+        "excludedByRule": false
+      },
+      "sourceRect": {
+        "x": 1040,
+        "y": 192,
+        "width": 32,
+        "height": 32
+      },
+      "paths": {
+        "spring": "src/spritesheets/world/spring/rocks/rock_03.png",
+        "summer": "src/spritesheets/world/summer/rocks/rock_03.png",
+        "autumn": "src/spritesheets/world/autumn/rocks/rock_03.png",
+        "winter": "src/spritesheets/world/winter/rocks/rock_03.png"
+      }
+    },
+    "rock_04": {
+      "name": "rock_04",
+      "originalName": "gate_piece_09",
+      "category": "rocks",
+      "family": "rock",
+      "group": "rocks",
+      "description": "blocs de cailloux qui apparaissent sur la grass, penser à appliquer de la collision dessus",
+      "width": 32,
+      "height": 32,
+      "tileW": 2,
+      "tileH": 2,
+      "tags": [
+        "blocks_movement",
+        "rock"
+      ],
+      "collision": {
+        "blocksMovement": true,
+        "walkableOverride": false
+      },
+      "spawn": {
+        "surfaces": [
+          "grass"
+        ],
+        "avoid": [
+          "water",
+          "road"
+        ],
+        "near": [
+          "grass"
+        ],
+        "frequency": "uncommon",
+        "placement": "scatter"
+      },
+      "render": {
+        "layer": "decor",
+        "priority": 0
+      },
+      "v1": {
+        "enabled": true,
+        "excludedByRule": false
+      },
+      "sourceRect": {
+        "x": 1072,
+        "y": 192,
+        "width": 32,
+        "height": 32
+      },
+      "paths": {
+        "spring": "src/spritesheets/world/spring/rocks/rock_04.png",
+        "summer": "src/spritesheets/world/summer/rocks/rock_04.png",
+        "autumn": "src/spritesheets/world/autumn/rocks/rock_04.png",
+        "winter": "src/spritesheets/world/winter/rocks/rock_04.png"
+      }
+    },
+    "rock_05": {
+      "name": "rock_05",
+      "originalName": "gate_piece_10",
+      "category": "rocks",
+      "family": "rock",
+      "group": "rocks",
+      "description": "blocs de cailloux qui apparaissent sur la grass, penser à appliquer de la collision dessus",
+      "width": 32,
+      "height": 32,
+      "tileW": 2,
+      "tileH": 2,
+      "tags": [
+        "blocks_movement",
+        "rock"
+      ],
+      "collision": {
+        "blocksMovement": true,
+        "walkableOverride": false
+      },
+      "spawn": {
+        "surfaces": [
+          "grass"
+        ],
+        "avoid": [
+          "water",
+          "road"
+        ],
+        "near": [
+          "grass"
+        ],
+        "frequency": "uncommon",
+        "placement": "scatter"
+      },
+      "render": {
+        "layer": "decor",
+        "priority": 0
+      },
+      "v1": {
+        "enabled": true,
+        "excludedByRule": false
+      },
+      "sourceRect": {
+        "x": 1104,
+        "y": 192,
+        "width": 32,
+        "height": 32
+      },
+      "paths": {
+        "spring": "src/spritesheets/world/spring/rocks/rock_05.png",
+        "summer": "src/spritesheets/world/summer/rocks/rock_05.png",
+        "autumn": "src/spritesheets/world/autumn/rocks/rock_05.png",
+        "winter": "src/spritesheets/world/winter/rocks/rock_05.png"
+      }
+    },
+    "rock_06": {
+      "name": "rock_06",
+      "originalName": "gate_piece_11",
+      "category": "rocks",
+      "family": "rock",
+      "group": "rocks",
+      "description": "blocs de cailloux qui apparaissent sur la grass, penser à appliquer de la collision dessus",
+      "width": 32,
+      "height": 32,
+      "tileW": 2,
+      "tileH": 2,
+      "tags": [
+        "blocks_movement",
+        "rock"
+      ],
+      "collision": {
+        "blocksMovement": true,
+        "walkableOverride": false
+      },
+      "spawn": {
+        "surfaces": [
+          "grass"
+        ],
+        "avoid": [
+          "water",
+          "road"
+        ],
+        "near": [
+          "grass"
+        ],
+        "frequency": "uncommon",
+        "placement": "scatter"
+      },
+      "render": {
+        "layer": "decor",
+        "priority": 0
+      },
+      "v1": {
+        "enabled": true,
+        "excludedByRule": false
+      },
+      "sourceRect": {
+        "x": 1136,
+        "y": 192,
+        "width": 32,
+        "height": 32
+      },
+      "paths": {
+        "spring": "src/spritesheets/world/spring/rocks/rock_06.png",
+        "summer": "src/spritesheets/world/summer/rocks/rock_06.png",
+        "autumn": "src/spritesheets/world/autumn/rocks/rock_06.png",
+        "winter": "src/spritesheets/world/winter/rocks/rock_06.png"
+      }
+    },
+    "rock_07": {
+      "name": "rock_07",
+      "originalName": "gate_piece_12",
+      "category": "rocks",
+      "family": "rock",
+      "group": "rocks",
+      "description": "blocs de cailloux qui apparaissent sur la grass, penser à appliquer de la collision dessus",
+      "width": 32,
+      "height": 32,
+      "tileW": 2,
+      "tileH": 2,
+      "tags": [
+        "blocks_movement",
+        "rock"
+      ],
+      "collision": {
+        "blocksMovement": true,
+        "walkableOverride": false
+      },
+      "spawn": {
+        "surfaces": [
+          "grass"
+        ],
+        "avoid": [
+          "water",
+          "road"
+        ],
+        "near": [
+          "grass"
+        ],
+        "frequency": "uncommon",
+        "placement": "scatter"
+      },
+      "render": {
+        "layer": "decor",
+        "priority": 0
+      },
+      "v1": {
+        "enabled": true,
+        "excludedByRule": false
+      },
+      "sourceRect": {
+        "x": 1168,
+        "y": 192,
+        "width": 32,
+        "height": 32
+      },
+      "paths": {
+        "spring": "src/spritesheets/world/spring/rocks/rock_07.png",
+        "summer": "src/spritesheets/world/summer/rocks/rock_07.png",
+        "autumn": "src/spritesheets/world/autumn/rocks/rock_07.png",
+        "winter": "src/spritesheets/world/winter/rocks/rock_07.png"
+      }
+    },
+    "rock_08": {
+      "name": "rock_08",
+      "originalName": "gate_piece_13",
+      "category": "rocks",
+      "family": "rock",
+      "group": "rocks",
+      "description": "blocs de cailloux qui apparaissent sur la grass, penser à appliquer de la collision dessus",
+      "width": 32,
+      "height": 32,
+      "tileW": 2,
+      "tileH": 2,
+      "tags": [
+        "blocks_movement",
+        "rock"
+      ],
+      "collision": {
+        "blocksMovement": true,
+        "walkableOverride": false
+      },
+      "spawn": {
+        "surfaces": [
+          "grass"
+        ],
+        "avoid": [
+          "water",
+          "road"
+        ],
+        "near": [
+          "grass"
+        ],
+        "frequency": "uncommon",
+        "placement": "scatter"
+      },
+      "render": {
+        "layer": "decor",
+        "priority": 0
+      },
+      "v1": {
+        "enabled": true,
+        "excludedByRule": false
+      },
+      "sourceRect": {
+        "x": 1200,
+        "y": 192,
+        "width": 32,
+        "height": 32
+      },
+      "paths": {
+        "spring": "src/spritesheets/world/spring/rocks/rock_08.png",
+        "summer": "src/spritesheets/world/summer/rocks/rock_08.png",
+        "autumn": "src/spritesheets/world/autumn/rocks/rock_08.png",
+        "winter": "src/spritesheets/world/winter/rocks/rock_08.png"
+      }
+    },
+    "rock_09": {
+      "name": "rock_09",
+      "originalName": "fence_post_13",
+      "category": "rocks",
+      "family": "rock",
+      "group": "rocks",
+      "description": "Roche seule, appliquer de la collision dessus.",
+      "width": 16,
+      "height": 32,
+      "tileW": 1,
+      "tileH": 2,
+      "tags": [
+        "blocks_movement",
+        "rock"
+      ],
+      "collision": {
+        "blocksMovement": true,
+        "walkableOverride": false
+      },
+      "spawn": {
+        "surfaces": [
+          "grass"
+        ],
+        "avoid": [
+          "water",
+          "road"
+        ],
+        "near": [
+          "grass"
+        ],
+        "frequency": "uncommon",
+        "placement": "scatter"
+      },
+      "render": {
+        "layer": "decor",
+        "priority": 0
+      },
+      "v1": {
+        "enabled": true,
+        "excludedByRule": false
+      },
+      "sourceRect": {
+        "x": 976,
+        "y": 224,
+        "width": 16,
+        "height": 32
+      },
+      "paths": {
+        "spring": "src/spritesheets/world/spring/rocks/rock_09.png",
+        "summer": "src/spritesheets/world/summer/rocks/rock_09.png",
+        "autumn": "src/spritesheets/world/autumn/rocks/rock_09.png",
+        "winter": "src/spritesheets/world/winter/rocks/rock_09.png"
+      }
+    },
+    "rock_10": {
+      "name": "rock_10",
+      "originalName": "fence_post_14",
+      "category": "rocks",
+      "family": "rock",
+      "group": "rocks",
+      "description": "Roche seule, appliquer de la collision dessus.",
+      "width": 16,
+      "height": 32,
+      "tileW": 1,
+      "tileH": 2,
+      "tags": [
+        "blocks_movement",
+        "rock"
+      ],
+      "collision": {
+        "blocksMovement": true,
+        "walkableOverride": false
+      },
+      "spawn": {
+        "surfaces": [
+          "grass"
+        ],
+        "avoid": [
+          "water",
+          "road"
+        ],
+        "near": [
+          "grass"
+        ],
+        "frequency": "uncommon",
+        "placement": "scatter"
+      },
+      "render": {
+        "layer": "decor",
+        "priority": 0
+      },
+      "v1": {
+        "enabled": true,
+        "excludedByRule": false
+      },
+      "sourceRect": {
+        "x": 992,
+        "y": 224,
+        "width": 16,
+        "height": 32
+      },
+      "paths": {
+        "spring": "src/spritesheets/world/spring/rocks/rock_10.png",
+        "summer": "src/spritesheets/world/summer/rocks/rock_10.png",
+        "autumn": "src/spritesheets/world/autumn/rocks/rock_10.png",
+        "winter": "src/spritesheets/world/winter/rocks/rock_10.png"
+      }
+    },
+    "rock_11": {
+      "name": "rock_11",
+      "originalName": "fence_post_15",
+      "category": "rocks",
+      "family": "rock",
+      "group": "rocks",
+      "description": "Roche seule, appliquer de la collision dessus.",
+      "width": 16,
+      "height": 32,
+      "tileW": 1,
+      "tileH": 2,
+      "tags": [
+        "blocks_movement",
+        "rock"
+      ],
+      "collision": {
+        "blocksMovement": true,
+        "walkableOverride": false
+      },
+      "spawn": {
+        "surfaces": [
+          "grass"
+        ],
+        "avoid": [
+          "water",
+          "road"
+        ],
+        "near": [
+          "grass"
+        ],
+        "frequency": "uncommon",
+        "placement": "scatter"
+      },
+      "render": {
+        "layer": "decor",
+        "priority": 0
+      },
+      "v1": {
+        "enabled": true,
+        "excludedByRule": false
+      },
+      "sourceRect": {
+        "x": 1008,
+        "y": 224,
+        "width": 16,
+        "height": 32
+      },
+      "paths": {
+        "spring": "src/spritesheets/world/spring/rocks/rock_11.png",
+        "summer": "src/spritesheets/world/summer/rocks/rock_11.png",
+        "autumn": "src/spritesheets/world/autumn/rocks/rock_11.png",
+        "winter": "src/spritesheets/world/winter/rocks/rock_11.png"
+      }
+    },
+    "rock_12": {
+      "name": "rock_12",
+      "originalName": "fence_post_16",
+      "category": "rocks",
+      "family": "rock",
+      "group": "rocks",
+      "description": "Roche seule, appliquer de la collision dessus.",
+      "width": 16,
+      "height": 32,
+      "tileW": 1,
+      "tileH": 2,
+      "tags": [
+        "blocks_movement",
+        "rock"
+      ],
+      "collision": {
+        "blocksMovement": true,
+        "walkableOverride": false
+      },
+      "spawn": {
+        "surfaces": [
+          "grass"
+        ],
+        "avoid": [
+          "water",
+          "road"
+        ],
+        "near": [
+          "grass"
+        ],
+        "frequency": "uncommon",
+        "placement": "scatter"
+      },
+      "render": {
+        "layer": "decor",
+        "priority": 0
+      },
+      "v1": {
+        "enabled": true,
+        "excludedByRule": false
+      },
+      "sourceRect": {
+        "x": 1024,
+        "y": 224,
+        "width": 16,
+        "height": 32
+      },
+      "paths": {
+        "spring": "src/spritesheets/world/spring/rocks/rock_12.png",
+        "summer": "src/spritesheets/world/summer/rocks/rock_12.png",
+        "autumn": "src/spritesheets/world/autumn/rocks/rock_12.png",
+        "winter": "src/spritesheets/world/winter/rocks/rock_12.png"
+      }
+    },
+    "rock_13": {
+      "name": "rock_13",
+      "originalName": "fence_post_17",
+      "category": "rocks",
+      "family": "rock",
+      "group": "rocks",
+      "description": "Roche seule, appliquer de la collision dessus.",
+      "width": 16,
+      "height": 32,
+      "tileW": 1,
+      "tileH": 2,
+      "tags": [
+        "blocks_movement",
+        "rock"
+      ],
+      "collision": {
+        "blocksMovement": true,
+        "walkableOverride": false
+      },
+      "spawn": {
+        "surfaces": [
+          "grass"
+        ],
+        "avoid": [
+          "water",
+          "road"
+        ],
+        "near": [
+          "grass"
+        ],
+        "frequency": "uncommon",
+        "placement": "scatter"
+      },
+      "render": {
+        "layer": "decor",
+        "priority": 0
+      },
+      "v1": {
+        "enabled": true,
+        "excludedByRule": false
+      },
+      "sourceRect": {
+        "x": 1040,
+        "y": 224,
+        "width": 16,
+        "height": 32
+      },
+      "paths": {
+        "spring": "src/spritesheets/world/spring/rocks/rock_13.png",
+        "summer": "src/spritesheets/world/summer/rocks/rock_13.png",
+        "autumn": "src/spritesheets/world/autumn/rocks/rock_13.png",
+        "winter": "src/spritesheets/world/winter/rocks/rock_13.png"
+      }
+    },
+    "rock_14": {
+      "name": "rock_14",
+      "originalName": "fence_post_18",
+      "category": "rocks",
+      "family": "rock",
+      "group": "rocks",
+      "description": "Roche seule, appliquer de la collision dessus.",
+      "width": 16,
+      "height": 32,
+      "tileW": 1,
+      "tileH": 2,
+      "tags": [
+        "blocks_movement",
+        "rock"
+      ],
+      "collision": {
+        "blocksMovement": true,
+        "walkableOverride": false
+      },
+      "spawn": {
+        "surfaces": [
+          "grass"
+        ],
+        "avoid": [
+          "water",
+          "road"
+        ],
+        "near": [
+          "grass"
+        ],
+        "frequency": "uncommon",
+        "placement": "scatter"
+      },
+      "render": {
+        "layer": "decor",
+        "priority": 0
+      },
+      "v1": {
+        "enabled": true,
+        "excludedByRule": false
+      },
+      "sourceRect": {
+        "x": 1056,
+        "y": 224,
+        "width": 16,
+        "height": 32
+      },
+      "paths": {
+        "spring": "src/spritesheets/world/spring/rocks/rock_14.png",
+        "summer": "src/spritesheets/world/summer/rocks/rock_14.png",
+        "autumn": "src/spritesheets/world/autumn/rocks/rock_14.png",
+        "winter": "src/spritesheets/world/winter/rocks/rock_14.png"
+      }
+    },
+    "rock_15": {
+      "name": "rock_15",
+      "originalName": "fence_post_19",
+      "category": "rocks",
+      "family": "rock",
+      "group": "rocks",
+      "description": "Roche seule, appliquer de la collision dessus.",
+      "width": 16,
+      "height": 32,
+      "tileW": 1,
+      "tileH": 2,
+      "tags": [
+        "blocks_movement",
+        "rock"
+      ],
+      "collision": {
+        "blocksMovement": true,
+        "walkableOverride": false
+      },
+      "spawn": {
+        "surfaces": [
+          "grass"
+        ],
+        "avoid": [
+          "water",
+          "road"
+        ],
+        "near": [
+          "grass"
+        ],
+        "frequency": "uncommon",
+        "placement": "scatter"
+      },
+      "render": {
+        "layer": "decor",
+        "priority": 0
+      },
+      "v1": {
+        "enabled": true,
+        "excludedByRule": false
+      },
+      "sourceRect": {
+        "x": 1072,
+        "y": 224,
+        "width": 16,
+        "height": 32
+      },
+      "paths": {
+        "spring": "src/spritesheets/world/spring/rocks/rock_15.png",
+        "summer": "src/spritesheets/world/summer/rocks/rock_15.png",
+        "autumn": "src/spritesheets/world/autumn/rocks/rock_15.png",
+        "winter": "src/spritesheets/world/winter/rocks/rock_15.png"
+      }
+    },
+    "rock_16": {
+      "name": "rock_16",
+      "originalName": "fence_post_20",
+      "category": "rocks",
+      "family": "rock",
+      "group": "rocks",
+      "description": "Roche seule, appliquer de la collision dessus.",
+      "width": 16,
+      "height": 32,
+      "tileW": 1,
+      "tileH": 2,
+      "tags": [
+        "blocks_movement",
+        "rock"
+      ],
+      "collision": {
+        "blocksMovement": true,
+        "walkableOverride": false
+      },
+      "spawn": {
+        "surfaces": [
+          "grass"
+        ],
+        "avoid": [
+          "water",
+          "road"
+        ],
+        "near": [
+          "grass"
+        ],
+        "frequency": "uncommon",
+        "placement": "scatter"
+      },
+      "render": {
+        "layer": "decor",
+        "priority": 0
+      },
+      "v1": {
+        "enabled": true,
+        "excludedByRule": false
+      },
+      "sourceRect": {
+        "x": 1088,
+        "y": 224,
+        "width": 16,
+        "height": 32
+      },
+      "paths": {
+        "spring": "src/spritesheets/world/spring/rocks/rock_16.png",
+        "summer": "src/spritesheets/world/summer/rocks/rock_16.png",
+        "autumn": "src/spritesheets/world/autumn/rocks/rock_16.png",
+        "winter": "src/spritesheets/world/winter/rocks/rock_16.png"
+      }
+    },
+    "rock_17": {
+      "name": "rock_17",
+      "originalName": "fence_post_21",
+      "category": "rocks",
+      "family": "rock",
+      "group": "rocks",
+      "description": "Roche seule, appliquer de la collision dessus.",
+      "width": 16,
+      "height": 32,
+      "tileW": 1,
+      "tileH": 2,
+      "tags": [
+        "blocks_movement",
+        "rock"
+      ],
+      "collision": {
+        "blocksMovement": true,
+        "walkableOverride": false
+      },
+      "spawn": {
+        "surfaces": [
+          "grass"
+        ],
+        "avoid": [
+          "water",
+          "road"
+        ],
+        "near": [
+          "grass"
+        ],
+        "frequency": "uncommon",
+        "placement": "scatter"
+      },
+      "render": {
+        "layer": "decor",
+        "priority": 0
+      },
+      "v1": {
+        "enabled": true,
+        "excludedByRule": false
+      },
+      "sourceRect": {
+        "x": 1104,
+        "y": 224,
+        "width": 16,
+        "height": 32
+      },
+      "paths": {
+        "spring": "src/spritesheets/world/spring/rocks/rock_17.png",
+        "summer": "src/spritesheets/world/summer/rocks/rock_17.png",
+        "autumn": "src/spritesheets/world/autumn/rocks/rock_17.png",
+        "winter": "src/spritesheets/world/winter/rocks/rock_17.png"
+      }
+    },
+    "rock_18": {
+      "name": "rock_18",
+      "originalName": "fence_post_22",
+      "category": "rocks",
+      "family": "rock",
+      "group": "rocks",
+      "description": "Roche seule, appliquer de la collision dessus.",
+      "width": 16,
+      "height": 32,
+      "tileW": 1,
+      "tileH": 2,
+      "tags": [
+        "blocks_movement",
+        "rock"
+      ],
+      "collision": {
+        "blocksMovement": true,
+        "walkableOverride": false
+      },
+      "spawn": {
+        "surfaces": [
+          "grass"
+        ],
+        "avoid": [
+          "water",
+          "road"
+        ],
+        "near": [
+          "grass"
+        ],
+        "frequency": "uncommon",
+        "placement": "scatter"
+      },
+      "render": {
+        "layer": "decor",
+        "priority": 0
+      },
+      "v1": {
+        "enabled": true,
+        "excludedByRule": false
+      },
+      "sourceRect": {
+        "x": 1120,
+        "y": 224,
+        "width": 16,
+        "height": 32
+      },
+      "paths": {
+        "spring": "src/spritesheets/world/spring/rocks/rock_18.png",
+        "summer": "src/spritesheets/world/summer/rocks/rock_18.png",
+        "autumn": "src/spritesheets/world/autumn/rocks/rock_18.png",
+        "winter": "src/spritesheets/world/winter/rocks/rock_18.png"
+      }
+    },
+    "rock_19": {
+      "name": "rock_19",
+      "originalName": "fence_post_23",
+      "category": "rocks",
+      "family": "rock",
+      "group": "rocks",
+      "description": "Roche seule, appliquer de la collision dessus.",
+      "width": 16,
+      "height": 32,
+      "tileW": 1,
+      "tileH": 2,
+      "tags": [
+        "blocks_movement",
+        "rock"
+      ],
+      "collision": {
+        "blocksMovement": true,
+        "walkableOverride": false
+      },
+      "spawn": {
+        "surfaces": [
+          "grass"
+        ],
+        "avoid": [
+          "water",
+          "road"
+        ],
+        "near": [
+          "grass"
+        ],
+        "frequency": "uncommon",
+        "placement": "scatter"
+      },
+      "render": {
+        "layer": "decor",
+        "priority": 0
+      },
+      "v1": {
+        "enabled": true,
+        "excludedByRule": false
+      },
+      "sourceRect": {
+        "x": 1136,
+        "y": 224,
+        "width": 16,
+        "height": 32
+      },
+      "paths": {
+        "spring": "src/spritesheets/world/spring/rocks/rock_19.png",
+        "summer": "src/spritesheets/world/summer/rocks/rock_19.png",
+        "autumn": "src/spritesheets/world/autumn/rocks/rock_19.png",
+        "winter": "src/spritesheets/world/winter/rocks/rock_19.png"
+      }
+    },
+    "rock_20": {
+      "name": "rock_20",
+      "originalName": "fence_post_24",
+      "category": "rocks",
+      "family": "rock",
+      "group": "rocks",
+      "description": "Roche seule, appliquer de la collision dessus.",
+      "width": 16,
+      "height": 32,
+      "tileW": 1,
+      "tileH": 2,
+      "tags": [
+        "blocks_movement",
+        "rock"
+      ],
+      "collision": {
+        "blocksMovement": true,
+        "walkableOverride": false
+      },
+      "spawn": {
+        "surfaces": [
+          "grass"
+        ],
+        "avoid": [
+          "water",
+          "road"
+        ],
+        "near": [
+          "grass"
+        ],
+        "frequency": "uncommon",
+        "placement": "scatter"
+      },
+      "render": {
+        "layer": "decor",
+        "priority": 0
+      },
+      "v1": {
+        "enabled": true,
+        "excludedByRule": false
+      },
+      "sourceRect": {
+        "x": 1152,
+        "y": 224,
+        "width": 16,
+        "height": 32
+      },
+      "paths": {
+        "spring": "src/spritesheets/world/spring/rocks/rock_20.png",
+        "summer": "src/spritesheets/world/summer/rocks/rock_20.png",
+        "autumn": "src/spritesheets/world/autumn/rocks/rock_20.png",
+        "winter": "src/spritesheets/world/winter/rocks/rock_20.png"
+      }
+    },
+    "rock_21": {
+      "name": "rock_21",
+      "originalName": "fence_post_25",
+      "category": "rocks",
+      "family": "rock",
+      "group": "rocks",
+      "description": "Roche seule, appliquer de la collision dessus.",
+      "width": 16,
+      "height": 32,
+      "tileW": 1,
+      "tileH": 2,
+      "tags": [
+        "blocks_movement",
+        "rock"
+      ],
+      "collision": {
+        "blocksMovement": true,
+        "walkableOverride": false
+      },
+      "spawn": {
+        "surfaces": [
+          "grass"
+        ],
+        "avoid": [
+          "water",
+          "road"
+        ],
+        "near": [
+          "grass"
+        ],
+        "frequency": "uncommon",
+        "placement": "scatter"
+      },
+      "render": {
+        "layer": "decor",
+        "priority": 0
+      },
+      "v1": {
+        "enabled": true,
+        "excludedByRule": false
+      },
+      "sourceRect": {
+        "x": 1168,
+        "y": 224,
+        "width": 16,
+        "height": 32
+      },
+      "paths": {
+        "spring": "src/spritesheets/world/spring/rocks/rock_21.png",
+        "summer": "src/spritesheets/world/summer/rocks/rock_21.png",
+        "autumn": "src/spritesheets/world/autumn/rocks/rock_21.png",
+        "winter": "src/spritesheets/world/winter/rocks/rock_21.png"
+      }
+    },
+    "rock_22": {
+      "name": "rock_22",
+      "originalName": "fence_post_26",
+      "category": "rocks",
+      "family": "rock",
+      "group": "rocks",
+      "description": "Roche seule, appliquer de la collision dessus.",
+      "width": 16,
+      "height": 32,
+      "tileW": 1,
+      "tileH": 2,
+      "tags": [
+        "blocks_movement",
+        "rock"
+      ],
+      "collision": {
+        "blocksMovement": true,
+        "walkableOverride": false
+      },
+      "spawn": {
+        "surfaces": [
+          "grass"
+        ],
+        "avoid": [
+          "water",
+          "road"
+        ],
+        "near": [
+          "grass"
+        ],
+        "frequency": "uncommon",
+        "placement": "scatter"
+      },
+      "render": {
+        "layer": "decor",
+        "priority": 0
+      },
+      "v1": {
+        "enabled": true,
+        "excludedByRule": false
+      },
+      "sourceRect": {
+        "x": 1184,
+        "y": 224,
+        "width": 16,
+        "height": 32
+      },
+      "paths": {
+        "spring": "src/spritesheets/world/spring/rocks/rock_22.png",
+        "summer": "src/spritesheets/world/summer/rocks/rock_22.png",
+        "autumn": "src/spritesheets/world/autumn/rocks/rock_22.png",
+        "winter": "src/spritesheets/world/winter/rocks/rock_22.png"
+      }
+    },
+    "rock_23": {
+      "name": "rock_23",
+      "originalName": "fence_post_27",
+      "category": "rocks",
+      "family": "rock",
+      "group": "rocks",
+      "description": "Roche seule, appliquer de la collision dessus.",
+      "width": 16,
+      "height": 32,
+      "tileW": 1,
+      "tileH": 2,
+      "tags": [
+        "blocks_movement",
+        "rock"
+      ],
+      "collision": {
+        "blocksMovement": true,
+        "walkableOverride": false
+      },
+      "spawn": {
+        "surfaces": [
+          "grass"
+        ],
+        "avoid": [
+          "water",
+          "road"
+        ],
+        "near": [
+          "grass"
+        ],
+        "frequency": "uncommon",
+        "placement": "scatter"
+      },
+      "render": {
+        "layer": "decor",
+        "priority": 0
+      },
+      "v1": {
+        "enabled": true,
+        "excludedByRule": false
+      },
+      "sourceRect": {
+        "x": 1200,
+        "y": 224,
+        "width": 16,
+        "height": 32
+      },
+      "paths": {
+        "spring": "src/spritesheets/world/spring/rocks/rock_23.png",
+        "summer": "src/spritesheets/world/summer/rocks/rock_23.png",
+        "autumn": "src/spritesheets/world/autumn/rocks/rock_23.png",
+        "winter": "src/spritesheets/world/winter/rocks/rock_23.png"
+      }
+    },
+    "rock_24": {
+      "name": "rock_24",
+      "originalName": "fence_post_28",
+      "category": "rocks",
+      "family": "rock",
+      "group": "rocks",
+      "description": "Roche seule, appliquer de la collision dessus.",
+      "width": 16,
+      "height": 32,
+      "tileW": 1,
+      "tileH": 2,
+      "tags": [
+        "blocks_movement",
+        "rock"
+      ],
+      "collision": {
+        "blocksMovement": true,
+        "walkableOverride": false
+      },
+      "spawn": {
+        "surfaces": [
+          "grass"
+        ],
+        "avoid": [
+          "water",
+          "road"
+        ],
+        "near": [
+          "grass"
+        ],
+        "frequency": "uncommon",
+        "placement": "scatter"
+      },
+      "render": {
+        "layer": "decor",
+        "priority": 0
+      },
+      "v1": {
+        "enabled": true,
+        "excludedByRule": false
+      },
+      "sourceRect": {
+        "x": 1216,
+        "y": 224,
+        "width": 16,
+        "height": 32
+      },
+      "paths": {
+        "spring": "src/spritesheets/world/spring/rocks/rock_24.png",
+        "summer": "src/spritesheets/world/summer/rocks/rock_24.png",
+        "autumn": "src/spritesheets/world/autumn/rocks/rock_24.png",
+        "winter": "src/spritesheets/world/winter/rocks/rock_24.png"
+      }
+    },
+    "tree_pink_01": {
+      "name": "tree_pink_01",
+      "originalName": "tree_pink_01",
+      "category": "trees",
+      "family": "tree_pink",
+      "group": "trees",
+      "description": "variations d'arbres roses, penser à appliquer de la collision",
+      "width": 48,
+      "height": 48,
+      "tileW": 3,
+      "tileH": 3,
+      "tags": [
+        "blocks_movement",
+        "tree"
+      ],
+      "collision": {
+        "blocksMovement": true,
+        "walkableOverride": false
+      },
+      "spawn": {
+        "surfaces": [
+          "grass"
+        ],
+        "avoid": [
+          "road",
+          "water",
+          "sand"
+        ],
+        "near": [
+          "grass",
+          "tree"
+        ],
+        "frequency": "common",
+        "placement": "small_group"
+      },
+      "render": {
+        "layer": "decor",
+        "priority": 0
+      },
+      "v1": {
+        "enabled": true,
+        "excludedByRule": false
+      },
+      "sourceRect": {
+        "x": 432,
+        "y": 656,
+        "width": 48,
+        "height": 48
+      },
+      "paths": {
+        "spring": "src/spritesheets/world/spring/trees/tree_pink_01.png",
+        "summer": "src/spritesheets/world/summer/trees/tree_pink_01.png",
+        "autumn": "src/spritesheets/world/autumn/trees/tree_pink_01.png",
+        "winter": "src/spritesheets/world/winter/trees/tree_pink_01.png"
+      }
+    },
+    "tree_pink_02": {
+      "name": "tree_pink_02",
+      "originalName": "tree_pink_02",
+      "category": "trees",
+      "family": "tree_pink",
+      "group": "trees",
+      "description": "variations d'arbres roses, penser à appliquer de la collision",
+      "width": 48,
+      "height": 48,
+      "tileW": 3,
+      "tileH": 3,
+      "tags": [
+        "blocks_movement",
+        "tree"
+      ],
+      "collision": {
+        "blocksMovement": true,
+        "walkableOverride": false
+      },
+      "spawn": {
+        "surfaces": [
+          "grass"
+        ],
+        "avoid": [
+          "road",
+          "water",
+          "sand"
+        ],
+        "near": [
+          "grass",
+          "tree"
+        ],
+        "frequency": "common",
+        "placement": "small_group"
+      },
+      "render": {
+        "layer": "decor",
+        "priority": 0
+      },
+      "v1": {
+        "enabled": true,
+        "excludedByRule": false
+      },
+      "sourceRect": {
+        "x": 480,
+        "y": 656,
+        "width": 48,
+        "height": 48
+      },
+      "paths": {
+        "spring": "src/spritesheets/world/spring/trees/tree_pink_02.png",
+        "summer": "src/spritesheets/world/summer/trees/tree_pink_02.png",
+        "autumn": "src/spritesheets/world/autumn/trees/tree_pink_02.png",
+        "winter": "src/spritesheets/world/winter/trees/tree_pink_02.png"
+      }
+    },
+    "tree_pink_03": {
+      "name": "tree_pink_03",
+      "originalName": "tree_pink_03",
+      "category": "trees",
+      "family": "tree_pink",
+      "group": "trees",
+      "description": "variations d'arbres roses, penser à appliquer de la collision",
+      "width": 48,
+      "height": 48,
+      "tileW": 3,
+      "tileH": 3,
+      "tags": [
+        "blocks_movement",
+        "tree"
+      ],
+      "collision": {
+        "blocksMovement": true,
+        "walkableOverride": false
+      },
+      "spawn": {
+        "surfaces": [
+          "grass"
+        ],
+        "avoid": [
+          "road",
+          "water",
+          "sand"
+        ],
+        "near": [
+          "grass",
+          "tree"
+        ],
+        "frequency": "common",
+        "placement": "small_group"
+      },
+      "render": {
+        "layer": "decor",
+        "priority": 0
+      },
+      "v1": {
+        "enabled": true,
+        "excludedByRule": false
+      },
+      "sourceRect": {
+        "x": 576,
+        "y": 656,
+        "width": 48,
+        "height": 48
+      },
+      "paths": {
+        "spring": "src/spritesheets/world/spring/trees/tree_pink_03.png",
+        "summer": "src/spritesheets/world/summer/trees/tree_pink_03.png",
+        "autumn": "src/spritesheets/world/autumn/trees/tree_pink_03.png",
+        "winter": "src/spritesheets/world/winter/trees/tree_pink_03.png"
+      }
+    },
+    "tree_pink_04": {
+      "name": "tree_pink_04",
+      "originalName": "tree_pink_04",
+      "category": "trees",
+      "family": "tree_pink",
+      "group": "trees",
+      "description": "variations d'arbres roses, penser à appliquer de la collision",
+      "width": 48,
+      "height": 48,
+      "tileW": 3,
+      "tileH": 3,
+      "tags": [
+        "blocks_movement",
+        "tree"
+      ],
+      "collision": {
+        "blocksMovement": true,
+        "walkableOverride": false
+      },
+      "spawn": {
+        "surfaces": [
+          "grass"
+        ],
+        "avoid": [
+          "road",
+          "water",
+          "sand"
+        ],
+        "near": [
+          "grass",
+          "tree"
+        ],
+        "frequency": "common",
+        "placement": "small_group"
+      },
+      "render": {
+        "layer": "decor",
+        "priority": 0
+      },
+      "v1": {
+        "enabled": true,
+        "excludedByRule": false
+      },
+      "sourceRect": {
+        "x": 624,
+        "y": 656,
+        "width": 48,
+        "height": 48
+      },
+      "paths": {
+        "spring": "src/spritesheets/world/spring/trees/tree_pink_04.png",
+        "summer": "src/spritesheets/world/summer/trees/tree_pink_04.png",
+        "autumn": "src/spritesheets/world/autumn/trees/tree_pink_04.png",
+        "winter": "src/spritesheets/world/winter/trees/tree_pink_04.png"
+      }
+    },
+    "tree_green_01": {
+      "name": "tree_green_01",
+      "originalName": "tree_green_01",
+      "category": "trees",
+      "family": "tree_green",
+      "group": "trees",
+      "description": "variations d'arbres verts, penser à appliquer de la collision",
+      "width": 48,
+      "height": 48,
+      "tileW": 3,
+      "tileH": 3,
+      "tags": [
+        "blocks_movement",
+        "tree"
+      ],
+      "collision": {
+        "blocksMovement": true,
+        "walkableOverride": false
+      },
+      "spawn": {
+        "surfaces": [
+          "grass"
+        ],
+        "avoid": [
+          "road",
+          "water",
+          "sand"
+        ],
+        "near": [
+          "grass",
+          "tree"
+        ],
+        "frequency": "common",
+        "placement": "small_group"
+      },
+      "render": {
+        "layer": "decor",
+        "priority": 0
+      },
+      "v1": {
+        "enabled": true,
+        "excludedByRule": false
+      },
+      "sourceRect": {
+        "x": 720,
+        "y": 656,
+        "width": 48,
+        "height": 48
+      },
+      "paths": {
+        "spring": "src/spritesheets/world/spring/trees/tree_green_01.png",
+        "summer": "src/spritesheets/world/summer/trees/tree_green_01.png",
+        "autumn": "src/spritesheets/world/autumn/trees/tree_green_01.png",
+        "winter": "src/spritesheets/world/winter/trees/tree_green_01.png"
+      }
+    },
+    "tree_green_02": {
+      "name": "tree_green_02",
+      "originalName": "tree_green_02",
+      "category": "trees",
+      "family": "tree_green",
+      "group": "trees",
+      "description": "variations d'arbres verts, penser à appliquer de la collision",
+      "width": 48,
+      "height": 48,
+      "tileW": 3,
+      "tileH": 3,
+      "tags": [
+        "blocks_movement",
+        "tree"
+      ],
+      "collision": {
+        "blocksMovement": true,
+        "walkableOverride": false
+      },
+      "spawn": {
+        "surfaces": [
+          "grass"
+        ],
+        "avoid": [
+          "road",
+          "water",
+          "sand"
+        ],
+        "near": [
+          "grass",
+          "tree"
+        ],
+        "frequency": "common",
+        "placement": "small_group"
+      },
+      "render": {
+        "layer": "decor",
+        "priority": 0
+      },
+      "v1": {
+        "enabled": true,
+        "excludedByRule": false
+      },
+      "sourceRect": {
+        "x": 768,
+        "y": 656,
+        "width": 48,
+        "height": 48
+      },
+      "paths": {
+        "spring": "src/spritesheets/world/spring/trees/tree_green_02.png",
+        "summer": "src/spritesheets/world/summer/trees/tree_green_02.png",
+        "autumn": "src/spritesheets/world/autumn/trees/tree_green_02.png",
+        "winter": "src/spritesheets/world/winter/trees/tree_green_02.png"
+      }
+    },
+    "tree_green_03": {
+      "name": "tree_green_03",
+      "originalName": "tree_green_03",
+      "category": "trees",
+      "family": "tree_green",
+      "group": "trees",
+      "description": "variations d'arbres verts, penser à appliquer de la collision",
+      "width": 48,
+      "height": 48,
+      "tileW": 3,
+      "tileH": 3,
+      "tags": [
+        "blocks_movement",
+        "tree"
+      ],
+      "collision": {
+        "blocksMovement": true,
+        "walkableOverride": false
+      },
+      "spawn": {
+        "surfaces": [
+          "grass"
+        ],
+        "avoid": [
+          "road",
+          "water",
+          "sand"
+        ],
+        "near": [
+          "grass",
+          "tree"
+        ],
+        "frequency": "common",
+        "placement": "small_group"
+      },
+      "render": {
+        "layer": "decor",
+        "priority": 0
+      },
+      "v1": {
+        "enabled": true,
+        "excludedByRule": false
+      },
+      "sourceRect": {
+        "x": 864,
+        "y": 656,
+        "width": 48,
+        "height": 48
+      },
+      "paths": {
+        "spring": "src/spritesheets/world/spring/trees/tree_green_03.png",
+        "summer": "src/spritesheets/world/summer/trees/tree_green_03.png",
+        "autumn": "src/spritesheets/world/autumn/trees/tree_green_03.png",
+        "winter": "src/spritesheets/world/winter/trees/tree_green_03.png"
+      }
+    },
+    "tree_green_04": {
+      "name": "tree_green_04",
+      "originalName": "tree_green_04",
+      "category": "trees",
+      "family": "tree_green",
+      "group": "trees",
+      "description": "variations d'arbres verts, penser à appliquer de la collision",
+      "width": 48,
+      "height": 48,
+      "tileW": 3,
+      "tileH": 3,
+      "tags": [
+        "blocks_movement",
+        "tree"
+      ],
+      "collision": {
+        "blocksMovement": true,
+        "walkableOverride": false
+      },
+      "spawn": {
+        "surfaces": [
+          "grass"
+        ],
+        "avoid": [
+          "road",
+          "water",
+          "sand"
+        ],
+        "near": [
+          "grass",
+          "tree"
+        ],
+        "frequency": "common",
+        "placement": "small_group"
+      },
+      "render": {
+        "layer": "decor",
+        "priority": 0
+      },
+      "v1": {
+        "enabled": true,
+        "excludedByRule": false
+      },
+      "sourceRect": {
+        "x": 912,
+        "y": 656,
+        "width": 48,
+        "height": 48
+      },
+      "paths": {
+        "spring": "src/spritesheets/world/spring/trees/tree_green_04.png",
+        "summer": "src/spritesheets/world/summer/trees/tree_green_04.png",
+        "autumn": "src/spritesheets/world/autumn/trees/tree_green_04.png",
+        "winter": "src/spritesheets/world/winter/trees/tree_green_04.png"
+      }
+    },
+    "tall_tree_pink_01": {
+      "name": "tall_tree_pink_01",
+      "originalName": "tall_tree_pink_01",
+      "category": "trees",
+      "family": "tall_tree_pink",
+      "group": "trees",
+      "description": "variation d'arbres roses, penser à appliquer de la collision dessus",
+      "width": 48,
+      "height": 80,
+      "tileW": 3,
+      "tileH": 5,
+      "tags": [
+        "blocks_movement",
+        "tall_tree",
+        "tree"
+      ],
+      "collision": {
+        "blocksMovement": true,
+        "walkableOverride": false
+      },
+      "spawn": {
+        "surfaces": [
+          "grass"
+        ],
+        "avoid": [
+          "road",
+          "water",
+          "sand"
+        ],
+        "near": [
+          "grass",
+          "tree"
+        ],
+        "frequency": "uncommon",
+        "placement": "small_group"
+      },
+      "render": {
+        "layer": "decor",
+        "priority": 0
+      },
+      "v1": {
+        "enabled": true,
+        "excludedByRule": false
+      },
+      "sourceRect": {
+        "x": 976,
+        "y": 672,
+        "width": 48,
+        "height": 80
+      },
+      "paths": {
+        "spring": "src/spritesheets/world/spring/trees/tall_tree_pink_01.png",
+        "summer": "src/spritesheets/world/summer/trees/tall_tree_pink_01.png",
+        "autumn": "src/spritesheets/world/autumn/trees/tall_tree_pink_01.png",
+        "winter": "src/spritesheets/world/winter/trees/tall_tree_pink_01.png"
+      }
+    },
+    "tall_tree_pink_02": {
+      "name": "tall_tree_pink_02",
+      "originalName": "tall_tree_pink_02",
+      "category": "trees",
+      "family": "tall_tree_pink",
+      "group": "trees",
+      "description": "variation d'arbres roses, penser à appliquer de la collision dessus",
+      "width": 48,
+      "height": 80,
+      "tileW": 3,
+      "tileH": 5,
+      "tags": [
+        "blocks_movement",
+        "tall_tree",
+        "tree"
+      ],
+      "collision": {
+        "blocksMovement": true,
+        "walkableOverride": false
+      },
+      "spawn": {
+        "surfaces": [
+          "grass"
+        ],
+        "avoid": [
+          "road",
+          "water",
+          "sand"
+        ],
+        "near": [
+          "grass",
+          "tree"
+        ],
+        "frequency": "uncommon",
+        "placement": "small_group"
+      },
+      "render": {
+        "layer": "decor",
+        "priority": 0
+      },
+      "v1": {
+        "enabled": true,
+        "excludedByRule": false
+      },
+      "sourceRect": {
+        "x": 1040,
+        "y": 672,
+        "width": 48,
+        "height": 80
+      },
+      "paths": {
+        "spring": "src/spritesheets/world/spring/trees/tall_tree_pink_02.png",
+        "summer": "src/spritesheets/world/summer/trees/tall_tree_pink_02.png",
+        "autumn": "src/spritesheets/world/autumn/trees/tall_tree_pink_02.png",
+        "winter": "src/spritesheets/world/winter/trees/tall_tree_pink_02.png"
+      }
+    },
+    "tall_tree_green_01": {
+      "name": "tall_tree_green_01",
+      "originalName": "tall_tree_green_01",
+      "category": "trees",
+      "family": "tall_tree_green",
+      "group": "trees",
+      "description": "variation d'arbres verts, penser à appliquer de la collision dessus",
+      "width": 48,
+      "height": 80,
+      "tileW": 3,
+      "tileH": 5,
+      "tags": [
+        "blocks_movement",
+        "tall_tree",
+        "tree"
+      ],
+      "collision": {
+        "blocksMovement": true,
+        "walkableOverride": false
+      },
+      "spawn": {
+        "surfaces": [
+          "grass"
+        ],
+        "avoid": [
+          "road",
+          "water",
+          "sand"
+        ],
+        "near": [
+          "grass",
+          "tree"
+        ],
+        "frequency": "uncommon",
+        "placement": "small_group"
+      },
+      "render": {
+        "layer": "decor",
+        "priority": 0
+      },
+      "v1": {
+        "enabled": true,
+        "excludedByRule": false
+      },
+      "sourceRect": {
+        "x": 1104,
+        "y": 672,
+        "width": 48,
+        "height": 80
+      },
+      "paths": {
+        "spring": "src/spritesheets/world/spring/trees/tall_tree_green_01.png",
+        "summer": "src/spritesheets/world/summer/trees/tall_tree_green_01.png",
+        "autumn": "src/spritesheets/world/autumn/trees/tall_tree_green_01.png",
+        "winter": "src/spritesheets/world/winter/trees/tall_tree_green_01.png"
+      }
+    },
+    "tall_tree_green_02": {
+      "name": "tall_tree_green_02",
+      "originalName": "tall_tree_green_02",
+      "category": "trees",
+      "family": "tall_tree_green",
+      "group": "trees",
+      "description": "variation d'arbres verts, penser à appliquer de la collision dessus",
+      "width": 48,
+      "height": 80,
+      "tileW": 3,
+      "tileH": 5,
+      "tags": [
+        "blocks_movement",
+        "tall_tree",
+        "tree"
+      ],
+      "collision": {
+        "blocksMovement": true,
+        "walkableOverride": false
+      },
+      "spawn": {
+        "surfaces": [
+          "grass"
+        ],
+        "avoid": [
+          "road",
+          "water",
+          "sand"
+        ],
+        "near": [
+          "grass",
+          "tree"
+        ],
+        "frequency": "uncommon",
+        "placement": "small_group"
+      },
+      "render": {
+        "layer": "decor",
+        "priority": 0
+      },
+      "v1": {
+        "enabled": true,
+        "excludedByRule": false
+      },
+      "sourceRect": {
+        "x": 1168,
+        "y": 672,
+        "width": 48,
+        "height": 80
+      },
+      "paths": {
+        "spring": "src/spritesheets/world/spring/trees/tall_tree_green_02.png",
+        "summer": "src/spritesheets/world/summer/trees/tall_tree_green_02.png",
+        "autumn": "src/spritesheets/world/autumn/trees/tall_tree_green_02.png",
+        "winter": "src/spritesheets/world/winter/trees/tall_tree_green_02.png"
+      }
+    },
+    "tall_tree_pink_03": {
+      "name": "tall_tree_pink_03",
+      "originalName": "tall_tree_pink_03",
+      "category": "trees",
+      "family": "tall_tree_pink",
+      "group": "trees",
+      "description": "variation d'arbres roses, penser à appliquer de la collision dessus",
+      "width": 48,
+      "height": 64,
+      "tileW": 3,
+      "tileH": 4,
+      "tags": [
+        "blocks_movement",
+        "tall_tree",
+        "tree"
+      ],
+      "collision": {
+        "blocksMovement": true,
+        "walkableOverride": false
+      },
+      "spawn": {
+        "surfaces": [
+          "grass"
+        ],
+        "avoid": [
+          "road",
+          "water",
+          "sand"
+        ],
+        "near": [
+          "grass",
+          "tree"
+        ],
+        "frequency": "uncommon",
+        "placement": "small_group"
+      },
+      "render": {
+        "layer": "decor",
+        "priority": 0
+      },
+      "v1": {
+        "enabled": true,
+        "excludedByRule": false
+      },
+      "sourceRect": {
+        "x": 384,
+        "y": 704,
+        "width": 48,
+        "height": 64
+      },
+      "paths": {
+        "spring": "src/spritesheets/world/spring/trees/tall_tree_pink_03.png",
+        "summer": "src/spritesheets/world/summer/trees/tall_tree_pink_03.png",
+        "autumn": "src/spritesheets/world/autumn/trees/tall_tree_pink_03.png",
+        "winter": "src/spritesheets/world/winter/trees/tall_tree_pink_03.png"
+      }
+    },
+    "tall_tree_pink_04": {
+      "name": "tall_tree_pink_04",
+      "originalName": "tall_tree_pink_04",
+      "category": "trees",
+      "family": "tall_tree_pink",
+      "group": "trees",
+      "description": "variation d'arbres roses, penser à appliquer de la collision dessus",
+      "width": 48,
+      "height": 64,
+      "tileW": 3,
+      "tileH": 4,
+      "tags": [
+        "blocks_movement",
+        "tall_tree",
+        "tree"
+      ],
+      "collision": {
+        "blocksMovement": true,
+        "walkableOverride": false
+      },
+      "spawn": {
+        "surfaces": [
+          "grass"
+        ],
+        "avoid": [
+          "road",
+          "water",
+          "sand"
+        ],
+        "near": [
+          "grass",
+          "tree"
+        ],
+        "frequency": "uncommon",
+        "placement": "small_group"
+      },
+      "render": {
+        "layer": "decor",
+        "priority": 0
+      },
+      "v1": {
+        "enabled": true,
+        "excludedByRule": false
+      },
+      "sourceRect": {
+        "x": 528,
+        "y": 704,
+        "width": 48,
+        "height": 64
+      },
+      "paths": {
+        "spring": "src/spritesheets/world/spring/trees/tall_tree_pink_04.png",
+        "summer": "src/spritesheets/world/summer/trees/tall_tree_pink_04.png",
+        "autumn": "src/spritesheets/world/autumn/trees/tall_tree_pink_04.png",
+        "winter": "src/spritesheets/world/winter/trees/tall_tree_pink_04.png"
+      }
+    },
+    "tall_tree_green_03": {
+      "name": "tall_tree_green_03",
+      "originalName": "tall_tree_green_03",
+      "category": "trees",
+      "family": "tall_tree_green",
+      "group": "trees",
+      "description": "variation d'arbres verts, penser à appliquer de la collision dessus",
+      "width": 48,
+      "height": 64,
+      "tileW": 3,
+      "tileH": 4,
+      "tags": [
+        "blocks_movement",
+        "tall_tree",
+        "tree"
+      ],
+      "collision": {
+        "blocksMovement": true,
+        "walkableOverride": false
+      },
+      "spawn": {
+        "surfaces": [
+          "grass"
+        ],
+        "avoid": [
+          "road",
+          "water",
+          "sand"
+        ],
+        "near": [
+          "grass",
+          "tree"
+        ],
+        "frequency": "uncommon",
+        "placement": "small_group"
+      },
+      "render": {
+        "layer": "decor",
+        "priority": 0
+      },
+      "v1": {
+        "enabled": true,
+        "excludedByRule": false
+      },
+      "sourceRect": {
+        "x": 672,
+        "y": 704,
+        "width": 48,
+        "height": 64
+      },
+      "paths": {
+        "spring": "src/spritesheets/world/spring/trees/tall_tree_green_03.png",
+        "summer": "src/spritesheets/world/summer/trees/tall_tree_green_03.png",
+        "autumn": "src/spritesheets/world/autumn/trees/tall_tree_green_03.png",
+        "winter": "src/spritesheets/world/winter/trees/tall_tree_green_03.png"
+      }
+    },
+    "tall_tree_green_04": {
+      "name": "tall_tree_green_04",
+      "originalName": "tall_tree_green_04",
+      "category": "trees",
+      "family": "tall_tree_green",
+      "group": "trees",
+      "description": "variation d'arbres verts, penser à appliquer de la collision dessus",
+      "width": 48,
+      "height": 64,
+      "tileW": 3,
+      "tileH": 4,
+      "tags": [
+        "blocks_movement",
+        "tall_tree",
+        "tree"
+      ],
+      "collision": {
+        "blocksMovement": true,
+        "walkableOverride": false
+      },
+      "spawn": {
+        "surfaces": [
+          "grass"
+        ],
+        "avoid": [
+          "road",
+          "water",
+          "sand"
+        ],
+        "near": [
+          "grass",
+          "tree"
+        ],
+        "frequency": "uncommon",
+        "placement": "small_group"
+      },
+      "render": {
+        "layer": "decor",
+        "priority": 0
+      },
+      "v1": {
+        "enabled": true,
+        "excludedByRule": false
+      },
+      "sourceRect": {
+        "x": 816,
+        "y": 704,
+        "width": 48,
+        "height": 64
+      },
+      "paths": {
+        "spring": "src/spritesheets/world/spring/trees/tall_tree_green_04.png",
+        "summer": "src/spritesheets/world/summer/trees/tall_tree_green_04.png",
+        "autumn": "src/spritesheets/world/autumn/trees/tall_tree_green_04.png",
+        "winter": "src/spritesheets/world/winter/trees/tall_tree_green_04.png"
+      }
+    },
+    "tree_pink_05": {
+      "name": "tree_pink_05",
+      "originalName": "tree_pink_05",
+      "category": "trees",
+      "family": "tree_pink",
+      "group": "trees",
+      "description": "variations d'arbres roses, penser à appliquer de la collision",
+      "width": 48,
+      "height": 48,
+      "tileW": 3,
+      "tileH": 3,
+      "tags": [
+        "blocks_movement",
+        "tree"
+      ],
+      "collision": {
+        "blocksMovement": true,
+        "walkableOverride": false
+      },
+      "spawn": {
+        "surfaces": [
+          "grass"
+        ],
+        "avoid": [
+          "road",
+          "water",
+          "sand"
+        ],
+        "near": [
+          "grass",
+          "tree"
+        ],
+        "frequency": "common",
+        "placement": "small_group"
+      },
+      "render": {
+        "layer": "decor",
+        "priority": 0
+      },
+      "v1": {
+        "enabled": true,
+        "excludedByRule": false
+      },
+      "sourceRect": {
+        "x": 432,
+        "y": 720,
+        "width": 48,
+        "height": 48
+      },
+      "paths": {
+        "spring": "src/spritesheets/world/spring/trees/tree_pink_05.png",
+        "summer": "src/spritesheets/world/summer/trees/tree_pink_05.png",
+        "autumn": "src/spritesheets/world/autumn/trees/tree_pink_05.png",
+        "winter": "src/spritesheets/world/winter/trees/tree_pink_05.png"
+      }
+    },
+    "tree_pink_06": {
+      "name": "tree_pink_06",
+      "originalName": "tree_pink_06",
+      "category": "trees",
+      "family": "tree_pink",
+      "group": "trees",
+      "description": "variations d'arbres roses, penser à appliquer de la collision",
+      "width": 48,
+      "height": 48,
+      "tileW": 3,
+      "tileH": 3,
+      "tags": [
+        "blocks_movement",
+        "tree"
+      ],
+      "collision": {
+        "blocksMovement": true,
+        "walkableOverride": false
+      },
+      "spawn": {
+        "surfaces": [
+          "grass"
+        ],
+        "avoid": [
+          "road",
+          "water",
+          "sand"
+        ],
+        "near": [
+          "grass",
+          "tree"
+        ],
+        "frequency": "common",
+        "placement": "small_group"
+      },
+      "render": {
+        "layer": "decor",
+        "priority": 0
+      },
+      "v1": {
+        "enabled": true,
+        "excludedByRule": false
+      },
+      "sourceRect": {
+        "x": 480,
+        "y": 720,
+        "width": 48,
+        "height": 48
+      },
+      "paths": {
+        "spring": "src/spritesheets/world/spring/trees/tree_pink_06.png",
+        "summer": "src/spritesheets/world/summer/trees/tree_pink_06.png",
+        "autumn": "src/spritesheets/world/autumn/trees/tree_pink_06.png",
+        "winter": "src/spritesheets/world/winter/trees/tree_pink_06.png"
+      }
+    },
+    "tree_pink_07": {
+      "name": "tree_pink_07",
+      "originalName": "tree_pink_07",
+      "category": "trees",
+      "family": "tree_pink",
+      "group": "trees",
+      "description": "variations d'arbres roses, penser à appliquer de la collision",
+      "width": 48,
+      "height": 48,
+      "tileW": 3,
+      "tileH": 3,
+      "tags": [
+        "blocks_movement",
+        "tree"
+      ],
+      "collision": {
+        "blocksMovement": true,
+        "walkableOverride": false
+      },
+      "spawn": {
+        "surfaces": [
+          "grass"
+        ],
+        "avoid": [
+          "road",
+          "water",
+          "sand"
+        ],
+        "near": [
+          "grass",
+          "tree"
+        ],
+        "frequency": "common",
+        "placement": "small_group"
+      },
+      "render": {
+        "layer": "decor",
+        "priority": 0
+      },
+      "v1": {
+        "enabled": true,
+        "excludedByRule": false
+      },
+      "sourceRect": {
+        "x": 576,
+        "y": 720,
+        "width": 48,
+        "height": 48
+      },
+      "paths": {
+        "spring": "src/spritesheets/world/spring/trees/tree_pink_07.png",
+        "summer": "src/spritesheets/world/summer/trees/tree_pink_07.png",
+        "autumn": "src/spritesheets/world/autumn/trees/tree_pink_07.png",
+        "winter": "src/spritesheets/world/winter/trees/tree_pink_07.png"
+      }
+    },
+    "tree_pink_08": {
+      "name": "tree_pink_08",
+      "originalName": "tree_pink_08",
+      "category": "trees",
+      "family": "tree_pink",
+      "group": "trees",
+      "description": "variations d'arbres roses, penser à appliquer de la collision",
+      "width": 48,
+      "height": 48,
+      "tileW": 3,
+      "tileH": 3,
+      "tags": [
+        "blocks_movement",
+        "tree"
+      ],
+      "collision": {
+        "blocksMovement": true,
+        "walkableOverride": false
+      },
+      "spawn": {
+        "surfaces": [
+          "grass"
+        ],
+        "avoid": [
+          "road",
+          "water",
+          "sand"
+        ],
+        "near": [
+          "grass",
+          "tree"
+        ],
+        "frequency": "common",
+        "placement": "small_group"
+      },
+      "render": {
+        "layer": "decor",
+        "priority": 0
+      },
+      "v1": {
+        "enabled": true,
+        "excludedByRule": false
+      },
+      "sourceRect": {
+        "x": 624,
+        "y": 720,
+        "width": 48,
+        "height": 48
+      },
+      "paths": {
+        "spring": "src/spritesheets/world/spring/trees/tree_pink_08.png",
+        "summer": "src/spritesheets/world/summer/trees/tree_pink_08.png",
+        "autumn": "src/spritesheets/world/autumn/trees/tree_pink_08.png",
+        "winter": "src/spritesheets/world/winter/trees/tree_pink_08.png"
+      }
+    },
+    "tree_green_05": {
+      "name": "tree_green_05",
+      "originalName": "tree_green_05",
+      "category": "trees",
+      "family": "tree_green",
+      "group": "trees",
+      "description": "variations d'arbres verts, penser à appliquer de la collision",
+      "width": 48,
+      "height": 48,
+      "tileW": 3,
+      "tileH": 3,
+      "tags": [
+        "blocks_movement",
+        "tree"
+      ],
+      "collision": {
+        "blocksMovement": true,
+        "walkableOverride": false
+      },
+      "spawn": {
+        "surfaces": [
+          "grass"
+        ],
+        "avoid": [
+          "road",
+          "water",
+          "sand"
+        ],
+        "near": [
+          "grass",
+          "tree"
+        ],
+        "frequency": "common",
+        "placement": "small_group"
+      },
+      "render": {
+        "layer": "decor",
+        "priority": 0
+      },
+      "v1": {
+        "enabled": true,
+        "excludedByRule": false
+      },
+      "sourceRect": {
+        "x": 720,
+        "y": 720,
+        "width": 48,
+        "height": 48
+      },
+      "paths": {
+        "spring": "src/spritesheets/world/spring/trees/tree_green_05.png",
+        "summer": "src/spritesheets/world/summer/trees/tree_green_05.png",
+        "autumn": "src/spritesheets/world/autumn/trees/tree_green_05.png",
+        "winter": "src/spritesheets/world/winter/trees/tree_green_05.png"
+      }
+    },
+    "tree_green_06": {
+      "name": "tree_green_06",
+      "originalName": "tree_green_06",
+      "category": "trees",
+      "family": "tree_green",
+      "group": "trees",
+      "description": "variations d'arbres verts, penser à appliquer de la collision",
+      "width": 48,
+      "height": 48,
+      "tileW": 3,
+      "tileH": 3,
+      "tags": [
+        "blocks_movement",
+        "tree"
+      ],
+      "collision": {
+        "blocksMovement": true,
+        "walkableOverride": false
+      },
+      "spawn": {
+        "surfaces": [
+          "grass"
+        ],
+        "avoid": [
+          "road",
+          "water",
+          "sand"
+        ],
+        "near": [
+          "grass",
+          "tree"
+        ],
+        "frequency": "common",
+        "placement": "small_group"
+      },
+      "render": {
+        "layer": "decor",
+        "priority": 0
+      },
+      "v1": {
+        "enabled": true,
+        "excludedByRule": false
+      },
+      "sourceRect": {
+        "x": 768,
+        "y": 720,
+        "width": 48,
+        "height": 48
+      },
+      "paths": {
+        "spring": "src/spritesheets/world/spring/trees/tree_green_06.png",
+        "summer": "src/spritesheets/world/summer/trees/tree_green_06.png",
+        "autumn": "src/spritesheets/world/autumn/trees/tree_green_06.png",
+        "winter": "src/spritesheets/world/winter/trees/tree_green_06.png"
+      }
+    },
+    "tree_green_07": {
+      "name": "tree_green_07",
+      "originalName": "tree_green_07",
+      "category": "trees",
+      "family": "tree_green",
+      "group": "trees",
+      "description": "variations d'arbres verts, penser à appliquer de la collision",
+      "width": 48,
+      "height": 48,
+      "tileW": 3,
+      "tileH": 3,
+      "tags": [
+        "blocks_movement",
+        "tree"
+      ],
+      "collision": {
+        "blocksMovement": true,
+        "walkableOverride": false
+      },
+      "spawn": {
+        "surfaces": [
+          "grass"
+        ],
+        "avoid": [
+          "road",
+          "water",
+          "sand"
+        ],
+        "near": [
+          "grass",
+          "tree"
+        ],
+        "frequency": "common",
+        "placement": "small_group"
+      },
+      "render": {
+        "layer": "decor",
+        "priority": 0
+      },
+      "v1": {
+        "enabled": true,
+        "excludedByRule": false
+      },
+      "sourceRect": {
+        "x": 864,
+        "y": 720,
+        "width": 48,
+        "height": 48
+      },
+      "paths": {
+        "spring": "src/spritesheets/world/spring/trees/tree_green_07.png",
+        "summer": "src/spritesheets/world/summer/trees/tree_green_07.png",
+        "autumn": "src/spritesheets/world/autumn/trees/tree_green_07.png",
+        "winter": "src/spritesheets/world/winter/trees/tree_green_07.png"
+      }
+    },
+    "tree_green_08": {
+      "name": "tree_green_08",
+      "originalName": "tree_green_08",
+      "category": "trees",
+      "family": "tree_green",
+      "group": "trees",
+      "description": "variations d'arbres verts, penser à appliquer de la collision",
+      "width": 48,
+      "height": 48,
+      "tileW": 3,
+      "tileH": 3,
+      "tags": [
+        "blocks_movement",
+        "tree"
+      ],
+      "collision": {
+        "blocksMovement": true,
+        "walkableOverride": false
+      },
+      "spawn": {
+        "surfaces": [
+          "grass"
+        ],
+        "avoid": [
+          "road",
+          "water",
+          "sand"
+        ],
+        "near": [
+          "grass",
+          "tree"
+        ],
+        "frequency": "common",
+        "placement": "small_group"
+      },
+      "render": {
+        "layer": "decor",
+        "priority": 0
+      },
+      "v1": {
+        "enabled": true,
+        "excludedByRule": false
+      },
+      "sourceRect": {
+        "x": 912,
+        "y": 720,
+        "width": 48,
+        "height": 48
+      },
+      "paths": {
+        "spring": "src/spritesheets/world/spring/trees/tree_green_08.png",
+        "summer": "src/spritesheets/world/summer/trees/tree_green_08.png",
+        "autumn": "src/spritesheets/world/autumn/trees/tree_green_08.png",
+        "winter": "src/spritesheets/world/winter/trees/tree_green_08.png"
+      }
+    },
+    "tree_pink_09": {
+      "name": "tree_pink_09",
+      "originalName": "tree_pink_09",
+      "category": "trees",
+      "family": "tree_pink_birch",
+      "group": "trees",
+      "description": "variations d'arbres roses, penser à appliquer de la collision. appartient à la catégorie des arbres \"bouleaux\"",
+      "width": 48,
+      "height": 48,
+      "tileW": 3,
+      "tileH": 3,
+      "tags": [
+        "birch",
+        "blocks_movement",
+        "tree"
+      ],
+      "collision": {
+        "blocksMovement": true,
+        "walkableOverride": false
+      },
+      "spawn": {
+        "surfaces": [
+          "grass"
+        ],
+        "avoid": [
+          "road",
+          "water",
+          "sand"
+        ],
+        "near": [
+          "grass",
+          "tree"
+        ],
+        "frequency": "common",
+        "placement": "small_group"
+      },
+      "render": {
+        "layer": "decor",
+        "priority": 0
+      },
+      "v1": {
+        "enabled": true,
+        "excludedByRule": false
+      },
+      "sourceRect": {
+        "x": 432,
+        "y": 784,
+        "width": 48,
+        "height": 48
+      },
+      "paths": {
+        "spring": "src/spritesheets/world/spring/trees/tree_pink_09.png",
+        "summer": "src/spritesheets/world/summer/trees/tree_pink_09.png",
+        "autumn": "src/spritesheets/world/autumn/trees/tree_pink_09.png",
+        "winter": "src/spritesheets/world/winter/trees/tree_pink_09.png"
+      }
+    },
+    "tree_pink_10": {
+      "name": "tree_pink_10",
+      "originalName": "tree_pink_10",
+      "category": "trees",
+      "family": "tree_pink_birch",
+      "group": "trees",
+      "description": "variations d'arbres roses, penser à appliquer de la collision. appartient à la catégorie des arbres \"bouleaux\"",
+      "width": 48,
+      "height": 48,
+      "tileW": 3,
+      "tileH": 3,
+      "tags": [
+        "birch",
+        "blocks_movement",
+        "tree"
+      ],
+      "collision": {
+        "blocksMovement": true,
+        "walkableOverride": false
+      },
+      "spawn": {
+        "surfaces": [
+          "grass"
+        ],
+        "avoid": [
+          "road",
+          "water",
+          "sand"
+        ],
+        "near": [
+          "grass",
+          "tree"
+        ],
+        "frequency": "common",
+        "placement": "small_group"
+      },
+      "render": {
+        "layer": "decor",
+        "priority": 0
+      },
+      "v1": {
+        "enabled": true,
+        "excludedByRule": false
+      },
+      "sourceRect": {
+        "x": 480,
+        "y": 784,
+        "width": 48,
+        "height": 48
+      },
+      "paths": {
+        "spring": "src/spritesheets/world/spring/trees/tree_pink_10.png",
+        "summer": "src/spritesheets/world/summer/trees/tree_pink_10.png",
+        "autumn": "src/spritesheets/world/autumn/trees/tree_pink_10.png",
+        "winter": "src/spritesheets/world/winter/trees/tree_pink_10.png"
+      }
+    },
+    "tree_pink_11": {
+      "name": "tree_pink_11",
+      "originalName": "tree_pink_11",
+      "category": "trees",
+      "family": "tree_pink_birch",
+      "group": "trees",
+      "description": "variations d'arbres roses, penser à appliquer de la collision. appartient à la catégorie des arbres \"bouleaux\"",
+      "width": 48,
+      "height": 48,
+      "tileW": 3,
+      "tileH": 3,
+      "tags": [
+        "birch",
+        "blocks_movement",
+        "tree"
+      ],
+      "collision": {
+        "blocksMovement": true,
+        "walkableOverride": false
+      },
+      "spawn": {
+        "surfaces": [
+          "grass"
+        ],
+        "avoid": [
+          "road",
+          "water",
+          "sand"
+        ],
+        "near": [
+          "grass",
+          "tree"
+        ],
+        "frequency": "common",
+        "placement": "small_group"
+      },
+      "render": {
+        "layer": "decor",
+        "priority": 0
+      },
+      "v1": {
+        "enabled": true,
+        "excludedByRule": false
+      },
+      "sourceRect": {
+        "x": 576,
+        "y": 784,
+        "width": 48,
+        "height": 48
+      },
+      "paths": {
+        "spring": "src/spritesheets/world/spring/trees/tree_pink_11.png",
+        "summer": "src/spritesheets/world/summer/trees/tree_pink_11.png",
+        "autumn": "src/spritesheets/world/autumn/trees/tree_pink_11.png",
+        "winter": "src/spritesheets/world/winter/trees/tree_pink_11.png"
+      }
+    },
+    "tree_pink_12": {
+      "name": "tree_pink_12",
+      "originalName": "tree_pink_12",
+      "category": "trees",
+      "family": "tree_pink_birch",
+      "group": "trees",
+      "description": "variations d'arbres roses, penser à appliquer de la collision. appartient à la catégorie des arbres \"bouleaux\"",
+      "width": 48,
+      "height": 48,
+      "tileW": 3,
+      "tileH": 3,
+      "tags": [
+        "birch",
+        "blocks_movement",
+        "tree"
+      ],
+      "collision": {
+        "blocksMovement": true,
+        "walkableOverride": false
+      },
+      "spawn": {
+        "surfaces": [
+          "grass"
+        ],
+        "avoid": [
+          "road",
+          "water",
+          "sand"
+        ],
+        "near": [
+          "grass",
+          "tree"
+        ],
+        "frequency": "common",
+        "placement": "small_group"
+      },
+      "render": {
+        "layer": "decor",
+        "priority": 0
+      },
+      "v1": {
+        "enabled": true,
+        "excludedByRule": false
+      },
+      "sourceRect": {
+        "x": 624,
+        "y": 784,
+        "width": 48,
+        "height": 48
+      },
+      "paths": {
+        "spring": "src/spritesheets/world/spring/trees/tree_pink_12.png",
+        "summer": "src/spritesheets/world/summer/trees/tree_pink_12.png",
+        "autumn": "src/spritesheets/world/autumn/trees/tree_pink_12.png",
+        "winter": "src/spritesheets/world/winter/trees/tree_pink_12.png"
+      }
+    },
+    "tree_green_09": {
+      "name": "tree_green_09",
+      "originalName": "tree_green_09",
+      "category": "trees",
+      "family": "tree_green_birch",
+      "group": "trees",
+      "description": "variations d'arbres verts, penser à appliquer de la collision. appartient à la catégorie des arbres \"bouleaux\"",
+      "width": 48,
+      "height": 48,
+      "tileW": 3,
+      "tileH": 3,
+      "tags": [
+        "birch",
+        "blocks_movement",
+        "tree"
+      ],
+      "collision": {
+        "blocksMovement": true,
+        "walkableOverride": false
+      },
+      "spawn": {
+        "surfaces": [
+          "grass"
+        ],
+        "avoid": [
+          "road",
+          "water",
+          "sand"
+        ],
+        "near": [
+          "grass",
+          "tree"
+        ],
+        "frequency": "common",
+        "placement": "small_group"
+      },
+      "render": {
+        "layer": "decor",
+        "priority": 0
+      },
+      "v1": {
+        "enabled": true,
+        "excludedByRule": false
+      },
+      "sourceRect": {
+        "x": 720,
+        "y": 784,
+        "width": 48,
+        "height": 48
+      },
+      "paths": {
+        "spring": "src/spritesheets/world/spring/trees/tree_green_09.png",
+        "summer": "src/spritesheets/world/summer/trees/tree_green_09.png",
+        "autumn": "src/spritesheets/world/autumn/trees/tree_green_09.png",
+        "winter": "src/spritesheets/world/winter/trees/tree_green_09.png"
+      }
+    },
+    "tree_green_10": {
+      "name": "tree_green_10",
+      "originalName": "tree_green_10",
+      "category": "trees",
+      "family": "tree_green_birch",
+      "group": "trees",
+      "description": "variations d'arbres verts, penser à appliquer de la collision. appartient à la catégorie des arbres \"bouleaux\"",
+      "width": 48,
+      "height": 48,
+      "tileW": 3,
+      "tileH": 3,
+      "tags": [
+        "birch",
+        "blocks_movement",
+        "tree"
+      ],
+      "collision": {
+        "blocksMovement": true,
+        "walkableOverride": false
+      },
+      "spawn": {
+        "surfaces": [
+          "grass"
+        ],
+        "avoid": [
+          "road",
+          "water",
+          "sand"
+        ],
+        "near": [
+          "grass",
+          "tree"
+        ],
+        "frequency": "common",
+        "placement": "small_group"
+      },
+      "render": {
+        "layer": "decor",
+        "priority": 0
+      },
+      "v1": {
+        "enabled": true,
+        "excludedByRule": false
+      },
+      "sourceRect": {
+        "x": 768,
+        "y": 784,
+        "width": 48,
+        "height": 48
+      },
+      "paths": {
+        "spring": "src/spritesheets/world/spring/trees/tree_green_10.png",
+        "summer": "src/spritesheets/world/summer/trees/tree_green_10.png",
+        "autumn": "src/spritesheets/world/autumn/trees/tree_green_10.png",
+        "winter": "src/spritesheets/world/winter/trees/tree_green_10.png"
+      }
+    },
+    "tree_green_11": {
+      "name": "tree_green_11",
+      "originalName": "tree_green_11",
+      "category": "trees",
+      "family": "tree_green_birch",
+      "group": "trees",
+      "description": "variations d'arbres verts, penser à appliquer de la collision. appartient à la catégorie des arbres \"bouleaux\"",
+      "width": 48,
+      "height": 48,
+      "tileW": 3,
+      "tileH": 3,
+      "tags": [
+        "birch",
+        "blocks_movement",
+        "tree"
+      ],
+      "collision": {
+        "blocksMovement": true,
+        "walkableOverride": false
+      },
+      "spawn": {
+        "surfaces": [
+          "grass"
+        ],
+        "avoid": [
+          "road",
+          "water",
+          "sand"
+        ],
+        "near": [
+          "grass",
+          "tree"
+        ],
+        "frequency": "common",
+        "placement": "small_group"
+      },
+      "render": {
+        "layer": "decor",
+        "priority": 0
+      },
+      "v1": {
+        "enabled": true,
+        "excludedByRule": false
+      },
+      "sourceRect": {
+        "x": 864,
+        "y": 784,
+        "width": 48,
+        "height": 48
+      },
+      "paths": {
+        "spring": "src/spritesheets/world/spring/trees/tree_green_11.png",
+        "summer": "src/spritesheets/world/summer/trees/tree_green_11.png",
+        "autumn": "src/spritesheets/world/autumn/trees/tree_green_11.png",
+        "winter": "src/spritesheets/world/winter/trees/tree_green_11.png"
+      }
+    },
+    "tree_green_12": {
+      "name": "tree_green_12",
+      "originalName": "tree_green_12",
+      "category": "trees",
+      "family": "tree_green_birch",
+      "group": "trees",
+      "description": "variations d'arbres verts, penser à appliquer de la collision. appartient à la catégorie des arbres \"bouleaux\"",
+      "width": 48,
+      "height": 48,
+      "tileW": 3,
+      "tileH": 3,
+      "tags": [
+        "birch",
+        "blocks_movement",
+        "tree"
+      ],
+      "collision": {
+        "blocksMovement": true,
+        "walkableOverride": false
+      },
+      "spawn": {
+        "surfaces": [
+          "grass"
+        ],
+        "avoid": [
+          "road",
+          "water",
+          "sand"
+        ],
+        "near": [
+          "grass",
+          "tree"
+        ],
+        "frequency": "common",
+        "placement": "small_group"
+      },
+      "render": {
+        "layer": "decor",
+        "priority": 0
+      },
+      "v1": {
+        "enabled": true,
+        "excludedByRule": false
+      },
+      "sourceRect": {
+        "x": 912,
+        "y": 784,
+        "width": 48,
+        "height": 48
+      },
+      "paths": {
+        "spring": "src/spritesheets/world/spring/trees/tree_green_12.png",
+        "summer": "src/spritesheets/world/summer/trees/tree_green_12.png",
+        "autumn": "src/spritesheets/world/autumn/trees/tree_green_12.png",
+        "winter": "src/spritesheets/world/winter/trees/tree_green_12.png"
+      }
+    },
+    "tall_tree_pink_05": {
+      "name": "tall_tree_pink_05",
+      "originalName": "tall_tree_pink_05",
+      "category": "trees",
+      "family": "tall_tree_pink_birch",
+      "group": "trees",
+      "description": "variation d'arbres roses, penser à appliquer de la collision dessus. appartient à la catégorie des arbres \"bouleaux\"",
+      "width": 48,
+      "height": 80,
+      "tileW": 3,
+      "tileH": 5,
+      "tags": [
+        "birch",
+        "blocks_movement",
+        "tall_tree",
+        "tree"
+      ],
+      "collision": {
+        "blocksMovement": true,
+        "walkableOverride": false
+      },
+      "spawn": {
+        "surfaces": [
+          "grass"
+        ],
+        "avoid": [
+          "road",
+          "water",
+          "sand"
+        ],
+        "near": [
+          "grass",
+          "tree"
+        ],
+        "frequency": "uncommon",
+        "placement": "small_group"
+      },
+      "render": {
+        "layer": "decor",
+        "priority": 0
+      },
+      "v1": {
+        "enabled": true,
+        "excludedByRule": false
+      },
+      "sourceRect": {
+        "x": 976,
+        "y": 800,
+        "width": 48,
+        "height": 80
+      },
+      "paths": {
+        "spring": "src/spritesheets/world/spring/trees/tall_tree_pink_05.png",
+        "summer": "src/spritesheets/world/summer/trees/tall_tree_pink_05.png",
+        "autumn": "src/spritesheets/world/autumn/trees/tall_tree_pink_05.png",
+        "winter": "src/spritesheets/world/winter/trees/tall_tree_pink_05.png"
+      }
+    },
+    "tall_tree_pink_06": {
+      "name": "tall_tree_pink_06",
+      "originalName": "tall_tree_pink_06",
+      "category": "trees",
+      "family": "tall_tree_pink_birch",
+      "group": "trees",
+      "description": "variation d'arbres roses, penser à appliquer de la collision dessus. appartient à la catégorie des arbres \"bouleaux\"",
+      "width": 48,
+      "height": 80,
+      "tileW": 3,
+      "tileH": 5,
+      "tags": [
+        "birch",
+        "blocks_movement",
+        "tall_tree",
+        "tree"
+      ],
+      "collision": {
+        "blocksMovement": true,
+        "walkableOverride": false
+      },
+      "spawn": {
+        "surfaces": [
+          "grass"
+        ],
+        "avoid": [
+          "road",
+          "water",
+          "sand"
+        ],
+        "near": [
+          "grass",
+          "tree"
+        ],
+        "frequency": "uncommon",
+        "placement": "small_group"
+      },
+      "render": {
+        "layer": "decor",
+        "priority": 0
+      },
+      "v1": {
+        "enabled": true,
+        "excludedByRule": false
+      },
+      "sourceRect": {
+        "x": 1040,
+        "y": 800,
+        "width": 48,
+        "height": 80
+      },
+      "paths": {
+        "spring": "src/spritesheets/world/spring/trees/tall_tree_pink_06.png",
+        "summer": "src/spritesheets/world/summer/trees/tall_tree_pink_06.png",
+        "autumn": "src/spritesheets/world/autumn/trees/tall_tree_pink_06.png",
+        "winter": "src/spritesheets/world/winter/trees/tall_tree_pink_06.png"
+      }
+    },
+    "tall_tree_green_05": {
+      "name": "tall_tree_green_05",
+      "originalName": "tall_tree_green_05",
+      "category": "trees",
+      "family": "tall_tree_green_birch",
+      "group": "trees",
+      "description": "variation d'arbres verts, penser à appliquer de la collision dessus. appartient à la catégorie des arbres \"bouleaux\"",
+      "width": 48,
+      "height": 80,
+      "tileW": 3,
+      "tileH": 5,
+      "tags": [
+        "birch",
+        "blocks_movement",
+        "tall_tree",
+        "tree"
+      ],
+      "collision": {
+        "blocksMovement": true,
+        "walkableOverride": false
+      },
+      "spawn": {
+        "surfaces": [
+          "grass"
+        ],
+        "avoid": [
+          "road",
+          "water",
+          "sand"
+        ],
+        "near": [
+          "grass",
+          "tree"
+        ],
+        "frequency": "uncommon",
+        "placement": "small_group"
+      },
+      "render": {
+        "layer": "decor",
+        "priority": 0
+      },
+      "v1": {
+        "enabled": true,
+        "excludedByRule": false
+      },
+      "sourceRect": {
+        "x": 1104,
+        "y": 800,
+        "width": 48,
+        "height": 80
+      },
+      "paths": {
+        "spring": "src/spritesheets/world/spring/trees/tall_tree_green_05.png",
+        "summer": "src/spritesheets/world/summer/trees/tall_tree_green_05.png",
+        "autumn": "src/spritesheets/world/autumn/trees/tall_tree_green_05.png",
+        "winter": "src/spritesheets/world/winter/trees/tall_tree_green_05.png"
+      }
+    },
+    "tall_tree_green_06": {
+      "name": "tall_tree_green_06",
+      "originalName": "tall_tree_green_06",
+      "category": "trees",
+      "family": "tall_tree_green_birch",
+      "group": "trees",
+      "description": "variation d'arbres verts, penser à appliquer de la collision dessus. appartient à la catégorie des arbres \"bouleaux\"",
+      "width": 48,
+      "height": 80,
+      "tileW": 3,
+      "tileH": 5,
+      "tags": [
+        "birch",
+        "blocks_movement",
+        "tall_tree",
+        "tree"
+      ],
+      "collision": {
+        "blocksMovement": true,
+        "walkableOverride": false
+      },
+      "spawn": {
+        "surfaces": [
+          "grass"
+        ],
+        "avoid": [
+          "road",
+          "water",
+          "sand"
+        ],
+        "near": [
+          "grass",
+          "tree"
+        ],
+        "frequency": "uncommon",
+        "placement": "small_group"
+      },
+      "render": {
+        "layer": "decor",
+        "priority": 0
+      },
+      "v1": {
+        "enabled": true,
+        "excludedByRule": false
+      },
+      "sourceRect": {
+        "x": 1168,
+        "y": 800,
+        "width": 48,
+        "height": 80
+      },
+      "paths": {
+        "spring": "src/spritesheets/world/spring/trees/tall_tree_green_06.png",
+        "summer": "src/spritesheets/world/summer/trees/tall_tree_green_06.png",
+        "autumn": "src/spritesheets/world/autumn/trees/tall_tree_green_06.png",
+        "winter": "src/spritesheets/world/winter/trees/tall_tree_green_06.png"
+      }
+    },
+    "tall_tree_pink_07": {
+      "name": "tall_tree_pink_07",
+      "originalName": "tall_tree_pink_07",
+      "category": "trees",
+      "family": "tall_tree_pink_birch",
+      "group": "trees",
+      "description": "variation d'arbres roses, penser à appliquer de la collision dessus. appartient à la catégorie des arbres \"bouleaux\"",
+      "width": 48,
+      "height": 64,
+      "tileW": 3,
+      "tileH": 4,
+      "tags": [
+        "birch",
+        "blocks_movement",
+        "tall_tree",
+        "tree"
+      ],
+      "collision": {
+        "blocksMovement": true,
+        "walkableOverride": false
+      },
+      "spawn": {
+        "surfaces": [
+          "grass"
+        ],
+        "avoid": [
+          "road",
+          "water",
+          "sand"
+        ],
+        "near": [
+          "grass",
+          "tree"
+        ],
+        "frequency": "uncommon",
+        "placement": "small_group"
+      },
+      "render": {
+        "layer": "decor",
+        "priority": 0
+      },
+      "v1": {
+        "enabled": true,
+        "excludedByRule": false
+      },
+      "sourceRect": {
+        "x": 384,
+        "y": 832,
+        "width": 48,
+        "height": 64
+      },
+      "paths": {
+        "spring": "src/spritesheets/world/spring/trees/tall_tree_pink_07.png",
+        "summer": "src/spritesheets/world/summer/trees/tall_tree_pink_07.png",
+        "autumn": "src/spritesheets/world/autumn/trees/tall_tree_pink_07.png",
+        "winter": "src/spritesheets/world/winter/trees/tall_tree_pink_07.png"
+      }
+    },
+    "tall_tree_pink_08": {
+      "name": "tall_tree_pink_08",
+      "originalName": "tall_tree_pink_08",
+      "category": "trees",
+      "family": "tall_tree_pink_birch",
+      "group": "trees",
+      "description": "variation d'arbres roses, penser à appliquer de la collision dessus. appartient à la catégorie des arbres \"bouleaux\"",
+      "width": 48,
+      "height": 64,
+      "tileW": 3,
+      "tileH": 4,
+      "tags": [
+        "birch",
+        "blocks_movement",
+        "tall_tree",
+        "tree"
+      ],
+      "collision": {
+        "blocksMovement": true,
+        "walkableOverride": false
+      },
+      "spawn": {
+        "surfaces": [
+          "grass"
+        ],
+        "avoid": [
+          "road",
+          "water",
+          "sand"
+        ],
+        "near": [
+          "grass",
+          "tree"
+        ],
+        "frequency": "uncommon",
+        "placement": "small_group"
+      },
+      "render": {
+        "layer": "decor",
+        "priority": 0
+      },
+      "v1": {
+        "enabled": true,
+        "excludedByRule": false
+      },
+      "sourceRect": {
+        "x": 528,
+        "y": 832,
+        "width": 48,
+        "height": 64
+      },
+      "paths": {
+        "spring": "src/spritesheets/world/spring/trees/tall_tree_pink_08.png",
+        "summer": "src/spritesheets/world/summer/trees/tall_tree_pink_08.png",
+        "autumn": "src/spritesheets/world/autumn/trees/tall_tree_pink_08.png",
+        "winter": "src/spritesheets/world/winter/trees/tall_tree_pink_08.png"
+      }
+    },
+    "tall_tree_green_07": {
+      "name": "tall_tree_green_07",
+      "originalName": "tall_tree_green_07",
+      "category": "trees",
+      "family": "tall_tree_green_birch",
+      "group": "trees",
+      "description": "variation d'arbres verts, penser à appliquer de la collision dessus. appartient à la catégorie des arbres \"bouleaux\"",
+      "width": 48,
+      "height": 64,
+      "tileW": 3,
+      "tileH": 4,
+      "tags": [
+        "birch",
+        "blocks_movement",
+        "tall_tree",
+        "tree"
+      ],
+      "collision": {
+        "blocksMovement": true,
+        "walkableOverride": false
+      },
+      "spawn": {
+        "surfaces": [
+          "grass"
+        ],
+        "avoid": [
+          "road",
+          "water",
+          "sand"
+        ],
+        "near": [
+          "grass",
+          "tree"
+        ],
+        "frequency": "uncommon",
+        "placement": "small_group"
+      },
+      "render": {
+        "layer": "decor",
+        "priority": 0
+      },
+      "v1": {
+        "enabled": true,
+        "excludedByRule": false
+      },
+      "sourceRect": {
+        "x": 672,
+        "y": 832,
+        "width": 48,
+        "height": 64
+      },
+      "paths": {
+        "spring": "src/spritesheets/world/spring/trees/tall_tree_green_07.png",
+        "summer": "src/spritesheets/world/summer/trees/tall_tree_green_07.png",
+        "autumn": "src/spritesheets/world/autumn/trees/tall_tree_green_07.png",
+        "winter": "src/spritesheets/world/winter/trees/tall_tree_green_07.png"
+      }
+    },
+    "tall_tree_green_08": {
+      "name": "tall_tree_green_08",
+      "originalName": "tall_tree_green_08",
+      "category": "trees",
+      "family": "tall_tree_green_birch",
+      "group": "trees",
+      "description": "variation d'arbres verts, penser à appliquer de la collision dessus. appartient à la catégorie des arbres \"bouleaux\"",
+      "width": 48,
+      "height": 64,
+      "tileW": 3,
+      "tileH": 4,
+      "tags": [
+        "birch",
+        "blocks_movement",
+        "tall_tree",
+        "tree"
+      ],
+      "collision": {
+        "blocksMovement": true,
+        "walkableOverride": false
+      },
+      "spawn": {
+        "surfaces": [
+          "grass"
+        ],
+        "avoid": [
+          "road",
+          "water",
+          "sand"
+        ],
+        "near": [
+          "grass",
+          "tree"
+        ],
+        "frequency": "uncommon",
+        "placement": "small_group"
+      },
+      "render": {
+        "layer": "decor",
+        "priority": 0
+      },
+      "v1": {
+        "enabled": true,
+        "excludedByRule": false
+      },
+      "sourceRect": {
+        "x": 816,
+        "y": 832,
+        "width": 48,
+        "height": 64
+      },
+      "paths": {
+        "spring": "src/spritesheets/world/spring/trees/tall_tree_green_08.png",
+        "summer": "src/spritesheets/world/summer/trees/tall_tree_green_08.png",
+        "autumn": "src/spritesheets/world/autumn/trees/tall_tree_green_08.png",
+        "winter": "src/spritesheets/world/winter/trees/tall_tree_green_08.png"
+      }
+    },
+    "tree_pink_13": {
+      "name": "tree_pink_13",
+      "originalName": "tree_pink_13",
+      "category": "trees",
+      "family": "tree_pink_birch",
+      "group": "trees",
+      "description": "variations d'arbres roses, penser à appliquer de la collision. appartient à la catégorie des arbres \"bouleaux\"",
+      "width": 48,
+      "height": 48,
+      "tileW": 3,
+      "tileH": 3,
+      "tags": [
+        "birch",
+        "blocks_movement",
+        "tree"
+      ],
+      "collision": {
+        "blocksMovement": true,
+        "walkableOverride": false
+      },
+      "spawn": {
+        "surfaces": [
+          "grass"
+        ],
+        "avoid": [
+          "road",
+          "water",
+          "sand"
+        ],
+        "near": [
+          "grass",
+          "tree"
+        ],
+        "frequency": "common",
+        "placement": "small_group"
+      },
+      "render": {
+        "layer": "decor",
+        "priority": 0
+      },
+      "v1": {
+        "enabled": true,
+        "excludedByRule": false
+      },
+      "sourceRect": {
+        "x": 432,
+        "y": 848,
+        "width": 48,
+        "height": 48
+      },
+      "paths": {
+        "spring": "src/spritesheets/world/spring/trees/tree_pink_13.png",
+        "summer": "src/spritesheets/world/summer/trees/tree_pink_13.png",
+        "autumn": "src/spritesheets/world/autumn/trees/tree_pink_13.png",
+        "winter": "src/spritesheets/world/winter/trees/tree_pink_13.png"
+      }
+    },
+    "tree_pink_14": {
+      "name": "tree_pink_14",
+      "originalName": "tree_pink_14",
+      "category": "trees",
+      "family": "tree_pink_birch",
+      "group": "trees",
+      "description": "variations d'arbres roses, penser à appliquer de la collision. appartient à la catégorie des arbres \"bouleaux\"",
+      "width": 48,
+      "height": 48,
+      "tileW": 3,
+      "tileH": 3,
+      "tags": [
+        "birch",
+        "blocks_movement",
+        "tree"
+      ],
+      "collision": {
+        "blocksMovement": true,
+        "walkableOverride": false
+      },
+      "spawn": {
+        "surfaces": [
+          "grass"
+        ],
+        "avoid": [
+          "road",
+          "water",
+          "sand"
+        ],
+        "near": [
+          "grass",
+          "tree"
+        ],
+        "frequency": "common",
+        "placement": "small_group"
+      },
+      "render": {
+        "layer": "decor",
+        "priority": 0
+      },
+      "v1": {
+        "enabled": true,
+        "excludedByRule": false
+      },
+      "sourceRect": {
+        "x": 480,
+        "y": 848,
+        "width": 48,
+        "height": 48
+      },
+      "paths": {
+        "spring": "src/spritesheets/world/spring/trees/tree_pink_14.png",
+        "summer": "src/spritesheets/world/summer/trees/tree_pink_14.png",
+        "autumn": "src/spritesheets/world/autumn/trees/tree_pink_14.png",
+        "winter": "src/spritesheets/world/winter/trees/tree_pink_14.png"
+      }
+    },
+    "tree_pink_15": {
+      "name": "tree_pink_15",
+      "originalName": "tree_pink_15",
+      "category": "trees",
+      "family": "tree_pink_birch",
+      "group": "trees",
+      "description": "variations d'arbres roses, penser à appliquer de la collision. appartient à la catégorie des arbres \"bouleaux\"",
+      "width": 48,
+      "height": 48,
+      "tileW": 3,
+      "tileH": 3,
+      "tags": [
+        "birch",
+        "blocks_movement",
+        "tree"
+      ],
+      "collision": {
+        "blocksMovement": true,
+        "walkableOverride": false
+      },
+      "spawn": {
+        "surfaces": [
+          "grass"
+        ],
+        "avoid": [
+          "road",
+          "water",
+          "sand"
+        ],
+        "near": [
+          "grass",
+          "tree"
+        ],
+        "frequency": "common",
+        "placement": "small_group"
+      },
+      "render": {
+        "layer": "decor",
+        "priority": 0
+      },
+      "v1": {
+        "enabled": true,
+        "excludedByRule": false
+      },
+      "sourceRect": {
+        "x": 576,
+        "y": 848,
+        "width": 48,
+        "height": 48
+      },
+      "paths": {
+        "spring": "src/spritesheets/world/spring/trees/tree_pink_15.png",
+        "summer": "src/spritesheets/world/summer/trees/tree_pink_15.png",
+        "autumn": "src/spritesheets/world/autumn/trees/tree_pink_15.png",
+        "winter": "src/spritesheets/world/winter/trees/tree_pink_15.png"
+      }
+    },
+    "tree_pink_16": {
+      "name": "tree_pink_16",
+      "originalName": "tree_pink_16",
+      "category": "trees",
+      "family": "tree_pink_birch",
+      "group": "trees",
+      "description": "variations d'arbres roses, penser à appliquer de la collision. appartient à la catégorie des arbres \"bouleaux\"",
+      "width": 48,
+      "height": 48,
+      "tileW": 3,
+      "tileH": 3,
+      "tags": [
+        "birch",
+        "blocks_movement",
+        "tree"
+      ],
+      "collision": {
+        "blocksMovement": true,
+        "walkableOverride": false
+      },
+      "spawn": {
+        "surfaces": [
+          "grass"
+        ],
+        "avoid": [
+          "road",
+          "water",
+          "sand"
+        ],
+        "near": [
+          "grass",
+          "tree"
+        ],
+        "frequency": "common",
+        "placement": "small_group"
+      },
+      "render": {
+        "layer": "decor",
+        "priority": 0
+      },
+      "v1": {
+        "enabled": true,
+        "excludedByRule": false
+      },
+      "sourceRect": {
+        "x": 624,
+        "y": 848,
+        "width": 48,
+        "height": 48
+      },
+      "paths": {
+        "spring": "src/spritesheets/world/spring/trees/tree_pink_16.png",
+        "summer": "src/spritesheets/world/summer/trees/tree_pink_16.png",
+        "autumn": "src/spritesheets/world/autumn/trees/tree_pink_16.png",
+        "winter": "src/spritesheets/world/winter/trees/tree_pink_16.png"
+      }
+    },
+    "tree_green_13": {
+      "name": "tree_green_13",
+      "originalName": "tree_green_13",
+      "category": "trees",
+      "family": "tree_green_birch",
+      "group": "trees",
+      "description": "variations d'arbres verts, penser à appliquer de la collision. appartient à la catégorie des arbres \"bouleaux\"",
+      "width": 48,
+      "height": 48,
+      "tileW": 3,
+      "tileH": 3,
+      "tags": [
+        "birch",
+        "blocks_movement",
+        "tree"
+      ],
+      "collision": {
+        "blocksMovement": true,
+        "walkableOverride": false
+      },
+      "spawn": {
+        "surfaces": [
+          "grass"
+        ],
+        "avoid": [
+          "road",
+          "water",
+          "sand"
+        ],
+        "near": [
+          "grass",
+          "tree"
+        ],
+        "frequency": "common",
+        "placement": "small_group"
+      },
+      "render": {
+        "layer": "decor",
+        "priority": 0
+      },
+      "v1": {
+        "enabled": true,
+        "excludedByRule": false
+      },
+      "sourceRect": {
+        "x": 720,
+        "y": 848,
+        "width": 48,
+        "height": 48
+      },
+      "paths": {
+        "spring": "src/spritesheets/world/spring/trees/tree_green_13.png",
+        "summer": "src/spritesheets/world/summer/trees/tree_green_13.png",
+        "autumn": "src/spritesheets/world/autumn/trees/tree_green_13.png",
+        "winter": "src/spritesheets/world/winter/trees/tree_green_13.png"
+      }
+    },
+    "tree_green_14": {
+      "name": "tree_green_14",
+      "originalName": "tree_green_14",
+      "category": "trees",
+      "family": "tree_green_birch",
+      "group": "trees",
+      "description": "variations d'arbres verts, penser à appliquer de la collision. appartient à la catégorie des arbres \"bouleaux\"",
+      "width": 48,
+      "height": 48,
+      "tileW": 3,
+      "tileH": 3,
+      "tags": [
+        "birch",
+        "blocks_movement",
+        "tree"
+      ],
+      "collision": {
+        "blocksMovement": true,
+        "walkableOverride": false
+      },
+      "spawn": {
+        "surfaces": [
+          "grass"
+        ],
+        "avoid": [
+          "road",
+          "water",
+          "sand"
+        ],
+        "near": [
+          "grass",
+          "tree"
+        ],
+        "frequency": "common",
+        "placement": "small_group"
+      },
+      "render": {
+        "layer": "decor",
+        "priority": 0
+      },
+      "v1": {
+        "enabled": true,
+        "excludedByRule": false
+      },
+      "sourceRect": {
+        "x": 768,
+        "y": 848,
+        "width": 48,
+        "height": 48
+      },
+      "paths": {
+        "spring": "src/spritesheets/world/spring/trees/tree_green_14.png",
+        "summer": "src/spritesheets/world/summer/trees/tree_green_14.png",
+        "autumn": "src/spritesheets/world/autumn/trees/tree_green_14.png",
+        "winter": "src/spritesheets/world/winter/trees/tree_green_14.png"
+      }
+    },
+    "tree_green_15": {
+      "name": "tree_green_15",
+      "originalName": "tree_green_15",
+      "category": "trees",
+      "family": "tree_green_birch",
+      "group": "trees",
+      "description": "variations d'arbres verts, penser à appliquer de la collision. appartient à la catégorie des arbres \"bouleaux\"",
+      "width": 48,
+      "height": 48,
+      "tileW": 3,
+      "tileH": 3,
+      "tags": [
+        "birch",
+        "blocks_movement",
+        "tree"
+      ],
+      "collision": {
+        "blocksMovement": true,
+        "walkableOverride": false
+      },
+      "spawn": {
+        "surfaces": [
+          "grass"
+        ],
+        "avoid": [
+          "road",
+          "water",
+          "sand"
+        ],
+        "near": [
+          "grass",
+          "tree"
+        ],
+        "frequency": "common",
+        "placement": "small_group"
+      },
+      "render": {
+        "layer": "decor",
+        "priority": 0
+      },
+      "v1": {
+        "enabled": true,
+        "excludedByRule": false
+      },
+      "sourceRect": {
+        "x": 864,
+        "y": 848,
+        "width": 48,
+        "height": 48
+      },
+      "paths": {
+        "spring": "src/spritesheets/world/spring/trees/tree_green_15.png",
+        "summer": "src/spritesheets/world/summer/trees/tree_green_15.png",
+        "autumn": "src/spritesheets/world/autumn/trees/tree_green_15.png",
+        "winter": "src/spritesheets/world/winter/trees/tree_green_15.png"
+      }
+    },
+    "tree_green_16": {
+      "name": "tree_green_16",
+      "originalName": "tree_green_16",
+      "category": "trees",
+      "family": "tree_green_birch",
+      "group": "trees",
+      "description": "variations d'arbres verts, penser à appliquer de la collision. appartient à la catégorie des arbres \"bouleaux\"",
+      "width": 48,
+      "height": 48,
+      "tileW": 3,
+      "tileH": 3,
+      "tags": [
+        "birch",
+        "blocks_movement",
+        "tree"
+      ],
+      "collision": {
+        "blocksMovement": true,
+        "walkableOverride": false
+      },
+      "spawn": {
+        "surfaces": [
+          "grass"
+        ],
+        "avoid": [
+          "road",
+          "water",
+          "sand"
+        ],
+        "near": [
+          "grass",
+          "tree"
+        ],
+        "frequency": "common",
+        "placement": "small_group"
+      },
+      "render": {
+        "layer": "decor",
+        "priority": 0
+      },
+      "v1": {
+        "enabled": true,
+        "excludedByRule": false
+      },
+      "sourceRect": {
+        "x": 912,
+        "y": 848,
+        "width": 48,
+        "height": 48
+      },
+      "paths": {
+        "spring": "src/spritesheets/world/spring/trees/tree_green_16.png",
+        "summer": "src/spritesheets/world/summer/trees/tree_green_16.png",
+        "autumn": "src/spritesheets/world/autumn/trees/tree_green_16.png",
+        "winter": "src/spritesheets/world/winter/trees/tree_green_16.png"
+      }
+    },
+    "tree_pink_17": {
+      "name": "tree_pink_17",
+      "originalName": "tree_pink_17",
+      "category": "trees",
+      "family": "tree_pink",
+      "group": "trees",
+      "description": "variations d'arbres roses, penser à appliquer de la collision",
+      "width": 48,
+      "height": 48,
+      "tileW": 3,
+      "tileH": 3,
+      "tags": [
+        "blocks_movement",
+        "tree"
+      ],
+      "collision": {
+        "blocksMovement": true,
+        "walkableOverride": false
+      },
+      "spawn": {
+        "surfaces": [
+          "grass"
+        ],
+        "avoid": [
+          "road",
+          "water",
+          "sand"
+        ],
+        "near": [
+          "grass",
+          "tree"
+        ],
+        "frequency": "common",
+        "placement": "small_group"
+      },
+      "render": {
+        "layer": "decor",
+        "priority": 0
+      },
+      "v1": {
+        "enabled": true,
+        "excludedByRule": false
+      },
+      "sourceRect": {
+        "x": 432,
+        "y": 928,
+        "width": 48,
+        "height": 48
+      },
+      "paths": {
+        "spring": "src/spritesheets/world/spring/trees/tree_pink_17.png",
+        "summer": "src/spritesheets/world/summer/trees/tree_pink_17.png",
+        "autumn": "src/spritesheets/world/autumn/trees/tree_pink_17.png",
+        "winter": "src/spritesheets/world/winter/trees/tree_pink_17.png"
+      }
+    },
+    "tree_pink_18": {
+      "name": "tree_pink_18",
+      "originalName": "tree_pink_18",
+      "category": "trees",
+      "family": "tree_pink",
+      "group": "trees",
+      "description": "variations d'arbres roses, penser à appliquer de la collision",
+      "width": 48,
+      "height": 48,
+      "tileW": 3,
+      "tileH": 3,
+      "tags": [
+        "blocks_movement",
+        "tree"
+      ],
+      "collision": {
+        "blocksMovement": true,
+        "walkableOverride": false
+      },
+      "spawn": {
+        "surfaces": [
+          "grass"
+        ],
+        "avoid": [
+          "road",
+          "water",
+          "sand"
+        ],
+        "near": [
+          "grass",
+          "tree"
+        ],
+        "frequency": "common",
+        "placement": "small_group"
+      },
+      "render": {
+        "layer": "decor",
+        "priority": 0
+      },
+      "v1": {
+        "enabled": true,
+        "excludedByRule": false
+      },
+      "sourceRect": {
+        "x": 480,
+        "y": 928,
+        "width": 48,
+        "height": 48
+      },
+      "paths": {
+        "spring": "src/spritesheets/world/spring/trees/tree_pink_18.png",
+        "summer": "src/spritesheets/world/summer/trees/tree_pink_18.png",
+        "autumn": "src/spritesheets/world/autumn/trees/tree_pink_18.png",
+        "winter": "src/spritesheets/world/winter/trees/tree_pink_18.png"
+      }
+    },
+    "tree_pink_19": {
+      "name": "tree_pink_19",
+      "originalName": "tree_pink_19",
+      "category": "trees",
+      "family": "tree_pink",
+      "group": "trees",
+      "description": "variations d'arbres roses, penser à appliquer de la collision",
+      "width": 48,
+      "height": 48,
+      "tileW": 3,
+      "tileH": 3,
+      "tags": [
+        "blocks_movement",
+        "tree"
+      ],
+      "collision": {
+        "blocksMovement": true,
+        "walkableOverride": false
+      },
+      "spawn": {
+        "surfaces": [
+          "grass"
+        ],
+        "avoid": [
+          "road",
+          "water",
+          "sand"
+        ],
+        "near": [
+          "grass",
+          "tree"
+        ],
+        "frequency": "common",
+        "placement": "small_group"
+      },
+      "render": {
+        "layer": "decor",
+        "priority": 0
+      },
+      "v1": {
+        "enabled": true,
+        "excludedByRule": false
+      },
+      "sourceRect": {
+        "x": 576,
+        "y": 928,
+        "width": 48,
+        "height": 48
+      },
+      "paths": {
+        "spring": "src/spritesheets/world/spring/trees/tree_pink_19.png",
+        "summer": "src/spritesheets/world/summer/trees/tree_pink_19.png",
+        "autumn": "src/spritesheets/world/autumn/trees/tree_pink_19.png",
+        "winter": "src/spritesheets/world/winter/trees/tree_pink_19.png"
+      }
+    },
+    "tree_pink_20": {
+      "name": "tree_pink_20",
+      "originalName": "tree_pink_20",
+      "category": "trees",
+      "family": "tree_pink",
+      "group": "trees",
+      "description": "variations d'arbres roses, penser à appliquer de la collision",
+      "width": 48,
+      "height": 48,
+      "tileW": 3,
+      "tileH": 3,
+      "tags": [
+        "blocks_movement",
+        "tree"
+      ],
+      "collision": {
+        "blocksMovement": true,
+        "walkableOverride": false
+      },
+      "spawn": {
+        "surfaces": [
+          "grass"
+        ],
+        "avoid": [
+          "road",
+          "water",
+          "sand"
+        ],
+        "near": [
+          "grass",
+          "tree"
+        ],
+        "frequency": "common",
+        "placement": "small_group"
+      },
+      "render": {
+        "layer": "decor",
+        "priority": 0
+      },
+      "v1": {
+        "enabled": true,
+        "excludedByRule": false
+      },
+      "sourceRect": {
+        "x": 624,
+        "y": 928,
+        "width": 48,
+        "height": 48
+      },
+      "paths": {
+        "spring": "src/spritesheets/world/spring/trees/tree_pink_20.png",
+        "summer": "src/spritesheets/world/summer/trees/tree_pink_20.png",
+        "autumn": "src/spritesheets/world/autumn/trees/tree_pink_20.png",
+        "winter": "src/spritesheets/world/winter/trees/tree_pink_20.png"
+      }
+    },
+    "tree_green_17": {
+      "name": "tree_green_17",
+      "originalName": "tree_green_17",
+      "category": "trees",
+      "family": "tree_green",
+      "group": "trees",
+      "description": "variations d'arbres verts, penser à appliquer de la collision",
+      "width": 48,
+      "height": 48,
+      "tileW": 3,
+      "tileH": 3,
+      "tags": [
+        "blocks_movement",
+        "tree"
+      ],
+      "collision": {
+        "blocksMovement": true,
+        "walkableOverride": false
+      },
+      "spawn": {
+        "surfaces": [
+          "grass"
+        ],
+        "avoid": [
+          "road",
+          "water",
+          "sand"
+        ],
+        "near": [
+          "grass",
+          "tree"
+        ],
+        "frequency": "common",
+        "placement": "small_group"
+      },
+      "render": {
+        "layer": "decor",
+        "priority": 0
+      },
+      "v1": {
+        "enabled": true,
+        "excludedByRule": false
+      },
+      "sourceRect": {
+        "x": 720,
+        "y": 928,
+        "width": 48,
+        "height": 48
+      },
+      "paths": {
+        "spring": "src/spritesheets/world/spring/trees/tree_green_17.png",
+        "summer": "src/spritesheets/world/summer/trees/tree_green_17.png",
+        "autumn": "src/spritesheets/world/autumn/trees/tree_green_17.png",
+        "winter": "src/spritesheets/world/winter/trees/tree_green_17.png"
+      }
+    },
+    "tree_green_18": {
+      "name": "tree_green_18",
+      "originalName": "tree_green_18",
+      "category": "trees",
+      "family": "tree_green",
+      "group": "trees",
+      "description": "variations d'arbres verts, penser à appliquer de la collision",
+      "width": 48,
+      "height": 48,
+      "tileW": 3,
+      "tileH": 3,
+      "tags": [
+        "blocks_movement",
+        "tree"
+      ],
+      "collision": {
+        "blocksMovement": true,
+        "walkableOverride": false
+      },
+      "spawn": {
+        "surfaces": [
+          "grass"
+        ],
+        "avoid": [
+          "road",
+          "water",
+          "sand"
+        ],
+        "near": [
+          "grass",
+          "tree"
+        ],
+        "frequency": "common",
+        "placement": "small_group"
+      },
+      "render": {
+        "layer": "decor",
+        "priority": 0
+      },
+      "v1": {
+        "enabled": true,
+        "excludedByRule": false
+      },
+      "sourceRect": {
+        "x": 768,
+        "y": 928,
+        "width": 48,
+        "height": 48
+      },
+      "paths": {
+        "spring": "src/spritesheets/world/spring/trees/tree_green_18.png",
+        "summer": "src/spritesheets/world/summer/trees/tree_green_18.png",
+        "autumn": "src/spritesheets/world/autumn/trees/tree_green_18.png",
+        "winter": "src/spritesheets/world/winter/trees/tree_green_18.png"
+      }
+    },
+    "tree_green_19": {
+      "name": "tree_green_19",
+      "originalName": "tree_green_19",
+      "category": "trees",
+      "family": "tree_green",
+      "group": "trees",
+      "description": "variations d'arbres verts, penser à appliquer de la collision",
+      "width": 48,
+      "height": 48,
+      "tileW": 3,
+      "tileH": 3,
+      "tags": [
+        "blocks_movement",
+        "tree"
+      ],
+      "collision": {
+        "blocksMovement": true,
+        "walkableOverride": false
+      },
+      "spawn": {
+        "surfaces": [
+          "grass"
+        ],
+        "avoid": [
+          "road",
+          "water",
+          "sand"
+        ],
+        "near": [
+          "grass",
+          "tree"
+        ],
+        "frequency": "common",
+        "placement": "small_group"
+      },
+      "render": {
+        "layer": "decor",
+        "priority": 0
+      },
+      "v1": {
+        "enabled": true,
+        "excludedByRule": false
+      },
+      "sourceRect": {
+        "x": 864,
+        "y": 928,
+        "width": 48,
+        "height": 48
+      },
+      "paths": {
+        "spring": "src/spritesheets/world/spring/trees/tree_green_19.png",
+        "summer": "src/spritesheets/world/summer/trees/tree_green_19.png",
+        "autumn": "src/spritesheets/world/autumn/trees/tree_green_19.png",
+        "winter": "src/spritesheets/world/winter/trees/tree_green_19.png"
+      }
+    },
+    "tree_green_20": {
+      "name": "tree_green_20",
+      "originalName": "tree_green_20",
+      "category": "trees",
+      "family": "tree_green",
+      "group": "trees",
+      "description": "variations d'arbres verts, penser à appliquer de la collision",
+      "width": 48,
+      "height": 48,
+      "tileW": 3,
+      "tileH": 3,
+      "tags": [
+        "blocks_movement",
+        "tree"
+      ],
+      "collision": {
+        "blocksMovement": true,
+        "walkableOverride": false
+      },
+      "spawn": {
+        "surfaces": [
+          "grass"
+        ],
+        "avoid": [
+          "road",
+          "water",
+          "sand"
+        ],
+        "near": [
+          "grass",
+          "tree"
+        ],
+        "frequency": "common",
+        "placement": "small_group"
+      },
+      "render": {
+        "layer": "decor",
+        "priority": 0
+      },
+      "v1": {
+        "enabled": true,
+        "excludedByRule": false
+      },
+      "sourceRect": {
+        "x": 912,
+        "y": 928,
+        "width": 48,
+        "height": 48
+      },
+      "paths": {
+        "spring": "src/spritesheets/world/spring/trees/tree_green_20.png",
+        "summer": "src/spritesheets/world/summer/trees/tree_green_20.png",
+        "autumn": "src/spritesheets/world/autumn/trees/tree_green_20.png",
+        "winter": "src/spritesheets/world/winter/trees/tree_green_20.png"
+      }
+    },
+    "tall_tree_pink_09": {
+      "name": "tall_tree_pink_09",
+      "originalName": "tall_tree_pink_09",
+      "category": "trees",
+      "family": "tall_tree_pink",
+      "group": "trees",
+      "description": "variation d'arbres roses, penser à appliquer de la collision dessus",
+      "width": 48,
+      "height": 80,
+      "tileW": 3,
+      "tileH": 5,
+      "tags": [
+        "blocks_movement",
+        "tall_tree",
+        "tree"
+      ],
+      "collision": {
+        "blocksMovement": true,
+        "walkableOverride": false
+      },
+      "spawn": {
+        "surfaces": [
+          "grass"
+        ],
+        "avoid": [
+          "road",
+          "water",
+          "sand"
+        ],
+        "near": [
+          "grass",
+          "tree"
+        ],
+        "frequency": "uncommon",
+        "placement": "small_group"
+      },
+      "render": {
+        "layer": "decor",
+        "priority": 0
+      },
+      "v1": {
+        "enabled": true,
+        "excludedByRule": false
+      },
+      "sourceRect": {
+        "x": 976,
+        "y": 944,
+        "width": 48,
+        "height": 80
+      },
+      "paths": {
+        "spring": "src/spritesheets/world/spring/trees/tall_tree_pink_09.png",
+        "summer": "src/spritesheets/world/summer/trees/tall_tree_pink_09.png",
+        "autumn": "src/spritesheets/world/autumn/trees/tall_tree_pink_09.png",
+        "winter": "src/spritesheets/world/winter/trees/tall_tree_pink_09.png"
+      }
+    },
+    "tall_tree_pink_10": {
+      "name": "tall_tree_pink_10",
+      "originalName": "tall_tree_pink_10",
+      "category": "trees",
+      "family": "tall_tree_pink",
+      "group": "trees",
+      "description": "variation d'arbres roses, penser à appliquer de la collision dessus",
+      "width": 48,
+      "height": 80,
+      "tileW": 3,
+      "tileH": 5,
+      "tags": [
+        "blocks_movement",
+        "tall_tree",
+        "tree"
+      ],
+      "collision": {
+        "blocksMovement": true,
+        "walkableOverride": false
+      },
+      "spawn": {
+        "surfaces": [
+          "grass"
+        ],
+        "avoid": [
+          "road",
+          "water",
+          "sand"
+        ],
+        "near": [
+          "grass",
+          "tree"
+        ],
+        "frequency": "uncommon",
+        "placement": "small_group"
+      },
+      "render": {
+        "layer": "decor",
+        "priority": 0
+      },
+      "v1": {
+        "enabled": true,
+        "excludedByRule": false
+      },
+      "sourceRect": {
+        "x": 1040,
+        "y": 944,
+        "width": 48,
+        "height": 80
+      },
+      "paths": {
+        "spring": "src/spritesheets/world/spring/trees/tall_tree_pink_10.png",
+        "summer": "src/spritesheets/world/summer/trees/tall_tree_pink_10.png",
+        "autumn": "src/spritesheets/world/autumn/trees/tall_tree_pink_10.png",
+        "winter": "src/spritesheets/world/winter/trees/tall_tree_pink_10.png"
+      }
+    },
+    "tall_tree_green_09": {
+      "name": "tall_tree_green_09",
+      "originalName": "tall_tree_green_09",
+      "category": "trees",
+      "family": "tall_tree_green",
+      "group": "trees",
+      "description": "variation d'arbres verts, penser à appliquer de la collision dessus",
+      "width": 48,
+      "height": 80,
+      "tileW": 3,
+      "tileH": 5,
+      "tags": [
+        "blocks_movement",
+        "tall_tree",
+        "tree"
+      ],
+      "collision": {
+        "blocksMovement": true,
+        "walkableOverride": false
+      },
+      "spawn": {
+        "surfaces": [
+          "grass"
+        ],
+        "avoid": [
+          "road",
+          "water",
+          "sand"
+        ],
+        "near": [
+          "grass",
+          "tree"
+        ],
+        "frequency": "uncommon",
+        "placement": "small_group"
+      },
+      "render": {
+        "layer": "decor",
+        "priority": 0
+      },
+      "v1": {
+        "enabled": true,
+        "excludedByRule": false
+      },
+      "sourceRect": {
+        "x": 1104,
+        "y": 944,
+        "width": 48,
+        "height": 80
+      },
+      "paths": {
+        "spring": "src/spritesheets/world/spring/trees/tall_tree_green_09.png",
+        "summer": "src/spritesheets/world/summer/trees/tall_tree_green_09.png",
+        "autumn": "src/spritesheets/world/autumn/trees/tall_tree_green_09.png",
+        "winter": "src/spritesheets/world/winter/trees/tall_tree_green_09.png"
+      }
+    },
+    "tall_tree_green_10": {
+      "name": "tall_tree_green_10",
+      "originalName": "tall_tree_green_10",
+      "category": "trees",
+      "family": "tall_tree_green",
+      "group": "trees",
+      "description": "variation d'arbres verts, penser à appliquer de la collision dessus",
+      "width": 48,
+      "height": 80,
+      "tileW": 3,
+      "tileH": 5,
+      "tags": [
+        "blocks_movement",
+        "tall_tree",
+        "tree"
+      ],
+      "collision": {
+        "blocksMovement": true,
+        "walkableOverride": false
+      },
+      "spawn": {
+        "surfaces": [
+          "grass"
+        ],
+        "avoid": [
+          "road",
+          "water",
+          "sand"
+        ],
+        "near": [
+          "grass",
+          "tree"
+        ],
+        "frequency": "uncommon",
+        "placement": "small_group"
+      },
+      "render": {
+        "layer": "decor",
+        "priority": 0
+      },
+      "v1": {
+        "enabled": true,
+        "excludedByRule": false
+      },
+      "sourceRect": {
+        "x": 1168,
+        "y": 944,
+        "width": 48,
+        "height": 80
+      },
+      "paths": {
+        "spring": "src/spritesheets/world/spring/trees/tall_tree_green_10.png",
+        "summer": "src/spritesheets/world/summer/trees/tall_tree_green_10.png",
+        "autumn": "src/spritesheets/world/autumn/trees/tall_tree_green_10.png",
+        "winter": "src/spritesheets/world/winter/trees/tall_tree_green_10.png"
+      }
+    },
+    "tall_tree_pink_11": {
+      "name": "tall_tree_pink_11",
+      "originalName": "tall_tree_pink_11",
+      "category": "trees",
+      "family": "tall_tree_pink",
+      "group": "trees",
+      "description": "variation d'arbres roses, penser à appliquer de la collision dessus",
+      "width": 48,
+      "height": 64,
+      "tileW": 3,
+      "tileH": 4,
+      "tags": [
+        "blocks_movement",
+        "tall_tree",
+        "tree"
+      ],
+      "collision": {
+        "blocksMovement": true,
+        "walkableOverride": false
+      },
+      "spawn": {
+        "surfaces": [
+          "grass"
+        ],
+        "avoid": [
+          "road",
+          "water",
+          "sand"
+        ],
+        "near": [
+          "grass",
+          "tree"
+        ],
+        "frequency": "uncommon",
+        "placement": "small_group"
+      },
+      "render": {
+        "layer": "decor",
+        "priority": 0
+      },
+      "v1": {
+        "enabled": true,
+        "excludedByRule": false
+      },
+      "sourceRect": {
+        "x": 384,
+        "y": 976,
+        "width": 48,
+        "height": 64
+      },
+      "paths": {
+        "spring": "src/spritesheets/world/spring/trees/tall_tree_pink_11.png",
+        "summer": "src/spritesheets/world/summer/trees/tall_tree_pink_11.png",
+        "autumn": "src/spritesheets/world/autumn/trees/tall_tree_pink_11.png",
+        "winter": "src/spritesheets/world/winter/trees/tall_tree_pink_11.png"
+      }
+    },
+    "tall_tree_pink_12": {
+      "name": "tall_tree_pink_12",
+      "originalName": "tall_tree_pink_12",
+      "category": "trees",
+      "family": "tall_tree_pink",
+      "group": "trees",
+      "description": "variation d'arbres roses, penser à appliquer de la collision dessus",
+      "width": 48,
+      "height": 64,
+      "tileW": 3,
+      "tileH": 4,
+      "tags": [
+        "blocks_movement",
+        "tall_tree",
+        "tree"
+      ],
+      "collision": {
+        "blocksMovement": true,
+        "walkableOverride": false
+      },
+      "spawn": {
+        "surfaces": [
+          "grass"
+        ],
+        "avoid": [
+          "road",
+          "water",
+          "sand"
+        ],
+        "near": [
+          "grass",
+          "tree"
+        ],
+        "frequency": "uncommon",
+        "placement": "small_group"
+      },
+      "render": {
+        "layer": "decor",
+        "priority": 0
+      },
+      "v1": {
+        "enabled": true,
+        "excludedByRule": false
+      },
+      "sourceRect": {
+        "x": 528,
+        "y": 976,
+        "width": 48,
+        "height": 64
+      },
+      "paths": {
+        "spring": "src/spritesheets/world/spring/trees/tall_tree_pink_12.png",
+        "summer": "src/spritesheets/world/summer/trees/tall_tree_pink_12.png",
+        "autumn": "src/spritesheets/world/autumn/trees/tall_tree_pink_12.png",
+        "winter": "src/spritesheets/world/winter/trees/tall_tree_pink_12.png"
+      }
+    },
+    "tall_tree_green_11": {
+      "name": "tall_tree_green_11",
+      "originalName": "tall_tree_green_11",
+      "category": "trees",
+      "family": "tall_tree_green",
+      "group": "trees",
+      "description": "variation d'arbres verts, penser à appliquer de la collision dessus",
+      "width": 48,
+      "height": 64,
+      "tileW": 3,
+      "tileH": 4,
+      "tags": [
+        "blocks_movement",
+        "tall_tree",
+        "tree"
+      ],
+      "collision": {
+        "blocksMovement": true,
+        "walkableOverride": false
+      },
+      "spawn": {
+        "surfaces": [
+          "grass"
+        ],
+        "avoid": [
+          "road",
+          "water",
+          "sand"
+        ],
+        "near": [
+          "grass",
+          "tree"
+        ],
+        "frequency": "uncommon",
+        "placement": "small_group"
+      },
+      "render": {
+        "layer": "decor",
+        "priority": 0
+      },
+      "v1": {
+        "enabled": true,
+        "excludedByRule": false
+      },
+      "sourceRect": {
+        "x": 672,
+        "y": 976,
+        "width": 48,
+        "height": 64
+      },
+      "paths": {
+        "spring": "src/spritesheets/world/spring/trees/tall_tree_green_11.png",
+        "summer": "src/spritesheets/world/summer/trees/tall_tree_green_11.png",
+        "autumn": "src/spritesheets/world/autumn/trees/tall_tree_green_11.png",
+        "winter": "src/spritesheets/world/winter/trees/tall_tree_green_11.png"
+      }
+    },
+    "tall_tree_green_12": {
+      "name": "tall_tree_green_12",
+      "originalName": "tall_tree_green_12",
+      "category": "trees",
+      "family": "tall_tree_green",
+      "group": "trees",
+      "description": "variation d'arbres verts, penser à appliquer de la collision dessus",
+      "width": 48,
+      "height": 64,
+      "tileW": 3,
+      "tileH": 4,
+      "tags": [
+        "blocks_movement",
+        "tall_tree",
+        "tree"
+      ],
+      "collision": {
+        "blocksMovement": true,
+        "walkableOverride": false
+      },
+      "spawn": {
+        "surfaces": [
+          "grass"
+        ],
+        "avoid": [
+          "road",
+          "water",
+          "sand"
+        ],
+        "near": [
+          "grass",
+          "tree"
+        ],
+        "frequency": "uncommon",
+        "placement": "small_group"
+      },
+      "render": {
+        "layer": "decor",
+        "priority": 0
+      },
+      "v1": {
+        "enabled": true,
+        "excludedByRule": false
+      },
+      "sourceRect": {
+        "x": 816,
+        "y": 976,
+        "width": 48,
+        "height": 64
+      },
+      "paths": {
+        "spring": "src/spritesheets/world/spring/trees/tall_tree_green_12.png",
+        "summer": "src/spritesheets/world/summer/trees/tall_tree_green_12.png",
+        "autumn": "src/spritesheets/world/autumn/trees/tall_tree_green_12.png",
+        "winter": "src/spritesheets/world/winter/trees/tall_tree_green_12.png"
+      }
+    },
+    "tree_pink_21": {
+      "name": "tree_pink_21",
+      "originalName": "tree_pink_21",
+      "category": "trees",
+      "family": "tree_pink",
+      "group": "trees",
+      "description": "variations d'arbres roses, penser à appliquer de la collision",
+      "width": 48,
+      "height": 48,
+      "tileW": 3,
+      "tileH": 3,
+      "tags": [
+        "blocks_movement",
+        "tree"
+      ],
+      "collision": {
+        "blocksMovement": true,
+        "walkableOverride": false
+      },
+      "spawn": {
+        "surfaces": [
+          "grass"
+        ],
+        "avoid": [
+          "road",
+          "water",
+          "sand"
+        ],
+        "near": [
+          "grass",
+          "tree"
+        ],
+        "frequency": "common",
+        "placement": "small_group"
+      },
+      "render": {
+        "layer": "decor",
+        "priority": 0
+      },
+      "v1": {
+        "enabled": true,
+        "excludedByRule": false
+      },
+      "sourceRect": {
+        "x": 432,
+        "y": 992,
+        "width": 48,
+        "height": 48
+      },
+      "paths": {
+        "spring": "src/spritesheets/world/spring/trees/tree_pink_21.png",
+        "summer": "src/spritesheets/world/summer/trees/tree_pink_21.png",
+        "autumn": "src/spritesheets/world/autumn/trees/tree_pink_21.png",
+        "winter": "src/spritesheets/world/winter/trees/tree_pink_21.png"
+      }
+    },
+    "tree_pink_22": {
+      "name": "tree_pink_22",
+      "originalName": "tree_pink_22",
+      "category": "trees",
+      "family": "tree_pink",
+      "group": "trees",
+      "description": "variations d'arbres roses, penser à appliquer de la collision",
+      "width": 48,
+      "height": 48,
+      "tileW": 3,
+      "tileH": 3,
+      "tags": [
+        "blocks_movement",
+        "tree"
+      ],
+      "collision": {
+        "blocksMovement": true,
+        "walkableOverride": false
+      },
+      "spawn": {
+        "surfaces": [
+          "grass"
+        ],
+        "avoid": [
+          "road",
+          "water",
+          "sand"
+        ],
+        "near": [
+          "grass",
+          "tree"
+        ],
+        "frequency": "common",
+        "placement": "small_group"
+      },
+      "render": {
+        "layer": "decor",
+        "priority": 0
+      },
+      "v1": {
+        "enabled": true,
+        "excludedByRule": false
+      },
+      "sourceRect": {
+        "x": 480,
+        "y": 992,
+        "width": 48,
+        "height": 48
+      },
+      "paths": {
+        "spring": "src/spritesheets/world/spring/trees/tree_pink_22.png",
+        "summer": "src/spritesheets/world/summer/trees/tree_pink_22.png",
+        "autumn": "src/spritesheets/world/autumn/trees/tree_pink_22.png",
+        "winter": "src/spritesheets/world/winter/trees/tree_pink_22.png"
+      }
+    },
+    "tree_pink_23": {
+      "name": "tree_pink_23",
+      "originalName": "tree_pink_23",
+      "category": "trees",
+      "family": "tree_pink",
+      "group": "trees",
+      "description": "variations d'arbres roses, penser à appliquer de la collision",
+      "width": 48,
+      "height": 48,
+      "tileW": 3,
+      "tileH": 3,
+      "tags": [
+        "blocks_movement",
+        "tree"
+      ],
+      "collision": {
+        "blocksMovement": true,
+        "walkableOverride": false
+      },
+      "spawn": {
+        "surfaces": [
+          "grass"
+        ],
+        "avoid": [
+          "road",
+          "water",
+          "sand"
+        ],
+        "near": [
+          "grass",
+          "tree"
+        ],
+        "frequency": "common",
+        "placement": "small_group"
+      },
+      "render": {
+        "layer": "decor",
+        "priority": 0
+      },
+      "v1": {
+        "enabled": true,
+        "excludedByRule": false
+      },
+      "sourceRect": {
+        "x": 576,
+        "y": 992,
+        "width": 48,
+        "height": 48
+      },
+      "paths": {
+        "spring": "src/spritesheets/world/spring/trees/tree_pink_23.png",
+        "summer": "src/spritesheets/world/summer/trees/tree_pink_23.png",
+        "autumn": "src/spritesheets/world/autumn/trees/tree_pink_23.png",
+        "winter": "src/spritesheets/world/winter/trees/tree_pink_23.png"
+      }
+    },
+    "tree_pink_24": {
+      "name": "tree_pink_24",
+      "originalName": "tree_pink_24",
+      "category": "trees",
+      "family": "tree_pink",
+      "group": "trees",
+      "description": "variations d'arbres roses, penser à appliquer de la collision",
+      "width": 48,
+      "height": 48,
+      "tileW": 3,
+      "tileH": 3,
+      "tags": [
+        "blocks_movement",
+        "tree"
+      ],
+      "collision": {
+        "blocksMovement": true,
+        "walkableOverride": false
+      },
+      "spawn": {
+        "surfaces": [
+          "grass"
+        ],
+        "avoid": [
+          "road",
+          "water",
+          "sand"
+        ],
+        "near": [
+          "grass",
+          "tree"
+        ],
+        "frequency": "common",
+        "placement": "small_group"
+      },
+      "render": {
+        "layer": "decor",
+        "priority": 0
+      },
+      "v1": {
+        "enabled": true,
+        "excludedByRule": false
+      },
+      "sourceRect": {
+        "x": 624,
+        "y": 992,
+        "width": 48,
+        "height": 48
+      },
+      "paths": {
+        "spring": "src/spritesheets/world/spring/trees/tree_pink_24.png",
+        "summer": "src/spritesheets/world/summer/trees/tree_pink_24.png",
+        "autumn": "src/spritesheets/world/autumn/trees/tree_pink_24.png",
+        "winter": "src/spritesheets/world/winter/trees/tree_pink_24.png"
+      }
+    },
+    "tree_green_21": {
+      "name": "tree_green_21",
+      "originalName": "tree_green_21",
+      "category": "trees",
+      "family": "tree_green",
+      "group": "trees",
+      "description": "variations d'arbres verts, penser à appliquer de la collision",
+      "width": 48,
+      "height": 48,
+      "tileW": 3,
+      "tileH": 3,
+      "tags": [
+        "blocks_movement",
+        "tree"
+      ],
+      "collision": {
+        "blocksMovement": true,
+        "walkableOverride": false
+      },
+      "spawn": {
+        "surfaces": [
+          "grass"
+        ],
+        "avoid": [
+          "road",
+          "water",
+          "sand"
+        ],
+        "near": [
+          "grass",
+          "tree"
+        ],
+        "frequency": "common",
+        "placement": "small_group"
+      },
+      "render": {
+        "layer": "decor",
+        "priority": 0
+      },
+      "v1": {
+        "enabled": true,
+        "excludedByRule": false
+      },
+      "sourceRect": {
+        "x": 720,
+        "y": 992,
+        "width": 48,
+        "height": 48
+      },
+      "paths": {
+        "spring": "src/spritesheets/world/spring/trees/tree_green_21.png",
+        "summer": "src/spritesheets/world/summer/trees/tree_green_21.png",
+        "autumn": "src/spritesheets/world/autumn/trees/tree_green_21.png",
+        "winter": "src/spritesheets/world/winter/trees/tree_green_21.png"
+      }
+    },
+    "tree_green_22": {
+      "name": "tree_green_22",
+      "originalName": "tree_green_22",
+      "category": "trees",
+      "family": "tree_green",
+      "group": "trees",
+      "description": "variations d'arbres verts, penser à appliquer de la collision",
+      "width": 48,
+      "height": 48,
+      "tileW": 3,
+      "tileH": 3,
+      "tags": [
+        "blocks_movement",
+        "tree"
+      ],
+      "collision": {
+        "blocksMovement": true,
+        "walkableOverride": false
+      },
+      "spawn": {
+        "surfaces": [
+          "grass"
+        ],
+        "avoid": [
+          "road",
+          "water",
+          "sand"
+        ],
+        "near": [
+          "grass",
+          "tree"
+        ],
+        "frequency": "common",
+        "placement": "small_group"
+      },
+      "render": {
+        "layer": "decor",
+        "priority": 0
+      },
+      "v1": {
+        "enabled": true,
+        "excludedByRule": false
+      },
+      "sourceRect": {
+        "x": 768,
+        "y": 992,
+        "width": 48,
+        "height": 48
+      },
+      "paths": {
+        "spring": "src/spritesheets/world/spring/trees/tree_green_22.png",
+        "summer": "src/spritesheets/world/summer/trees/tree_green_22.png",
+        "autumn": "src/spritesheets/world/autumn/trees/tree_green_22.png",
+        "winter": "src/spritesheets/world/winter/trees/tree_green_22.png"
+      }
+    },
+    "tree_green_23": {
+      "name": "tree_green_23",
+      "originalName": "tree_green_23",
+      "category": "trees",
+      "family": "tree_green",
+      "group": "trees",
+      "description": "variations d'arbres verts, penser à appliquer de la collision",
+      "width": 48,
+      "height": 48,
+      "tileW": 3,
+      "tileH": 3,
+      "tags": [
+        "blocks_movement",
+        "tree"
+      ],
+      "collision": {
+        "blocksMovement": true,
+        "walkableOverride": false
+      },
+      "spawn": {
+        "surfaces": [
+          "grass"
+        ],
+        "avoid": [
+          "road",
+          "water",
+          "sand"
+        ],
+        "near": [
+          "grass",
+          "tree"
+        ],
+        "frequency": "common",
+        "placement": "small_group"
+      },
+      "render": {
+        "layer": "decor",
+        "priority": 0
+      },
+      "v1": {
+        "enabled": true,
+        "excludedByRule": false
+      },
+      "sourceRect": {
+        "x": 864,
+        "y": 992,
+        "width": 48,
+        "height": 48
+      },
+      "paths": {
+        "spring": "src/spritesheets/world/spring/trees/tree_green_23.png",
+        "summer": "src/spritesheets/world/summer/trees/tree_green_23.png",
+        "autumn": "src/spritesheets/world/autumn/trees/tree_green_23.png",
+        "winter": "src/spritesheets/world/winter/trees/tree_green_23.png"
+      }
+    },
+    "tree_green_24": {
+      "name": "tree_green_24",
+      "originalName": "tree_green_24",
+      "category": "trees",
+      "family": "tree_green",
+      "group": "trees",
+      "description": "variations d'arbres verts, penser à appliquer de la collision",
+      "width": 48,
+      "height": 48,
+      "tileW": 3,
+      "tileH": 3,
+      "tags": [
+        "blocks_movement",
+        "tree"
+      ],
+      "collision": {
+        "blocksMovement": true,
+        "walkableOverride": false
+      },
+      "spawn": {
+        "surfaces": [
+          "grass"
+        ],
+        "avoid": [
+          "road",
+          "water",
+          "sand"
+        ],
+        "near": [
+          "grass",
+          "tree"
+        ],
+        "frequency": "common",
+        "placement": "small_group"
+      },
+      "render": {
+        "layer": "decor",
+        "priority": 0
+      },
+      "v1": {
+        "enabled": true,
+        "excludedByRule": false
+      },
+      "sourceRect": {
+        "x": 912,
+        "y": 992,
+        "width": 48,
+        "height": 48
+      },
+      "paths": {
+        "spring": "src/spritesheets/world/spring/trees/tree_green_24.png",
+        "summer": "src/spritesheets/world/summer/trees/tree_green_24.png",
+        "autumn": "src/spritesheets/world/autumn/trees/tree_green_24.png",
+        "winter": "src/spritesheets/world/winter/trees/tree_green_24.png"
+      }
+    },
+    "tree_pink_25": {
+      "name": "tree_pink_25",
+      "originalName": "tree_pink_25",
+      "category": "trees",
+      "family": "tree_pink_birch",
+      "group": "trees",
+      "description": "variations d'arbres roses, penser à appliquer de la collision. appartient à la catégorie des arbres \"bouleaux\"",
+      "width": 48,
+      "height": 48,
+      "tileW": 3,
+      "tileH": 3,
+      "tags": [
+        "birch",
+        "blocks_movement",
+        "tree"
+      ],
+      "collision": {
+        "blocksMovement": true,
+        "walkableOverride": false
+      },
+      "spawn": {
+        "surfaces": [
+          "grass"
+        ],
+        "avoid": [
+          "road",
+          "water",
+          "sand"
+        ],
+        "near": [
+          "grass",
+          "tree"
+        ],
+        "frequency": "common",
+        "placement": "small_group"
+      },
+      "render": {
+        "layer": "decor",
+        "priority": 0
+      },
+      "v1": {
+        "enabled": true,
+        "excludedByRule": false
+      },
+      "sourceRect": {
+        "x": 432,
+        "y": 1056,
+        "width": 48,
+        "height": 48
+      },
+      "paths": {
+        "spring": "src/spritesheets/world/spring/trees/tree_pink_25.png",
+        "summer": "src/spritesheets/world/summer/trees/tree_pink_25.png",
+        "autumn": "src/spritesheets/world/autumn/trees/tree_pink_25.png",
+        "winter": "src/spritesheets/world/winter/trees/tree_pink_25.png"
+      }
+    },
+    "tree_pink_26": {
+      "name": "tree_pink_26",
+      "originalName": "tree_pink_26",
+      "category": "trees",
+      "family": "tree_pink_birch",
+      "group": "trees",
+      "description": "variations d'arbres roses, penser à appliquer de la collision. appartient à la catégorie des arbres \"bouleaux\"",
+      "width": 48,
+      "height": 48,
+      "tileW": 3,
+      "tileH": 3,
+      "tags": [
+        "birch",
+        "blocks_movement",
+        "tree"
+      ],
+      "collision": {
+        "blocksMovement": true,
+        "walkableOverride": false
+      },
+      "spawn": {
+        "surfaces": [
+          "grass"
+        ],
+        "avoid": [
+          "road",
+          "water",
+          "sand"
+        ],
+        "near": [
+          "grass",
+          "tree"
+        ],
+        "frequency": "common",
+        "placement": "small_group"
+      },
+      "render": {
+        "layer": "decor",
+        "priority": 0
+      },
+      "v1": {
+        "enabled": true,
+        "excludedByRule": false
+      },
+      "sourceRect": {
+        "x": 480,
+        "y": 1056,
+        "width": 48,
+        "height": 48
+      },
+      "paths": {
+        "spring": "src/spritesheets/world/spring/trees/tree_pink_26.png",
+        "summer": "src/spritesheets/world/summer/trees/tree_pink_26.png",
+        "autumn": "src/spritesheets/world/autumn/trees/tree_pink_26.png",
+        "winter": "src/spritesheets/world/winter/trees/tree_pink_26.png"
+      }
+    },
+    "tree_pink_27": {
+      "name": "tree_pink_27",
+      "originalName": "tree_pink_27",
+      "category": "trees",
+      "family": "tree_pink_birch",
+      "group": "trees",
+      "description": "variations d'arbres roses, penser à appliquer de la collision. appartient à la catégorie des arbres \"bouleaux\"",
+      "width": 48,
+      "height": 48,
+      "tileW": 3,
+      "tileH": 3,
+      "tags": [
+        "birch",
+        "blocks_movement",
+        "tree"
+      ],
+      "collision": {
+        "blocksMovement": true,
+        "walkableOverride": false
+      },
+      "spawn": {
+        "surfaces": [
+          "grass"
+        ],
+        "avoid": [
+          "road",
+          "water",
+          "sand"
+        ],
+        "near": [
+          "grass",
+          "tree"
+        ],
+        "frequency": "common",
+        "placement": "small_group"
+      },
+      "render": {
+        "layer": "decor",
+        "priority": 0
+      },
+      "v1": {
+        "enabled": true,
+        "excludedByRule": false
+      },
+      "sourceRect": {
+        "x": 576,
+        "y": 1056,
+        "width": 48,
+        "height": 48
+      },
+      "paths": {
+        "spring": "src/spritesheets/world/spring/trees/tree_pink_27.png",
+        "summer": "src/spritesheets/world/summer/trees/tree_pink_27.png",
+        "autumn": "src/spritesheets/world/autumn/trees/tree_pink_27.png",
+        "winter": "src/spritesheets/world/winter/trees/tree_pink_27.png"
+      }
+    },
+    "tree_pink_28": {
+      "name": "tree_pink_28",
+      "originalName": "tree_pink_28",
+      "category": "trees",
+      "family": "tree_pink_birch",
+      "group": "trees",
+      "description": "variations d'arbres roses, penser à appliquer de la collision. appartient à la catégorie des arbres \"bouleaux\"",
+      "width": 48,
+      "height": 48,
+      "tileW": 3,
+      "tileH": 3,
+      "tags": [
+        "birch",
+        "blocks_movement",
+        "tree"
+      ],
+      "collision": {
+        "blocksMovement": true,
+        "walkableOverride": false
+      },
+      "spawn": {
+        "surfaces": [
+          "grass"
+        ],
+        "avoid": [
+          "road",
+          "water",
+          "sand"
+        ],
+        "near": [
+          "grass",
+          "tree"
+        ],
+        "frequency": "common",
+        "placement": "small_group"
+      },
+      "render": {
+        "layer": "decor",
+        "priority": 0
+      },
+      "v1": {
+        "enabled": true,
+        "excludedByRule": false
+      },
+      "sourceRect": {
+        "x": 624,
+        "y": 1056,
+        "width": 48,
+        "height": 48
+      },
+      "paths": {
+        "spring": "src/spritesheets/world/spring/trees/tree_pink_28.png",
+        "summer": "src/spritesheets/world/summer/trees/tree_pink_28.png",
+        "autumn": "src/spritesheets/world/autumn/trees/tree_pink_28.png",
+        "winter": "src/spritesheets/world/winter/trees/tree_pink_28.png"
+      }
+    },
+    "tree_green_25": {
+      "name": "tree_green_25",
+      "originalName": "tree_green_25",
+      "category": "trees",
+      "family": "tree_green_birch",
+      "group": "trees",
+      "description": "variations d'arbres verts, penser à appliquer de la collision. appartient à la catégorie des arbres \"bouleaux\"",
+      "width": 48,
+      "height": 48,
+      "tileW": 3,
+      "tileH": 3,
+      "tags": [
+        "birch",
+        "blocks_movement",
+        "tree"
+      ],
+      "collision": {
+        "blocksMovement": true,
+        "walkableOverride": false
+      },
+      "spawn": {
+        "surfaces": [
+          "grass"
+        ],
+        "avoid": [
+          "road",
+          "water",
+          "sand"
+        ],
+        "near": [
+          "grass",
+          "tree"
+        ],
+        "frequency": "common",
+        "placement": "small_group"
+      },
+      "render": {
+        "layer": "decor",
+        "priority": 0
+      },
+      "v1": {
+        "enabled": true,
+        "excludedByRule": false
+      },
+      "sourceRect": {
+        "x": 720,
+        "y": 1056,
+        "width": 48,
+        "height": 48
+      },
+      "paths": {
+        "spring": "src/spritesheets/world/spring/trees/tree_green_25.png",
+        "summer": "src/spritesheets/world/summer/trees/tree_green_25.png",
+        "autumn": "src/spritesheets/world/autumn/trees/tree_green_25.png",
+        "winter": "src/spritesheets/world/winter/trees/tree_green_25.png"
+      }
+    },
+    "tree_green_26": {
+      "name": "tree_green_26",
+      "originalName": "tree_green_26",
+      "category": "trees",
+      "family": "tree_green_birch",
+      "group": "trees",
+      "description": "variations d'arbres verts, penser à appliquer de la collision. appartient à la catégorie des arbres \"bouleaux\"",
+      "width": 48,
+      "height": 48,
+      "tileW": 3,
+      "tileH": 3,
+      "tags": [
+        "birch",
+        "blocks_movement",
+        "tree"
+      ],
+      "collision": {
+        "blocksMovement": true,
+        "walkableOverride": false
+      },
+      "spawn": {
+        "surfaces": [
+          "grass"
+        ],
+        "avoid": [
+          "road",
+          "water",
+          "sand"
+        ],
+        "near": [
+          "grass",
+          "tree"
+        ],
+        "frequency": "common",
+        "placement": "small_group"
+      },
+      "render": {
+        "layer": "decor",
+        "priority": 0
+      },
+      "v1": {
+        "enabled": true,
+        "excludedByRule": false
+      },
+      "sourceRect": {
+        "x": 768,
+        "y": 1056,
+        "width": 48,
+        "height": 48
+      },
+      "paths": {
+        "spring": "src/spritesheets/world/spring/trees/tree_green_26.png",
+        "summer": "src/spritesheets/world/summer/trees/tree_green_26.png",
+        "autumn": "src/spritesheets/world/autumn/trees/tree_green_26.png",
+        "winter": "src/spritesheets/world/winter/trees/tree_green_26.png"
+      }
+    },
+    "tree_green_27": {
+      "name": "tree_green_27",
+      "originalName": "tree_green_27",
+      "category": "trees",
+      "family": "tree_green_birch",
+      "group": "trees",
+      "description": "variations d'arbres verts, penser à appliquer de la collision. appartient à la catégorie des arbres \"bouleaux\"",
+      "width": 48,
+      "height": 48,
+      "tileW": 3,
+      "tileH": 3,
+      "tags": [
+        "birch",
+        "blocks_movement",
+        "tree"
+      ],
+      "collision": {
+        "blocksMovement": true,
+        "walkableOverride": false
+      },
+      "spawn": {
+        "surfaces": [
+          "grass"
+        ],
+        "avoid": [
+          "road",
+          "water",
+          "sand"
+        ],
+        "near": [
+          "grass",
+          "tree"
+        ],
+        "frequency": "common",
+        "placement": "small_group"
+      },
+      "render": {
+        "layer": "decor",
+        "priority": 0
+      },
+      "v1": {
+        "enabled": true,
+        "excludedByRule": false
+      },
+      "sourceRect": {
+        "x": 864,
+        "y": 1056,
+        "width": 48,
+        "height": 48
+      },
+      "paths": {
+        "spring": "src/spritesheets/world/spring/trees/tree_green_27.png",
+        "summer": "src/spritesheets/world/summer/trees/tree_green_27.png",
+        "autumn": "src/spritesheets/world/autumn/trees/tree_green_27.png",
+        "winter": "src/spritesheets/world/winter/trees/tree_green_27.png"
+      }
+    },
+    "tree_green_28": {
+      "name": "tree_green_28",
+      "originalName": "tree_green_28",
+      "category": "trees",
+      "family": "tree_green_birch",
+      "group": "trees",
+      "description": "variations d'arbres verts, penser à appliquer de la collision. appartient à la catégorie des arbres \"bouleaux\"",
+      "width": 48,
+      "height": 48,
+      "tileW": 3,
+      "tileH": 3,
+      "tags": [
+        "birch",
+        "blocks_movement",
+        "tree"
+      ],
+      "collision": {
+        "blocksMovement": true,
+        "walkableOverride": false
+      },
+      "spawn": {
+        "surfaces": [
+          "grass"
+        ],
+        "avoid": [
+          "road",
+          "water",
+          "sand"
+        ],
+        "near": [
+          "grass",
+          "tree"
+        ],
+        "frequency": "common",
+        "placement": "small_group"
+      },
+      "render": {
+        "layer": "decor",
+        "priority": 0
+      },
+      "v1": {
+        "enabled": true,
+        "excludedByRule": false
+      },
+      "sourceRect": {
+        "x": 912,
+        "y": 1056,
+        "width": 48,
+        "height": 48
+      },
+      "paths": {
+        "spring": "src/spritesheets/world/spring/trees/tree_green_28.png",
+        "summer": "src/spritesheets/world/summer/trees/tree_green_28.png",
+        "autumn": "src/spritesheets/world/autumn/trees/tree_green_28.png",
+        "winter": "src/spritesheets/world/winter/trees/tree_green_28.png"
+      }
+    },
+    "tall_tree_pink_13": {
+      "name": "tall_tree_pink_13",
+      "originalName": "tall_tree_pink_13",
+      "category": "trees",
+      "family": "tall_tree_pink_birch",
+      "group": "trees",
+      "description": "variation d'arbres roses, penser à appliquer de la collision dessus. appartient à la catégorie des arbres \"bouleaux\"",
+      "width": 48,
+      "height": 80,
+      "tileW": 3,
+      "tileH": 5,
+      "tags": [
+        "birch",
+        "blocks_movement",
+        "tall_tree",
+        "tree"
+      ],
+      "collision": {
+        "blocksMovement": true,
+        "walkableOverride": false
+      },
+      "spawn": {
+        "surfaces": [
+          "grass"
+        ],
+        "avoid": [
+          "road",
+          "water",
+          "sand"
+        ],
+        "near": [
+          "grass",
+          "tree"
+        ],
+        "frequency": "uncommon",
+        "placement": "small_group"
+      },
+      "render": {
+        "layer": "decor",
+        "priority": 0
+      },
+      "v1": {
+        "enabled": true,
+        "excludedByRule": false
+      },
+      "sourceRect": {
+        "x": 976,
+        "y": 1072,
+        "width": 48,
+        "height": 80
+      },
+      "paths": {
+        "spring": "src/spritesheets/world/spring/trees/tall_tree_pink_13.png",
+        "summer": "src/spritesheets/world/summer/trees/tall_tree_pink_13.png",
+        "autumn": "src/spritesheets/world/autumn/trees/tall_tree_pink_13.png",
+        "winter": "src/spritesheets/world/winter/trees/tall_tree_pink_13.png"
+      }
+    },
+    "tall_tree_pink_14": {
+      "name": "tall_tree_pink_14",
+      "originalName": "tall_tree_pink_14",
+      "category": "trees",
+      "family": "tall_tree_pink_birch",
+      "group": "trees",
+      "description": "variation d'arbres roses, penser à appliquer de la collision dessus. appartient à la catégorie des arbres \"bouleaux\"",
+      "width": 48,
+      "height": 80,
+      "tileW": 3,
+      "tileH": 5,
+      "tags": [
+        "birch",
+        "blocks_movement",
+        "tall_tree",
+        "tree"
+      ],
+      "collision": {
+        "blocksMovement": true,
+        "walkableOverride": false
+      },
+      "spawn": {
+        "surfaces": [
+          "grass"
+        ],
+        "avoid": [
+          "road",
+          "water",
+          "sand"
+        ],
+        "near": [
+          "grass",
+          "tree"
+        ],
+        "frequency": "uncommon",
+        "placement": "small_group"
+      },
+      "render": {
+        "layer": "decor",
+        "priority": 0
+      },
+      "v1": {
+        "enabled": true,
+        "excludedByRule": false
+      },
+      "sourceRect": {
+        "x": 1040,
+        "y": 1072,
+        "width": 48,
+        "height": 80
+      },
+      "paths": {
+        "spring": "src/spritesheets/world/spring/trees/tall_tree_pink_14.png",
+        "summer": "src/spritesheets/world/summer/trees/tall_tree_pink_14.png",
+        "autumn": "src/spritesheets/world/autumn/trees/tall_tree_pink_14.png",
+        "winter": "src/spritesheets/world/winter/trees/tall_tree_pink_14.png"
+      }
+    },
+    "tall_tree_green_13": {
+      "name": "tall_tree_green_13",
+      "originalName": "tall_tree_green_13",
+      "category": "trees",
+      "family": "tall_tree_green_birch",
+      "group": "trees",
+      "description": "variation d'arbres verts, penser à appliquer de la collision dessus. appartient à la catégorie des arbres \"bouleaux\"",
+      "width": 48,
+      "height": 80,
+      "tileW": 3,
+      "tileH": 5,
+      "tags": [
+        "birch",
+        "blocks_movement",
+        "tall_tree",
+        "tree"
+      ],
+      "collision": {
+        "blocksMovement": true,
+        "walkableOverride": false
+      },
+      "spawn": {
+        "surfaces": [
+          "grass"
+        ],
+        "avoid": [
+          "road",
+          "water",
+          "sand"
+        ],
+        "near": [
+          "grass",
+          "tree"
+        ],
+        "frequency": "uncommon",
+        "placement": "small_group"
+      },
+      "render": {
+        "layer": "decor",
+        "priority": 0
+      },
+      "v1": {
+        "enabled": true,
+        "excludedByRule": false
+      },
+      "sourceRect": {
+        "x": 1104,
+        "y": 1072,
+        "width": 48,
+        "height": 80
+      },
+      "paths": {
+        "spring": "src/spritesheets/world/spring/trees/tall_tree_green_13.png",
+        "summer": "src/spritesheets/world/summer/trees/tall_tree_green_13.png",
+        "autumn": "src/spritesheets/world/autumn/trees/tall_tree_green_13.png",
+        "winter": "src/spritesheets/world/winter/trees/tall_tree_green_13.png"
+      }
+    },
+    "tall_tree_green_14": {
+      "name": "tall_tree_green_14",
+      "originalName": "tall_tree_green_14",
+      "category": "trees",
+      "family": "tall_tree_green_birch",
+      "group": "trees",
+      "description": "variation d'arbres verts, penser à appliquer de la collision dessus. appartient à la catégorie des arbres \"bouleaux\"",
+      "width": 48,
+      "height": 80,
+      "tileW": 3,
+      "tileH": 5,
+      "tags": [
+        "birch",
+        "blocks_movement",
+        "tall_tree",
+        "tree"
+      ],
+      "collision": {
+        "blocksMovement": true,
+        "walkableOverride": false
+      },
+      "spawn": {
+        "surfaces": [
+          "grass"
+        ],
+        "avoid": [
+          "road",
+          "water",
+          "sand"
+        ],
+        "near": [
+          "grass",
+          "tree"
+        ],
+        "frequency": "uncommon",
+        "placement": "small_group"
+      },
+      "render": {
+        "layer": "decor",
+        "priority": 0
+      },
+      "v1": {
+        "enabled": true,
+        "excludedByRule": false
+      },
+      "sourceRect": {
+        "x": 1168,
+        "y": 1072,
+        "width": 48,
+        "height": 80
+      },
+      "paths": {
+        "spring": "src/spritesheets/world/spring/trees/tall_tree_green_14.png",
+        "summer": "src/spritesheets/world/summer/trees/tall_tree_green_14.png",
+        "autumn": "src/spritesheets/world/autumn/trees/tall_tree_green_14.png",
+        "winter": "src/spritesheets/world/winter/trees/tall_tree_green_14.png"
+      }
+    },
+    "tall_tree_pink_15": {
+      "name": "tall_tree_pink_15",
+      "originalName": "tall_tree_pink_15",
+      "category": "trees",
+      "family": "tall_tree_pink_birch",
+      "group": "trees",
+      "description": "variation d'arbres roses, penser à appliquer de la collision dessus. appartient à la catégorie des arbres \"bouleaux\"",
+      "width": 48,
+      "height": 64,
+      "tileW": 3,
+      "tileH": 4,
+      "tags": [
+        "birch",
+        "blocks_movement",
+        "tall_tree",
+        "tree"
+      ],
+      "collision": {
+        "blocksMovement": true,
+        "walkableOverride": false
+      },
+      "spawn": {
+        "surfaces": [
+          "grass"
+        ],
+        "avoid": [
+          "road",
+          "water",
+          "sand"
+        ],
+        "near": [
+          "grass",
+          "tree"
+        ],
+        "frequency": "uncommon",
+        "placement": "small_group"
+      },
+      "render": {
+        "layer": "decor",
+        "priority": 0
+      },
+      "v1": {
+        "enabled": true,
+        "excludedByRule": false
+      },
+      "sourceRect": {
+        "x": 384,
+        "y": 1104,
+        "width": 48,
+        "height": 64
+      },
+      "paths": {
+        "spring": "src/spritesheets/world/spring/trees/tall_tree_pink_15.png",
+        "summer": "src/spritesheets/world/summer/trees/tall_tree_pink_15.png",
+        "autumn": "src/spritesheets/world/autumn/trees/tall_tree_pink_15.png",
+        "winter": "src/spritesheets/world/winter/trees/tall_tree_pink_15.png"
+      }
+    },
+    "tall_tree_pink_16": {
+      "name": "tall_tree_pink_16",
+      "originalName": "tall_tree_pink_16",
+      "category": "trees",
+      "family": "tall_tree_pink_birch",
+      "group": "trees",
+      "description": "variation d'arbres roses, penser à appliquer de la collision dessus. appartient à la catégorie des arbres \"bouleaux\"",
+      "width": 48,
+      "height": 64,
+      "tileW": 3,
+      "tileH": 4,
+      "tags": [
+        "birch",
+        "blocks_movement",
+        "tall_tree",
+        "tree"
+      ],
+      "collision": {
+        "blocksMovement": true,
+        "walkableOverride": false
+      },
+      "spawn": {
+        "surfaces": [
+          "grass"
+        ],
+        "avoid": [
+          "road",
+          "water",
+          "sand"
+        ],
+        "near": [
+          "grass",
+          "tree"
+        ],
+        "frequency": "uncommon",
+        "placement": "small_group"
+      },
+      "render": {
+        "layer": "decor",
+        "priority": 0
+      },
+      "v1": {
+        "enabled": true,
+        "excludedByRule": false
+      },
+      "sourceRect": {
+        "x": 528,
+        "y": 1104,
+        "width": 48,
+        "height": 64
+      },
+      "paths": {
+        "spring": "src/spritesheets/world/spring/trees/tall_tree_pink_16.png",
+        "summer": "src/spritesheets/world/summer/trees/tall_tree_pink_16.png",
+        "autumn": "src/spritesheets/world/autumn/trees/tall_tree_pink_16.png",
+        "winter": "src/spritesheets/world/winter/trees/tall_tree_pink_16.png"
+      }
+    },
+    "tall_tree_green_15": {
+      "name": "tall_tree_green_15",
+      "originalName": "tall_tree_green_15",
+      "category": "trees",
+      "family": "tall_tree_green_birch",
+      "group": "trees",
+      "description": "variation d'arbres verts, penser à appliquer de la collision dessus. appartient à la catégorie des arbres \"bouleaux\"",
+      "width": 48,
+      "height": 64,
+      "tileW": 3,
+      "tileH": 4,
+      "tags": [
+        "birch",
+        "blocks_movement",
+        "tall_tree",
+        "tree"
+      ],
+      "collision": {
+        "blocksMovement": true,
+        "walkableOverride": false
+      },
+      "spawn": {
+        "surfaces": [
+          "grass"
+        ],
+        "avoid": [
+          "road",
+          "water",
+          "sand"
+        ],
+        "near": [
+          "grass",
+          "tree"
+        ],
+        "frequency": "uncommon",
+        "placement": "small_group"
+      },
+      "render": {
+        "layer": "decor",
+        "priority": 0
+      },
+      "v1": {
+        "enabled": true,
+        "excludedByRule": false
+      },
+      "sourceRect": {
+        "x": 672,
+        "y": 1104,
+        "width": 48,
+        "height": 64
+      },
+      "paths": {
+        "spring": "src/spritesheets/world/spring/trees/tall_tree_green_15.png",
+        "summer": "src/spritesheets/world/summer/trees/tall_tree_green_15.png",
+        "autumn": "src/spritesheets/world/autumn/trees/tall_tree_green_15.png",
+        "winter": "src/spritesheets/world/winter/trees/tall_tree_green_15.png"
+      }
+    },
+    "tall_tree_green_16": {
+      "name": "tall_tree_green_16",
+      "originalName": "tall_tree_green_16",
+      "category": "trees",
+      "family": "tall_tree_green_birch",
+      "group": "trees",
+      "description": "variation d'arbres verts, penser à appliquer de la collision dessus. appartient à la catégorie des arbres \"bouleaux\"",
+      "width": 48,
+      "height": 64,
+      "tileW": 3,
+      "tileH": 4,
+      "tags": [
+        "birch",
+        "blocks_movement",
+        "tall_tree",
+        "tree"
+      ],
+      "collision": {
+        "blocksMovement": true,
+        "walkableOverride": false
+      },
+      "spawn": {
+        "surfaces": [
+          "grass"
+        ],
+        "avoid": [
+          "road",
+          "water",
+          "sand"
+        ],
+        "near": [
+          "grass",
+          "tree"
+        ],
+        "frequency": "uncommon",
+        "placement": "small_group"
+      },
+      "render": {
+        "layer": "decor",
+        "priority": 0
+      },
+      "v1": {
+        "enabled": true,
+        "excludedByRule": false
+      },
+      "sourceRect": {
+        "x": 816,
+        "y": 1104,
+        "width": 48,
+        "height": 64
+      },
+      "paths": {
+        "spring": "src/spritesheets/world/spring/trees/tall_tree_green_16.png",
+        "summer": "src/spritesheets/world/summer/trees/tall_tree_green_16.png",
+        "autumn": "src/spritesheets/world/autumn/trees/tall_tree_green_16.png",
+        "winter": "src/spritesheets/world/winter/trees/tall_tree_green_16.png"
+      }
+    },
+    "tree_pink_29": {
+      "name": "tree_pink_29",
+      "originalName": "tree_pink_29",
+      "category": "trees",
+      "family": "tree_pink_birch",
+      "group": "trees",
+      "description": "variations d'arbres roses, penser à appliquer de la collision. appartient à la catégorie des arbres \"bouleaux\"",
+      "width": 48,
+      "height": 48,
+      "tileW": 3,
+      "tileH": 3,
+      "tags": [
+        "birch",
+        "blocks_movement",
+        "tree"
+      ],
+      "collision": {
+        "blocksMovement": true,
+        "walkableOverride": false
+      },
+      "spawn": {
+        "surfaces": [
+          "grass"
+        ],
+        "avoid": [
+          "road",
+          "water",
+          "sand"
+        ],
+        "near": [
+          "grass",
+          "tree"
+        ],
+        "frequency": "common",
+        "placement": "small_group"
+      },
+      "render": {
+        "layer": "decor",
+        "priority": 0
+      },
+      "v1": {
+        "enabled": true,
+        "excludedByRule": false
+      },
+      "sourceRect": {
+        "x": 432,
+        "y": 1120,
+        "width": 48,
+        "height": 48
+      },
+      "paths": {
+        "spring": "src/spritesheets/world/spring/trees/tree_pink_29.png",
+        "summer": "src/spritesheets/world/summer/trees/tree_pink_29.png",
+        "autumn": "src/spritesheets/world/autumn/trees/tree_pink_29.png",
+        "winter": "src/spritesheets/world/winter/trees/tree_pink_29.png"
+      }
+    },
+    "tree_pink_30": {
+      "name": "tree_pink_30",
+      "originalName": "tree_pink_30",
+      "category": "trees",
+      "family": "tree_pink_birch",
+      "group": "trees",
+      "description": "variations d'arbres roses, penser à appliquer de la collision. appartient à la catégorie des arbres \"bouleaux\"",
+      "width": 48,
+      "height": 48,
+      "tileW": 3,
+      "tileH": 3,
+      "tags": [
+        "birch",
+        "blocks_movement",
+        "tree"
+      ],
+      "collision": {
+        "blocksMovement": true,
+        "walkableOverride": false
+      },
+      "spawn": {
+        "surfaces": [
+          "grass"
+        ],
+        "avoid": [
+          "road",
+          "water",
+          "sand"
+        ],
+        "near": [
+          "grass",
+          "tree"
+        ],
+        "frequency": "common",
+        "placement": "small_group"
+      },
+      "render": {
+        "layer": "decor",
+        "priority": 0
+      },
+      "v1": {
+        "enabled": true,
+        "excludedByRule": false
+      },
+      "sourceRect": {
+        "x": 480,
+        "y": 1120,
+        "width": 48,
+        "height": 48
+      },
+      "paths": {
+        "spring": "src/spritesheets/world/spring/trees/tree_pink_30.png",
+        "summer": "src/spritesheets/world/summer/trees/tree_pink_30.png",
+        "autumn": "src/spritesheets/world/autumn/trees/tree_pink_30.png",
+        "winter": "src/spritesheets/world/winter/trees/tree_pink_30.png"
+      }
+    },
+    "tree_pink_31": {
+      "name": "tree_pink_31",
+      "originalName": "tree_pink_31",
+      "category": "trees",
+      "family": "tree_pink_birch",
+      "group": "trees",
+      "description": "variations d'arbres roses, penser à appliquer de la collision. appartient à la catégorie des arbres \"bouleaux\"",
+      "width": 48,
+      "height": 48,
+      "tileW": 3,
+      "tileH": 3,
+      "tags": [
+        "birch",
+        "blocks_movement",
+        "tree"
+      ],
+      "collision": {
+        "blocksMovement": true,
+        "walkableOverride": false
+      },
+      "spawn": {
+        "surfaces": [
+          "grass"
+        ],
+        "avoid": [
+          "road",
+          "water",
+          "sand"
+        ],
+        "near": [
+          "grass",
+          "tree"
+        ],
+        "frequency": "common",
+        "placement": "small_group"
+      },
+      "render": {
+        "layer": "decor",
+        "priority": 0
+      },
+      "v1": {
+        "enabled": true,
+        "excludedByRule": false
+      },
+      "sourceRect": {
+        "x": 576,
+        "y": 1120,
+        "width": 48,
+        "height": 48
+      },
+      "paths": {
+        "spring": "src/spritesheets/world/spring/trees/tree_pink_31.png",
+        "summer": "src/spritesheets/world/summer/trees/tree_pink_31.png",
+        "autumn": "src/spritesheets/world/autumn/trees/tree_pink_31.png",
+        "winter": "src/spritesheets/world/winter/trees/tree_pink_31.png"
+      }
+    },
+    "tree_pink_32": {
+      "name": "tree_pink_32",
+      "originalName": "tree_pink_32",
+      "category": "trees",
+      "family": "tree_pink_birch",
+      "group": "trees",
+      "description": "variations d'arbres roses, penser à appliquer de la collision. appartient à la catégorie des arbres \"bouleaux\"",
+      "width": 48,
+      "height": 48,
+      "tileW": 3,
+      "tileH": 3,
+      "tags": [
+        "birch",
+        "blocks_movement",
+        "tree"
+      ],
+      "collision": {
+        "blocksMovement": true,
+        "walkableOverride": false
+      },
+      "spawn": {
+        "surfaces": [
+          "grass"
+        ],
+        "avoid": [
+          "road",
+          "water",
+          "sand"
+        ],
+        "near": [
+          "grass",
+          "tree"
+        ],
+        "frequency": "common",
+        "placement": "small_group"
+      },
+      "render": {
+        "layer": "decor",
+        "priority": 0
+      },
+      "v1": {
+        "enabled": true,
+        "excludedByRule": false
+      },
+      "sourceRect": {
+        "x": 624,
+        "y": 1120,
+        "width": 48,
+        "height": 48
+      },
+      "paths": {
+        "spring": "src/spritesheets/world/spring/trees/tree_pink_32.png",
+        "summer": "src/spritesheets/world/summer/trees/tree_pink_32.png",
+        "autumn": "src/spritesheets/world/autumn/trees/tree_pink_32.png",
+        "winter": "src/spritesheets/world/winter/trees/tree_pink_32.png"
+      }
+    },
+    "tree_green_29": {
+      "name": "tree_green_29",
+      "originalName": "tree_green_29",
+      "category": "trees",
+      "family": "tree_green_birch",
+      "group": "trees",
+      "description": "variations d'arbres verts, penser à appliquer de la collision. appartient à la catégorie des arbres \"bouleaux\"",
+      "width": 48,
+      "height": 48,
+      "tileW": 3,
+      "tileH": 3,
+      "tags": [
+        "birch",
+        "blocks_movement",
+        "tree"
+      ],
+      "collision": {
+        "blocksMovement": true,
+        "walkableOverride": false
+      },
+      "spawn": {
+        "surfaces": [
+          "grass"
+        ],
+        "avoid": [
+          "road",
+          "water",
+          "sand"
+        ],
+        "near": [
+          "grass",
+          "tree"
+        ],
+        "frequency": "common",
+        "placement": "small_group"
+      },
+      "render": {
+        "layer": "decor",
+        "priority": 0
+      },
+      "v1": {
+        "enabled": true,
+        "excludedByRule": false
+      },
+      "sourceRect": {
+        "x": 720,
+        "y": 1120,
+        "width": 48,
+        "height": 48
+      },
+      "paths": {
+        "spring": "src/spritesheets/world/spring/trees/tree_green_29.png",
+        "summer": "src/spritesheets/world/summer/trees/tree_green_29.png",
+        "autumn": "src/spritesheets/world/autumn/trees/tree_green_29.png",
+        "winter": "src/spritesheets/world/winter/trees/tree_green_29.png"
+      }
+    },
+    "tree_green_30": {
+      "name": "tree_green_30",
+      "originalName": "tree_green_30",
+      "category": "trees",
+      "family": "tree_green_birch",
+      "group": "trees",
+      "description": "variations d'arbres verts, penser à appliquer de la collision. appartient à la catégorie des arbres \"bouleaux\"",
+      "width": 48,
+      "height": 48,
+      "tileW": 3,
+      "tileH": 3,
+      "tags": [
+        "birch",
+        "blocks_movement",
+        "tree"
+      ],
+      "collision": {
+        "blocksMovement": true,
+        "walkableOverride": false
+      },
+      "spawn": {
+        "surfaces": [
+          "grass"
+        ],
+        "avoid": [
+          "road",
+          "water",
+          "sand"
+        ],
+        "near": [
+          "grass",
+          "tree"
+        ],
+        "frequency": "common",
+        "placement": "small_group"
+      },
+      "render": {
+        "layer": "decor",
+        "priority": 0
+      },
+      "v1": {
+        "enabled": true,
+        "excludedByRule": false
+      },
+      "sourceRect": {
+        "x": 768,
+        "y": 1120,
+        "width": 48,
+        "height": 48
+      },
+      "paths": {
+        "spring": "src/spritesheets/world/spring/trees/tree_green_30.png",
+        "summer": "src/spritesheets/world/summer/trees/tree_green_30.png",
+        "autumn": "src/spritesheets/world/autumn/trees/tree_green_30.png",
+        "winter": "src/spritesheets/world/winter/trees/tree_green_30.png"
+      }
+    },
+    "tree_green_31": {
+      "name": "tree_green_31",
+      "originalName": "tree_green_31",
+      "category": "trees",
+      "family": "tree_green_birch",
+      "group": "trees",
+      "description": "variations d'arbres verts, penser à appliquer de la collision. appartient à la catégorie des arbres \"bouleaux\"",
+      "width": 48,
+      "height": 48,
+      "tileW": 3,
+      "tileH": 3,
+      "tags": [
+        "birch",
+        "blocks_movement",
+        "tree"
+      ],
+      "collision": {
+        "blocksMovement": true,
+        "walkableOverride": false
+      },
+      "spawn": {
+        "surfaces": [
+          "grass"
+        ],
+        "avoid": [
+          "road",
+          "water",
+          "sand"
+        ],
+        "near": [
+          "grass",
+          "tree"
+        ],
+        "frequency": "common",
+        "placement": "small_group"
+      },
+      "render": {
+        "layer": "decor",
+        "priority": 0
+      },
+      "v1": {
+        "enabled": true,
+        "excludedByRule": false
+      },
+      "sourceRect": {
+        "x": 864,
+        "y": 1120,
+        "width": 48,
+        "height": 48
+      },
+      "paths": {
+        "spring": "src/spritesheets/world/spring/trees/tree_green_31.png",
+        "summer": "src/spritesheets/world/summer/trees/tree_green_31.png",
+        "autumn": "src/spritesheets/world/autumn/trees/tree_green_31.png",
+        "winter": "src/spritesheets/world/winter/trees/tree_green_31.png"
+      }
+    },
+    "tree_green_32": {
+      "name": "tree_green_32",
+      "originalName": "tree_green_32",
+      "category": "trees",
+      "family": "tree_green_birch",
+      "group": "trees",
+      "description": "variations d'arbres verts, penser à appliquer de la collision. appartient à la catégorie des arbres \"bouleaux\"",
+      "width": 48,
+      "height": 48,
+      "tileW": 3,
+      "tileH": 3,
+      "tags": [
+        "birch",
+        "blocks_movement",
+        "tree"
+      ],
+      "collision": {
+        "blocksMovement": true,
+        "walkableOverride": false
+      },
+      "spawn": {
+        "surfaces": [
+          "grass"
+        ],
+        "avoid": [
+          "road",
+          "water",
+          "sand"
+        ],
+        "near": [
+          "grass",
+          "tree"
+        ],
+        "frequency": "common",
+        "placement": "small_group"
+      },
+      "render": {
+        "layer": "decor",
+        "priority": 0
+      },
+      "v1": {
+        "enabled": true,
+        "excludedByRule": false
+      },
+      "sourceRect": {
+        "x": 912,
+        "y": 1120,
+        "width": 48,
+        "height": 48
+      },
+      "paths": {
+        "spring": "src/spritesheets/world/spring/trees/tree_green_32.png",
+        "summer": "src/spritesheets/world/summer/trees/tree_green_32.png",
+        "autumn": "src/spritesheets/world/autumn/trees/tree_green_32.png",
+        "winter": "src/spritesheets/world/winter/trees/tree_green_32.png"
+      }
+    }
+  }
+}
