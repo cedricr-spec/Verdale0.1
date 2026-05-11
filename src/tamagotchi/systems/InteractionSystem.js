@@ -1,4 +1,4 @@
-import { usePetStore } from "../store/usePetstore";
+import { usePetStore } from "../store/usePetStore";
 import { ENTITY_TYPE_CONFIG } from "../config/entityTypes";
 import { distance } from "../utils/spatial";
 import { useEffect } from "react";

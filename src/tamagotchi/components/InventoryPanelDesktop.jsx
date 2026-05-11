@@ -19,7 +19,7 @@ import {
   INVENTORY_MAX_VISUAL_CAPACITY,
   isInventorySlotUnlocked,
 } from "../store/useInventoryStore"
-import { usePetStore } from "../store/usePetstore"
+import { usePetStore } from "../store/usePetStore"
 
 const ACTION_PANEL = PLAYER_INVENTORY_UI_LAYOUT.actionSlots
 const INVENTORY_PANEL = PLAYER_INVENTORY_UI_LAYOUT.inventory

@@ -4,7 +4,7 @@ import closeButton from "../../hud/CTAs/CTA_Small_8BIT_Close.webp"
 import closeButtonPressed from "../../hud/CTAs/CTA_Small_8BIT_Close_Pressed.webp"
 import mediumCta from "../../hud/CTAs/CTA_Medium_8BIT.webp"
 import mediumCtaPressed from "../../hud/CTAs/CTA_Medium_8BIT_Pressed.webp"
-import { usePetStore } from "../store/usePetstore"
+import { usePetStore } from "../store/usePetStore"
 import { getCurrentChapter, getQuestIdsForChapter } from "../config/questConfig"
 import { getQuestSummaryById, useQuestStore } from "../store/useQuestStore"
 import QuestCard, {

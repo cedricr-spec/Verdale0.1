@@ -1,5 +1,5 @@
 import React, { useState } from "react";
-import { usePetStore } from "../store/usePetstore";
+import { usePetStore } from "../store/usePetStore";
 import BG_BACK from "../../hud/ActionsHUD_BACK.webp";
 import BG_FRONT from "../../hud/ActionsHUD_FRONT.webp";
 import BG_TEXT from "../../hud/ActionsHUD_bg_text.webp";

@@ -1,5 +1,5 @@
 import React from "react";
-import { usePetStore } from "../store/usePetstore";
+import { usePetStore } from "../store/usePetStore";
 import EllipsePicker from "./Ellipse_Picker";
 import CTA_ROUNDED from "../../GameActions/CTA_rounded_Game_Action.webp";
 

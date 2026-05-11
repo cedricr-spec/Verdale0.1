@@ -19,7 +19,7 @@ import {
   INVENTORY_MAX_VISUAL_CAPACITY,
   isInventorySlotUnlocked,
 } from "../store/useInventoryStore"
-import { usePetStore } from "../store/usePetstore"
+import { usePetStore } from "../store/usePetStore"
 
 const MOBILE_RECIPES_PANEL = {
   width: 192,

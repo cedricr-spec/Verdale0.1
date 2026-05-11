@@ -3,7 +3,7 @@ import PetSprite from "../components/PetSprite"
 import { resolvePetAnimationState } from "../lib/petAnimationResolver"
 import { getPhaserDebugFlags, subscribePhaserDebugFlags } from "../phaser/phaserDebugFlags"
 import { useCharacterStore } from "../store/useCharacterStore"
-import { usePetStore } from "../store/usePetstore"
+import { usePetStore } from "../store/usePetStore"
 
 export default function TamagotchiUI() {
   const debugUI = usePetStore((state) => state.debugUI)

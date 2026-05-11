@@ -11,7 +11,7 @@ import {
   getUnlockedSlotCountForArea,
   useInventoryStore,
 } from "../store/useInventoryStore"
-import { usePetStore } from "../store/usePetstore"
+import { usePetStore } from "../store/usePetStore"
 import { useQuestStore } from "../store/useQuestStore"
 
 const OVERLAY_Z_INDEX = 1000002

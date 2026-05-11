@@ -11,7 +11,7 @@ import { getScaledSpriteMetrics } from "../lib/spritesheetUtils"
 import { getPetSpriteRenderModel } from "../lib/petSpriteRenderModel"
 import { getPhaserDebugFlags, subscribePhaserDebugFlags } from "../phaser/phaserDebugFlags"
 import { useCharacterStore } from "../store/useCharacterStore"
-import { usePetStore } from "../store/usePetstore"
+import { usePetStore } from "../store/usePetStore"
 import { useWorldStore } from "../store/worldSlice"
 
 const MOVEMENT_IDLE_DELAY = 120

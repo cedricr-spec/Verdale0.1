@@ -1,5 +1,5 @@
 import React, { useEffect, useState } from "react";
-import { usePetStore } from "../store/usePetstore";
+import { usePetStore } from "../store/usePetStore";
 import GaugeV2 from "./GaugeV2";
 
 const MOBILE_GAUGES_QUERY = "(max-width: 800px)";
