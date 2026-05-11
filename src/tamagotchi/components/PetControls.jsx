@@ -7,7 +7,7 @@ import React, {
 } from "react";
 import { createPortal } from "react-dom";
 import { useWorldStore } from "../store/worldSlice";
-import { usePetStore } from "../store/usePetstore";
+import { usePetStore } from "../store/usePetStore";
 import MobileJoystick from "./MobileJoystick";
 
 import controlUp from "../../hud/Control_Keys/Control_Up.webp";
