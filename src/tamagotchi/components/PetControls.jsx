@@ -6,7 +6,7 @@ import React, {
   useState,
 } from "react";
 import { createPortal } from "react-dom";
-import { useWorldStore } from "../store/worldSlice";
+import { isGameplayUiBlockingState, useWorldStore } from "../store/worldSlice";
 import { usePetStore } from "../store/usePetStore";
 import MobileJoystick from "./MobileJoystick";
 
@@ -21,27 +21,6 @@ import controlLeftPressed from "../../hud/Control_Keys/Control_Left_Pressed.webp
 import controlRightPressed from "../../hud/Control_Keys/Control_Right_Pressed.webp";
 
 const CONTROL_SIZE = 52;
-
-const MENU_BLOCKING_SELECTOR = [
-  '[role="dialog"][aria-modal="true"]',
-  '[aria-label="Quest carousel"]',
-  '[data-inventory-panel]',
-  '[data-player-inventory]',
-  '[data-shop-panel]',
-  '.inventory-panel',
-  '.inventory-overlay',
-  '.quest-panel',
-  '.shop-panel',
-].join(',');
-
-function hasBlockingMenuInDom() {
-  if (typeof document === 'undefined') return false;
-  const node = document.querySelector(MENU_BLOCKING_SELECTOR);
-  if (!node) return false;
-  const style = window.getComputedStyle?.(node);
-  if (!style) return true;
-  return style.display !== 'none' && style.visibility !== 'hidden' && style.opacity !== '0';
-}
 
 function ControlButton({
   image,
@@ -143,23 +122,7 @@ export default function PetControls({ embedded = false }) {
   const theme = usePetStore((s) => s.theme);
   const color = theme?.modelColor || "#8f8f8f";
 
-  const activeShop = useWorldStore((s) => s.activeShop);
-  const inventoryOpen = useWorldStore((s) => Boolean(
-    s.inventoryOpen ||
-    s.isInventoryOpen ||
-    s.inventoryVisible ||
-    s.activeInventory ||
-    s.openInventory
-  ));
-  const questPanelOpen = useWorldStore((s) => Boolean(
-    s.questPanelOpen ||
-    s.isQuestPanelOpen ||
-    s.questOverlayOpen ||
-    s.activeQuestPanel ||
-    s.questCarouselOpen
-  ));
-  const [blockingMenuOpen, setBlockingMenuOpen] = useState(false);
-  const gameplayInputBlocked = Boolean(activeShop || inventoryOpen || questPanelOpen || blockingMenuOpen);
+  const gameplayInputBlocked = useWorldStore(isGameplayUiBlockingState);
 
   // Discrete direction state for D-pad (touch + keyboard)
   const holdRef = useRef({ up: false, down: false, left: false, right: false });
@@ -188,16 +151,6 @@ export default function PetControls({ embedded = false }) {
     update();
     media.addEventListener("change", update);
     return () => media.removeEventListener("change", update);
-  }, []);
-
-  useEffect(() => {
-    const updateBlockingMenuState = () => {
-      setBlockingMenuOpen(hasBlockingMenuInDom());
-    };
-
-    updateBlockingMenuState();
-    const interval = window.setInterval(updateBlockingMenuState, 120);
-    return () => window.clearInterval(interval);
   }, []);
 
   useEffect(() => {
@@ -416,7 +369,10 @@ export default function PetControls({ embedded = false }) {
   // ── Mobile: render virtual joystick via portal to escape transform stacking context ──
   if (isTouchDevice && !gameplayInputBlocked) {
     return createPortal(
-      <MobileJoystick onVectorChange={updateJoystickVec} />,
+      <MobileJoystick
+        onVectorChange={updateJoystickVec}
+        inputBlocked={gameplayInputBlocked}
+      />,
       document.body
     );
   }

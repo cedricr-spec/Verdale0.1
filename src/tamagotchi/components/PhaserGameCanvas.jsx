@@ -30,7 +30,7 @@ function syncPhaserCanvasStyles(containerNode) {
     canvas.style.display = "block";
     canvas.style.pointerEvents = "auto";
     canvas.style.zIndex = "0";
-    canvas.style.touchAction = "manipulation";
+    canvas.style.touchAction = "none";
     // Explicit overrides: visibility and opacity must never be inherited from a
     // parent that sets visibility:hidden (e.g. the hideReactWorldLayer wrapper).
     canvas.style.opacity = "1";
@@ -115,7 +115,7 @@ export default function PhaserGameCanvas({ viewportFrame, visible = true }) {
       display: visible ? "block" : "none",
       overflow: "hidden",
       pointerEvents: visible ? "auto" : "none",
-      touchAction: "manipulation",
+      touchAction: "none",
       borderRadius: "inherit",
       zIndex: PHASER_LAYER_Z_INDEX,
       // Explicit overrides so a visibility:hidden ancestor never makes this invisible.

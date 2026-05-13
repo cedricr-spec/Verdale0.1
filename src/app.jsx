@@ -2,16 +2,16 @@ import * as React from "react";
 import { useState, useEffect } from "react"; // 👈 AJOUT
 import { Canvas } from "@react-three/fiber";
 import Scene from "./scene.jsx";
-import CustomizerPanel from "./components/CustomizerPanel";
-import CharacterMenu from "./components/CharacterMenu";
+const CustomizerPanel = React.lazy(() => import("./components/CustomizerPanel"));
+const CharacterMenu = React.lazy(() => import("./components/CharacterMenu"));
+const InventoryPanel = React.lazy(() => import("./tamagotchi/components/InventoryPanel"));
+const QuestPanel = React.lazy(() => import("./tamagotchi/components/QuestPanel"));
 import PetScreen from "./tamagotchi/components/PetScreen";
 import { usePetStore } from "./tamagotchi/store/usePetStore";
 import JaugesPanel from "./tamagotchi/components/JaugesPanel";
 import GaugeV2 from "./tamagotchi/components/GaugeV2";
 import LineMenu from "./tamagotchi/components/Line_Menu";
 import PetControls from "./tamagotchi/components/PetControls";
-import InventoryPanel from "./tamagotchi/components/InventoryPanel";
-import QuestPanel from "./tamagotchi/components/QuestPanel";
 import ActiveQuestTracker from "./tamagotchi/components/ActiveQuestTracker";
 import InventoryNoticeToast from "./tamagotchi/components/InventoryNoticeToast";
 import SeedBagDebugOverlay from "./tamagotchi/components/SeedBagDebugOverlay";
@@ -296,28 +296,32 @@ export default function App() {
             zIndex: 0
           }} />
         )}
-      <InventoryPanel
-        open={inventoryOpen}
-        onClose={() => setInventoryOpen(false)}
-      />
-      <QuestPanel
-        open={questOpen}
-        onClose={() => setQuestOpen(false)}
-      />
+      <React.Suspense fallback={null}>
+        <InventoryPanel
+          open={inventoryOpen}
+          onClose={() => setInventoryOpen(false)}
+        />
+        <QuestPanel
+          open={questOpen}
+          onClose={() => setQuestOpen(false)}
+        />
+      </React.Suspense>
       <WorldInteractionSystem />
       <InventoryNoticeToast />
       <WorldInteractionToast />
-      <CustomizerPanel
-        open={open}
-        onRandomizeStars={(seed) => setStarsSeed(seed)}
-        onToggle={() => setOpen((prev) => !prev)}
-        mode={mode}
-        onSwitchMode={() => setMode(mode === "device" ? "fullscreen" : "device")}
-      />
-      <CharacterMenu
-        open={characterMenuOpen}
-        onToggle={() => setCharacterMenuOpen((prev) => !prev)}
-      />
+      <React.Suspense fallback={null}>
+        <CustomizerPanel
+          open={open}
+          onRandomizeStars={(seed) => setStarsSeed(seed)}
+          onToggle={() => setOpen((prev) => !prev)}
+          mode={mode}
+          onSwitchMode={() => setMode(mode === "device" ? "fullscreen" : "device")}
+        />
+        <CharacterMenu
+          open={characterMenuOpen}
+          onToggle={() => setCharacterMenuOpen((prev) => !prev)}
+        />
+      </React.Suspense>
       </div>
     </div>
   </div>

@@ -1,4 +1,5 @@
 import React, { useCallback, useEffect, useLayoutEffect, useMemo, useRef, useState } from "react"
+import MenuBackdrop from "./MenuBackdrop"
 import TintedCtaButton from "../../components/TintedCtaButton"
 import closeButton from "../../hud/CTAs/CTA_Small_8BIT_Close.webp"
 import closeButtonPressed from "../../hud/CTAs/CTA_Small_8BIT_Close_Pressed.webp"
@@ -428,20 +429,14 @@ export default function QuestPanel({ open, onClose }) {
       `}</style>
 
       {/* Backdrop */}
-      <div
+      <MenuBackdrop
+        open
+        zIndex={OVERLAY_Z_INDEX}
         aria-hidden="true"
+        style={{ transition: "none" }}
         onPointerDown={(event) => {
           event.stopPropagation()
           onClose?.()
-        }}
-        style={{
-          position: "fixed",
-          inset: 0,
-          zIndex: OVERLAY_Z_INDEX,
-          background: "rgba(2, 6, 12, 0.54)",
-          backdropFilter: "blur(10px)",
-          WebkitBackdropFilter: "blur(10px)",
-          pointerEvents: "auto",
         }}
       />
 
@@ -450,6 +445,7 @@ export default function QuestPanel({ open, onClose }) {
         role="dialog"
         aria-modal="true"
         aria-label="Quest carousel"
+        className="quest-panel hud-ui-text-scope"
         style={{
           position: "fixed",
           inset: 0,
@@ -493,10 +489,20 @@ export default function QuestPanel({ open, onClose }) {
               minWidth: 0,
             }}
           >
-            <strong style={{ fontSize: "24px", letterSpacing: "0.08em", textTransform: "uppercase" }}>
+            <strong
+              className={[
+                "menu-text-title",
+                isMobileView ? "menu-text-title--mobile" : null,
+              ].filter(Boolean).join(" ")}
+            >
               {currentChapter.title}
             </strong>
-            <span style={{ fontSize: "12px", lineHeight: 1.35, color: "rgba(255,255,255,0.78)" }}>
+            <span
+              className={[
+                "menu-text-subtitle",
+                isMobileView ? "menu-text-subtitle--mobile" : null,
+              ].filter(Boolean).join(" ")}
+            >
               {claimableQuestCount > 0
                 ? `${claimableQuestCount} quest reward${claimableQuestCount === 1 ? "" : "s"} ready to claim`
                 : "Swipe to explore quests. Tap a quest card to track it."}
@@ -511,7 +517,12 @@ export default function QuestPanel({ open, onClose }) {
             onClick={() => onClose?.()}
             width={`${CLOSE_BUTTON_SIZE}px`}
             height={`${CLOSE_BUTTON_SIZE}px`}
-            style={{ pointerEvents: "auto", flexShrink: 0 }}
+            style={{
+              pointerEvents: "auto",
+              flexShrink: 0,
+              marginRight: "9px",
+              marginTop: "0px",
+            }}
           />
         </div>
 
@@ -616,7 +627,7 @@ export default function QuestPanel({ open, onClose }) {
               pressedSrc={mediumCtaPressed}
               tintColor={canClaimQuest(focusedQuest) ? modelColor || "#8f8f8f" : "#58606d"}
               label={canClaimQuest(focusedQuest) ? "Claim Reward" : "Not Ready"}
-              labelClassName="hud-ui-text hud-ui-text--cta"
+              labelClassName="hud-ui-text hud-ui-text--cta menu-text-cta"
               onClick={() => {
                 if (!canClaimQuest(focusedQuest)) return
                 const claimedQuestId = focusedQuest.id

@@ -61,6 +61,7 @@ export default function InventoryPanelDesktop({
   onCraftRecipe,
   getStackLabel,
   renderLockedOverlay,
+  onStorageSlotContextMenu,
 }) {
   const modelColor = usePetStore((state) => state.theme?.modelColor || "#8f8f8f")
   const closeButtonScale = layoutScale > 0 ? 1 / layoutScale : 1
@@ -71,7 +72,7 @@ export default function InventoryPanelDesktop({
       style={{ "--inventory-ui-scale": layoutScale }}
     >
       <div className="inventory-ui-toolbar">
-        <span className="inventory-ui-toolbar__meta">
+        <span className="inventory-ui-toolbar__meta menu-text-subtitle menu-text-subtitle--uppercase">
           {`${unlockedSlotCount}/${INVENTORY_MAX_VISUAL_CAPACITY} slots unlocked`}
         </span>
 
@@ -104,7 +105,7 @@ export default function InventoryPanelDesktop({
             className="inventory-ui-skin"
           />
 
-          <div className="inventory-ui-panel-title inventory-ui-panel-title--inventory">
+          <div className="inventory-ui-panel-title inventory-ui-panel-title--inventory menu-text-title menu-text-title--panel">
             {`Bag ${mainUnlockedCount}/${INVENTORY_MAIN_SLOT_COUNT}`}
           </div>
 
@@ -169,6 +170,11 @@ export default function InventoryPanelDesktop({
                     ? (event) => onSlotPointerDown(event, "main", index, stack)
                     : undefined
                 }
+                onContextMenu={
+                  unlocked
+                    ? (event) => onStorageSlotContextMenu?.(event, "main", index, stack)
+                    : undefined
+                }
               >
                 {!unlocked ? renderLockedOverlay() : null}
               </InventorySlot>
@@ -187,10 +193,10 @@ export default function InventoryPanelDesktop({
             className="inventory-ui-skin"
           />
 
-          <div className="inventory-ui-panel-title inventory-ui-panel-title--craft">
+          <div className="inventory-ui-panel-title inventory-ui-panel-title--craft menu-text-title menu-text-title--panel">
             CRAFT
           </div>
-          <div className="inventory-ui-panel-title inventory-ui-panel-title--recipes">
+          <div className="inventory-ui-panel-title inventory-ui-panel-title--recipes menu-text-title menu-text-title--panel">
             RECIPES
           </div>
 
@@ -270,6 +276,9 @@ export default function InventoryPanelDesktop({
                 isDragSource={dragSourceKey === slotKey}
                 isDropTarget={dropTargetKey === slotKey}
                 onPointerDown={(event) => onSlotPointerDown(event, "usable", index, stack)}
+                onContextMenu={(event) =>
+                  onStorageSlotContextMenu?.(event, "usable", index, stack)
+                }
               />
             )
           })}

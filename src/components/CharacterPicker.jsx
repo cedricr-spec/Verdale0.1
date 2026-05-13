@@ -264,7 +264,7 @@ export default function CharacterPicker({ previewedId, onPreviewChange }) {
           pressedSrc={mediumCtaPressed}
           tintColor={controlColor}
           label="Random"
-          labelClassName="hud-ui-text hud-ui-text--cta"
+          labelClassName="hud-ui-text hud-ui-text--cta menu-text-cta"
           onClick={pickRandomUnlocked}
           width={RANDOM_BUTTON_WIDTH}
           height="52px"
@@ -351,10 +351,11 @@ export default function CharacterPicker({ previewedId, onPreviewChange }) {
         />
 
         <div
-          className="hud-ui-text"
+          className="hud-ui-text menu-text-title menu-text-title--mobile"
           style={{
-            fontSize: "16px",
             textAlign: "center",
+            textTransform: "none",
+            letterSpacing: "0.04em",
             whiteSpace: "nowrap",
             overflow: "hidden",
             textOverflow: "ellipsis",

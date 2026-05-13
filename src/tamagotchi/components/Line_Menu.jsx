@@ -32,6 +32,7 @@ export default function LineMenu({
   const color = theme?.modelColor || "#8f8f8f"
   const usableSlots = useInventoryStore((s) => s.usableSlots)
   const consumeSlotItem = useInventoryStore((s) => s.consumeSlotItem)
+  const activeUsableSlotIndex = useInventoryStore((s) => s.activeUsableSlotIndex)
   const setActiveUsableSlotIndex = useInventoryStore((s) => s.setActiveUsableSlotIndex)
   const gameplayViewportRef = useRef(null)
   const [pressedKey, setPressedKey] = useState(null)
@@ -240,7 +241,9 @@ export default function LineMenu({
               const itemId = stack?.itemId || null
               const definition = itemId ? getItemDefinition(itemId) : null
               const slotKey = `usable:${index}`
-              const isSelected = pressedSlotKey === slotKey
+              const isPressed = pressedSlotKey === slotKey
+              const isActive = itemId !== null && activeUsableSlotIndex === index
+              const isSelected = isPressed || isActive
               const isDisabled = !stack || !definition?.usable
 
               return (
@@ -261,7 +264,7 @@ export default function LineMenu({
                   }}
                   iconSize={GAMEPLAY_SLOT_SIZE - 12}
                   slotClassName="inventory-ui-slot--mobile-skin gameplay-action-slot"
-                  slotSkinSrc={isSelected ? gameplaySlotPressed : gameplaySlotDefault}
+                  slotSkinSrc={isPressed ? gameplaySlotPressed : gameplaySlotDefault}
                   touchAction="manipulation"
                   isDisabled={isDisabled}
                   onPointerDown={() => {

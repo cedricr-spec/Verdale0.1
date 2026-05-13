@@ -4,6 +4,16 @@ export const EQUIPMENT_HIDDEN_ANIMATION_STATES = new Set(["dead", "death"])
 
 const DEFAULT_EQUIPMENT_ACTION_DURATION_MS = 340
 const DEFAULT_EQUIPMENT_HOLD_ORIGIN = { x: 0.18, y: 0.86 }
+const DEFAULT_MIRRORED_EQUIPMENT_FACING = {
+  left: {
+    mirrorX: true,
+    rotationMultiplier: -1,
+  },
+  right: {
+    mirrorX: true,
+    rotationMultiplier: 1,
+  },
+}
 
 const ACTION_PROFILE_KEYS_BY_TYPE = {
   chop: "axe",
@@ -18,16 +28,7 @@ const EQUIPMENT_ACTION_PROFILES = {
   axe: {
     durationMs: 360,
     origin: DEFAULT_EQUIPMENT_HOLD_ORIGIN,
-    facing: {
-      left: {
-        mirrorX: true,
-        rotationMultiplier: 1,
-      },
-      right: {
-        mirrorX: true,
-        rotationMultiplier: 1,
-      },
-    },
+    facing: DEFAULT_MIRRORED_EQUIPMENT_FACING,
     keyframes: [
       { t: 0, x: 0, y: 0, bob: 0, rotation: 0 },
       { t: 0.18, x: -2, y: 0, bob: -1, rotation: -14 },
@@ -40,16 +41,7 @@ const EQUIPMENT_ACTION_PROFILES = {
   pickaxe: {
     durationMs: 350,
     origin: DEFAULT_EQUIPMENT_HOLD_ORIGIN,
-    facing: {
-      left: {
-        mirrorX: true,
-        rotationMultiplier: 1,
-      },
-      right: {
-        mirrorX: true,
-        rotationMultiplier: 1,
-      },
-    },
+    facing: DEFAULT_MIRRORED_EQUIPMENT_FACING,
     keyframes: [
       { t: 0, x: 0, y: 0, bob: 0, rotation: 0 },
       { t: 0.16, x: -2, y: 0, bob: -1, rotation: -16 },
@@ -62,16 +54,7 @@ const EQUIPMENT_ACTION_PROFILES = {
   shovel: {
     durationMs: 330,
     origin: DEFAULT_EQUIPMENT_HOLD_ORIGIN,
-    facing: {
-      left: {
-        mirrorX: true,
-        rotationMultiplier: 1,
-      },
-      right: {
-        mirrorX: true,
-        rotationMultiplier: 1,
-      },
-    },
+    facing: DEFAULT_MIRRORED_EQUIPMENT_FACING,
     keyframes: [
       { t: 0, x: 0, y: 0, bob: 0, rotation: 0 },
       { t: 0.2, x: -1, y: 0, bob: -1, rotation: -8 },
@@ -84,16 +67,7 @@ const EQUIPMENT_ACTION_PROFILES = {
   hoe: {
     durationMs: 320,
     origin: DEFAULT_EQUIPMENT_HOLD_ORIGIN,
-    facing: {
-      left: {
-        mirrorX: true,
-        rotationMultiplier: 1,
-      },
-      right: {
-        mirrorX: true,
-        rotationMultiplier: 1,
-      },
-    },
+    facing: DEFAULT_MIRRORED_EQUIPMENT_FACING,
     keyframes: [
       { t: 0, x: 0, y: 0, bob: 0, rotation: 0 },
       { t: 0.22, x: -1, y: 0, bob: -1, rotation: -10 },
@@ -106,16 +80,7 @@ const EQUIPMENT_ACTION_PROFILES = {
   watering_can: {
     durationMs: 360,
     origin: { x: 0.2, y: 0.82 },
-    facing: {
-      left: {
-        mirrorX: true,
-        rotationMultiplier: 1,
-      },
-      right: {
-        mirrorX: true,
-        rotationMultiplier: 1,
-      },
-    },
+    facing: DEFAULT_MIRRORED_EQUIPMENT_FACING,
     keyframes: [
       { t: 0, x: 0, y: 0, bob: 0, rotation: 0 },
       { t: 0.22, x: 0, y: -1, bob: -1, rotation: -4 },
@@ -128,16 +93,7 @@ const EQUIPMENT_ACTION_PROFILES = {
   weapon: {
     durationMs: 320,
     origin: DEFAULT_EQUIPMENT_HOLD_ORIGIN,
-    facing: {
-      left: {
-        mirrorX: true,
-        rotationMultiplier: 1,
-      },
-      right: {
-        mirrorX: true,
-        rotationMultiplier: 1,
-      },
-    },
+    facing: DEFAULT_MIRRORED_EQUIPMENT_FACING,
     keyframes: [
       { t: 0, x: 0, y: 0, bob: 0, rotation: 0 },
       { t: 0.16, x: -2, y: 0, bob: -1, rotation: -18 },

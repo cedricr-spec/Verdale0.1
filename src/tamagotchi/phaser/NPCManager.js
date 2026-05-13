@@ -112,6 +112,7 @@ import {
   FIXED_MERCHANT_DEPTH,
   NPC_SPEECH_BUBBLE_DEPTH,
   NPC_SLEEP_BUBBLE_DEPTH,
+  getMerchantDepthForVillagePassBand,
   getEntityDepthFromFeetY,
 } from './renderDepths';
 
@@ -191,6 +192,16 @@ function getTextureDebugInfo(scene, textureKey) {
       Boolean(getTextureFrame(texture, index))
     ).every(Boolean),
   };
+}
+
+function resolveMerchantRenderDepth(merchantRenderBand) {
+  const lowerPass = merchantRenderBand?.lowerPass;
+  const upperPass = merchantRenderBand?.upperPass;
+  if (!lowerPass || !upperPass) {
+    return FIXED_MERCHANT_DEPTH;
+  }
+
+  return getMerchantDepthForVillagePassBand(lowerPass, upperPass);
 }
 
 function boundsOverlap(a, b) {
@@ -636,6 +647,8 @@ export default class NPCManager {
 
     npc.pushReactionBubbleVisibleUntil = 0;
     npc.pushReactionBubbleContent = null;
+    npc.speechBubble?.setVisible(false);
+    npc.speechIcon?.setVisible(false);
   }
 
   getActiveSpeechBubbleContent(npc, now = this.scene.time.now) {
@@ -680,6 +693,8 @@ export default class NPCManager {
       reaction.mood,
       reaction.frameIndex
     );
+    npc.speechBubble?.setVisible(false);
+    npc.speechIcon?.setVisible(false);
     return npc.pushReactionBubbleContent;
   }
 
@@ -712,6 +727,7 @@ export default class NPCManager {
     merchantId = null,
     shopId = null,
     facing = null,
+    merchantRenderBand = null,
   }) {
     const spawnPoint = { x, y };
     const merchantSpriteConfig = isMerchant
@@ -762,7 +778,7 @@ export default class NPCManager {
       .setVisible(false);
 
     const speechIcon = this.scene.add
-      .image(0, 0, NPC_SPEECH_BUBBLE_ASSET.key)
+      .image(0, 0, NPC_EMOJI_REACTIONS_ASSET.key, 0)
       .setOrigin(0.5, 0.5)
       .setDepth(NPC_SPEECH_BUBBLE_DEPTH)
       .setScrollFactor(0)
@@ -803,6 +819,11 @@ export default class NPCManager {
       isMerchant,
       merchantId,
       shopId,
+      merchantRenderBand,
+      renderDepthOverride:
+        isMerchant && merchantRenderBand
+          ? resolveMerchantRenderDepth(merchantRenderBand)
+          : null,
       doorId: null,
       lastDoorId: null,
       nextDoorAllowedAt: 0,
@@ -879,6 +900,7 @@ export default class NPCManager {
         merchantId: spawn.merchantId,
         shopId: spawn.shopId,
         facing: spawn.facing,
+        merchantRenderBand: spawn.merchantRenderBand || null,
       })
     );
 
@@ -1941,27 +1963,13 @@ export default class NPCManager {
   showDiscussionBubble(npc, content, now) {
     npc.discussionCurrentBubbleContent = content;
     npc.discussionBubbleVisibleUntil = now + NPC_DISCUSSION_BUBBLE_DURATION_MS;
-    npc.speechBubble?.setVisible(true);
+    npc.speechBubble?.setVisible(false);
+    npc.speechIcon?.setVisible(false);
 
     if (content?.type === 'emoji') {
-      npc.speechIcon
-        ?.setTexture(NPC_EMOJI_REACTIONS_ASSET.key, content.frameIndex)
-        .setDisplaySize(NPC_SPEECH_ICON_DISPLAY_WIDTH, NPC_SPEECH_ICON_DISPLAY_HEIGHT)
-        .setVisible(true);
       this.logDiscussionEvent('bubble shown', npc.id, 'emoji', content.frameIndex);
     } else if (content?.type === 'item') {
-      const frame = this.ensureDiscussionIconFrame(content.itemId);
-      if (frame) {
-        npc.speechIcon
-          ?.setTexture(frame.textureKey, frame.frameKey)
-          .setDisplaySize(NPC_SPEECH_ICON_DISPLAY_WIDTH, NPC_SPEECH_ICON_DISPLAY_HEIGHT)
-          .setVisible(true);
-      } else {
-        npc.speechIcon?.setVisible(false);
-      }
       this.logDiscussionEvent('bubble shown', npc.id, 'item', content.itemId);
-    } else {
-      npc.speechIcon?.setVisible(false);
     }
   }
 
@@ -2198,6 +2206,51 @@ export default class NPCManager {
       .setVisible(true);
   }
 
+  getSpeechBubbleScreenPosition(screenX, screenY) {
+    return {
+      bubbleX: Math.round(screenX + NPC_SPEECH_BUBBLE_OFFSET_X),
+      bubbleY: Math.round(screenY + NPC_SPEECH_BUBBLE_OFFSET_Y),
+      iconY: Math.round(screenY + NPC_SPEECH_BUBBLE_OFFSET_Y + NPC_SPEECH_ICON_OFFSET_Y),
+    };
+  }
+
+  prepareSpeechBubbleIcon(icon, activeContent) {
+    if (!icon || !activeContent) {
+      return false;
+    }
+
+    if (activeContent.type === 'emoji') {
+      if (!this.scene.textures.exists(NPC_EMOJI_REACTIONS_ASSET.key)) {
+        return false;
+      }
+
+      icon
+        .setTexture(NPC_EMOJI_REACTIONS_ASSET.key, activeContent.frameIndex)
+        .setDisplaySize(
+          NPC_SPEECH_ICON_DISPLAY_WIDTH,
+          NPC_SPEECH_ICON_DISPLAY_HEIGHT
+        );
+      return true;
+    }
+
+    if (activeContent.type === 'item') {
+      const frame = this.ensureDiscussionIconFrame(activeContent.itemId);
+      if (!frame) {
+        return false;
+      }
+
+      icon
+        .setTexture(frame.textureKey, frame.frameKey)
+        .setDisplaySize(
+          NPC_SPEECH_ICON_DISPLAY_WIDTH,
+          NPC_SPEECH_ICON_DISPLAY_HEIGHT
+        );
+      return true;
+    }
+
+    return false;
+  }
+
   syncSpeechBubble(npc, screenX, screenY) {
     const bubble = npc?.speechBubble;
     const icon = npc?.speechIcon;
@@ -2212,45 +2265,26 @@ export default class NPCManager {
       return;
     }
 
-    const bubbleX = Math.round(screenX + NPC_SPEECH_BUBBLE_OFFSET_X);
-    const bubbleY = Math.round(screenY + NPC_SPEECH_BUBBLE_OFFSET_Y);
+    const iconReady = this.prepareSpeechBubbleIcon(icon, activeContent);
+    if (!iconReady) {
+      bubble.setVisible(false);
+      icon.setVisible(false);
+      return;
+    }
+
+    const { bubbleX, bubbleY, iconY } = this.getSpeechBubbleScreenPosition(
+      screenX,
+      screenY
+    );
     bubble
       .setPosition(bubbleX, bubbleY)
-      .setDepth(NPC_SPEECH_BUBBLE_DEPTH)
-      .setVisible(true);
+      .setDepth(NPC_SPEECH_BUBBLE_DEPTH);
     icon
-      .setPosition(bubbleX, bubbleY + NPC_SPEECH_ICON_OFFSET_Y)
-      .setDepth(NPC_SPEECH_BUBBLE_DEPTH)
-      .setVisible(true);
+      .setPosition(bubbleX, iconY)
+      .setDepth(NPC_SPEECH_BUBBLE_DEPTH);
 
-    if (activeContent?.type === 'emoji') {
-      icon
-        .setTexture(NPC_EMOJI_REACTIONS_ASSET.key, activeContent.frameIndex)
-        .setDisplaySize(
-          NPC_SPEECH_ICON_DISPLAY_WIDTH,
-          NPC_SPEECH_ICON_DISPLAY_HEIGHT
-        )
-        .setVisible(true);
-      return;
-    }
-
-    if (activeContent?.type === 'item') {
-      const frame = this.ensureDiscussionIconFrame(activeContent.itemId);
-      if (frame) {
-        icon
-          .setTexture(frame.textureKey, frame.frameKey)
-          .setDisplaySize(
-            NPC_SPEECH_ICON_DISPLAY_WIDTH,
-            NPC_SPEECH_ICON_DISPLAY_HEIGHT
-          )
-          .setVisible(true);
-      } else {
-        icon.setVisible(false);
-      }
-      return;
-    }
-
-    icon.setVisible(false);
+    bubble.setVisible(true);
+    icon.setVisible(true);
   }
 
   setNpcAnimation(npc, animationKey) {
@@ -2977,9 +3011,12 @@ export default class NPCManager {
       if (npc.speechIcon?.visible)  npc.speechIcon.setVisible(false);
       return;
     }
-    const entityDepth = npc.isMerchant
-      ? FIXED_MERCHANT_DEPTH
-      : getEntityDepthFromFeetY(screenY);
+    const entityDepth =
+      npc.isMerchant && Number.isFinite(npc.renderDepthOverride)
+        ? npc.renderDepthOverride
+        : npc.isMerchant
+          ? FIXED_MERCHANT_DEPTH
+          : getEntityDepthFromFeetY(screenY);
     let spriteAlpha = 1;
     let shadowAlpha = 0.42;
     let spriteVisible = true;

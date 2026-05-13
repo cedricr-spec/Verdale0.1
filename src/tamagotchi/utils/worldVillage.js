@@ -36,6 +36,9 @@ const VILLAGE_MERCHANT_SPAWN_OBJECT_LAYER_NAMES = new Set([
   "merchants_spawns",
 ]);
 const VILLAGE_SHADOW_MASK_LAYER_NAME_PATTERN = /shadow mask/i;
+const VILLAGE_FOREGROUND_LAYER_NAME_PATTERN = /(?:^|[\s_])over(?:[\s_]|$)/i;
+const VILLAGE_MARKET_LAYER_NAME_PATTERN = /^market\b/i;
+const VILLAGE_MARKET_GROUND_LAYER_NAME_PATTERN = /^market\b.*ground\b/i;
 const VILLAGE_SHADOW_MASK_FOREGROUND_OVERRIDE_LAYER_NAMES = new Set([
   "bushes",
   "decors",
@@ -226,6 +229,7 @@ function buildLayerRuntime(layer, mapWidth, mapHeight, firstgid, columns) {
   return Object.freeze({
     id: layer?.id ?? null,
     name: layer?.name || "layer",
+    groupPath: layer?.__groupPath || "",
     layerPath: layer?.__layerPath || layer?.name || "layer",
     orderIndex: Number.isFinite(Number(layer?.__orderIndex))
       ? Number(layer.__orderIndex)
@@ -236,6 +240,121 @@ function buildLayerRuntime(layer, mapWidth, mapHeight, firstgid, columns) {
     tiles: Object.freeze(tiles),
     tilesByCoord,
   });
+}
+
+function createVillageLayerRef(layer) {
+  return Object.freeze({
+    id: layer?.id ?? null,
+    name: layer?.name || "layer",
+    groupPath: layer?.groupPath || layer?.__groupPath || "",
+    layerPath: layer?.layerPath || layer?.__layerPath || layer?.name || "layer",
+    orderIndex: Number.isFinite(Number(layer?.orderIndex))
+      ? Number(layer.orderIndex)
+      : Number.isFinite(Number(layer?.__orderIndex))
+        ? Number(layer.__orderIndex)
+      : -1,
+  });
+}
+
+function getVillageLayerRefKey(layerRef) {
+  if (!layerRef) {
+    return "";
+  }
+
+  if (layerRef.id !== null && layerRef.id !== undefined) {
+    return `id:${layerRef.id}`;
+  }
+
+  return `path:${layerRef.layerPath || layerRef.name || ""}`;
+}
+
+function buildVillageMerchantRenderBand(flatLayers, depthMarkerIndex) {
+  const marketTileLayers = (flatLayers || [])
+    .filter(
+      (layer) =>
+        layer?.type === "tilelayer" &&
+        layer?.visible !== false &&
+        VILLAGE_MARKET_LAYER_NAME_PATTERN.test(String(layer?.name || ""))
+    )
+    .sort(
+      (left, right) =>
+        (Number(left?.__orderIndex) || 0) - (Number(right?.__orderIndex) || 0)
+    );
+
+  if (!marketTileLayers.length) {
+    return null;
+  }
+
+  const lowerLayer = [...marketTileLayers]
+    .reverse()
+    .find((layer) =>
+      VILLAGE_MARKET_GROUND_LAYER_NAME_PATTERN.test(String(layer?.name || ""))
+    );
+  if (!lowerLayer) {
+    return null;
+  }
+
+  const lowerOrderIndex = Number(lowerLayer.__orderIndex);
+  const upperLayers = marketTileLayers.filter((layer) => {
+    const orderIndex = Number(layer?.__orderIndex);
+    return (
+      Number.isFinite(orderIndex) &&
+      orderIndex > lowerOrderIndex &&
+      !VILLAGE_FOREGROUND_LAYER_NAME_PATTERN.test(String(layer?.name || ""))
+    );
+  });
+
+  if (!upperLayers.length) {
+    return null;
+  }
+
+  const foregroundLayers = marketTileLayers.filter((layer) => {
+    const orderIndex = Number(layer?.__orderIndex);
+    return (
+      Number.isFinite(orderIndex) &&
+      orderIndex > lowerOrderIndex &&
+      VILLAGE_FOREGROUND_LAYER_NAME_PATTERN.test(String(layer?.name || ""))
+    );
+  });
+
+  return Object.freeze({
+    lowerLayer: createVillageLayerRef(lowerLayer),
+    lowerPass: resolveVillageRenderPassForLayer(lowerLayer, depthMarkerIndex) || "back",
+    upperLayers: Object.freeze(upperLayers.map((layer) => createVillageLayerRef(layer))),
+    upperPass: "mid",
+    foregroundLayers: Object.freeze(
+      foregroundLayers.map((layer) => createVillageLayerRef(layer))
+    ),
+  });
+}
+
+function resolveVillageRenderPassForLayer(layer, depthMarkerIndex) {
+  const layerName = layer?.name;
+  if (typeof layerName !== "string" || layer?.visible === false) {
+    return null;
+  }
+
+  if (VILLAGE_SHADOW_MASK_LAYER_NAME_PATTERN.test(layerName)) {
+    return "shadowmask";
+  }
+
+  if (VILLAGE_FOREGROUND_LAYER_NAME_PATTERN.test(layerName)) {
+    return "front";
+  }
+
+  if (VILLAGE_SHADOW_MASK_FOREGROUND_OVERRIDE_LAYER_NAMES.has(layerName)) {
+    return "mid";
+  }
+
+  if (
+    depthMarkerIndex >= 0 &&
+    Number.isFinite(Number(layer?.__orderIndex)) &&
+    Number(layer.__orderIndex) > depthMarkerIndex
+  ) {
+    return "front";
+  }
+
+  return "back";
 }
 
 function buildOrderedVillageRenderPasses(flatLayers) {
@@ -250,62 +369,85 @@ function buildOrderedVillageRenderPasses(flatLayers) {
       )
     : -1;
 
-  const backLayerNames = [];
-  const frontLayerNames = [];
-  const midLayerNames = [];
-  const shadowMaskLayerNames = [];
+  const backLayers = [];
+  const frontLayers = [];
+  const midLayers = [];
+  const shadowMaskLayers = [];
+  const merchantRenderBand = buildVillageMerchantRenderBand(
+    flatLayers,
+    depthMarkerIndex
+  );
+  const merchantUpperLayerRefKeys = new Set(
+    (merchantRenderBand?.upperLayers || []).map((layerRef) =>
+      getVillageLayerRefKey(layerRef)
+    )
+  );
 
   orderedTileLayers.forEach((layer) => {
-    const layerName = layer?.name;
-    if (typeof layerName !== "string" || layer?.visible === false) {
+    const layerRef = createVillageLayerRef(layer);
+    if (merchantUpperLayerRefKeys.has(getVillageLayerRefKey(layerRef))) {
+      midLayers.push(layerRef);
       return;
     }
 
-    if (
-      depthMarkerIndex >= 0 &&
-      Number.isFinite(Number(layer?.__orderIndex)) &&
-      Number(layer.__orderIndex) > depthMarkerIndex
-    ) {
-      frontLayerNames.push(layerName);
+    const pass = resolveVillageRenderPassForLayer(layer, depthMarkerIndex);
+    if (!pass || !layerRef) {
       return;
     }
 
-    if (VILLAGE_SHADOW_MASK_LAYER_NAME_PATTERN.test(layerName)) {
-      shadowMaskLayerNames.push(layerName);
+    if (pass === "front") {
+      frontLayers.push(layerRef);
       return;
     }
 
-    if (VILLAGE_SHADOW_MASK_FOREGROUND_OVERRIDE_LAYER_NAMES.has(layerName)) {
-      midLayerNames.push(layerName);
+    if (pass === "shadowmask") {
+      shadowMaskLayers.push(layerRef);
       return;
     }
 
-    backLayerNames.push(layerName);
+    if (pass === "mid") {
+      midLayers.push(layerRef);
+      return;
+    }
+
+    backLayers.push(layerRef);
   });
 
   return Object.freeze({
-    backLayerNames: Object.freeze(backLayerNames),
-    midLayerNames: Object.freeze(midLayerNames),
-    shadowMaskLayerNames: Object.freeze(shadowMaskLayerNames),
-    frontLayerNames: Object.freeze(frontLayerNames),
+    backLayers: Object.freeze(backLayers),
+    midLayers: Object.freeze(midLayers),
+    shadowMaskLayers: Object.freeze(shadowMaskLayers),
+    frontLayers: Object.freeze(frontLayers),
+    merchantRenderBand,
   });
 }
 
-function getVillageLayerOrderIndex(map, layerName) {
-  if (!map || typeof layerName !== "string") {
+function getVillageLayerOrderIndex(layerRef) {
+  if (!layerRef) {
     return Number.MAX_SAFE_INTEGER;
   }
 
-  const directIndex = map.tileLayerOrderIndexByName?.[layerName];
-  return Number.isFinite(directIndex) ? directIndex : Number.MAX_SAFE_INTEGER;
+  return Number.isFinite(Number(layerRef.orderIndex))
+    ? Number(layerRef.orderIndex)
+    : Number.MAX_SAFE_INTEGER;
 }
 
-function sortVillageLayerNamesByMapOrder(layerNames, map) {
-  return [...new Set(layerNames)].sort((left, right) => {
-    const leftIndex = getVillageLayerOrderIndex(map, left);
-    const rightIndex = getVillageLayerOrderIndex(map, right);
+function sortVillageLayerRefsByMapOrder(layerRefs) {
+  const uniqueRefs = Array.from(
+    new Map(
+      (layerRefs || [])
+        .filter(Boolean)
+        .map((layerRef) => [layerRef.id ?? layerRef.layerPath, layerRef])
+    ).values()
+  );
+
+  return uniqueRefs.sort((left, right) => {
+    const leftIndex = getVillageLayerOrderIndex(left);
+    const rightIndex = getVillageLayerOrderIndex(right);
     if (leftIndex === rightIndex) {
-      return String(left).localeCompare(String(right));
+      return String(left?.layerPath || left?.name || "").localeCompare(
+        String(right?.layerPath || right?.name || "")
+      );
     }
     return leftIndex - rightIndex;
   });
@@ -535,6 +677,7 @@ function buildMerchantSpawnRuntime(layer) {
         merchantId,
         shopId: properties.shopId ? String(properties.shopId) : null,
         facing: properties.facing ? String(properties.facing).toLowerCase() : null,
+        merchantRenderBand: layer?.__merchantRenderBand || null,
         bounds,
         x: bounds.left + bounds.width * 0.5,
         y: bounds.top + bounds.height * 0.5,
@@ -565,6 +708,12 @@ function buildVillageMapRuntime(rawMap) {
     ? flatLayers.flatMap((layer) => buildDepthObjectRuntime(layer))
     : [];
   const layersByName = Object.fromEntries(layers.map((layer) => [layer.name, layer]));
+  const layersById = Object.fromEntries(
+    layers
+      .filter((layer) => layer?.id !== null && layer?.id !== undefined)
+      .map((layer) => [String(layer.id), layer])
+  );
+  const orderedRenderPasses = buildOrderedVillageRenderPasses(flatLayers);
   const doorObjects = flatLayers.length
     ? flatLayers.flatMap((layer) =>
         buildDoorObjectRuntime(
@@ -576,13 +725,17 @@ function buildVillageMapRuntime(rawMap) {
       )
     : [];
   const merchantSpawns = flatLayers.length
-    ? flatLayers.flatMap((layer) => buildMerchantSpawnRuntime(layer))
+    ? flatLayers.flatMap((layer) =>
+        buildMerchantSpawnRuntime({
+          ...layer,
+          __merchantRenderBand: orderedRenderPasses.merchantRenderBand || null,
+        })
+      )
     : [];
   const doorVisualLayerName = getVillageDoorVisualLayerNameFromLayers(layersByName);
   const tileLayerOrderIndexByName = Object.fromEntries(
     layers.map((layer) => [layer.name, layer.orderIndex])
   );
-  const orderedRenderPasses = buildOrderedVillageRenderPasses(flatLayers);
   const blockingTiles = new Set();
 
   layers.forEach((layer) => {
@@ -604,6 +757,7 @@ function buildVillageMapRuntime(rawMap) {
     columns: VILLAGE_TILESET_COLUMNS,
     layers: Object.freeze(layers),
     layersByName,
+    layersById,
     blockingTiles,
     collisionRects: Object.freeze(collisionRects),
     depthRects: Object.freeze(depthRects),
@@ -623,10 +777,11 @@ function buildVillageMapRuntime(rawMap) {
         .map((layer) => layer.name)
         .filter((layerName) => VILLAGE_DEPTH_EXCLUDED_LAYER_NAME_SET.has(layerName))
     ),
-    backLayerNames: orderedRenderPasses.backLayerNames,
-    shadowMaskLayerNames: orderedRenderPasses.shadowMaskLayerNames,
-    midLayerNames: orderedRenderPasses.midLayerNames,
-    frontLayerNames: orderedRenderPasses.frontLayerNames,
+    backLayers: orderedRenderPasses.backLayers,
+    shadowMaskLayers: orderedRenderPasses.shadowMaskLayers,
+    midLayers: orderedRenderPasses.midLayers,
+    frontLayers: orderedRenderPasses.frontLayers,
+    merchantRenderBand: orderedRenderPasses.merchantRenderBand || null,
   });
 }
 
@@ -713,17 +868,32 @@ function pointInsideBounds(x, y, bounds) {
   );
 }
 
-function getVillageLayerNamesForPass(map, pass = "back") {
+function getVillageLayerRefsForPass(map, pass = "back") {
   if (pass === "front") {
-    return map.frontLayerNames;
+    return map.frontLayers || [];
   }
   if (pass === "shadowmask") {
-    return map.shadowMaskLayerNames || [];
+    return map.shadowMaskLayers || [];
   }
   if (pass === "mid") {
-    return map.midLayerNames || [];
+    return map.midLayers || [];
   }
-  return map.backLayerNames;
+  return map.backLayers || [];
+}
+
+function getVillageLayerByRef(map, layerRef) {
+  if (!map || !layerRef) {
+    return null;
+  }
+
+  if (layerRef.id !== null && layerRef.id !== undefined) {
+    const layerById = map.layersById?.[String(layerRef.id)];
+    if (layerById) {
+      return layerById;
+    }
+  }
+
+  return map.layersByName?.[layerRef.name] || null;
 }
 
 function getWorldTileRangeForBounds(bounds) {
@@ -1175,25 +1345,24 @@ export function visitVillageRenderTiles(
       return;
     }
 
-    const layerNames = [...getVillageLayerNamesForPass(instance.map, pass)];
-    const depthAwareLayerNames = instance.map.depthAwareLayerNames || [];
+    const layerRefs = [...getVillageLayerRefsForPass(instance.map, pass)];
     if (pass === "front" && hasActiveDepthRects) {
-      layerNames.push(
-        ...depthAwareLayerNames.filter(
-          (layerName) => !layerNames.includes(layerName)
-        )
-      );
+      const depthAwareLayerRefs = (instance.map.layers || [])
+        .filter((layer) => VILLAGE_DEPTH_AWARE_LAYER_NAME_SET.has(layer.name))
+        .map((layer) => createVillageLayerRef(layer));
+      layerRefs.push(...depthAwareLayerRefs);
     }
-    const orderedLayerNames = sortVillageLayerNamesByMapOrder(layerNames, instance.map);
+    const orderedLayerRefs = sortVillageLayerRefsByMapOrder(layerRefs);
     let movedToFrontCount = 0;
     const movedTileSamples = [];
 
-    orderedLayerNames.forEach((layerName) => {
+    orderedLayerRefs.forEach((layerRef) => {
+      const layerName = layerRef.name;
       if (typeof layerFilter === "function" && !layerFilter(layerName, pass, instance)) {
         return;
       }
 
-      const layer = instance.map.layersByName[layerName];
+      const layer = getVillageLayerByRef(instance.map, layerRef);
       if (!layer?.visible || !layer?.tiles.length) {
         return;
       }
@@ -1272,12 +1441,15 @@ export function visitVillageRenderTiles(
     });
 
     if (DEBUG_VILLAGE_DEPTH && pass === "front" && movedToFrontCount > 0) {
-      const debugSignature = `${instance.id}:${movedToFrontCount}:${orderedLayerNames.join(",")}`;
+      const orderedLayerPaths = orderedLayerRefs.map(
+        (layerRef) => layerRef.layerPath || layerRef.name
+      );
+      const debugSignature = `${instance.id}:${movedToFrontCount}:${orderedLayerPaths.join(",")}`;
       if (debugSignature !== lastVillageDepthMovedTileLog) {
         console.info("[Solaria Village] depth-moved tiles:", {
           instanceId: instance.id,
           movedToFrontCount,
-          orderedLayerNames,
+          orderedLayerPaths,
         });
         lastVillageDepthMovedTileLog = debugSignature;
       }

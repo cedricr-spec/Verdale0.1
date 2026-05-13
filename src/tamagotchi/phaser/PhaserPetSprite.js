@@ -1,4 +1,9 @@
 import Phaser from "phaser"
+import {
+  CHARACTER_HAND_BACK_FRAME,
+  CHARACTER_HAND_FRONT_FRAME,
+  hasCharacterHandFrames,
+} from "../config/sharedAnimationMap"
 import { getItemDefinition } from "../config/itemsRegistry"
 import { getItemEquipmentProfile } from "../config/normalizedItemRegistry"
 import { useInventoryStore } from "../store/useInventoryStore"
@@ -13,10 +18,67 @@ import {
 } from "./equipmentAnimationConfig"
 import { getEntityDepthFromFeetY } from "./renderDepths"
 
+const HAND_LAYER_DEPTH_STEP = 0.01
+const EQUIPMENT_BEHIND_LAYER_DEPTH_STEP = 0.005
+const EQUIPMENT_FRONT_LAYER_DEPTH_STEP = 0.02
+const RUN_HAND_SWAY = Object.freeze([
+  Object.freeze({ left: -1, right: 1 }),
+  Object.freeze({ left: 1, right: -1 }),
+  Object.freeze({ left: 0, right: 0 }),
+])
+const NO_HAND_SWAY = Object.freeze({
+  left: 0,
+  right: 0,
+  front: 0,
+  back: 0,
+})
+
+function getCharacterHandLayerDepths(entityDepth, equipmentDepth = null) {
+  const baseDepth = Number.isFinite(entityDepth) ? entityDepth : 0
+  const safeEquipmentDepth = Number.isFinite(equipmentDepth)
+    ? equipmentDepth
+    : baseDepth
+
+  return {
+    back: baseDepth - HAND_LAYER_DEPTH_STEP,
+    front: Math.max(baseDepth, safeEquipmentDepth) + HAND_LAYER_DEPTH_STEP,
+  }
+}
+
+function getEquipmentLayerDepth(entityDepth, equipmentDepthTag = "front") {
+  const baseDepth = Number.isFinite(entityDepth) ? entityDepth : 0
+
+  if (equipmentDepthTag === "behind") {
+    return baseDepth + EQUIPMENT_BEHIND_LAYER_DEPTH_STEP
+  }
+
+  return baseDepth + EQUIPMENT_FRONT_LAYER_DEPTH_STEP
+}
+
+function getHandSwayOffsets(model, allowSway = false) {
+  if (!allowSway || model?.animationState !== "run") {
+    return NO_HAND_SWAY
+  }
+
+  const swayFrame = RUN_HAND_SWAY[model.frameIndex % RUN_HAND_SWAY.length] || RUN_HAND_SWAY[0]
+  const facingDirectionMultiplier = model.flipX ? -1 : 1
+  const left = swayFrame.left * facingDirectionMultiplier
+  const right = swayFrame.right * facingDirectionMultiplier
+
+  return {
+    left,
+    right,
+    front: left,
+    back: right,
+  }
+}
+
 export default class PhaserPetSprite {
   constructor(scene) {
     this.scene = scene
     this.sprite = null
+    this.backHandSprite = null
+    this.frontHandSprite = null
     this.characterId = null
     this.textureKey = null
     this.loadingTextureKey = null
@@ -34,6 +96,7 @@ export default class PhaserPetSprite {
 
   update(model, visible, options = {}) {
     if (!model?.spritesheet) {
+      this.hideHands()
       this.hideEquipment()
       return false
     }
@@ -50,6 +113,7 @@ export default class PhaserPetSprite {
     const textureKey = this.getTextureKey(model)
     if (!this.ensureTexture(textureKey, model.spritesheet)) {
       this.sprite?.setVisible(false)
+      this.hideHands()
       this.hideEquipment()
       return false
     }
@@ -60,9 +124,12 @@ export default class PhaserPetSprite {
     const frameKey = this.ensureFrame(texture, textureKey, model)
     if (!frameKey) {
       this.sprite?.setVisible(false)
+      this.hideHands()
       this.hideEquipment()
       return false
     }
+
+    const handFrameKeys = this.ensureHandFrames(texture, textureKey)
 
     if (!this.sprite) {
       this.sprite = this.scene.add
@@ -79,11 +146,28 @@ export default class PhaserPetSprite {
       .setScale(model.flipX ? -model.scale : model.scale, model.scale)
       .setVisible(Boolean(visible))
 
+    const showHands = Boolean(visible) &&
+      !EQUIPMENT_HIDDEN_ANIMATION_STATES.has(model.animationState)
+
+    let equipmentRenderState = null
     if (options.showEquipment === false) {
       this.hideEquipment()
     } else {
-      this.updateEquipment(model, visible, entityDepth)
+      equipmentRenderState = this.updateEquipment(model, visible, entityDepth)
     }
+
+    const handSway = equipmentRenderState?.handSway ||
+      getHandSwayOffsets(model, Boolean(visible) && !this.equipmentAction)
+
+    this.updateHands(
+      model,
+      showHands,
+      textureKey,
+      handFrameKeys,
+      entityDepth,
+      equipmentRenderState,
+      handSway
+    )
 
     return true
   }
@@ -139,13 +223,13 @@ export default class PhaserPetSprite {
       EQUIPMENT_HIDDEN_ANIMATION_STATES.has(model.animationState)
     ) {
       this.hideEquipment()
-      return false
+      return null
     }
 
     const textureKey = this.getEquipmentTextureKey(equipmentInfo.itemId)
     if (!this.ensureEquipmentTexture(textureKey, equipmentInfo.atlasSource)) {
       this.hideEquipment()
-      return false
+      return null
     }
 
     const texture = this.scene.textures.get(textureKey)
@@ -154,7 +238,7 @@ export default class PhaserPetSprite {
     const frameKey = this.ensureEquipmentFrame(texture, textureKey, equipmentInfo)
     if (!frameKey) {
       this.hideEquipment()
-      return false
+      return null
     }
 
     const facing = model.facingDirection === "left" ? "left" : "right"
@@ -162,7 +246,7 @@ export default class PhaserPetSprite {
       equipmentInfo.equipment.offsets?.right ||
       { x: 0, y: 0, depth: "front" }
     const flipX = facing === "left"
-    const depthOffset = offset.depth === "behind" ? -0.02 : 0.02
+    const equipmentDepth = getEquipmentLayerDepth(entityDepth, offset.depth)
     const equipmentScale = Math.max(1, model.scale || 1) * 0.5
     const holdTransform = getEquipmentHoldTransform(
       equipmentInfo.equipment.animationSet,
@@ -180,9 +264,13 @@ export default class PhaserPetSprite {
     const targetEquipmentBob = idleBob + runBob
     this.currentEquipmentBob += (targetEquipmentBob - this.currentEquipmentBob) * 0.18
     const equipmentBob = this.currentEquipmentBob + actionBob
+    const handSway = getHandSwayOffsets(model, visible && !this.equipmentAction)
+    const handedness = equipmentInfo.equipment.handedness === "left" ? "left" : "right"
+    const equipmentHandSwayX = handSway[handedness] || 0
     const x = Math.round(
       model.centerX +
       (offset.x || 0) * equipmentScale +
+      equipmentHandSwayX +
       actionPose.x
     )
     const y = Math.round(
@@ -212,12 +300,15 @@ export default class PhaserPetSprite {
       .setTexture(textureKey, frameKey)
       .setOrigin(originX, originY)
       .setPosition(pivotX, pivotY)
-      .setDepth(entityDepth + depthOffset)
+      .setDepth(equipmentDepth)
       .setRotation(actionRotation)
       .setScale(scaleX, scaleY)
       .setVisible(true)
 
-    return true
+    return {
+      depth: equipmentDepth,
+      handSway,
+    }
   }
 
   resolveActiveEquipmentInfo() {
@@ -294,6 +385,11 @@ export default class PhaserPetSprite {
     this.equipmentSprite?.setVisible(false)
   }
 
+  hideHands() {
+    this.backHandSprite?.setVisible(false)
+    this.frontHandSprite?.setVisible(false)
+  }
+
   ensureTexture(textureKey, src) {
     if (this.scene.textures.exists(textureKey)) return true
     if (this.loadingTextureKey === textureKey) return false
@@ -327,12 +423,103 @@ export default class PhaserPetSprite {
     return texture.has(frameKey) ? frameKey : null
   }
 
+  ensureHandFrames(texture, textureKey) {
+    const sourceImage = texture?.source?.[0]?.image || texture?.getSourceImage?.() || null
+    if (!hasCharacterHandFrames(sourceImage)) return null
+
+    const frontFrameKey = this.ensureStaticFrame(
+      texture,
+      `${textureKey}_hand_front`,
+      CHARACTER_HAND_FRONT_FRAME
+    )
+    const backFrameKey = this.ensureStaticFrame(
+      texture,
+      `${textureKey}_hand_back`,
+      CHARACTER_HAND_BACK_FRAME
+    )
+
+    if (!frontFrameKey || !backFrameKey) return null
+
+    return {
+      front: frontFrameKey,
+      back: backFrameKey,
+    }
+  }
+
+  ensureStaticFrame(texture, frameKey, rect) {
+    if (!texture.has(frameKey)) {
+      texture.add(
+        frameKey,
+        0,
+        rect.x || 0,
+        rect.y || 0,
+        rect.width || rect.w || 24,
+        rect.height || rect.h || 24
+      )
+    }
+
+    return texture.has(frameKey) ? frameKey : null
+  }
+
+  updateHands(
+    model,
+    visible,
+    textureKey,
+    handFrameKeys,
+    entityDepth,
+    equipmentRenderState = null,
+    handSway = NO_HAND_SWAY
+  ) {
+    if (!visible || !handFrameKeys) {
+      this.hideHands()
+      return
+    }
+
+    const handDepths = getCharacterHandLayerDepths(
+      entityDepth,
+      equipmentRenderState?.depth ?? null
+    )
+    const scaleX = model.flipX ? -model.scale : model.scale
+
+    if (!this.backHandSprite) {
+      this.backHandSprite = this.scene.add
+        .image(model.centerX, model.centerY, textureKey, handFrameKeys.back)
+        .setOrigin(0.5, 0.5)
+        .setScrollFactor(0)
+    }
+
+    if (!this.frontHandSprite) {
+      this.frontHandSprite = this.scene.add
+        .image(model.centerX, model.centerY, textureKey, handFrameKeys.front)
+        .setOrigin(0.5, 0.5)
+        .setScrollFactor(0)
+    }
+
+    this.backHandSprite
+      .setTexture(textureKey, handFrameKeys.back)
+      .setPosition(model.centerX + (handSway.back || 0), model.centerY)
+      .setDepth(handDepths.back)
+      .setScale(scaleX, model.scale)
+      .setVisible(true)
+
+    this.frontHandSprite
+      .setTexture(textureKey, handFrameKeys.front)
+      .setPosition(model.centerX + (handSway.front || 0), model.centerY)
+      .setDepth(handDepths.front)
+      .setScale(scaleX, model.scale)
+      .setVisible(true)
+  }
+
   getTextureKey(model) {
     return `phaser_pet_${model.characterId}`
   }
 
   resetCharacter(characterId) {
+    this.backHandSprite?.destroy()
+    this.frontHandSprite?.destroy()
     this.sprite?.destroy()
+    this.backHandSprite = null
+    this.frontHandSprite = null
     this.sprite = null
     this.characterId = characterId
     this.textureKey = null
@@ -343,15 +530,24 @@ export default class PhaserPetSprite {
 
   setVisible(visible) {
     this.sprite?.setVisible(Boolean(visible))
-    if (!visible) this.hideEquipment()
+    this.backHandSprite?.setVisible(Boolean(visible))
+    this.frontHandSprite?.setVisible(Boolean(visible))
+    if (!visible) {
+      this.hideHands()
+      this.hideEquipment()
+    }
   }
 
   destroy() {
     if (typeof window !== "undefined") {
       window.removeEventListener("phaser-equipment-action", this.handleEquipmentAction)
     }
+    this.backHandSprite?.destroy()
+    this.frontHandSprite?.destroy()
     this.sprite?.destroy()
     this.equipmentSprite?.destroy()
+    this.backHandSprite = null
+    this.frontHandSprite = null
     this.sprite = null
     this.equipmentSprite = null
     this.characterId = null

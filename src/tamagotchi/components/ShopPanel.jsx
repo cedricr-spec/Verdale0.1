@@ -1,4 +1,5 @@
 import React, { useCallback } from "react";
+import MenuBackdrop from "./MenuBackdrop";
 import { getItemDefinition } from "../config/itemsRegistry";
 import { MERCHANTS } from "../config/merchantCatalog";
 import { useInventoryStore } from "../store/useInventoryStore";
@@ -10,16 +11,6 @@ import ItemVisual from "./ItemVisual";
 const Z = 1000010;
 
 const S = {
-  backdrop: {
-    position: "absolute",
-    inset: 0,
-    zIndex: Z,
-    display: "flex",
-    alignItems: "center",
-    justifyContent: "center",
-    background: "rgba(0,0,0,0.6)",
-    pointerEvents: "auto",
-  },
   panel: {
     background: "#12121e",
     border: "2px solid #3a3a5c",
@@ -43,14 +34,9 @@ const S = {
     flexShrink: 0,
   },
   headerTitle: {
-    fontSize: 14,
-    fontWeight: "bold",
-    letterSpacing: 1,
     color: "#f0c040",
-    textTransform: "uppercase",
   },
   headerMeta: {
-    fontSize: 11,
     color: "#8888aa",
     marginLeft: 8,
   },
@@ -331,15 +317,25 @@ export default function ShopPanel() {
   const merchant = MERCHANTS[merchantId];
 
   return (
-    <div style={S.backdrop} onClick={handleClose}>
-      <div style={S.panel} onClick={(e) => e.stopPropagation()}>
+    <MenuBackdrop
+      open
+      zIndex={Z}
+      style={{ position: "absolute", transition: "none", display: "flex", alignItems: "center", justifyContent: "center" }}
+      onClick={handleClose}
+    >
+      <div
+        style={S.panel}
+        className="hud-ui-text-scope shop-panel"
+        data-shop-panel="true"
+        onClick={(e) => e.stopPropagation()}
+      >
         {/* Header */}
         <div style={S.header}>
-          <span style={S.headerTitle}>
+          <span className="menu-text-title menu-text-title--mobile" style={S.headerTitle}>
             {merchant?.name || merchantId}
           </span>
           {merchant?.title && (
-          <span style={S.headerMeta}>{merchant.title}</span>
+          <span className="menu-text-subtitle menu-text-subtitle--mobile" style={S.headerMeta}>{merchant.title}</span>
           )}
           <span style={S.walletChip}>
             <CurrencyDisplay
@@ -379,6 +375,6 @@ export default function ShopPanel() {
           )}
         </div>
       </div>
-    </div>
+    </MenuBackdrop>
   );
 }

@@ -4,6 +4,7 @@ import closeButton from "../../hud/CTAs/CTA_Small_8BIT_Close.webp"
 import closeButtonPressed from "../../hud/CTAs/CTA_Small_8BIT_Close_Pressed.webp"
 import playerActionsSlotsSkin from "../../hud/inventories/player/PlayerActionsSlots.png"
 import playerCraftMobileSkin from "../../hud/inventories/player/PlayerCraftMobile.png"
+import playerInventoryMobileLargeSkin from "../../hud/inventories/player/PlayerCraftMobileL.png"
 import playerInventoryMobileSkin from "../../hud/inventories/player/PlayerInventoryMobile.png"
 import playerInventoryMobileReducedSkin from "../../hud/inventories/player/PlayerInventoryMobile_Reduced(<825px).png"
 import playerInventoryMobileCompactSkin from "../../hud/inventories/player/PlayerInventoryMobile_Reduced(<750px).png"
@@ -50,48 +51,42 @@ const MOBILE_CRAFT_PANEL = {
 }
 
 const MOBILE_INVENTORY_PANEL = {
-  // 5 columns × 32px slots + 8px padding on each side
-  width: 176,
-  // 3 visible rows × 32px slots + 8px padding top/bottom
-  height: 112,
+  // Uses PlayerCraftMobileL.png native 192×256 ratio.
+  width: 192,
+  height: 256,
   gridViewport: {
     left: 8,
     top: 8,
-    width: 160,
-    height: 96,
+    width: 176,
+    height: 240,
   },
   grid: {
     columns: 5,
     slotSize: 32,
+    rowGap: 4,
+    columnGap: 4,
   },
 }
 
 const MOBILE_INVENTORY_PANEL_REDUCED = {
   ...MOBILE_INVENTORY_PANEL,
-  // 2 visible rows × 32px slots + 8px padding top/bottom
-  height: 80,
+  height: 224,
   gridViewport: {
     ...MOBILE_INVENTORY_PANEL.gridViewport,
-    height: 64,
+    height: 208,
   },
 }
 
 const MOBILE_INVENTORY_PANEL_COMPACT = {
   ...MOBILE_INVENTORY_PANEL,
-  // 1.5 visible rows × 32px slots + 8px padding top/bottom
-  height: 64,
+  height: 192,
   gridViewport: {
     ...MOBILE_INVENTORY_PANEL.gridViewport,
-    height: 48,
+    height: 176,
   },
 }
 
 const ACTION_PANEL = PLAYER_INVENTORY_UI_LAYOUT.actionSlots
-const MOBILE_SLOT_STYLE = {
-  position: "relative",
-  width: "32px",
-  height: "32px",
-}
 const MOBILE_SECTION_GAP = 16
 const MOBILE_LABEL_GAP = 2
 const MOBILE_TITLE_ROW_HEIGHT = 20
@@ -226,6 +221,7 @@ export default function InventoryPanelMobile({
   onCraftRecipe,
   getStackLabel,
   renderLockedOverlay,
+  onStorageSlotContextMenu,
 }) {
   const [contentRef, layoutState] = useSharedMobileScale(Math.max(0.5, panelScale || 1))
   const modelColor = usePetStore((state) => state.theme?.modelColor || "#8f8f8f")
@@ -263,11 +259,7 @@ export default function InventoryPanelMobile({
   }, [])
 
   const mobileScale = layoutState.mainScale
-  const inventorySkinSrc = inventorySkinMode === "compact"
-    ? playerInventoryMobileCompactSkin
-    : inventorySkinMode === "reduced"
-      ? playerInventoryMobileReducedSkin
-      : playerInventoryMobileSkin
+  const inventorySkinSrc = playerInventoryMobileLargeSkin
   const activeInventoryPanel = inventorySkinMode === "compact"
     ? MOBILE_INVENTORY_PANEL_COMPACT
     : inventorySkinMode === "reduced"
@@ -283,6 +275,15 @@ export default function InventoryPanelMobile({
   const actionFrameHeight = ACTION_PANEL.height * actionScale
   const contentWidth = Math.min(layoutState.contentWidth, Math.max(recipesFrameWidth, craftFrameWidth, inventoryFrameWidth))
   const inventoryGridColumns = activeInventoryPanel.grid.columns
+  const inventorySlotSize = activeInventoryPanel.grid.slotSize
+  const inventoryGridRowGap = activeInventoryPanel.grid.rowGap || 0
+  const inventoryGridColumnGap = activeInventoryPanel.grid.columnGap || 0
+  const mobileSlotStyle = {
+    position: "relative",
+    width: `${inventorySlotSize}px`,
+    height: `${inventorySlotSize}px`,
+  }
+  const mobileSlotIconSize = Math.round(inventorySlotSize * 0.75)
 
   return (
     <div className="inventory-mobile-ui">
@@ -293,7 +294,7 @@ export default function InventoryPanelMobile({
           flex: "0 0 auto",
         }}
       >
-        <span className="inventory-mobile-ui__meta">
+        <span className="inventory-mobile-ui__meta menu-text-subtitle menu-text-subtitle--uppercase">
           {`${unlockedSlotCount}/${INVENTORY_MAX_VISUAL_CAPACITY} slots unlocked`}
         </span>
 
@@ -341,6 +342,7 @@ export default function InventoryPanelMobile({
           }}
         >
           <div
+            className="menu-text-title menu-text-title--panel"
             style={{
               width: `${recipesFrameWidth}px`,
               height: `${MOBILE_TITLE_ROW_HEIGHT}px`,
@@ -348,10 +350,6 @@ export default function InventoryPanelMobile({
               alignItems: "center",
               justifyContent: "flex-start",
               color: "#d7efe5",
-              fontSize: "10px",
-              lineHeight: 1,
-              textTransform: "uppercase",
-              letterSpacing: "0.08em",
               textShadow: "1px 1px 0 rgba(0, 0, 0, 0.35)",
               paddingLeft: "2px",
               boxSizing: "border-box",
@@ -410,6 +408,7 @@ export default function InventoryPanelMobile({
               height: `${craftFrameHeight}px`,
               flex: "0 0 auto",
               marginTop: "0px",
+              display: "none",
             }}
           >
             <MobileScaledPanel
@@ -526,12 +525,9 @@ export default function InventoryPanelMobile({
             }}
           >
             <span
+              className="menu-text-title menu-text-title--panel"
               style={{
                 color: "#d7efe5",
-                fontSize: "10px",
-                lineHeight: 1,
-                textTransform: "uppercase",
-                letterSpacing: "0.08em",
                 textShadow: "1px 1px 0 rgba(0, 0, 0, 0.35)",
                 whiteSpace: "nowrap",
               }}
@@ -578,6 +574,7 @@ export default function InventoryPanelMobile({
                 className="inventory-ui-skin"
               />
 
+
               <div
                 className="inventory-mobile-grid-viewport"
                 style={{
@@ -590,7 +587,13 @@ export default function InventoryPanelMobile({
                   "--inventory-mobile-grid-columns": inventoryGridColumns,
                 }}
               >
-                <div className="inventory-mobile-grid">
+                <div
+                  className="inventory-mobile-grid"
+                  style={{
+                    columnGap: `${inventoryGridColumnGap}px`,
+                    rowGap: `${inventoryGridRowGap}px`,
+                  }}
+                >
                   {mainSlots.map((stack, index) => {
                     const slotKey = `main:${index}`
                     const unlocked = isInventorySlotUnlocked({ unlockedSlotCount }, "main", index)
@@ -605,8 +608,8 @@ export default function InventoryPanelMobile({
                             ? getStackLabel(stack) || `Bag slot ${index + 1}`
                             : `Locked bag slot ${index + 1}`
                         }
-                        style={MOBILE_SLOT_STYLE}
-                        iconSize={24}
+                        style={mobileSlotStyle}
+                        iconSize={mobileSlotIconSize}
                         slotClassName="inventory-ui-slot--mobile-skin"
                         slotSkinSrc={playerInventoryMobileSlotSkin}
                         touchAction="pan-y"
@@ -622,6 +625,12 @@ export default function InventoryPanelMobile({
                                   selectOnPointerDown: false,
                                   allowVerticalScroll: true,
                                 })
+                            : undefined
+                        }
+                        onContextMenu={
+                          unlocked
+                            ? (event) =>
+                                onStorageSlotContextMenu?.(event, "main", index, stack)
                             : undefined
                         }
                       >
@@ -689,6 +698,9 @@ export default function InventoryPanelMobile({
                     isDragSource={dragSourceKey === slotKey}
                     isDropTarget={dropTargetKey === slotKey}
                     onPointerDown={(event) => onSlotPointerDown(event, "usable", index, stack)}
+                    onContextMenu={(event) =>
+                      onStorageSlotContextMenu?.(event, "usable", index, stack)
+                    }
                   />
                 )
               })}

@@ -23,3 +23,31 @@ export function getEntityDepthFromFeetY(feetScreenY = 0) {
     ENTITY_SORT_BASE_DEPTH + safeFeetY * ENTITY_SORT_STEP
   );
 }
+
+export function getVillageRenderPassDepth(pass = 'back') {
+  switch (pass) {
+    case 'shadowmask':
+      return VILLAGE_SHADOW_MASK_DEPTH;
+    case 'mid':
+      return VILLAGE_MID_DEPTH;
+    case 'front':
+      return VILLAGE_FRONT_DEPTH;
+    case 'back':
+    default:
+      return WORLD_TERRAIN_DEPTH;
+  }
+}
+
+export function getMerchantDepthForVillagePassBand(
+  lowerPass = 'back',
+  upperPass = 'mid'
+) {
+  const lowerDepth = getVillageRenderPassDepth(lowerPass);
+  const upperDepth = getVillageRenderPassDepth(upperPass);
+
+  if (upperDepth > CHARACTER_SHADOW_DEPTH) {
+    return Math.max(lowerDepth + 0.01, upperDepth - 0.2);
+  }
+
+  return lowerDepth + Math.max(0.01, (upperDepth - lowerDepth) * 0.5);
+}

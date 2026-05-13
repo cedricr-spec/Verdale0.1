@@ -148,6 +148,60 @@ body[data-ui-mode="fullscreen"] #grain {
   margin-bottom: 2px;
 }
 
+.menu-text-title,
+.menu-text-subtitle,
+.menu-text-cta {
+  font-family: "Determination", sans-serif;
+  -webkit-font-smoothing: none;
+  font-smooth: never;
+}
+
+.menu-text-title {
+  font-size: 24px;
+  line-height: 1;
+  font-weight: 700;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  color: #ffffff;
+}
+
+.menu-text-title--mobile {
+  font-size: 18px;
+}
+
+.menu-text-title--panel {
+  font-size: 10px;
+  line-height: 1;
+  font-weight: 600;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+}
+
+.menu-text-subtitle {
+  font-size: 14px;
+  line-height: 1.35;
+  font-weight: 500;
+  letter-spacing: 0.04em;
+  color: rgba(255, 255, 255, 0.78);
+}
+
+.menu-text-subtitle--mobile {
+  font-size: 12px;
+}
+
+.menu-text-subtitle--uppercase {
+  text-transform: uppercase;
+  letter-spacing: 0.08em;
+}
+
+.menu-text-cta {
+  font-size: 12px;
+  line-height: 1;
+  font-weight: 1000;
+  text-transform: uppercase;
+  letter-spacing: 0.08em;
+}
+
 /* Background base */
 #bg-base {
   position: fixed;
@@ -559,6 +613,7 @@ textarea,
   width: 100%;
   max-width: 100%;
   overflow-y: hidden;
+  padding: 4px 0; /* gives SelectionHelper room to bleed past the 52px slot without being clipped */
   overscroll-behavior-x: contain;
   overscroll-behavior-y: none;
   scrollbar-width: none;
@@ -699,6 +754,17 @@ textarea,
   box-shadow:
     inset 0 0 0 1px rgba(255, 240, 181, 0.92),
     0 0 0 1px rgba(255, 240, 181, 0.72);
+}
+
+/* Shared selection helper sprite (Cursors & Pointers.png, frame x=32 y=0) */
+.selection-helper-sprite {
+  transform-origin: center;
+  animation: selection-helper-pulse 1.8s ease-in-out infinite;
+}
+
+@keyframes selection-helper-pulse {
+  0%, 100% { transform: scale(var(--sel-scale, 1)); }
+  50% { transform: scale(calc(var(--sel-scale, 1) * 0.94)); }
 }
 
 .inventory-ui-slot--drop-target {
@@ -1476,24 +1542,6 @@ textarea,
   -webkit-mask-composite: xor;
   mask-composite: exclude;
 }
-.text-label {
-  font-size: 11px;
-  font-weight: 500;
-  opacity: 0.85;
-  letter-spacing: 0.4px;
-}
-
-.text-value {
-  font-size: 14px;
-  font-weight: 600;
-  letter-spacing: 0.5px;
-  color: #dfe6ff;
-}
-
-.text-title {
-  font-size: 16px;
-  font-weight: 600;
-}
 .preset-popin-content div {
   padding: 12px 12px;
   border-radius: 6px;
@@ -1649,13 +1697,6 @@ textarea,
   text-shadow: 0 0 4px rgba(0, 0, 0, 0.9);
 }
 
-.action-title {
-  font-size: 1.2vw;
-  letter-spacing: -0.05em;
-  font-family: inherit;
-  line-height: 1.4;
-}
-
 .effect.positive {
   color: #00ffcc;
   font-family: 'Press Start 2P', monospace;
@@ -1670,11 +1711,19 @@ textarea,
   line-height: 1.4;
 }
 
-.cta.bit {
-  color: #ffffff;
-  font-family: 'Press Start 2P', monospace;
-  font-size: 14px;
-  line-height: 1.4;
+/* ─── Shared menu backdrop ─────────────────────────────────────────────────── */
+.menu-backdrop__bitmap {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  display: block;
+  pointer-events: none;
+  user-select: none;
+  -webkit-user-select: none;
+  image-rendering: pixelated;
+  opacity: 0.18;
+  z-index: 0;
 }
 
 :root {

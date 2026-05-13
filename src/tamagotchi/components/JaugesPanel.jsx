@@ -53,8 +53,8 @@ export default function JaugesPanel({ embedded = false, ...props }) {
       {...props}
       style={{
         position: isMobileLayout ? "absolute" : "relative",
-        top: isMobileLayout ? "12px" : undefined,
-        left: isMobileLayout ? "12px" : undefined,
+        top: 0,
+        left: isMobileLayout ? "0px" : 0,
         right: isMobileLayout ? "auto" : undefined,
         bottom: isMobileLayout ? "auto" : undefined,
         inset: isMobileLayout ? undefined : "auto",
@@ -62,7 +62,7 @@ export default function JaugesPanel({ embedded = false, ...props }) {
         justifyContent: isMobileLayout ? "flex-start" : "center",
         alignItems: isMobileLayout ? "flex-start" : "center",
         pointerEvents: embedded ? "auto" : "none",
-        zIndex: embedded ? "auto" : 20,
+        zIndex: embedded ? "auto" : 2,
         width: embedded && !isMobileLayout ? "100%" : undefined,
         height: embedded && !isMobileLayout ? "100%" : undefined,
       }}
@@ -70,31 +70,35 @@ export default function JaugesPanel({ embedded = false, ...props }) {
       <div
         className="gauges-panel__list"
         style={{
+          position: "relative",
           width: isMobileLayout
             ? "fit-content"
             : embedded
               ? "min(100%, 760px)"
               : "max-content",
-          maxWidth: isMobileLayout ? "min(calc(100vw - 24px), 520px)" : "none",
-          display: "flex",
-          flexDirection: "row",
-          flexWrap: isMobileLayout ? "wrap" : "nowrap",
+          maxWidth: isMobileLayout ? "calc(100vw - 24px)" : "none",
+          display: isMobileLayout ? "grid" : "flex",
+          gridTemplateColumns: isMobileLayout ? "repeat(2, max-content)" : undefined,
+          gridAutoRows: isMobileLayout ? "max-content" : undefined,
+          flexDirection: isMobileLayout ? undefined : "row",
+          flexWrap: isMobileLayout ? undefined : "nowrap",
           justifyContent: isMobileLayout ? "flex-start" : "center",
           alignItems: "flex-start",
-          gap: isMobileLayout ? "6px 8px" : "0px",
+          columnGap: isMobileLayout ? "8px" : undefined,
+          rowGap: isMobileLayout ? "6px" : undefined,
+          gap: isMobileLayout ? undefined : "12px",
         }}
       >
-        {gauges.map(([type, value]) => (
+        {gauges.map(([type, value], index) => (
           <div
             className="gauges-panel__item"
             key={type}
             style={{
-              display: "flex",
-              justifyContent: "center",
-              alignItems: "center",
+              position: "relative",
               width: "fit-content",
               flex: "0 0 auto",
-              marginRight: isMobileLayout ? 0 : "-16px",
+              marginRight: 0,
+              marginLeft: 0,
             }}
           >
             <GaugeV2 type={type} value={value} />

@@ -1,4 +1,5 @@
 import React, { useState, useEffect, useRef } from "react"
+import MenuBackdrop from "../tamagotchi/components/MenuBackdrop"
 import PanelItem from "./PanelItem"
 import TintedCtaButton from "./TintedCtaButton"
 import { HexColorPicker } from "react-colorful"
@@ -243,46 +244,38 @@ export default function CustomizerPanel({ open, onRandomizeStars, onToggle, mode
         }}
       />
 
-      <div
+      <MenuBackdrop
         ref={panelRef}
-        className="customizer-panel-scroll hud-ui-text-scope"
+        open={open}
+        zIndex={999999}
+        className="hud-ui-text-scope"
         onWheel={(e) => {
           e.stopPropagation()
         }}
-        style={{
-          position: "fixed",
-          top: 0,
-          left: 0,
-          width: "100vw",
-          height: "100vh",
-          overflowY: "auto",
-          direction: "rtl",
-          scrollbarWidth: "none",
-          overflowX: "hidden",
-          WebkitOverflowScrolling: "touch",
-          backgroundImage: "none",
-          backgroundColor: "rgba(6, 10, 18, 0.34)",
-          backdropFilter: "blur(8px)",
-          WebkitBackdropFilter: "blur(8px)",
-          boxSizing: "border-box",
-          zIndex: 999999,
-          isolation: "isolate",
-          pointerEvents: open ? "auto" : "none",
-          opacity: open ? 1 : 0,
-          visibility: open ? "visible" : "hidden",
-          transition: "opacity 0.2s linear, visibility 0.2s linear",
-          display: "flex",
-          flexDirection: "column",
-          alignItems: "center",
-          gap: "20px",
-          paddingBottom: PANEL_SCROLL_BOTTOM_SPACE,
-          outline: debugUI ? "2px solid red" : "none",
-          overscrollBehaviorY: "auto",
-          touchAction: "pan-y",
-          scrollbarGutter: "stable",
-          paddingRight: 0,
-        }}
       >
+        <div
+          className="customizer-panel-scroll"
+          style={{
+            position: "absolute",
+            inset: 0,
+            overflowY: "auto",
+            direction: "rtl",
+            scrollbarWidth: "none",
+            overflowX: "hidden",
+            WebkitOverflowScrolling: "touch",
+            boxSizing: "border-box",
+            display: "flex",
+            flexDirection: "column",
+            alignItems: "center",
+            gap: "20px",
+            paddingBottom: PANEL_SCROLL_BOTTOM_SPACE,
+            outline: debugUI ? "2px solid red" : "none",
+            overscrollBehaviorY: "auto",
+            touchAction: "pan-y",
+            scrollbarGutter: "stable",
+            paddingRight: 0,
+          }}
+        >
         <div
           className="panel-header panel-section"
           style={{
@@ -794,7 +787,8 @@ export default function CustomizerPanel({ open, onRandomizeStars, onToggle, mode
             />
           </div>
         )}
-      </div>
+        </div>
+      </MenuBackdrop>
     </>
   )
 }

@@ -9,10 +9,12 @@ import { DEFAULT_PERSISTENT_STATE } from "../config/sharedAnimationMap"
 import { getAnimationDefinition, resolvePetAnimationState } from "../lib/petAnimationResolver"
 import { getScaledSpriteMetrics } from "../lib/spritesheetUtils"
 import { getPetSpriteRenderModel } from "../lib/petSpriteRenderModel"
+import { EQUIPMENT_HIDDEN_ANIMATION_STATES } from "../phaser/equipmentAnimationConfig"
 import { getPhaserDebugFlags, subscribePhaserDebugFlags } from "../phaser/phaserDebugFlags"
 import { useCharacterStore } from "../store/useCharacterStore"
 import { usePetStore } from "../store/usePetStore"
 import { useWorldStore } from "../store/worldSlice"
+import LayeredCharacterSprite from "./LayeredCharacterSprite"
 
 const MOVEMENT_IDLE_DELAY = 120
 
@@ -208,15 +210,7 @@ export default function PetSprite({
   const frameY = renderModel.frameY * metrics.scale
   const safeLabel = `${activeCharacter.name} ${renderModel.animationState || DEFAULT_PERSISTENT_STATE}`
   const spriteFlipScale = renderModel.flipX ? -1 : 1
-
-  const viewportStyle = {
-    position: "relative",
-    width: `${metrics.viewportWidth}px`,
-    height: `${metrics.viewportHeight}px`,
-    overflow: "hidden",
-    imageRendering: "pixelated",
-    pointerEvents: "none",
-  }
+  const showHands = !EQUIPMENT_HIDDEN_ANIMATION_STATES.has(renderModel.animationState)
 
   return (
     <div
@@ -280,40 +274,15 @@ export default function PetSprite({
             zIndex: 1,
           }}
         >
-          {activeCharacter.useTint ? (
-            <div
-              style={{
-                ...viewportStyle,
-                backgroundColor: petColor,
-                WebkitMaskImage: `url("${activeCharacter.spritesheet}")`,
-                WebkitMaskRepeat: "no-repeat",
-                WebkitMaskSize: `${metrics.spritesheetWidth}px ${metrics.spritesheetHeight}px`,
-                WebkitMaskPosition: `-${frameX}px -${frameY}px`,
-                maskImage: `url("${activeCharacter.spritesheet}")`,
-                maskRepeat: "no-repeat",
-                maskSize: `${metrics.spritesheetWidth}px ${metrics.spritesheetHeight}px`,
-                maskPosition: `-${frameX}px -${frameY}px`,
-              }}
-            />
-          ) : (
-            <div style={viewportStyle}>
-              <img
-                src={activeCharacter.spritesheet}
-                alt=""
-                draggable="false"
-                style={{
-                  position: "absolute",
-                  top: `-${frameY}px`,
-                  left: `-${frameX}px`,
-                  width: `${metrics.spritesheetWidth}px`,
-                  height: `${metrics.spritesheetHeight}px`,
-                  imageRendering: "pixelated",
-                  pointerEvents: "none",
-                  userSelect: "none",
-                }}
-              />
-            </div>
-          )}
+          <LayeredCharacterSprite
+            spritesheet={activeCharacter.spritesheet}
+            frameX={frameX}
+            frameY={frameY}
+            metrics={metrics}
+            useTint={Boolean(activeCharacter.useTint)}
+            tintColor={petColor}
+            showHands={showHands}
+          />
         </div>
       </div>
     </div>

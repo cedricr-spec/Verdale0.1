@@ -1,5 +1,6 @@
 import React, { useCallback, useEffect, useMemo, useRef, useState } from "react"
-import lockIcon from "../../hud/Lock_Icon.png"
+import lockIcon from "../../hud/Locks/Lock_Icon.webp"
+import MenuBackdrop from "./MenuBackdrop"
 import { countItemsInSlots, getCraftRecipe, getRecipeInputs } from "../config/craftRecipes"
 import { PLAYER_INVENTORY_UI_LAYOUT } from "../config/inventoryLayout"
 import { getItemDefinition } from "../config/itemsRegistry"
@@ -128,6 +129,13 @@ function canUseItemDefinition(itemDefinition) {
   return Boolean(itemDefinition?.usable || itemDefinition?.food?.edible)
 }
 
+function canSplitStackForUi(area, stack, itemDefinition) {
+  if (!["main", "usable"].includes(area)) return false
+  if (!stack?.itemId) return false
+  if (!itemDefinition?.stackable) return false
+  return Math.max(0, Number(stack.quantity) || 0) > 1
+}
+
 function renderLockedOverlay() {
   return (
     <span className="inventory-ui-slot__lock">
@@ -135,6 +143,7 @@ function renderLockedOverlay() {
         src={lockIcon}
         alt=""
         aria-hidden="true"
+        loading="lazy"
         className="inventory-ui-slot__lock-icon"
       />
     </span>
@@ -196,6 +205,7 @@ export default function InventoryPanel({ open, onClose }) {
   const unlockedSlotCount = useInventoryStore((state) => state.unlockedSlotCount)
   const walletSol = useInventoryStore((state) => state.wallet?.sol ?? 0)
   const moveItem = useInventoryStore((state) => state.moveItem)
+  const splitStack = useInventoryStore((state) => state.splitStack)
   const craftCurrentRecipe = useInventoryStore((state) => state.craftCurrentRecipe)
   const craftRecipeById = useInventoryStore((state) => state.craftRecipeById)
   const consumeSlotItem = useInventoryStore((state) => state.consumeSlotItem)
@@ -470,12 +480,44 @@ export default function InventoryPanel({ open, onClose }) {
     setHoverPreviewRecipeId(null)
   }, [open])
 
+  const handleSplitStackAction = useCallback(
+    (area, index, stack) => {
+      const itemDefinition = stack?.itemId ? getItemDefinition(stack.itemId) : null
+      if (!canSplitStackForUi(area, stack, itemDefinition)) {
+        return { success: false, reason: "not_splittable" }
+      }
+
+      const result = splitStack(area, index)
+      if (!result?.success) {
+        showActionFeedback("No empty unlocked slot for a split stack.")
+        return result
+      }
+
+      const targetLabel =
+        result.target?.area === "usable"
+          ? `action slot ${result.target.index + 1}`
+          : `bag slot ${result.target.index + 1}`
+      showActionFeedback(
+        `Split ${itemDefinition?.name || stack.itemId} into ${targetLabel}.`
+      )
+      setSelectedSlotKey(
+        result.target ? `${result.target.area}:${result.target.index}` : `${area}:${index}`
+      )
+      return result
+    },
+    [showActionFeedback, splitStack]
+  )
+
   const handleSlotPointerDown = useCallback((event, area, index, stack, options = {}) => {
     const {
       preventBrowserDefault = true,
       selectOnPointerDown = true,
       allowVerticalScroll = false,
     } = options
+
+    if (event.button !== undefined && event.button !== 0) {
+      return
+    }
 
     if (preventBrowserDefault) {
       event.preventDefault()
@@ -494,6 +536,15 @@ export default function InventoryPanel({ open, onClose }) {
       return
     }
 
+    if (event.shiftKey) {
+      const splitResult = handleSplitStackAction(area, index, stack)
+      if (splitResult?.success) {
+        pressStateRef.current = null
+        setPressState(null)
+      }
+      return
+    }
+
     const nextPressState = {
       source: { area, index },
       sourceKey: slotKey,
@@ -506,7 +557,18 @@ export default function InventoryPanel({ open, onClose }) {
 
     pressStateRef.current = nextPressState
     setPressState(nextPressState)
-  }, [])
+  }, [handleSplitStackAction])
+
+  const handleStorageSlotContextMenu = useCallback((event, area, index, stack) => {
+    event.preventDefault()
+    event.stopPropagation()
+    pressStateRef.current = null
+    dragStateRef.current = null
+    setPressState(null)
+    setDragState(null)
+    setItemActionPopover(null)
+    handleSplitStackAction(area, index, stack)
+  }, [handleSplitStackAction])
 
   const notifyCraftedOutputs = useCallback(
     (outputs = []) => {
@@ -564,6 +626,11 @@ export default function InventoryPanel({ open, onClose }) {
     : null
   const canUsePopoverItem = canUseItemDefinition(actionPopoverItemDefinition)
   const canThrowPopoverItem = actionPopoverItemDefinition?.discardable === true
+  const canSplitPopoverItem = canSplitStackForUi(
+    itemActionPopover?.area,
+    actionPopoverStack,
+    actionPopoverItemDefinition
+  )
   const canEquipPopoverItem =
     Boolean(actionPopoverItemDefinition?.equipable) && itemActionPopover?.area === "main"
 
@@ -644,6 +711,20 @@ export default function InventoryPanel({ open, onClose }) {
     setItemActionPopover(null)
   }, [itemActionPopover, showActionFeedback, throwItemFromSlot])
 
+  const handleSplitSelectedItem = useCallback(() => {
+    if (!itemActionPopover) return
+
+    const stack = getStackForArea(itemActionPopover.area, itemActionPopover.index)
+    const result = handleSplitStackAction(
+      itemActionPopover.area,
+      itemActionPopover.index,
+      stack
+    )
+    if (result?.success) {
+      setItemActionPopover(null)
+    }
+  }, [getStackForArea, handleSplitStackAction, itemActionPopover])
+
   const draggedStack = dragState?.stack || null
   const dragPreviewScale = dragState?.source?.area
     ? getInteractionScale(dragState.source.area)
@@ -660,6 +741,11 @@ export default function InventoryPanel({ open, onClose }) {
         onClick: handleUseSelectedItem,
       },
       {
+        label: "Split",
+        disabled: !canSplitPopoverItem,
+        onClick: handleSplitSelectedItem,
+      },
+      {
         label: "Throw",
         disabled: !canThrowPopoverItem,
         danger: true,
@@ -672,9 +758,11 @@ export default function InventoryPanel({ open, onClose }) {
       },
     ],
     [
+      canSplitPopoverItem,
       canThrowPopoverItem,
       canUsePopoverItem,
       closeItemActionPopover,
+      handleSplitSelectedItem,
       handleThrowSelectedItem,
       handleUseSelectedItem,
     ]
@@ -707,25 +795,21 @@ export default function InventoryPanel({ open, onClose }) {
 
   return (
     <>
-      <div
+      <MenuBackdrop
+        open
+        zIndex={OVERLAY_Z_INDEX}
         aria-hidden="true"
+        style={{ transition: "none" }}
         onPointerDown={(event) => {
           event.stopPropagation()
           onClose?.()
-        }}
-        style={{
-          position: "fixed",
-          inset: 0,
-          zIndex: OVERLAY_Z_INDEX,
-          background: "rgba(0, 0, 0, 0.46)",
-          backdropFilter: "blur(3px)",
-          pointerEvents: "auto",
         }}
       />
 
       <div
         role="dialog"
         aria-modal="true"
+        data-inventory-panel="true"
         className={[
           "inventory-panel-shell",
           "hud-ui-text-scope",
@@ -768,6 +852,7 @@ export default function InventoryPanel({ open, onClose }) {
             onCraftRecipe={handleCraftRecipeById}
             getStackLabel={getStackLabel}
             renderLockedOverlay={renderLockedOverlay}
+            onStorageSlotContextMenu={handleStorageSlotContextMenu}
           />
         ) : (
           <InventoryPanelDesktop
@@ -792,6 +877,7 @@ export default function InventoryPanel({ open, onClose }) {
             onCraftRecipe={handleCraftRecipeById}
             getStackLabel={getStackLabel}
             renderLockedOverlay={renderLockedOverlay}
+            onStorageSlotContextMenu={handleStorageSlotContextMenu}
           />
         )}
       </div>

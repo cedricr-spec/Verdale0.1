@@ -187,6 +187,31 @@ function getAreaUnlockedSlotCount(stateLike, area) {
   return getUnlockedSlotCountForArea(stateLike.unlockedSlotCount, area)
 }
 
+function getPreferredStorageAreas(preferredArea = null) {
+  const orderedAreas = STORAGE_AREA_UNLOCK_ORDER.map(({ area }) => area)
+  if (!isStorageArea(preferredArea)) {
+    return orderedAreas
+  }
+
+  return [preferredArea, ...orderedAreas.filter((area) => area !== preferredArea)]
+}
+
+function findFirstEmptyStorageSlot(stateLike, areas = ["main", "usable"]) {
+  for (const area of areas) {
+    if (!isStorageArea(area)) continue
+
+    const slots = getSlotsByArea(stateLike, area)
+    const unlockedSlotCount = getAreaUnlockedSlotCount(stateLike, area)
+    for (let index = 0; index < unlockedSlotCount; index += 1) {
+      if (!slots[index]) {
+        return { area, index }
+      }
+    }
+  }
+
+  return null
+}
+
 function placeItemIntoSlots(slots, itemId, quantity, unlockedSlotCount = slots.length) {
   const canonicalItemId = getCanonicalItemId(itemId) || itemId
   const definition = getItemDefinition(canonicalItemId)
@@ -231,30 +256,46 @@ function placeItemIntoSlots(slots, itemId, quantity, unlockedSlotCount = slots.l
 }
 
 function addItemToStorageAreas(state, itemId, quantity, areas = ["main", "usable"]) {
-  let remaining = quantity
+  return addItemEntriesToStorageAreas(
+    state,
+    [{ itemId, quantity }],
+    areas
+  )
+}
+
+function addItemEntriesToStorageAreas(state, entries = [], areas = ["main", "usable"]) {
   const nextState = createMutableInventoryState(state)
 
-  areas.forEach((area) => {
-    if (remaining <= 0) return
+  for (const entry of entries) {
+    const itemId = getCanonicalItemId(entry?.itemId) || entry?.itemId
+    let remaining = Math.max(0, Math.floor(Number(entry?.quantity) || 0))
 
-    const key = getAreaKey(area)
-    if (!key) return
+    if (!itemId || remaining <= 0) {
+      continue
+    }
 
-    const result = placeItemIntoSlots(
-      nextState[key],
-      itemId,
-      remaining,
-      getAreaUnlockedSlotCount(nextState, area)
-    )
-    nextState[key] = result.slots
-    remaining = result.remaining
-  })
+    areas.forEach((area) => {
+      if (remaining <= 0) return
 
-  if (remaining > 0) {
-    return {
-      success: false,
-      nextState: state,
-      reason: "inventory_full",
+      const key = getAreaKey(area)
+      if (!key) return
+
+      const result = placeItemIntoSlots(
+        nextState[key],
+        itemId,
+        remaining,
+        getAreaUnlockedSlotCount(nextState, area)
+      )
+      nextState[key] = result.slots
+      remaining = result.remaining
+    })
+
+    if (remaining > 0) {
+      return {
+        success: false,
+        nextState: state,
+        reason: "inventory_full",
+      }
     }
   }
 
@@ -265,25 +306,14 @@ function addItemToStorageAreas(state, itemId, quantity, areas = ["main", "usable
 }
 
 function addRecipeOutputsToStorageAreas(state, recipeOutputs, areas = ["main", "usable"]) {
-  let nextState = state
-
-  for (const output of recipeOutputs) {
-    const result = addItemToStorageAreas(nextState, output.itemId, output.quantity, areas)
-    if (!result.success) {
-      return {
-        success: false,
-        nextState: state,
-        reason: result.reason || "inventory_full",
-      }
-    }
-
-    nextState = result.nextState
-  }
-
-  return {
-    success: true,
-    nextState,
-  }
+  return addItemEntriesToStorageAreas(
+    state,
+    (recipeOutputs || []).map((output) => ({
+      itemId: output?.itemId,
+      quantity: output?.quantity,
+    })),
+    areas
+  )
 }
 
 function getFacingDirectionVector(facingDirection) {
@@ -519,14 +549,20 @@ function applyQuestRewardsToState(state, rewards = []) {
     nextState = increaseUnlockedSlotCountInState(nextState, reward.amount)
   })
 
-  for (const reward of rewards) {
-    if (reward?.type !== QUEST_REWARD_TYPES.ITEM) continue
+  const itemRewards = rewards
+    .filter((reward) => reward?.type === QUEST_REWARD_TYPES.ITEM)
+    .map((reward) => ({
+      itemId: getCanonicalItemId(reward.value) || reward.value,
+      quantity: Math.max(0, Math.floor(Number(reward.amount) || 0)),
+    }))
+    .filter((reward) => reward.itemId && reward.quantity > 0)
 
-    const itemId = getCanonicalItemId(reward.value) || reward.value
-    const quantity = Math.max(0, Math.floor(Number(reward.amount) || 0))
-    if (!itemId || quantity <= 0) continue
-
-    const result = addItemToStorageAreas(nextState, itemId, quantity, ["main", "usable"])
+  if (itemRewards.length > 0) {
+    const result = addItemEntriesToStorageAreas(
+      nextState,
+      itemRewards,
+      ["main", "usable"]
+    )
     if (!result.success) {
       return {
         success: false,
@@ -549,6 +585,63 @@ function getCraftOutputSummary(recipe) {
     itemId: output.itemId,
     quantity: Math.max(0, Number(output.quantity) || 0),
   }))
+}
+
+function splitStackInState(stateLike, area, index, amount = null) {
+  if (!isStorageArea(area) || !isInventorySlotUnlocked(stateLike, area, index)) {
+    return { success: false, reason: "invalid_slot", nextState: stateLike }
+  }
+
+  const slots = getSlotsByArea(stateLike, area)
+  const sourceStack = cloneSlot(slots[index])
+  const itemId = getStackItemId(sourceStack)
+  const definition = getItemDefinition(itemId)
+
+  if (!itemId || !definition?.stackable || (sourceStack?.quantity || 0) <= 1) {
+    return { success: false, reason: "not_splittable", nextState: stateLike }
+  }
+
+  const splitAmount = Number.isFinite(Number(amount))
+    ? Math.floor(Number(amount))
+    : Math.floor(sourceStack.quantity / 2)
+  if (splitAmount <= 0 || splitAmount >= sourceStack.quantity) {
+    return { success: false, reason: "invalid_quantity", nextState: stateLike }
+  }
+
+  // Splits always create a brand-new stack in the first empty unlocked slot so
+  // drag/drop, crafting, and stack merges continue to use the same slot rules.
+  const targetSlot = findFirstEmptyStorageSlot(
+    stateLike,
+    getPreferredStorageAreas(area)
+  )
+  if (!targetSlot) {
+    return { success: false, reason: "inventory_full", nextState: stateLike }
+  }
+
+  const nextState = createMutableInventoryState(stateLike)
+  const sourceSlots = cloneSlots(getSlotsByArea(nextState, area))
+  const targetSlots =
+    targetSlot.area === area
+      ? sourceSlots
+      : cloneSlots(getSlotsByArea(nextState, targetSlot.area))
+
+  sourceSlots[index] = {
+    ...sourceStack,
+    itemId,
+    quantity: sourceStack.quantity - splitAmount,
+  }
+  targetSlots[targetSlot.index] = normalizeStack(itemId, splitAmount)
+
+  setSlotsByArea(nextState, area, sourceSlots)
+  setSlotsByArea(nextState, targetSlot.area, targetSlots)
+
+  return {
+    success: true,
+    nextState: withResolvedCraftResult(nextState),
+    movedQuantity: splitAmount,
+    target: targetSlot,
+    itemId,
+  }
 }
 
 export const useInventoryStore = create((set, get) => ({
@@ -918,6 +1011,23 @@ export const useInventoryStore = create((set, get) => ({
     set({ lastInventoryError: null })
   },
 
+  splitStack: (area, index, amount = null) => {
+    const result = splitStackInState(get(), area, index, amount)
+    if (!result.success) {
+      set((state) => withInventoryErrorState(state, result.reason || "inventory_full"))
+      return result
+    }
+
+    set((state) =>
+      withInventorySuccessState({
+        ...result.nextState,
+        lastInventoryErrorNonce: state.lastInventoryErrorNonce,
+      })
+    )
+
+    return result
+  },
+
   // ── Wallet ──────────────────────────────────────────────────────────────────
 
   addCurrency: (currencyId, amount) => {
@@ -1035,9 +1145,22 @@ export const useInventoryStore = create((set, get) => ({
       set({ wallet: newWallet })
     }
     if (price?.items?.length > 0) {
-      price.items.forEach(({ itemId, qty }) => {
-        addItemToStorageAreas(get(), itemId, qty ?? 1, ["main", "usable"])
-      })
+      const result = addItemEntriesToStorageAreas(
+        get(),
+        price.items.map(({ itemId, qty }) => ({
+          itemId,
+          quantity: qty ?? 1,
+        })),
+        ["main", "usable"]
+      )
+      if (result.success) {
+        set((state) =>
+          withInventorySuccessState({
+            ...result.nextState,
+            lastInventoryErrorNonce: state.lastInventoryErrorNonce,
+          })
+        )
+      }
     }
   },
 

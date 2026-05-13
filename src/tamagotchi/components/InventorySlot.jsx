@@ -1,5 +1,6 @@
 import React from "react"
 import ItemVisual from "./ItemVisual"
+import SelectionHelper from "./SelectionHelper"
 
 export default function InventorySlot({
   slotKey,
@@ -106,6 +107,8 @@ export default function InventorySlot({
           )}
         </>
       )}
+
+      {isSelected && <SelectionHelper size={fallbackSlotSize + 8} zIndex={4} />}
 
       {children}
     </button>

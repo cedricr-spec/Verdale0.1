@@ -1,7 +1,74 @@
-export const FRAME_WIDTH = 24
-export const FRAME_HEIGHT = 24
+export const CHARACTER_FRAME_SIZE = 24
+export const FRAME_WIDTH = CHARACTER_FRAME_SIZE
+export const FRAME_HEIGHT = CHARACTER_FRAME_SIZE
 export const SPRITESHEET_WIDTH = 216
 export const SPRITESHEET_HEIGHT = 120
+
+function createCharacterLayerFrame(x, y) {
+  return Object.freeze({
+    x,
+    y,
+    w: CHARACTER_FRAME_SIZE,
+    h: CHARACTER_FRAME_SIZE,
+    width: CHARACTER_FRAME_SIZE,
+    height: CHARACTER_FRAME_SIZE,
+  })
+}
+
+export const CHARACTER_HAND_FRONT_FRAME = createCharacterLayerFrame(192, 0)
+export const CHARACTER_HAND_BACK_FRAME = createCharacterLayerFrame(192, 24)
+
+export function getImageDimensions(source) {
+  if (!source) return null
+
+  if (
+    Number.isFinite(source.naturalWidth) &&
+    Number.isFinite(source.naturalHeight) &&
+    source.naturalWidth > 0 &&
+    source.naturalHeight > 0
+  ) {
+    return {
+      width: source.naturalWidth,
+      height: source.naturalHeight,
+    }
+  }
+
+  if (
+    Number.isFinite(source.width) &&
+    Number.isFinite(source.height) &&
+    source.width > 0 &&
+    source.height > 0
+  ) {
+    return {
+      width: source.width,
+      height: source.height,
+    }
+  }
+
+  return null
+}
+
+export function doesFrameFitSource(frame, source) {
+  const dimensions = getImageDimensions(source)
+  if (!frame || !dimensions) return false
+
+  const width = frame.width || frame.w || CHARACTER_FRAME_SIZE
+  const height = frame.height || frame.h || CHARACTER_FRAME_SIZE
+
+  return (
+    frame.x >= 0 &&
+    frame.y >= 0 &&
+    frame.x + width <= dimensions.width &&
+    frame.y + height <= dimensions.height
+  )
+}
+
+export function hasCharacterHandFrames(source) {
+  return (
+    doesFrameFitSource(CHARACTER_HAND_FRONT_FRAME, source) &&
+    doesFrameFitSource(CHARACTER_HAND_BACK_FRAME, source)
+  )
+}
 
 export const PERSISTENT_CHARACTER_STATES = ["idle", "run", "sit", "dead"]
 export const TRANSIENT_CHARACTER_STATES = ["jump", "hurt", "death"]
